@@ -21,7 +21,7 @@ public class EPMGuadalupe {
         
        
         JFrame ventana = new Vista();
-        ventana.setSize(1700,900);
+        ventana.setSize(1446, 844);
         ventana.setVisible(true);
         //ventana.setLocation(300, 0);
        

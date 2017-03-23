@@ -5,34 +5,49 @@
  */
 package epmgudalupe;
 
-import epmgudalupe.partes.arranque.AbrirValvulaEsferica;
-import epmgudalupe.partes.arranque.BombaRefrigeracion;
-import epmgudalupe.partes.arranque.Desaplicarfrenos;
-import epmgudalupe.partes.arranque.JuntaInflable;
-import epmgudalupe.partes.arranque.LubricacionForzadaOn;
-import epmgudalupe.partes.arranque.ReguladorDesbloqueado;
-import epmgudalupe.partes.arranque.ReguladorEnergizado;
-import epmgudalupe.partes.arranque.ValvulaAlivio;
-import epmgudalupe.partes.arranque.ValvulaAislamiento;
-import epmgudalupe.partes.arranque.VelocidadM90;
-import epmgudalupe.partes.arranque.filtroAplicado;
+import com.sun.javafx.stage.WindowCloseRequestHandler;
+import empgudalupe.arranque.AbrirValvulaEsferica;
+import empgudalupe.arranque.AplicarFrenos;
+import empgudalupe.arranque.BombaRefrigeracion;
+import empgudalupe.arranque.DesaplicarFrenos;
+import empgudalupe.arranque.JuntaInflable;
+import empgudalupe.arranque.LubricacionForzadaOn;
+import empgudalupe.arranque.ReguladorDesbloqueado;
+import empgudalupe.arranque.ReguladorEnergizado;
+import empgudalupe.arranque.ValvulaAlivio;
+import empgudalupe.arranque.ValvulaAislamiento;
+import empgudalupe.arranque.VelocidadM90;
+import empgudalupe.arranque.filtroAplicado;
+import epmgudalupe.Energizado.InterruptordeCampo;
+import epmgudalupe.Energizado.LubricacionForzadaOf;
+import epmgudalupe.Energizado.VoltageInterruptor;
+import epmgudalupe.Sincronizado.ComunicacionG4ux;
+import epmgudalupe.Sincronizado.InterruptoGeneradorCerrado;
+import epmgudalupe.Sincronizado.LimaperturaAl;
+import epmgudalupe.Sincronizado.SincroDisponible;
+import epmgudalupe.Sincronizado.SincroOk;
+import epmgudalupe.Sincronizado.SincroenMarcha;
+import epmgudalupe.Sincronizado.UnidadXSeleccionada;
+import epmgudalupe.Sincronizado.Unidaddes;
+import epmgudalupe.Sincronizado.tensionM63;
 import java.awt.Color;
-import static java.awt.Color.black;
 import static java.awt.Color.green;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 
 
@@ -41,18 +56,20 @@ import javax.swing.JButton;
  * @author lzambrs
  */
 public class Vista extends javax.swing.JFrame {
-       private Point location1,location2,location3,location4,location5,location6,location7,location8,location9,location10,location11,location12;
+    int contador=0;
+          private Point location1,location2,location3,location4,location5,location6,location7,location8,location9,location10,location11,location12;
+          private Point location21,location22,location13,location14,location15,location16,location17,location18,location19,location20,location23,location24;
           Color color;
-         
           private Point p;
-    private Point pl;
-    private int lx,ly;
-    boolean calcular_diferencia=true;
-     Point loc;
-     int contgeneral=0;
-     int num=0;
-     int [] ubica=new int [12];
-     boolean superbande=false;
+          private Point pl;
+          private int lx,ly;
+          boolean calcular_diferencia=true;
+          Point loc;
+          int contgeneral=0;
+          int num=0;
+          int [] ubica=new int [24];
+          boolean superbande=false;
+          
      
 
     /**
@@ -60,18 +77,33 @@ public class Vista extends javax.swing.JFrame {
      */
     public Vista() {
         initComponents();    
-        ubica[0]=100;
-        ubica[1]=150;
-        ubica[2]=200;
-        ubica[3]=250;
-        ubica[4]=300;
-        ubica[5]=350;
-        ubica[6]=400;
-        ubica[7]=450;
-        ubica[8]=500;
-        ubica[9]=550;
-        ubica[10]=600;
-        ubica[11]=650;   
+        ubica[0]=70;
+        ubica[1]=100;
+        ubica[2]=130;
+        ubica[3]=160;
+        ubica[4]=190;
+        ubica[5]=220;
+        ubica[6]=250;
+        ubica[7]=280;
+        ubica[8]=310;
+        ubica[9]=340;
+        ubica[10]=370;
+        ubica[11]=400;
+        ubica[12]=430;
+        ubica[13]=460;
+        ubica[14]=490;
+        ubica[15]=520;
+        ubica[16]=550;
+        ubica[17]=580;
+        ubica[18]=610;
+        ubica[19]=640;
+        ubica[20]=670;
+        ubica[21]=700;
+        ubica[22]=730;
+        ubica[23]=760;
+       
+        
+        
         color = boton1.getBackground();
         boton1.setEnabled(false);
         boton2.setEnabled(false);
@@ -84,12 +116,24 @@ public class Vista extends javax.swing.JFrame {
         boton9.setEnabled(false);
         boton10.setEnabled(false);
         boton11.setEnabled(false);
-        boton12.setEnabled(false);     
+        boton12.setEnabled(false);
+        boton24.setEnabled(false);
+        boton23.setEnabled(false);
+        boton22.setEnabled(false);
+        boton21.setEnabled(false);
+        boton20.setEnabled(false);
+        boton19.setEnabled(false);
+        boton18.setEnabled(false);
+        boton17.setEnabled(false);
+        boton16.setEnabled(false);
+        boton15.setEnabled(false); 
+        boton14.setEnabled(false);
+        boton13.setEnabled(false);
     }
     //crea numeros aleatorios para poner los botones en diferentes posiciones
     public static Stack<Integer> generaNumeroAleatorio(int minimo,int maximo){
         int pos;
-    int nCartas = 12;
+    int nCartas = 24;
          Stack < Integer > pCartas = new Stack < Integer > ();
     for (int i = 0; i < nCartas ; i++) {
       pos = (int) Math.floor(Math.random() * nCartas );
@@ -138,9 +182,7 @@ public class Vista extends javax.swing.JFrame {
     tamaño[3]=posmayory;
     return tamaño;
     
-    }
-    
-                
+    }           
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -160,15 +202,15 @@ public class Vista extends javax.swing.JFrame {
         label2 = new javax.swing.JLabel();
         label6 = new javax.swing.JLabel();
         label7 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Plabel2 = new javax.swing.JLabel();
+        Plabel1 = new javax.swing.JLabel();
         label10 = new javax.swing.JLabel();
         label8 = new javax.swing.JLabel();
         label9 = new javax.swing.JLabel();
         label11 = new javax.swing.JLabel();
         label12 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        Plabel4 = new javax.swing.JLabel();
+        Plabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         boton6 = new javax.swing.JButton();
         boton7 = new javax.swing.JButton();
@@ -189,19 +231,29 @@ public class Vista extends javax.swing.JFrame {
         label17 = new javax.swing.JLabel();
         label18 = new javax.swing.JLabel();
         label19 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        Plabel6 = new javax.swing.JLabel();
+        Plabel5 = new javax.swing.JLabel();
+        Plabel9 = new javax.swing.JLabel();
+        Plabel7 = new javax.swing.JLabel();
         label20 = new javax.swing.JLabel();
         label21 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Plabel10 = new javax.swing.JLabel();
         label22 = new javax.swing.JLabel();
         label23 = new javax.swing.JLabel();
         label24 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        label26 = new javax.swing.JLabel();
-        label27 = new javax.swing.JLabel();
+        Plabel11 = new javax.swing.JLabel();
+        boton24 = new javax.swing.JButton();
+        boton23 = new javax.swing.JButton();
+        boton22 = new javax.swing.JButton();
+        boton21 = new javax.swing.JButton();
+        boton20 = new javax.swing.JButton();
+        boton19 = new javax.swing.JButton();
+        boton18 = new javax.swing.JButton();
+        boton17 = new javax.swing.JButton();
+        boton16 = new javax.swing.JButton();
+        boton15 = new javax.swing.JButton();
+        boton14 = new javax.swing.JButton();
+        boton13 = new javax.swing.JButton();
         icono = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -258,23 +310,23 @@ public class Vista extends javax.swing.JFrame {
         label7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 20, 20));
 
-        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("2");
-        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel15.setOpaque(true);
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 130, 110));
+        Plabel2.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel2.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel2.setText("2");
+        Plabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel2.setOpaque(true);
+        getContentPane().add(Plabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 130, 110));
 
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("1");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel4.setOpaque(true);
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 130, 100));
+        Plabel1.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel1.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel1.setText("1");
+        Plabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel1.setOpaque(true);
+        getContentPane().add(Plabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 130, 100));
 
         label10.setForeground(new java.awt.Color(255, 255, 255));
         label10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -295,23 +347,23 @@ public class Vista extends javax.swing.JFrame {
         label12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 670, 20, 20));
 
-        jLabel20.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("4");
-        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel20.setOpaque(true);
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 130, 110));
+        Plabel4.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel4.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel4.setText("4");
+        Plabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel4.setOpaque(true);
+        getContentPane().add(Plabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 130, 110));
 
-        jLabel21.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("3");
-        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel21.setOpaque(true);
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, 110));
+        Plabel3.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel3.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel3.setText("3");
+        Plabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel3.setOpaque(true);
+        getContentPane().add(Plabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, 110));
 
         jButton2.setText("Cerrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -335,7 +387,7 @@ public class Vista extends javax.swing.JFrame {
                 boton6MouseReleased(evt);
             }
         });
-        getContentPane().add(boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 200, -1, -1));
+        getContentPane().add(boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 130, -1, -1));
 
         boton7.setText("VALVULA ESFERICA ABIERTA");
         boton7.setFocusable(false);
@@ -352,7 +404,7 @@ public class Vista extends javax.swing.JFrame {
                 boton7MouseReleased(evt);
             }
         });
-        getContentPane().add(boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 100, -1, -1));
+        getContentPane().add(boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 70, -1, -1));
 
         boton5.setText("FILTRO REFRIGERACION ON");
         boton5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -371,7 +423,7 @@ public class Vista extends javax.swing.JFrame {
                 boton5MouseReleased(evt);
             }
         });
-        getContentPane().add(boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 240, -1, -1));
+        getContentPane().add(boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 160, -1, -1));
 
         boton4.setText("JUNTA INFLABLE OPERACION DESAPLICADA");
         boton4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -390,7 +442,7 @@ public class Vista extends javax.swing.JFrame {
                 boton4MouseReleased(evt);
             }
         });
-        getContentPane().add(boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 630, -1, -1));
+        getContentPane().add(boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 400, -1, -1));
 
         boton3.setText("VALVULA DE ALIVIO CERRADA");
         boton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -409,7 +461,7 @@ public class Vista extends javax.swing.JFrame {
                 boton3MouseReleased(evt);
             }
         });
-        getContentPane().add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 150, -1, -1));
+        getContentPane().add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 100, -1, -1));
 
         boton2.setText("VALVULA DE AISLAMIENTO ABIERTA");
         boton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -428,7 +480,7 @@ public class Vista extends javax.swing.JFrame {
                 boton2MouseReleased(evt);
             }
         });
-        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 290, -1, -1));
+        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 190, -1, -1));
 
         boton11.setText("REGULADOR ENERGIZADO");
         boton11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -447,7 +499,7 @@ public class Vista extends javax.swing.JFrame {
                 boton11MouseReleased(evt);
             }
         });
-        getContentPane().add(boton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 480, -1, -1));
+        getContentPane().add(boton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 310, -1, -1));
 
         boton10.setText("REGULADOR DESBLOQUEADO");
         boton10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -463,7 +515,7 @@ public class Vista extends javax.swing.JFrame {
                 boton10MouseReleased(evt);
             }
         });
-        getContentPane().add(boton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 530, -1, -1));
+        getContentPane().add(boton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 340, -1, -1));
 
         boton9.setText("LUBRICACION FORZADA ON");
         boton9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -484,7 +536,7 @@ public class Vista extends javax.swing.JFrame {
                 boton9ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 340, -1, -1));
+        getContentPane().add(boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 220, -1, -1));
 
         boton8.setText("FRENOS DESAPLICADOS");
         boton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -502,9 +554,13 @@ public class Vista extends javax.swing.JFrame {
                 boton8MouseReleased(evt);
             }
         });
-        getContentPane().add(boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 390, -1, -1));
+        boton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 250, -1, -1));
 
-        boton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         boton1.setText("BOMBA DE REFRIGERACION EN OPERACION");
         boton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -519,7 +575,7 @@ public class Vista extends javax.swing.JFrame {
                 boton1MouseReleased(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 430, -1, -1));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 280, -1, -1));
 
         boton12.setText("VELOCIDAD >90%");
         boton12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -535,27 +591,27 @@ public class Vista extends javax.swing.JFrame {
                 boton12MouseReleased(evt);
             }
         });
-        getContentPane().add(boton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 580, -1, -1));
+        getContentPane().add(boton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, -1, -1));
 
         label13.setForeground(new java.awt.Color(255, 255, 255));
         label13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 210, 20, 20));
+        getContentPane().add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 120, 20, 20));
 
         label14.setForeground(new java.awt.Color(255, 255, 255));
         label14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label14, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 130, 20, 20));
+        getContentPane().add(label14, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 160, 20, 20));
 
         label15.setForeground(new java.awt.Color(255, 255, 255));
         label15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label15, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 280, 20, 20));
+        getContentPane().add(label15, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 200, 20, 20));
 
         label16.setForeground(new java.awt.Color(255, 255, 255));
         label16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 350, 20, 20));
+        getContentPane().add(label16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 290, 20, 20));
 
         label17.setForeground(new java.awt.Color(255, 255, 255));
         label17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label17, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 170, 20, 20));
+        getContentPane().add(label17, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 360, 20, 20));
 
         label18.setForeground(new java.awt.Color(255, 255, 255));
         label18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -565,87 +621,304 @@ public class Vista extends javax.swing.JFrame {
         label19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(label19, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, 20, 20));
 
-        jLabel16.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("6");
-        jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel16.setOpaque(true);
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 130, 60));
+        Plabel6.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel6.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel6.setText("6");
+        Plabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel6.setOpaque(true);
+        getContentPane().add(Plabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 130, 60));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("5");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel5.setOpaque(true);
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 130, 70));
+        Plabel5.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel5.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel5.setText("5");
+        Plabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel5.setOpaque(true);
+        getContentPane().add(Plabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 130, 70));
 
-        jLabel22.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("9");
-        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel22.setOpaque(true);
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 460, 130, 70));
+        Plabel9.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel9.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel9.setText("9");
+        Plabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel9.setOpaque(true);
+        getContentPane().add(Plabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 460, 130, 70));
 
-        jLabel23.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("7");
-        jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel23.setOpaque(true);
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, 130, 60));
+        Plabel7.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel7.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel7.setText("7");
+        Plabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel7.setOpaque(true);
+        getContentPane().add(Plabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, 130, 60));
 
         label20.setForeground(new java.awt.Color(255, 255, 255));
         label20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label20, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 780, 20, 20));
+        getContentPane().add(label20, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 550, 20, 20));
 
         label21.setForeground(new java.awt.Color(255, 255, 255));
         label21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label21, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 630, 20, 20));
+        getContentPane().add(label21, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 590, 20, 20));
 
-        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("10");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel6.setOpaque(true);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, 130, 70));
+        Plabel10.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel10.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel10.setText("10");
+        Plabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel10.setOpaque(true);
+        getContentPane().add(Plabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, 130, 70));
 
         label22.setForeground(new java.awt.Color(255, 255, 255));
         label22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label22, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 590, 20, 20));
+        getContentPane().add(label22, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 620, 20, 20));
 
         label23.setForeground(new java.awt.Color(255, 255, 255));
         label23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label23, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 550, 20, 20));
+        getContentPane().add(label23, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 690, 20, 20));
 
         label24.setForeground(new java.awt.Color(255, 255, 255));
         label24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label24, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 1000, 20, 20));
+        getContentPane().add(label24, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 730, 20, 20));
 
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("11");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
-        jLabel7.setOpaque(true);
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 130, 70));
+        Plabel11.setBackground(new java.awt.Color(0, 0, 0));
+        Plabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Plabel11.setForeground(new java.awt.Color(255, 255, 255));
+        Plabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Plabel11.setText("11");
+        Plabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel11.setOpaque(true);
+        getContentPane().add(Plabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 130, 70));
 
-        label26.setForeground(new java.awt.Color(255, 255, 255));
-        label26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label26, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 730, 20, 20));
+        boton24.setText("UNIDAD DESELECCIONADA");
+        boton24.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton24MouseDragged(evt);
+            }
+        });
+        boton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton24MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton24MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton24MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 760, -1, -1));
 
-        label27.setForeground(new java.awt.Color(255, 255, 255));
-        label27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label27, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 690, 20, 20));
+        boton23.setText("LIM APERTURA AL 100%");
+        boton23.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton23MouseDragged(evt);
+            }
+        });
+        boton23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton23MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton23MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 730, -1, -1));
+
+        boton22.setText("TENSION > 63%");
+        boton22.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton22MouseDragged(evt);
+            }
+        });
+        boton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton22MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton22MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 700, -1, -1));
+
+        boton21.setText("INTERRUPTOR GENERADOR CERRADO");
+        boton21.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton21MouseDragged(evt);
+            }
+        });
+        boton21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton21MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton21MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton21MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 670, -1, -1));
+
+        boton20.setText("SINCRONIZADOR OK");
+        boton20.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton20MouseDragged(evt);
+            }
+        });
+        boton20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton20MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton20MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 640, -1, -1));
+
+        boton19.setText("SINCRO EN MARCHA");
+        boton19.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        boton19.setDefaultCapable(false);
+        boton19.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton19MouseDragged(evt);
+            }
+        });
+        boton19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton19MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton19MouseReleased(evt);
+            }
+        });
+        boton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton19ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 610, -1, -1));
+
+        boton18.setText("COMUNICACION G4UX/G4CM OK");
+        boton18.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton18MouseDragged(evt);
+            }
+        });
+        boton18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton18MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton18MouseReleased(evt);
+            }
+        });
+        boton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton18ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 580, -1, -1));
+
+        boton17.setText("UNIDAD X SELECCIONADA");
+        boton17.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton17MouseDragged(evt);
+            }
+        });
+        boton17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton17MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton17MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton17MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 550, -1, -1));
+
+        boton16.setText("SINCRONIZACION DISPONIBLE");
+        boton16.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton16MouseDragged(evt);
+            }
+        });
+        boton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton16MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton16MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton16MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 520, -1, -1));
+
+        boton15.setText("VOLTAGE INTERRUPTOR >63%");
+        boton15.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton15MouseDragged(evt);
+            }
+        });
+        boton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton15MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton15MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 490, -1, -1));
+
+        boton14.setText("LUBRICACION FORZADA OFF");
+        boton14.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton14MouseDragged(evt);
+            }
+        });
+        boton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton14MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                boton14MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton14MouseReleased(evt);
+            }
+        });
+        boton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton14ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 460, -1, -1));
+
+        boton13.setText("INTERRUPTOR DE CAMPO CERRADO");
+        boton13.setFocusable(false);
+        boton13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boton13MouseDragged(evt);
+            }
+        });
+        boton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                boton13MouseEntered(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                boton13MouseReleased(evt);
+            }
+        });
+        getContentPane().add(boton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 430, -1, -1));
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -659,31 +932,55 @@ public class Vista extends javax.swing.JFrame {
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
        Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         int num0 = numero.get(0);
-         boton1.setLocation(1250,ubica[num0]);
+         boton1.setLocation(1130,ubica[num0]);
           int num1 = numero.get(1);
-         boton2.setLocation(1250,ubica[num1]);
+         boton2.setLocation(1130,ubica[num1]);
            int num2 = numero.get(2);
-         boton3.setLocation(1250,ubica[num2]);
+         boton3.setLocation(1130,ubica[num2]);
            int num3 = numero.get(3);
-         boton4.setLocation(1250,ubica[num3]);
+         boton4.setLocation(1130,ubica[num3]);
            int num4 = numero.get(4);
-         boton5.setLocation(1250,ubica[num4]);
+         boton5.setLocation(1130,ubica[num4]);
            int num5 = numero.get(5);
-         boton6.setLocation(1250,ubica[num5]);
+         boton6.setLocation(1130,ubica[num5]);
            int num6 = numero.get(6);
-         boton7.setLocation(1250,ubica[num6]);
+         boton7.setLocation(1130,ubica[num6]);
            int num7 = numero.get(7);
-         boton8.setLocation(1250,ubica[num7]);
+         boton8.setLocation(1130,ubica[num7]);
            int num8 = numero.get(8);
-         boton9.setLocation(1250,ubica[num8]);
+         boton9.setLocation(1130,ubica[num8]);
            int num9 = numero.get(9);
-         boton10.setLocation(1250,ubica[num9]);
+         boton10.setLocation(1130,ubica[num9]);
            int num10 = numero.get(10);
-         boton11.setLocation(1250,ubica[num10]);
+         boton11.setLocation(1130,ubica[num10]);
            int num11 = numero.get(11);
-         boton12.setLocation(1250,ubica[num11]);
-         
-           location1 = boton1.getLocation();
+         boton12.setLocation(1130,ubica[num11]);
+          int num12 = numero.get(12);
+         boton24.setLocation(1130,ubica[num12]);
+          int num13 = numero.get(13);
+         boton23.setLocation(1130,ubica[num13]);
+          int num14 = numero.get(14);
+         boton22.setLocation(1130,ubica[num14]);
+          int num15 = numero.get(15);
+         boton21.setLocation(1130,ubica[num15]); 
+          int num16 = numero.get(16);
+         boton20.setLocation(1130,ubica[num16]);
+          int num17 = numero.get(17);
+         boton19.setLocation(1130,ubica[num17]);
+          int num18 = numero.get(18);
+         boton18.setLocation(1130,ubica[num18]);
+          int num19 = numero.get(19);
+         boton17.setLocation(1130,ubica[num19]);
+          int num20 = numero.get(20);
+         boton16.setLocation(1130,ubica[num20]);
+          int num21 = numero.get(21);
+         boton15.setLocation(1130,ubica[num21]);
+          int num22 = numero.get(22);
+         boton14.setLocation(1130,ubica[num22]);
+          int num23 = numero.get(23);
+         boton13.setLocation(1130,ubica[num23]);
+        
+         location1 = boton1.getLocation();
         location2 = boton2.getLocation();
         location3 = boton3.getLocation();
         location4 = boton4.getLocation();
@@ -695,6 +992,18 @@ public class Vista extends javax.swing.JFrame {
         location10 = boton10.getLocation();
         location11 = boton11.getLocation();
         location12 = boton12.getLocation();
+         location13 = boton13.getLocation();
+        location14 = boton14.getLocation();
+        location15 = boton15.getLocation();
+        location16 = boton16.getLocation();
+        location17 = boton17.getLocation();
+        location18 = boton18.getLocation();
+        location19 = boton19.getLocation();
+        location20 = boton20.getLocation();
+        location21 = boton21.getLocation();
+        location22 = boton22.getLocation();
+        location23 = boton23.getLocation();
+        location24 = boton24.getLocation();
           
          
          boton1.setEnabled(true);
@@ -709,6 +1018,18 @@ public class Vista extends javax.swing.JFrame {
                   boton10.setEnabled(true);
                    boton11.setEnabled(true);
                     boton12.setEnabled(true);
+                      boton24.setEnabled(true);
+            boton23.setEnabled(true);
+             boton22.setEnabled(true);
+              boton21.setEnabled(true);
+               boton20.setEnabled(true);
+                boton19.setEnabled(true);
+                 boton18.setEnabled(true);
+                  boton17.setEnabled(true);
+                   boton16.setEnabled(true);
+                    boton15.setEnabled(true);
+                    boton14.setEnabled(true);
+            boton13.setEnabled(true);
          
          superbande=true;
          
@@ -749,6 +1070,7 @@ boolean bande1=true;
                     bomba.setSize(734,494);
                     bomba.setVisible(true);
                     bomba.setLocationRelativeTo(null);
+              
                 
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
@@ -874,7 +1196,7 @@ boolean bande4=true;
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    junta.setSize(734,499);
+                    junta.setSize(884,499);
                     junta.setVisible(true);
                      junta.setLocationRelativeTo(null);
                 
@@ -915,7 +1237,7 @@ boolean bande5=true;
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    filtro.setSize(649,499);
+                    filtro.setSize(720,520);
                     filtro.setVisible(true);
                      filtro.setLocationRelativeTo(null);
                 
@@ -968,15 +1290,15 @@ boolean bande6=true;
                         Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                     }
                    
-                    filtroAplicado filtro = null;
+                    AplicarFrenos frenos = null;
                 try {
-                    filtro = new filtroAplicado();
+                    frenos = new AplicarFrenos();
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    filtro.setSize(734,499);
-                    filtro.setVisible(true);
-                     filtro.setLocationRelativeTo(null);
+                    frenos.setSize(734,499);
+                    frenos.setVisible(true);
+                    frenos.setLocationRelativeTo(null);
                     }
         }
          }
@@ -1026,38 +1348,16 @@ boolean bande7=true;
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseReleased
-      if(superbande==true){
+             if(superbande==true){ 
         if(bande6==true){       
             System.out.println("incorrecto");
             boton6.setLocation(location6);
-             //codigo para el cambio de color del boton
+            //codigo para el cambio de color del boton
              boton6.setBackground(Color.red);
           //codigo para la generacion de el sonido
-             Clip sonido = null;
-              try {
-                  sonido = AudioSystem.getClip();
-              } catch (LineUnavailableException ex) {
-                  Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
-              }
-            File a = new File("C:\\Users\\lzambrs\\Documents\\NetBeansProjects\\Epmgudalupe\\src\\sonidos\\Track_No01.wav");
-              try {
-                  sonido.open(AudioSystem.getAudioInputStream(a));
-              } catch (UnsupportedAudioFileException ex) {
-                  Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
-              } catch (IOException ex) {
-                  Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
-              } catch (LineUnavailableException ex) {
-                  Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
-              }
-            sonido.start();
-            System.out.println("Reproduciendo 10s. de sonido...");
-              try {
-                  Thread.sleep(1000); // 1000 milisegundos (10 segundos)
-              } catch (InterruptedException ex) {
-                  Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
-              }
-            sonido.close();
+             generarsonido();
         }
+        
       }
     }//GEN-LAST:event_boton6MouseReleased
 
@@ -1167,9 +1467,9 @@ boolean bande8=true;
                         Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                     }
                    
-                    Desaplicarfrenos frenosd = null;
+                    DesaplicarFrenos frenosd = null;
                 try {
-                    frenosd = new Desaplicarfrenos();
+                    frenosd = new DesaplicarFrenos();
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -1228,7 +1528,7 @@ boolean bande9=true;
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    lubricar.setSize(734,499);
+                    lubricar.setSize(700,499);
                     lubricar.setVisible(true);
                      lubricar.setLocationRelativeTo(null);
                     
@@ -1262,8 +1562,9 @@ boolean bande10=true;
              //valida si la pisicion del boton es igual a la del lugar donde deberia estar
             //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
             if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])&&(contgeneral>=9)){
+            
                  generarsonidowell();
-                contgeneral=contgeneral+1;
+                 contgeneral=contgeneral+1;
                 validarcuantos(contgeneral);
                 boton10.setLocation(tam[1]-a.width-20, tam[3]-a.height-20); 
                 System.out.println("correcto");
@@ -1279,13 +1580,16 @@ boolean bande10=true;
                    
                     ReguladorDesbloqueado reguladordes = null;
                 try {
-                    reguladordes = new ReguladorDesbloqueado();
+                    reguladordes = new ReguladorDesbloqueado(contgeneral);
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    reguladordes.setSize(734,499);
+                    reguladordes.setSize(700,420);
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
+                    
+       
+               
                     
              }
             }
@@ -1317,6 +1621,7 @@ boolean bande11=true;
              //valida si la pisicion del boton es igual a la del lugar donde deberia estar
             //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
             if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])&&(contgeneral>=9)){
+                //
                  generarsonidowell();
                 contgeneral=contgeneral+1;
                 validarcuantos(contgeneral);
@@ -1334,11 +1639,11 @@ boolean bande11=true;
                    
                     ReguladorEnergizado reguladorene = null;
                 try {
-                    reguladorene = new ReguladorEnergizado();
+                    reguladorene = new ReguladorEnergizado(contgeneral);
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    reguladorene.setSize(734,499);
+                    reguladorene.setSize(700,420);
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
                     
@@ -1376,8 +1681,9 @@ boolean bande12=true;
              //valida si la pisicion del boton es igual a la del lugar donde deberia estar
             //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
             if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])&&(contgeneral>=9)){
+               // &&(contgeneral>=9)
                  generarsonidowell();
-                contgeneral=contgeneral+1;
+                  contgeneral=contgeneral+1;
                 validarcuantos(contgeneral);
                 boton12.setLocation(tam[1]-a.width-20, tam[3]-a.height-20); 
                 System.out.println("correcto");
@@ -1393,11 +1699,11 @@ boolean bande12=true;
                    
                     VelocidadM90 velocidad = null;
                 try {
-                    velocidad = new VelocidadM90();
+                    velocidad = new VelocidadM90(contgeneral);
                 } catch (IOException ex) {
                     Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                    velocidad.setSize(734,499);
+                    velocidad.setSize(700,370);
                     velocidad.setVisible(true);
                      velocidad.setLocationRelativeTo(null);
                     
@@ -1453,53 +1759,810 @@ boolean bande12=true;
     }//GEN-LAST:event_boton4MouseEntered
 
     private void boton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseEntered
-       if(boton1.getBackground()!=green){  
+       if(boton5.getBackground()!=green){  
            boton5.setBackground(color);
        }
     }//GEN-LAST:event_boton5MouseEntered
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton6.getBackground()!=green){  
             boton6.setBackground(color);
         }
         
     }//GEN-LAST:event_boton6MouseEntered
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton7.getBackground()!=green){  
             boton7.setBackground(color);
         }
     }//GEN-LAST:event_boton7MouseEntered
 
     private void boton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton8.getBackground()!=green){  
             boton8.setBackground(color);
         }
     }//GEN-LAST:event_boton8MouseEntered
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton9.getBackground()!=green){  
             boton9.setBackground(color);
         }
     }//GEN-LAST:event_boton9MouseEntered
 
     private void boton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton10.getBackground()!=green){  
             boton10.setBackground(color);
         }
     }//GEN-LAST:event_boton10MouseEntered
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton11.getBackground()!=green){  
             boton11.setBackground(color);
         }
     }//GEN-LAST:event_boton11MouseEntered
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
-        if(boton1.getBackground()!=green){  
+        if(boton12.getBackground()!=green){  
             boton12.setBackground(color);
         }
     }//GEN-LAST:event_boton12MouseEntered
+
+    private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton8ActionPerformed
+boolean bande24=true;
+    private void boton24MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseDragged
+          if(superbande==true){
+        if(bande24==true){
+            mover(boton24);
+            int tam[];
+            //ubicacion del puntero en el presiso momento
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton24.getBounds();
+            tam=tamaño(label24);
+           //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+           //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                try {
+                    generarsonidowell();
+                    contgeneral=contgeneral+1;
+                    validarcuantos(contgeneral);
+                    boton24.setLocation(tam[1]-a.width-20, tam[3]-a.height-20);
+                    System.out.println("correcto");
+                    label24.setSize(boton24.getWidth(),boton24.getHeight());
+                    label24.setLocation(tam[1]-a.width-20, tam[3]-a.height-20);
+                     boton24.setBackground(Color.green);
+                    bande24=false;
+                    try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    Unidaddes unidadd = null;
+                    unidadd = new Unidaddes();
+                    unidadd.setSize(734,494);
+                    unidadd.setVisible(true);
+                    unidadd.setLocationRelativeTo(null);
+                
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+              }
+
+            }
+       }
+  
+    }//GEN-LAST:event_boton24MouseDragged
+
+    private void boton24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseEntered
+          if(boton24.getBackground()!=green){   
+         boton24.setBackground(color);
+       }
+    }//GEN-LAST:event_boton24MouseEntered
+
+    private void boton24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton24MousePressed
+
+    private void boton24MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseReleased
+             if(superbande==true){ 
+        if(bande24==true){       
+            System.out.println("incorrecto");
+            boton24.setLocation(location24);
+            //codigo para el cambio de color del boton
+             boton24.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton24MouseReleased
+boolean bande23=true;
+    private void boton23MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton23MouseDragged
+        if(superbande==true){
+        if(bande23==true){
+            mover(boton23);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton23.getBounds();
+            tam=tamañoIz(label23);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton23.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label23.setSize(boton23.getWidth(),boton23.getHeight());
+                label23.setLocation(tam[0], tam[2]-20);
+                bande23=false;
+                boton23.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    LimaperturaAl limite = null;
+                try {
+                    limite = new LimaperturaAl();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    limite.setSize(734,494);
+                    limite.setVisible(true);
+                    limite.setLocationRelativeTo(null);
+              }
+
+        }
+          }
+    }//GEN-LAST:event_boton23MouseDragged
+
+    private void boton23MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton23MouseEntered
+          if(boton23.getBackground()!=green){   
+         boton23.setBackground(color);
+       }
+    }//GEN-LAST:event_boton23MouseEntered
+
+    private void boton23MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton23MouseReleased
+             if(superbande==true){ 
+        if(bande23==true){       
+            System.out.println("incorrecto");
+            boton23.setLocation(location23);
+            //codigo para el cambio de color del boton
+             boton23.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton23MouseReleased
+boolean bande22=true;
+    private void boton22MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton22MouseDragged
+        if(superbande==true){
+            if(bande22==true){
+                mover(boton22);
+                int tam[];
+                p = MouseInfo.getPointerInfo().getLocation();
+                Rectangle a=boton22.getBounds();
+                tam=tamañoIz(label22);
+                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+                //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+                if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                    generarsonidowell();
+                    contgeneral=contgeneral+1;
+                    validarcuantos(contgeneral);
+                    boton22.setLocation(tam[0], tam[2]-20); 
+                    System.out.println("correcto");
+                    label22.setSize(boton22.getWidth(),boton22.getHeight());
+                    label22.setLocation(tam[0], tam[2]-20);
+                    bande22=false;
+                    boton22.setBackground(Color.green);
+                    try {
+                            Thread.sleep (500);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        //llamado a la ventana de la bomba de refrigeracion
+                        tensionM63 tension = null;
+                    try {
+                        tension = new tensionM63();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                        tension.setSize(734,494);
+                        tension.setVisible(true);
+                        tension.setLocationRelativeTo(null);
+                  }
+
+        }
+          }
+    }//GEN-LAST:event_boton22MouseDragged
+
+    private void boton22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton22MouseEntered
+          if(boton22.getBackground()!=green){   
+         boton22.setBackground(color);
+       }
+    }//GEN-LAST:event_boton22MouseEntered
+
+    private void boton22MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton22MouseReleased
+             if(superbande==true){ 
+        if(bande22==true){       
+            System.out.println("incorrecto");
+            boton22.setLocation(location22);
+            //codigo para el cambio de color del boton
+             boton22.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton22MouseReleased
+boolean bande21=true;
+    private void boton21MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseDragged
+          if(superbande==true){
+        if(bande21==true){
+            mover(boton21);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton21.getBounds();
+            tam=tamañoIz(label21);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton21.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label21.setSize(boton21.getWidth(),boton21.getHeight());
+                label21.setLocation(tam[0], tam[2]-20);
+                bande21=false;
+                boton21.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    InterruptoGeneradorCerrado interruptor = null;
+                try {
+                    interruptor = new InterruptoGeneradorCerrado();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    interruptor.setSize(734,494);
+                    interruptor.setVisible(true);
+                    interruptor.setLocationRelativeTo(null);
+              }
+
+        }
+          }
+    }//GEN-LAST:event_boton21MouseDragged
+
+    private void boton21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseEntered
+         if(boton21.getBackground()!=green){   
+         boton21.setBackground(color);
+       }
+    }//GEN-LAST:event_boton21MouseEntered
+
+    private void boton21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton21MousePressed
+
+    private void boton21MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseReleased
+             if(superbande==true){ 
+        if(bande21==true){       
+            System.out.println("incorrecto");
+            boton21.setLocation(location17);
+            //codigo para el cambio de color del boton
+             boton21.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton21MouseReleased
+boolean bande20=true;
+    private void boton20MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseDragged
+         if(superbande==true){
+            if(bande20==true){
+                mover(boton20);
+                int tam[];
+                p = MouseInfo.getPointerInfo().getLocation();
+                Rectangle a=boton20.getBounds();
+                tam=tamañoIz(label20);
+                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+                //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+                if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                    generarsonidowell();
+                    contgeneral=contgeneral+1;
+                    validarcuantos(contgeneral);
+                    boton20.setLocation(tam[0], tam[2]-20); 
+                    System.out.println("correcto");
+                    label20.setSize(boton20.getWidth(),boton20.getHeight());
+                    label20.setLocation(tam[0], tam[2]-20);
+                    bande20=false;
+                    boton20.setBackground(Color.green);
+                    try {
+                            Thread.sleep (500);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        //llamado a la ventana de la bomba de refrigeracion
+                        SincroOk sincro = null;
+                    try {
+                        sincro = new SincroOk();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                        sincro.setSize(734,494);
+                        sincro.setVisible(true);
+                        sincro.setLocationRelativeTo(null);
+                  }
+           }
+       }
+    }//GEN-LAST:event_boton20MouseDragged
+
+    private void boton20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseEntered
+         if(boton20.getBackground()!=green){   
+         boton20.setBackground(color);
+       }
+    }//GEN-LAST:event_boton20MouseEntered
+
+    private void boton20MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseReleased
+            if(superbande==true){ 
+        if(bande20==true){       
+            System.out.println("incorrecto");
+            boton20.setLocation(location20);
+            //codigo para el cambio de color del boton
+             boton20.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton20MouseReleased
+boolean bande19=true;
+    private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
+          if(superbande==true){
+            if(bande19==true){
+                mover(boton19);
+                int tam[];
+                p = MouseInfo.getPointerInfo().getLocation();
+                Rectangle a=boton19.getBounds();
+                tam=tamañoIz(label19);
+                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+                //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+                if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                    generarsonidowell();
+                    contgeneral=contgeneral+1;
+                    validarcuantos(contgeneral);
+                    boton19.setLocation(tam[0], tam[2]-20); 
+                    System.out.println("correcto");
+                    label19.setSize(boton19.getWidth(),boton19.getHeight());
+                    label19.setLocation(tam[0], tam[2]-20);
+                    bande19=false;
+                    boton19.setBackground(Color.green);
+                    try {
+                            Thread.sleep (500);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        //llamado a la ventana de la bomba de refrigeracion
+                        SincroenMarcha sincro = null;
+                    try {
+                        sincro = new SincroenMarcha();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                        sincro.setSize(734,494);
+                        sincro.setVisible(true);
+                        sincro.setLocationRelativeTo(null);
+                  }
+
+               }
+          }
+    }//GEN-LAST:event_boton19MouseDragged
+
+    private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
+          if(boton19.getBackground()!=green){   
+         boton19.setBackground(color);
+       }
+    }//GEN-LAST:event_boton19MouseEntered
+
+    private void boton19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseReleased
+             if(superbande==true){ 
+        if(bande19==true){       
+            System.out.println("incorrecto");
+            boton19.setLocation(location19);
+            //codigo para el cambio de color del boton
+             boton19.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton19MouseReleased
+
+    private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton19ActionPerformed
+boolean bande18=true;
+    private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
+         if(superbande==true){
+        if(bande18==true){
+            mover(boton18);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton18.getBounds();
+            tam=tamañoIz(label18);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton18.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label18.setSize(boton18.getWidth(),boton18.getHeight());
+                label18.setLocation(tam[0], tam[2]-20);
+                bande18=false;
+                boton18.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    ComunicacionG4ux comunicacion = null;
+                try {
+                    comunicacion = new ComunicacionG4ux();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    comunicacion.setSize(734,494);
+                    comunicacion.setVisible(true);
+                    comunicacion.setLocationRelativeTo(null);
+              }
+        }
+          }
+    }//GEN-LAST:event_boton18MouseDragged
+
+    private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
+        if(boton18.getBackground()!=green){   
+         boton18.setBackground(color);
+       }
+    }//GEN-LAST:event_boton18MouseEntered
+
+    private void boton18MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseReleased
+             if(superbande==true){ 
+        if(bande18==true){       
+            System.out.println("incorrecto");
+            boton18.setLocation(location18);
+            //codigo para el cambio de color del boton
+             boton18.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton18MouseReleased
+
+    private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton18ActionPerformed
+boolean bande17=true;
+    private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
+         if(superbande==true){
+        if(bande17==true){
+            mover(boton17);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton17.getBounds();
+            tam=tamañoIz(label17);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton17.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label17.setSize(boton17.getWidth(),boton17.getHeight());
+                label17.setLocation(tam[0], tam[2]-20);
+                bande17=false;
+                boton17.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    UnidadXSeleccionada unidad = null;
+                try {
+                    unidad = new UnidadXSeleccionada();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    unidad.setSize(734,494);
+                    unidad.setVisible(true);
+                    unidad.setLocationRelativeTo(null);
+              }
+
+        }
+          }
+    }//GEN-LAST:event_boton17MouseDragged
+
+    private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
+          if(boton17.getBackground()!=green){   
+         boton17.setBackground(color);
+       }
+    }//GEN-LAST:event_boton17MouseEntered
+
+    private void boton17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton17MousePressed
+
+    private void boton17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseReleased
+       if(superbande==true){ 
+        if(bande17==true){       
+            System.out.println("incorrecto");
+            boton17.setLocation(location17);
+            //codigo para el cambio de color del boton
+             boton17.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton17MouseReleased
+boolean bande16=true;
+    private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
+          if(superbande==true){
+        if(bande16==true){
+            mover(boton16);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton16.getBounds();
+            tam=tamañoIz(label16);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton16.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label16.setSize(boton16.getWidth(),boton16.getHeight());
+                label16.setLocation(tam[0], tam[2]-20);
+                bande16=false;
+                boton16.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    SincroDisponible sincro = null;
+                try {
+                    sincro = new SincroDisponible();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    sincro.setSize(734,494);
+                    sincro.setVisible(true);
+                    sincro.setLocationRelativeTo(null);
+              }
+
+        }
+          }
+    }//GEN-LAST:event_boton16MouseDragged
+
+    private void boton16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseEntered
+          if(boton16.getBackground()!=green){   
+         boton16.setBackground(color);
+       }
+    }//GEN-LAST:event_boton16MouseEntered
+
+    private void boton16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton16MousePressed
+
+    private void boton16MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseReleased
+              if(superbande==true){ 
+        if(bande16==true){       
+            System.out.println("incorrecto");
+            boton16.setLocation(location16);
+            //codigo para el cambio de color del boton
+             boton16.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton16MouseReleased
+boolean bande15=true;
+    private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
+         if(superbande==true){
+        if(bande15==true){
+            mover(boton15);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton15.getBounds();
+            tam=tamañoIz(label15);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton15.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label15.setSize(boton15.getWidth(),boton15.getHeight());
+                label15.setLocation(tam[0], tam[2]-20);
+                bande15=false;
+                boton15.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    VoltageInterruptor interruptor = null;
+                try {
+                    interruptor = new VoltageInterruptor();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    interruptor.setSize(734,494);
+                    interruptor.setVisible(true);
+                    interruptor.setLocationRelativeTo(null);
+              }
+
+        }
+          } 
+    }//GEN-LAST:event_boton15MouseDragged
+
+    private void boton15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseEntered
+          if(boton15.getBackground()!=green){   
+         boton15.setBackground(color);
+       }
+    }//GEN-LAST:event_boton15MouseEntered
+
+    private void boton15MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseReleased
+               if(superbande==true){ 
+        if(bande15==true){       
+            System.out.println("incorrecto");
+            boton15.setLocation(location15);
+            //codigo para el cambio de color del boton
+             boton15.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton15MouseReleased
+boolean bande14=true;
+    private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
+         if(superbande==true){
+        if(bande14==true){
+            mover(boton14);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton14.getBounds();
+            tam=tamañoIz(label14);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton14.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label14.setSize(boton14.getWidth(),boton14.getHeight());
+                label14.setLocation(tam[0], tam[2]-20);
+                bande14=false;
+                boton14.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    LubricacionForzadaOf lubrica = null;
+                try {
+                    lubrica = new LubricacionForzadaOf();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    lubrica.setSize(734,494);
+                    lubrica.setVisible(true);
+                    lubrica.setLocationRelativeTo(null);
+              }
+
+        }
+          } 
+    }//GEN-LAST:event_boton14MouseDragged
+
+    private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
+         if(boton14.getBackground()!=green){   
+         boton14.setBackground(color);
+       }
+    }//GEN-LAST:event_boton14MouseEntered
+
+    private void boton14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton14MousePressed
+
+    private void boton14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseReleased
+               if(superbande==true){ 
+        if(bande14==true){       
+            System.out.println("incorrecto");
+            boton14.setLocation(location14);
+            //codigo para el cambio de color del boton
+             boton14.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton14MouseReleased
+boolean bande13=true;
+    private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
+          if(superbande==true){
+        if(bande13==true){
+            mover(boton13);
+            int tam[];
+            p = MouseInfo.getPointerInfo().getLocation();
+            Rectangle a=boton13.getBounds();
+            tam=tamañoIz(label13);
+             //valida si la pisicion del boton es igual a la del lugar donde deberia estar
+            //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
+            if((tam[0]<=p.x && p.x <= tam[1])&&(tam[2]<=p.y && p.y <= tam[3])){
+                generarsonidowell();
+                contgeneral=contgeneral+1;
+                validarcuantos(contgeneral);
+                boton13.setLocation(tam[0], tam[2]-20); 
+                System.out.println("correcto");
+                label13.setSize(boton13.getWidth(),boton13.getHeight());
+                label13.setLocation(tam[0], tam[2]-20);
+                bande13=false;
+                boton13.setBackground(Color.green);
+                try {
+                        Thread.sleep (500);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    InterruptordeCampo interruptor = null;
+                try {
+                    interruptor = new InterruptordeCampo();
+                } catch (IOException ex) {
+                    Logger.getLogger(Vista.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                    interruptor.setSize(734,494);
+                    interruptor.setVisible(true);
+                    interruptor.setLocationRelativeTo(null);
+              }
+
+        }
+          }    
+    }//GEN-LAST:event_boton13MouseDragged
+
+    private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
+          if(boton13.getBackground()!=green){   
+         boton13.setBackground(color);
+       }
+    }//GEN-LAST:event_boton13MouseEntered
+
+    private void boton13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseReleased
+               if(superbande==true){ 
+        if(bande13==true){       
+            System.out.println("incorrecto");
+            boton13.setLocation(location13);
+            //codigo para el cambio de color del boton
+             boton13.setBackground(Color.red);
+          //codigo para la generacion de el sonido
+             generarsonido();
+        }
+        }
+    }//GEN-LAST:event_boton13MouseReleased
+
+    private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton14ActionPerformed
     
     public void mover(JButton boton){
           
@@ -1572,32 +2635,61 @@ boolean bande12=true;
                 }
               sonido.close();
         }
+    
     public void validarcuantos(int p){
+         contador= contador+1;
         switch(p){
             
             case 5: 
-                jLabel4.setBackground(green);
+                Plabel1.setBackground(green);
                 break;
+            case 13:
+                if(contador==p){
+                    
+                }
+        break;
             case 7:
-                jLabel15.setBackground(green);
+                Plabel2.setBackground(green);
                 break;
             case 9:
-                jLabel21.setBackground(green);
+                Plabel3.setBackground(green);
                 break;
             case 12:
-                jLabel20.setBackground(green);
+                Plabel4.setBackground(green);
                 break;
         }
     
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Plabel1;
+    private javax.swing.JLabel Plabel10;
+    private javax.swing.JLabel Plabel11;
+    private javax.swing.JLabel Plabel2;
+    private javax.swing.JLabel Plabel3;
+    private javax.swing.JLabel Plabel4;
+    private javax.swing.JLabel Plabel5;
+    private javax.swing.JLabel Plabel6;
+    private javax.swing.JLabel Plabel7;
+    private javax.swing.JLabel Plabel9;
     private javax.swing.JButton arranqueNormal;
     private javax.swing.JButton boton1;
     private javax.swing.JButton boton10;
     private javax.swing.JButton boton11;
     private javax.swing.JButton boton12;
+    private javax.swing.JButton boton13;
+    private javax.swing.JButton boton14;
+    private javax.swing.JButton boton15;
+    private javax.swing.JButton boton16;
+    private javax.swing.JButton boton17;
+    private javax.swing.JButton boton18;
+    private javax.swing.JButton boton19;
     private javax.swing.JButton boton2;
+    private javax.swing.JButton boton20;
+    private javax.swing.JButton boton21;
+    private javax.swing.JButton boton22;
+    private javax.swing.JButton boton23;
+    private javax.swing.JButton boton24;
     private javax.swing.JButton boton3;
     private javax.swing.JButton boton4;
     private javax.swing.JButton boton5;
@@ -1607,16 +2699,6 @@ boolean bande12=true;
     private javax.swing.JButton boton9;
     private javax.swing.JLabel icono;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel label1;
     private javax.swing.JLabel label10;
     private javax.swing.JLabel label11;
@@ -1634,8 +2716,6 @@ boolean bande12=true;
     private javax.swing.JLabel label22;
     private javax.swing.JLabel label23;
     private javax.swing.JLabel label24;
-    private javax.swing.JLabel label26;
-    private javax.swing.JLabel label27;
     private javax.swing.JLabel label3;
     private javax.swing.JLabel label4;
     private javax.swing.JLabel label5;
@@ -1649,5 +2729,16 @@ boolean bande12=true;
 
     private void tamaño() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public void cerro (int a) {
+       
+        if(a==12){
+            contgeneral=a;
+            contgeneral=contgeneral+1;
+            validarcuantos(contgeneral);
+        }else{
+            contgeneral=a;
+        contgeneral=contgeneral+1;
+        }
     }
 }
