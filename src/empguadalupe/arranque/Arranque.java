@@ -5,6 +5,7 @@
  */
 package empguadalupe.arranque;
 
+import com.sun.java.swing.plaf.windows.resources.windows;
 import empguadalupe.arranque.EnMarcha.AbrirValvulaEsferica;
 import empguadalupe.arranque.EnMarcha.AplicarFrenos;
 import empguadalupe.arranque.EnMarcha.BombaRefrigeracion;
@@ -28,8 +29,8 @@ import empguadalupe.arranque.Sincronizado.SincroOk;
 import empguadalupe.arranque.Sincronizado.SincroenMarcha;
 import empguadalupe.arranque.Sincronizado.UnidadXSeleccionada;
 import empguadalupe.arranque.Sincronizado.Unidaddes;
-import empguadalupe.arranque.Sincronizado.tensionM63;
 import java.awt.Color;
+import static java.awt.Color.black;
 import static java.awt.Color.green;
 
 import java.awt.MouseInfo;
@@ -45,6 +46,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import empguadalupe.arranque.Sincronizado.VoltajeM63;
 
 import javax.swing.JButton;
 
@@ -54,7 +56,7 @@ import javax.swing.JButton;
  * @author lzambrs
  */
 public class Arranque extends javax.swing.JFrame {
-
+     Thread hiloA;
     int contador = 0;
     private Point location1, location2, location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
     private Point location21, location22, location13, location14, location15, location16, location17, location18, location19, location20, location23, location24;
@@ -92,14 +94,44 @@ public class Arranque extends javax.swing.JFrame {
     boolean bande22 = true;
     boolean bande23 = true;
     boolean bande24 = true;
+    
     Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
     
     
     /**
      * Creates new form Vista
      */
+    
     public Arranque() {
+        
+        
         initComponents();
+        correct1.setBackground(black);
+        correct2.setBackground(black);
+        correct3.setBackground(black);
+        correct4.setBackground(black);
+        correct5.setBackground(black);
+        correct6.setBackground(black);
+        correct7.setBackground(black);
+        correct8.setBackground(black);
+        correct9.setBackground(black);
+        correct10.setBackground(black);
+        correct11.setBackground(black);
+        correct12.setBackground(black);
+        correct13.setBackground(black);
+        correct14.setBackground(black);
+        correct15.setBackground(black);
+        correct16.setBackground(black);
+        correct17.setBackground(black);
+        correct18.setBackground(black);
+        correct19.setBackground(black);
+        correct20.setBackground(black);
+        correct21.setBackground(black);
+        correct22.setBackground(black);
+        correct23.setBackground(black);
+        correct24.setBackground(black);
+        
+        
         rec1 =label1.getBounds();
         rec2 =label2.getBounds();
         rec3 =label3.getBounds();
@@ -177,6 +209,9 @@ public class Arranque extends javax.swing.JFrame {
         boton15.setEnabled(false);
         boton14.setEnabled(false);
         boton13.setEnabled(false);
+        
+      
+        
     }
 
     //crea numeros aleatorios para poner los botones en diferentes posiciones
@@ -263,6 +298,44 @@ public class Arranque extends javax.swing.JFrame {
     private void initComponents() {
 
         logo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        correct1 = new javax.swing.JButton();
+        correct2 = new javax.swing.JButton();
+        correct3 = new javax.swing.JButton();
+        correct4 = new javax.swing.JButton();
+        correct5 = new javax.swing.JButton();
+        correct6 = new javax.swing.JButton();
+        correct7 = new javax.swing.JButton();
+        correct8 = new javax.swing.JButton();
+        correct9 = new javax.swing.JButton();
+        correct10 = new javax.swing.JButton();
+        correct11 = new javax.swing.JButton();
+        correct12 = new javax.swing.JButton();
+        correct13 = new javax.swing.JButton();
+        correct14 = new javax.swing.JButton();
+        correct15 = new javax.swing.JButton();
+        correct16 = new javax.swing.JButton();
+        correct17 = new javax.swing.JButton();
+        correct18 = new javax.swing.JButton();
+        correct19 = new javax.swing.JButton();
+        correct20 = new javax.swing.JButton();
+        correct21 = new javax.swing.JButton();
+        correct22 = new javax.swing.JButton();
+        correct23 = new javax.swing.JButton();
+        correct24 = new javax.swing.JButton();
         titulo = new javax.swing.JLabel();
         arranqueNormal = new javax.swing.JButton();
         label3 = new javax.swing.JLabel();
@@ -294,6 +367,8 @@ public class Arranque extends javax.swing.JFrame {
         Plabel9 = new javax.swing.JLabel();
         Plabel7 = new javax.swing.JLabel();
         label20 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         label21 = new javax.swing.JLabel();
         Plabel10 = new javax.swing.JLabel();
         label22 = new javax.swing.JLabel();
@@ -331,18 +406,249 @@ public class Arranque extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setUndecorated(true);
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
-        getContentPane().add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 50));
+        getContentPane().add(logo);
+        logo.setBounds(0, 0, 170, 50);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("2");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(360, 270, 70, 50);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("3");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(360, 360, 70, 50);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("4");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(360, 460, 70, 50);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(360, 560, 70, 59);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("5");
+        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(360, 660, 70, 50);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("6");
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(780, 220, 60, 50);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("7");
+        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(780, 310, 60, 50);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("9");
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(780, 400, 60, 50);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("10");
+        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(770, 500, 60, 50);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("EN MARCHA");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(270, 580, 74, 17);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(780, 130, 70, 59);
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("ENERGIZADA");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(770, 110, 81, 17);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("11");
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(760, 610, 60, 50);
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("1");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(360, 160, 60, 50);
+
+        correct1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct1);
+        correct1.setBounds(330, 150, 20, 20);
+
+        correct2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct2);
+        correct2.setBounds(330, 180, 20, 20);
+
+        correct3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct3);
+        correct3.setBounds(330, 210, 20, 20);
+
+        correct4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct4);
+        correct4.setBounds(430, 150, 20, 20);
+
+        correct5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct5);
+        correct5.setBounds(430, 180, 20, 20);
+
+        correct6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct6);
+        correct6.setBounds(330, 270, 20, 20);
+
+        correct7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct7);
+        correct7.setBounds(330, 300, 20, 20);
+
+        correct8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct8);
+        correct8.setBounds(330, 360, 20, 20);
+
+        correct9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct9);
+        correct9.setBounds(330, 390, 20, 20);
+
+        correct10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct10);
+        correct10.setBounds(330, 450, 20, 20);
+
+        correct11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct11);
+        correct11.setBounds(330, 480, 20, 20);
+
+        correct12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct12);
+        correct12.setBounds(330, 510, 20, 20);
+
+        correct13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct13);
+        correct13.setBounds(330, 650, 20, 20);
+
+        correct14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct14);
+        correct14.setBounds(330, 680, 20, 20);
+
+        correct15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct15);
+        correct15.setBounds(330, 710, 20, 20);
+
+        correct16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct16);
+        correct16.setBounds(850, 230, 20, 20);
+
+        correct17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct17);
+        correct17.setBounds(850, 310, 20, 20);
+
+        correct18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct18);
+        correct18.setBounds(850, 340, 20, 20);
+
+        correct19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct19);
+        correct19.setBounds(850, 410, 20, 20);
+
+        correct20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct20);
+        correct20.setBounds(850, 490, 20, 20);
+
+        correct21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct21);
+        correct21.setBounds(850, 520, 20, 20);
+
+        correct22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct22);
+        correct22.setBounds(850, 550, 20, 20);
+
+        correct23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct23);
+        correct23.setBounds(850, 610, 20, 20);
+
+        correct24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(correct24);
+        correct24.setBounds(850, 640, 20, 20);
 
         titulo.setBackground(new java.awt.Color(60, 188, 28));
         titulo.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titulo.setText("SECUENCIA DE ARRANQUE");
+        titulo.setText("SECUENCIA DE ARRANQUE UNIDAD X GUADALUPE IV");
         titulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 204, 0), null, null));
         titulo.setOpaque(true);
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 830, 50));
+        getContentPane().add(titulo);
+        titulo.setBounds(200, 0, 1120, 50);
 
         arranqueNormal.setText("SECUENCIA NORMAL");
         arranqueNormal.addActionListener(new java.awt.event.ActionListener() {
@@ -350,90 +656,103 @@ public class Arranque extends javax.swing.JFrame {
                 arranqueNormalActionPerformed(evt);
             }
         });
-        getContentPane().add(arranqueNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+        getContentPane().add(arranqueNormal);
+        arranqueNormal.setBounds(550, 60, 180, 23);
 
         label3.setForeground(new java.awt.Color(255, 255, 255));
         label3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 20, 20));
+        getContentPane().add(label3);
+        label3.setBounds(290, 210, 20, 20);
 
         label1.setForeground(new java.awt.Color(255, 255, 255));
         label1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 20, 20));
+        getContentPane().add(label1);
+        label1.setBounds(290, 150, 20, 20);
 
         label4.setForeground(new java.awt.Color(255, 255, 255));
         label4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 20, 20));
+        getContentPane().add(label4);
+        label4.setBounds(470, 150, 20, 20);
 
         label5.setForeground(new java.awt.Color(255, 255, 255));
         label5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 20, 20));
+        getContentPane().add(label5);
+        label5.setBounds(470, 180, 20, 20);
 
         label2.setForeground(new java.awt.Color(255, 255, 255));
         label2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 20, 20));
+        getContentPane().add(label2);
+        label2.setBounds(290, 180, 20, 20);
 
         label6.setForeground(new java.awt.Color(255, 255, 255));
         label6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 20, 20));
+        getContentPane().add(label6);
+        label6.setBounds(290, 270, 20, 20);
 
         label7.setForeground(new java.awt.Color(255, 255, 255));
         label7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 20, 20));
+        getContentPane().add(label7);
+        label7.setBounds(290, 300, 20, 20);
 
         Plabel2.setBackground(new java.awt.Color(0, 0, 0));
         Plabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel2.setForeground(new java.awt.Color(255, 255, 255));
         Plabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel2.setText("2");
-        Plabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel2.setOpaque(true);
-        getContentPane().add(Plabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 130, 110));
+        getContentPane().add(Plabel2);
+        Plabel2.setBounds(320, 260, 140, 70);
 
         Plabel1.setBackground(new java.awt.Color(0, 0, 0));
         Plabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel1.setForeground(new java.awt.Color(255, 255, 255));
         Plabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel1.setText("1");
-        Plabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel1.setOpaque(true);
-        getContentPane().add(Plabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 130, 100));
+        getContentPane().add(Plabel1);
+        Plabel1.setBounds(320, 140, 140, 100);
 
         label10.setForeground(new java.awt.Color(255, 255, 255));
         label10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 600, 20, 20));
+        getContentPane().add(label10);
+        label10.setBounds(290, 450, 20, 20);
 
         label8.setForeground(new java.awt.Color(255, 255, 255));
         label8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 20, 20));
+        getContentPane().add(label8);
+        label8.setBounds(290, 360, 20, 20);
 
         label9.setForeground(new java.awt.Color(255, 255, 255));
         label9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 480, 20, 20));
+        getContentPane().add(label9);
+        label9.setBounds(290, 390, 20, 20);
 
         label11.setForeground(new java.awt.Color(255, 255, 255));
         label11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label11, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 640, 20, 20));
+        getContentPane().add(label11);
+        label11.setBounds(290, 480, 20, 20);
 
         label12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 670, 20, 20));
+        getContentPane().add(label12);
+        label12.setBounds(290, 510, 20, 20);
 
         Plabel4.setBackground(new java.awt.Color(0, 0, 0));
         Plabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel4.setForeground(new java.awt.Color(255, 255, 255));
         Plabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel4.setText("4");
-        Plabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel4.setOpaque(true);
-        getContentPane().add(Plabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 130, 110));
+        getContentPane().add(Plabel4);
+        Plabel4.setBounds(320, 440, 140, 100);
 
         Plabel3.setBackground(new java.awt.Color(0, 0, 0));
         Plabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel3.setForeground(new java.awt.Color(255, 255, 255));
         Plabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel3.setText("3");
-        Plabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel3.setOpaque(true);
-        getContentPane().add(Plabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 130, 110));
+        getContentPane().add(Plabel3);
+        Plabel3.setBounds(320, 350, 140, 70);
 
         jButton2.setText("Cerrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -441,110 +760,141 @@ public class Arranque extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, -1, -1));
+        getContentPane().add(jButton2);
+        jButton2.setBounds(810, 60, 80, 23);
 
         label13.setForeground(new java.awt.Color(255, 255, 255));
         label13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label13, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 120, 20, 20));
+        getContentPane().add(label13);
+        label13.setBounds(290, 650, 20, 20);
 
         label14.setForeground(new java.awt.Color(255, 255, 255));
         label14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label14, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 160, 20, 20));
+        getContentPane().add(label14);
+        label14.setBounds(290, 680, 20, 20);
 
         label15.setForeground(new java.awt.Color(255, 255, 255));
         label15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label15, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 200, 20, 20));
+        getContentPane().add(label15);
+        label15.setBounds(290, 710, 20, 20);
 
         label16.setForeground(new java.awt.Color(255, 255, 255));
         label16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 290, 20, 20));
+        getContentPane().add(label16);
+        label16.setBounds(890, 230, 20, 20);
 
         label17.setForeground(new java.awt.Color(255, 255, 255));
         label17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label17, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 360, 20, 20));
+        getContentPane().add(label17);
+        label17.setBounds(890, 310, 20, 20);
 
         label18.setForeground(new java.awt.Color(255, 255, 255));
         label18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label18, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 400, 20, 20));
+        getContentPane().add(label18);
+        label18.setBounds(890, 340, 20, 20);
 
         label19.setForeground(new java.awt.Color(255, 255, 255));
         label19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label19, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, 20, 20));
+        getContentPane().add(label19);
+        label19.setBounds(890, 410, 20, 20);
 
         Plabel6.setBackground(new java.awt.Color(0, 0, 0));
         Plabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel6.setForeground(new java.awt.Color(255, 255, 255));
         Plabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel6.setText("6");
-        Plabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel6.setOpaque(true);
-        getContentPane().add(Plabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 130, 60));
+        getContentPane().add(Plabel6);
+        Plabel6.setBounds(740, 210, 140, 70);
 
         Plabel5.setBackground(new java.awt.Color(0, 0, 0));
         Plabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel5.setForeground(new java.awt.Color(255, 255, 255));
         Plabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel5.setText("5");
-        Plabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel5.setOpaque(true);
-        getContentPane().add(Plabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 130, 70));
+        getContentPane().add(Plabel5);
+        Plabel5.setBounds(320, 640, 140, 100);
 
         Plabel9.setBackground(new java.awt.Color(0, 0, 0));
         Plabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel9.setForeground(new java.awt.Color(255, 255, 255));
         Plabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel9.setText("9");
-        Plabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel9.setOpaque(true);
-        getContentPane().add(Plabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 460, 130, 70));
+        getContentPane().add(Plabel9);
+        Plabel9.setBounds(740, 390, 140, 70);
 
         Plabel7.setBackground(new java.awt.Color(0, 0, 0));
         Plabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel7.setForeground(new java.awt.Color(255, 255, 255));
         Plabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel7.setText("7");
-        Plabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel7.setOpaque(true);
-        getContentPane().add(Plabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 360, 130, 60));
+        getContentPane().add(Plabel7);
+        Plabel7.setBounds(740, 300, 140, 70);
 
         label20.setForeground(new java.awt.Color(255, 255, 255));
         label20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label20, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 550, 20, 20));
+        getContentPane().add(label20);
+        label20.setBounds(890, 490, 20, 20);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(770, 710, 70, 59);
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("SINCRONIZADA");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(760, 690, 100, 17);
 
         label21.setForeground(new java.awt.Color(255, 255, 255));
         label21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label21, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 590, 20, 20));
+        getContentPane().add(label21);
+        label21.setBounds(890, 520, 20, 20);
 
         Plabel10.setBackground(new java.awt.Color(0, 0, 0));
         Plabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel10.setForeground(new java.awt.Color(255, 255, 255));
         Plabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel10.setText("10");
-        Plabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel10.setOpaque(true);
-        getContentPane().add(Plabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 560, 130, 70));
+        getContentPane().add(Plabel10);
+        Plabel10.setBounds(740, 480, 140, 100);
 
         label22.setForeground(new java.awt.Color(255, 255, 255));
         label22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label22, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 620, 20, 20));
+        getContentPane().add(label22);
+        label22.setBounds(890, 550, 20, 20);
 
         label23.setForeground(new java.awt.Color(255, 255, 255));
         label23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label23, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 690, 20, 20));
+        getContentPane().add(label23);
+        label23.setBounds(890, 610, 20, 20);
 
         label24.setForeground(new java.awt.Color(255, 255, 255));
         label24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label24, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 730, 20, 20));
+        getContentPane().add(label24);
+        label24.setBounds(890, 640, 20, 20);
 
         Plabel11.setBackground(new java.awt.Color(0, 0, 0));
         Plabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         Plabel11.setForeground(new java.awt.Color(255, 255, 255));
         Plabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel11.setText("11");
-        Plabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 3));
+        Plabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel11.setOpaque(true);
-        getContentPane().add(Plabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 130, 70));
+        getContentPane().add(Plabel11);
+        Plabel11.setBounds(740, 600, 140, 70);
 
+        boton1.setBackground(new java.awt.Color(0, 0, 0));
+        boton1.setForeground(new java.awt.Color(255, 255, 255));
         boton1.setText("BOMBA DE REFRIGERACION EN OPERACION");
         boton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -559,8 +909,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton1MouseReleased(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 280, -1, -1));
+        getContentPane().add(boton1);
+        boton1.setBounds(1130, 280, 290, 23);
 
+        boton2.setBackground(new java.awt.Color(0, 0, 0));
+        boton2.setForeground(new java.awt.Color(255, 255, 255));
         boton2.setText("VALVULA DE AISLAMIENTO ABIERTA");
         boton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -578,8 +931,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton2MouseReleased(evt);
             }
         });
-        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 190, -1, -1));
+        getContentPane().add(boton2);
+        boton2.setBounds(1130, 190, 250, 23);
 
+        boton3.setBackground(new java.awt.Color(0, 0, 0));
+        boton3.setForeground(new java.awt.Color(255, 255, 255));
         boton3.setText("VALVULA DE ALIVIO CERRADA");
         boton3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -597,8 +953,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton3MouseReleased(evt);
             }
         });
-        getContentPane().add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 100, -1, -1));
+        getContentPane().add(boton3);
+        boton3.setBounds(1130, 100, 220, 23);
 
+        boton4.setBackground(new java.awt.Color(0, 0, 0));
+        boton4.setForeground(new java.awt.Color(255, 255, 255));
         boton4.setText("JUNTA INFLABLE OPERACION DESAPLICADA");
         boton4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -616,8 +975,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton4MouseReleased(evt);
             }
         });
-        getContentPane().add(boton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 400, -1, -1));
+        getContentPane().add(boton4);
+        boton4.setBounds(1130, 400, 300, 23);
 
+        boton5.setBackground(new java.awt.Color(0, 0, 0));
+        boton5.setForeground(new java.awt.Color(255, 255, 255));
         boton5.setText("FILTRO REFRIGERACION ON");
         boton5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -635,8 +997,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton5MouseReleased(evt);
             }
         });
-        getContentPane().add(boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 160, -1, -1));
+        getContentPane().add(boton5);
+        boton5.setBounds(1130, 160, 200, 23);
 
+        boton7.setBackground(new java.awt.Color(0, 0, 0));
+        boton7.setForeground(new java.awt.Color(255, 255, 255));
         boton7.setText("VALVULA ESFERICA ABIERTA");
         boton7.setFocusable(false);
         boton7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -652,8 +1017,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton7MouseReleased(evt);
             }
         });
-        getContentPane().add(boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 70, -1, -1));
+        getContentPane().add(boton7);
+        boton7.setBounds(1130, 70, 200, 23);
 
+        boton6.setBackground(new java.awt.Color(0, 0, 0));
+        boton6.setForeground(new java.awt.Color(255, 255, 255));
         boton6.setText("FRENOS APLICADOS");
         boton6.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -668,8 +1036,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton6MouseReleased(evt);
             }
         });
-        getContentPane().add(boton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 130, -1, -1));
+        getContentPane().add(boton6);
+        boton6.setBounds(1130, 130, 150, 23);
 
+        boton9.setBackground(new java.awt.Color(0, 0, 0));
+        boton9.setForeground(new java.awt.Color(255, 255, 255));
         boton9.setText("LUBRICACION FORZADA ON");
         boton9.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -689,8 +1060,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton9ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 220, -1, -1));
+        getContentPane().add(boton9);
+        boton9.setBounds(1130, 220, 190, 23);
 
+        boton8.setBackground(new java.awt.Color(0, 0, 0));
+        boton8.setForeground(new java.awt.Color(255, 255, 255));
         boton8.setText("FRENOS DESAPLICADOS");
         boton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boton8.setDefaultCapable(false);
@@ -712,8 +1086,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 250, -1, -1));
+        getContentPane().add(boton8);
+        boton8.setBounds(1130, 250, 180, 23);
 
+        boton10.setBackground(new java.awt.Color(0, 0, 0));
+        boton10.setForeground(new java.awt.Color(255, 255, 255));
         boton10.setText("REGULADOR DESBLOQUEADO");
         boton10.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -728,8 +1105,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton10MouseReleased(evt);
             }
         });
-        getContentPane().add(boton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 340, -1, -1));
+        getContentPane().add(boton10);
+        boton10.setBounds(1130, 340, 210, 23);
 
+        boton11.setBackground(new java.awt.Color(0, 0, 0));
+        boton11.setForeground(new java.awt.Color(255, 255, 255));
         boton11.setText("REGULADOR ENERGIZADO");
         boton11.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -747,8 +1127,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton11MouseReleased(evt);
             }
         });
-        getContentPane().add(boton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 310, -1, -1));
+        getContentPane().add(boton11);
+        boton11.setBounds(1130, 310, 190, 23);
 
+        boton12.setBackground(new java.awt.Color(0, 0, 0));
+        boton12.setForeground(new java.awt.Color(255, 255, 255));
         boton12.setText("VELOCIDAD >90%");
         boton12.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -763,8 +1146,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton12MouseReleased(evt);
             }
         });
-        getContentPane().add(boton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 370, -1, -1));
+        getContentPane().add(boton12);
+        boton12.setBounds(1130, 370, 140, 23);
 
+        boton13.setBackground(new java.awt.Color(0, 0, 0));
+        boton13.setForeground(new java.awt.Color(255, 255, 255));
         boton13.setText("INTERRUPTOR DE CAMPO CERRADO");
         boton13.setFocusable(false);
         boton13.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -780,8 +1166,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton13MouseReleased(evt);
             }
         });
-        getContentPane().add(boton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 430, -1, -1));
+        getContentPane().add(boton13);
+        boton13.setBounds(1130, 430, 240, 23);
 
+        boton14.setBackground(new java.awt.Color(0, 0, 0));
+        boton14.setForeground(new java.awt.Color(255, 255, 255));
         boton14.setText("LUBRICACION FORZADA OFF");
         boton14.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -804,9 +1193,12 @@ public class Arranque extends javax.swing.JFrame {
                 boton14ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 460, -1, -1));
+        getContentPane().add(boton14);
+        boton14.setBounds(1130, 460, 200, 23);
 
-        boton15.setText("VOLTAJE INTERRUPTOR >63%");
+        boton15.setBackground(new java.awt.Color(0, 0, 0));
+        boton15.setForeground(new java.awt.Color(255, 255, 255));
+        boton15.setText("VOLTAJE INTERRUPTOR GENERADOR >63%");
         boton15.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 boton15MouseDragged(evt);
@@ -820,8 +1212,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton15MouseReleased(evt);
             }
         });
-        getContentPane().add(boton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 490, -1, -1));
+        getContentPane().add(boton15);
+        boton15.setBounds(1130, 490, 290, 23);
 
+        boton16.setBackground(new java.awt.Color(0, 0, 0));
+        boton16.setForeground(new java.awt.Color(255, 255, 255));
         boton16.setText("SINCRONIZACION DISPONIBLE");
         boton16.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -839,8 +1234,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton16MouseReleased(evt);
             }
         });
-        getContentPane().add(boton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 520, -1, -1));
+        getContentPane().add(boton16);
+        boton16.setBounds(1130, 520, 220, 23);
 
+        boton17.setBackground(new java.awt.Color(0, 0, 0));
+        boton17.setForeground(new java.awt.Color(255, 255, 255));
         boton17.setText("UNIDAD X SELECCIONADA");
         boton17.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -858,8 +1256,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton17MouseReleased(evt);
             }
         });
-        getContentPane().add(boton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 550, -1, -1));
+        getContentPane().add(boton17);
+        boton17.setBounds(1130, 550, 190, 23);
 
+        boton18.setBackground(new java.awt.Color(0, 0, 0));
+        boton18.setForeground(new java.awt.Color(255, 255, 255));
         boton18.setText("COMUNICACION G4UX/G4CM OK");
         boton18.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -879,8 +1280,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 580, -1, -1));
+        getContentPane().add(boton18);
+        boton18.setBounds(1130, 580, 230, 23);
 
+        boton19.setBackground(new java.awt.Color(0, 0, 0));
+        boton19.setForeground(new java.awt.Color(255, 255, 255));
         boton19.setText("SINCRO EN MARCHA");
         boton19.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         boton19.setDefaultCapable(false);
@@ -902,8 +1306,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton19ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 610, -1, -1));
+        getContentPane().add(boton19);
+        boton19.setBounds(1130, 610, 150, 23);
 
+        boton20.setBackground(new java.awt.Color(0, 0, 0));
+        boton20.setForeground(new java.awt.Color(255, 255, 255));
         boton20.setText("SINCRONIZADOR OK");
         boton20.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -918,8 +1325,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton20MouseReleased(evt);
             }
         });
-        getContentPane().add(boton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 640, -1, -1));
+        getContentPane().add(boton20);
+        boton20.setBounds(1130, 640, 150, 23);
 
+        boton21.setBackground(new java.awt.Color(0, 0, 0));
+        boton21.setForeground(new java.awt.Color(255, 255, 255));
         boton21.setText("INTERRUPTOR GENERADOR CERRADO");
         boton21.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -937,8 +1347,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton21MouseReleased(evt);
             }
         });
-        getContentPane().add(boton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 670, -1, -1));
+        getContentPane().add(boton21);
+        boton21.setBounds(1130, 670, 250, 23);
 
+        boton22.setBackground(new java.awt.Color(0, 0, 0));
+        boton22.setForeground(new java.awt.Color(255, 255, 255));
         boton22.setText("TENSION > 63%");
         boton22.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -953,8 +1366,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton22MouseReleased(evt);
             }
         });
-        getContentPane().add(boton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 700, -1, -1));
+        getContentPane().add(boton22);
+        boton22.setBounds(1130, 700, 130, 23);
 
+        boton23.setBackground(new java.awt.Color(0, 0, 0));
+        boton23.setForeground(new java.awt.Color(255, 255, 255));
         boton23.setText("LIM APERTURA AL 100%");
         boton23.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -969,8 +1385,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton23MouseReleased(evt);
             }
         });
-        getContentPane().add(boton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 730, -1, -1));
+        getContentPane().add(boton23);
+        boton23.setBounds(1130, 730, 170, 23);
 
+        boton24.setBackground(new java.awt.Color(0, 0, 0));
+        boton24.setForeground(new java.awt.Color(255, 255, 255));
         boton24.setText("UNIDAD DESELECCIONADA");
         boton24.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -988,13 +1407,17 @@ public class Arranque extends javax.swing.JFrame {
                 boton24MouseReleased(evt);
             }
         });
-        getContentPane().add(boton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 760, -1, -1));
+        getContentPane().add(boton24);
+        boton24.setBounds(1130, 760, 190, 23);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
+        icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 1000));
+        getContentPane().add(icono);
+        icono.setBounds(-50, 0, 1540, 1010);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1074,6 +1497,8 @@ public class Arranque extends javax.swing.JFrame {
         boton24.setLocation(1130, ubica[num23]);
         boton24.setBackground(color);
         
+        
+     
         
         label1.setBounds(rec1);
         label2.setBounds(rec2);
@@ -1182,6 +1607,7 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
+         // hiloA.start();
         if (superbande == true) {
             if (bande1 == true) {
                 mover(boton1);
@@ -1201,7 +1627,9 @@ public class Arranque extends javax.swing.JFrame {
                         System.out.println("correcto");
                         label1.setSize(boton1.getWidth(), boton1.getHeight());
                         label1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
-                        boton1.setBackground(Color.green);
+                        //boton1.setBackground(Color.black);
+                        
+                        correct1.setBackground(Color.green);
                         bande1 = false;
                         try {
                             Thread.sleep(500);
@@ -1222,6 +1650,7 @@ public class Arranque extends javax.swing.JFrame {
 
             }
         }
+       
     }//GEN-LAST:event_boton1MouseDragged
 
     private void boton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseEntered
@@ -1262,7 +1691,8 @@ public class Arranque extends javax.swing.JFrame {
                     label2.setSize(boton2.getWidth(), boton2.getHeight());
                     label2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande2 = false;
-                    boton2.setBackground(Color.green);
+                    //boton2.setBackground(Color.green);
+                    correct2.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1275,7 +1705,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvula.setSize(734, 499);
+                    valvula.setSize(720, 484);
                     valvula.setVisible(true);
                     valvula.setLocationRelativeTo(null);
                 }
@@ -1326,7 +1756,8 @@ public class Arranque extends javax.swing.JFrame {
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
                     label3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande3 = false;
-                    boton3.setBackground(Color.green);
+                    //boton3.setBackground(Color.green);
+                    correct3.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1339,7 +1770,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvulaA.setSize(734, 499);
+                    valvulaA.setSize(630, 471);
                     valvulaA.setVisible(true);
                     valvulaA.setLocationRelativeTo(null);
 
@@ -1390,7 +1821,8 @@ public class Arranque extends javax.swing.JFrame {
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
                     label4.setLocation(tam[0], tam[2] - 20);
                     bande4 = false;
-                    boton4.setBackground(Color.green);
+                    //boton4.setBackground(Color.green);
+                    correct4.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1454,7 +1886,8 @@ public class Arranque extends javax.swing.JFrame {
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
                     label5.setLocation(tam[0], tam[2] - 20);
                     bande5 = false;
-                    boton5.setBackground(Color.green);
+                    //boton5.setBackground(Color.green);
+                    correct5.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1520,7 +1953,8 @@ public class Arranque extends javax.swing.JFrame {
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
                     label7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande7 = false;
-                    boton7.setBackground(Color.green);
+                    //boton7.setBackground(Color.green);
+                    correct7.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1533,7 +1967,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvulaE.setSize(734, 499);
+                    valvulaE.setSize(734, 400);
                     valvulaE.setVisible(true);
                     valvulaE.setLocationRelativeTo(null);
                 }
@@ -1572,7 +2006,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label6);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 5)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 5)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -1581,7 +2015,9 @@ public class Arranque extends javax.swing.JFrame {
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
                     label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande6 = false;
-                    boton6.setBackground(Color.green);
+                    //boton6.setBackground(Color.green);
+                    correct6.setBackground(Color.green);
+                    
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1594,7 +2030,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    frenos.setSize(734, 499);
+                    frenos.setSize(734, 425);
                     frenos.setVisible(true);
                     frenos.setLocationRelativeTo(null);
                 }
@@ -1642,7 +2078,8 @@ public class Arranque extends javax.swing.JFrame {
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
                     label9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande9 = false;
-                    boton9.setBackground(Color.green);
+                    //boton9.setBackground(Color.green);
+                    correct9.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1708,7 +2145,8 @@ public class Arranque extends javax.swing.JFrame {
                     label8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande8 = false;
 
-                    boton8.setBackground(Color.green);
+                    //boton8.setBackground(Color.green);
+                    correct8.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1721,7 +2159,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    frenosd.setSize(734, 499);
+                    frenosd.setSize(734, 429);
                     frenosd.setVisible(true);
                     frenosd.setLocationRelativeTo(null);
                 }
@@ -1774,7 +2212,8 @@ public class Arranque extends javax.swing.JFrame {
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
                     label10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande10 = false;
-                    boton10.setBackground(Color.green);
+                    //boton10.setBackground(Color.green);
+                    correct10.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1787,7 +2226,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    reguladordes.setSize(700, 420);
+                    reguladordes.setSize(660, 410);
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
 
@@ -1836,7 +2275,8 @@ public class Arranque extends javax.swing.JFrame {
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
                     label11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande11 = false;
-                    boton11.setBackground(Color.green);
+                    //boton11.setBackground(Color.green);
+                    correct11.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1849,7 +2289,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    reguladorene.setSize(700, 420);
+                    reguladorene.setSize(660, 410);
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
 
@@ -1892,7 +2332,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label12);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) /*&& (contgeneral >= 9)*/) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 9)) {
                     // &&(contgeneral>=9)
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
@@ -1902,7 +2342,8 @@ public class Arranque extends javax.swing.JFrame {
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
                     label12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande12 = false;
-                    boton12.setBackground(Color.green);
+                    //boton12.setBackground(Color.green);
+                    correct12.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1915,7 +2356,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    velocidad.setSize(700, 370);
+                    velocidad.setSize(660, 380);
                     velocidad.setVisible(true);
                     velocidad.setLocationRelativeTo(null);
 
@@ -1950,19 +2391,20 @@ public class Arranque extends javax.swing.JFrame {
                 int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton13.getBounds();
-                tam = tamañoIz(label13);
+                tam = tamaño(label13);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])/*&& (contgeneral >= 12)*/) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[0], tam[2] - 20);
+                    boton13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[0], tam[2] - 20);
+                    label13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande13 = false;
-                    boton13.setBackground(Color.green);
+                    //boton13.setBackground(Color.green);
+                    correct13.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1975,7 +2417,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    interruptor.setSize(734, 494);
+                    interruptor.setSize(613, 474);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2010,19 +2452,20 @@ public class Arranque extends javax.swing.JFrame {
                 int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton14.getBounds();
-                tam = tamañoIz(label14);
+                tam = tamaño(label14);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[0], tam[2] - 20);
+                    boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[0], tam[2] - 20);
+                    label14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande14 = false;
-                    boton14.setBackground(Color.green);
+                    //boton14.setBackground(Color.green);
+                    correct14.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2035,7 +2478,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    lubrica.setSize(734, 494);
+                    lubrica.setSize(734, 424);
                     lubrica.setVisible(true);
                     lubrica.setLocationRelativeTo(null);
                 }
@@ -2078,19 +2521,20 @@ public class Arranque extends javax.swing.JFrame {
                 int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton15.getBounds();
-                tam = tamañoIz(label15);
+                tam = tamaño(label15);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[0], tam[2] - 20);
+                    boton15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[0], tam[2] - 20);
+                    label15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande15 = false;
-                    boton15.setBackground(Color.green);
+                    //boton15.setBackground(Color.green);
+                    correct15.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2103,7 +2547,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    interruptor.setSize(734, 494);
+                    interruptor.setSize(494, 494);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2141,7 +2585,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label16);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2150,7 +2594,8 @@ public class Arranque extends javax.swing.JFrame {
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
                     label16.setLocation(tam[0], tam[2] - 20);
                     bande16 = false;
-                    boton16.setBackground(Color.green);
+                    //boton16.setBackground(Color.green);
+                    correct16.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2163,7 +2608,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    sincro.setSize(734, 494);
+                   // sincro.setSize(734, 494);
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -2205,7 +2650,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label17);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 16)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2214,7 +2659,8 @@ public class Arranque extends javax.swing.JFrame {
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
                     label17.setLocation(tam[0], tam[2] - 20);
                     bande17 = false;
-                    boton17.setBackground(Color.green);
+                    //boton17.setBackground(Color.green);
+                    correct17.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2227,7 +2673,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    unidad.setSize(734, 494);
+                    //unidad.setSize(734, 494);
                     unidad.setVisible(true);
                     unidad.setLocationRelativeTo(null);
                 }
@@ -2269,7 +2715,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label18);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 16)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2278,7 +2724,8 @@ public class Arranque extends javax.swing.JFrame {
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
                     label18.setLocation(tam[0], tam[2] - 20);
                     bande18 = false;
-                    boton18.setBackground(Color.green);
+                    //boton18.setBackground(Color.green);
+                    correct18.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2291,7 +2738,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    comunicacion.setSize(734, 494);
+                    //comunicacion.setSize(734, 494);
                     comunicacion.setVisible(true);
                     comunicacion.setLocationRelativeTo(null);
                 }
@@ -2332,7 +2779,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label19);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 18)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2341,7 +2788,8 @@ public class Arranque extends javax.swing.JFrame {
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
                     label19.setLocation(tam[0], tam[2] - 20);
                     bande19 = false;
-                    boton19.setBackground(Color.green);
+                    //boton19.setBackground(Color.green);
+                    correct19.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2354,7 +2802,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    sincro.setSize(734, 494);
+                    //sincro.setSize(734, 494);
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -2396,7 +2844,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label20);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2405,7 +2853,8 @@ public class Arranque extends javax.swing.JFrame {
                     label20.setSize(boton20.getWidth(), boton20.getHeight());
                     label20.setLocation(tam[0], tam[2] - 20);
                     bande20 = false;
-                    boton20.setBackground(Color.green);
+                    //boton20.setBackground(Color.green);
+                    correct20.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2418,7 +2867,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    sincro.setSize(734, 494);
+                   // sincro.setSize(734, 494);
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -2455,7 +2904,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label21);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2464,7 +2913,8 @@ public class Arranque extends javax.swing.JFrame {
                     label21.setSize(boton21.getWidth(), boton21.getHeight());
                     label21.setLocation(tam[0], tam[2] - 20);
                     bande21 = false;
-                    boton21.setBackground(Color.green);
+                    //boton21.setBackground(Color.green);
+                    correct21.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2477,7 +2927,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    interruptor.setSize(734, 494);
+                   // interruptor.setSize(734, 494);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2500,7 +2950,7 @@ public class Arranque extends javax.swing.JFrame {
         if (superbande == true) {
             if (bande21 == true) {
                 System.out.println("incorrecto");
-                boton21.setLocation(location17);
+                boton21.setLocation(location21);
                 //codigo para el cambio de color del boton
                 boton21.setBackground(Color.red);
                 //codigo para la generacion de el sonido
@@ -2519,7 +2969,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label22);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2528,20 +2978,21 @@ public class Arranque extends javax.swing.JFrame {
                     label22.setSize(boton22.getWidth(), boton22.getHeight());
                     label22.setLocation(tam[0], tam[2] - 20);
                     bande22 = false;
-                    boton22.setBackground(Color.green);
+                    //boton22.setBackground(Color.green);
+                    correct22.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                    tensionM63 tension = null;
+                    VoltajeM63 tension = null;
                     try {
-                        tension = new tensionM63();
+                        tension = new VoltajeM63();
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    tension.setSize(734, 494);
+                    //tension.setSize(734, 494);
                     tension.setVisible(true);
                     tension.setLocationRelativeTo(null);
                 }
@@ -2579,7 +3030,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamañoIz(label23);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 22)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2588,7 +3039,8 @@ public class Arranque extends javax.swing.JFrame {
                     label23.setSize(boton23.getWidth(), boton23.getHeight());
                     label23.setLocation(tam[0], tam[2] - 20);
                     bande23 = false;
-                    boton23.setBackground(Color.green);
+                    //boton23.setBackground(Color.green);
+                    correct23.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -2601,7 +3053,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    limite.setSize(734, 494);
+                    //limite.setSize(734, 494);
                     limite.setVisible(true);
                     limite.setLocationRelativeTo(null);
                 }
@@ -2637,19 +3089,20 @@ public class Arranque extends javax.swing.JFrame {
                 //ubicacion del puntero en el presiso momento
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton24.getBounds();
-                tam = tamaño(label24);
+                tam = tamañoIz(label24);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 22)) {
                     try {
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
-                        boton24.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                        boton24.setLocation(tam[0], tam[2] - 20);
                         System.out.println("correcto");
                         label24.setSize(boton24.getWidth(), boton24.getHeight());
-                        label24.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
-                        boton24.setBackground(Color.green);
+                        label24.setLocation(tam[0], tam[2] - 20);
+                        //boton24.setBackground(Color.green);
+                        correct24.setBackground(Color.green);
                         bande24 = false;
                         try {
                             Thread.sleep(500);
@@ -2658,8 +3111,8 @@ public class Arranque extends javax.swing.JFrame {
                         }
                         //llamado a la ventana de la bomba de refrigeracion
                         Unidaddes unidadd = null;
-                        unidadd = new Unidaddes();
-                        unidadd.setSize(734, 494);
+                        unidadd = new Unidaddes(contgeneral);
+                        //unidadd.setSize(734, 494);
                         unidadd.setVisible(true);
                         unidadd.setLocationRelativeTo(null);
 
@@ -2841,8 +3294,48 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JButton boton7;
     private javax.swing.JButton boton8;
     private javax.swing.JButton boton9;
+    private javax.swing.JButton correct1;
+    private javax.swing.JButton correct10;
+    private javax.swing.JButton correct11;
+    private javax.swing.JButton correct12;
+    private javax.swing.JButton correct13;
+    private javax.swing.JButton correct14;
+    private javax.swing.JButton correct15;
+    private javax.swing.JButton correct16;
+    private javax.swing.JButton correct17;
+    private javax.swing.JButton correct18;
+    private javax.swing.JButton correct19;
+    private javax.swing.JButton correct2;
+    private javax.swing.JButton correct20;
+    private javax.swing.JButton correct21;
+    private javax.swing.JButton correct22;
+    private javax.swing.JButton correct23;
+    private javax.swing.JButton correct24;
+    private javax.swing.JButton correct3;
+    private javax.swing.JButton correct4;
+    private javax.swing.JButton correct5;
+    private javax.swing.JButton correct6;
+    private javax.swing.JButton correct7;
+    private javax.swing.JButton correct8;
+    private javax.swing.JButton correct9;
     private javax.swing.JLabel icono;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel label1;
     private javax.swing.JLabel label10;
     private javax.swing.JLabel label11;
@@ -2870,4 +3363,5 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JLabel logo;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
+   
 }
