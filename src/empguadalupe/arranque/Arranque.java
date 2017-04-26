@@ -6,8 +6,8 @@
 package empguadalupe.arranque;
 
 import com.sun.java.swing.plaf.windows.resources.windows;
-import empguadalupe.arranque.EnMarcha.AbrirValvulaEsferica;
-import empguadalupe.arranque.EnMarcha.AplicarFrenos;
+import empguadalupe.arranque.EnMarcha.CerrarValvulaEsferica;
+import empguadalupe.arranque.EnMarcha.AplicarFrenosParoNormal;
 import empguadalupe.arranque.EnMarcha.BombaRefrigeracion;
 import empguadalupe.arranque.EnMarcha.DesaplicarFrenos;
 import empguadalupe.arranque.EnMarcha.JuntaInflable;
@@ -1423,6 +1423,8 @@ public class Arranque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de arranque
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
+       CondicionesIniciales condi = new CondicionesIniciales();
+       condi.setVisible(true);
         Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         int num0 = numero.get(0);
         boton1.setLocation(1130, ubica[num0]);
@@ -1639,7 +1641,7 @@ public class Arranque extends javax.swing.JFrame {
                         //llamado a la ventana de la bomba de refrigeracion
                         BombaRefrigeracion bomba = null;
                         bomba = new BombaRefrigeracion();
-                        bomba.setSize(734, 494);
+                        //bomba.setSize(734, 494);
                         bomba.setVisible(true);
                         bomba.setLocationRelativeTo(null);
 
@@ -1705,7 +1707,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvula.setSize(720, 484);
+                    //valvula.setSize(720, 484);
                     valvula.setVisible(true);
                     valvula.setLocationRelativeTo(null);
                 }
@@ -1770,7 +1772,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvulaA.setSize(630, 471);
+                    //valvulaA.setSize(630, 471);
                     valvulaA.setVisible(true);
                     valvulaA.setLocationRelativeTo(null);
 
@@ -1835,7 +1837,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    junta.setSize(884, 499);
+                    //junta.setSize(884, 499);
                     junta.setVisible(true);
                     junta.setLocationRelativeTo(null);
 
@@ -1900,7 +1902,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    filtro.setSize(720, 520);
+                    //filtro.setSize(720, 520);
                     filtro.setVisible(true);
                     filtro.setLocationRelativeTo(null);
 
@@ -1961,13 +1963,13 @@ public class Arranque extends javax.swing.JFrame {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                    AbrirValvulaEsferica valvulaE = null;
+                    CerrarValvulaEsferica valvulaE = null;
                     try {
-                        valvulaE = new AbrirValvulaEsferica();
+                        valvulaE = new CerrarValvulaEsferica();
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    valvulaE.setSize(734, 400);
+                    //valvulaE.setSize(734, 400);
                     valvulaE.setVisible(true);
                     valvulaE.setLocationRelativeTo(null);
                 }
@@ -2024,13 +2026,13 @@ public class Arranque extends javax.swing.JFrame {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                    AplicarFrenos frenos = null;
+                    AplicarFrenosParoNormal frenos = null;
                     try {
-                        frenos = new AplicarFrenos();
+                        frenos = new AplicarFrenosParoNormal();
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    frenos.setSize(734, 425);
+                   // frenos.setSize(734, 425);
                     frenos.setVisible(true);
                     frenos.setLocationRelativeTo(null);
                 }
@@ -2092,7 +2094,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    lubricar.setSize(700, 499);
+                    //lubricar.setSize(700, 499);
                     lubricar.setVisible(true);
                     lubricar.setLocationRelativeTo(null);
 
@@ -2159,7 +2161,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    frenosd.setSize(734, 429);
+                    //frenosd.setSize(734, 429);
                     frenosd.setVisible(true);
                     frenosd.setLocationRelativeTo(null);
                 }
@@ -2226,7 +2228,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    reguladordes.setSize(660, 410);
+                    //reguladordes.setSize(660, 410);
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
 
@@ -2289,7 +2291,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    reguladorene.setSize(660, 410);
+                   // reguladorene.setSize(660, 410);
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
 
