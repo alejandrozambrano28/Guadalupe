@@ -53,8 +53,8 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
         jLabel1.setText("INTERRUPTOR DE GENERADOR CERRADO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/InterruptorMaquina.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 51, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/Ginterruptor.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 51, 540, 400));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +62,7 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);

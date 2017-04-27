@@ -67,8 +67,8 @@ int contgeneralv=0;
         jLabel1.setText("INTERRUPTOR DE CAMPO CERRADO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 11, -1, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/InterruptorCampo.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 43, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GinterruptorCampo.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 570, -1));
 
         jButton1.setText("Ubicación en planta Local");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Cuando se ejecuta este paso, el interruptor cargado con corriente de los servicios auxiliares      (125V DC), aplica esta energía a anillo superior, con esto el rotor se magnetiza y comienza a generar energía con el movimiento antes dado por el agua.\nEn esta imagen la podemos ver como pre-excitación y exitacion.\nla maquina se autoexita cuando ya se encuentra generando.");
+        jTextArea1.setText("Interruptor de campo\nCuando se ejecuta este paso, el interruptor cargado con corriente de los servicios auxiliares      (125V DC), aplica esta energía a anillo superior, con esto el rotor se magnetiza y comienza a generar energía con el movimiento antes dado por el agua.\nEn esta imagen la podemos ver como pre-excitación y excitación.\nla maquina se auto excita cuando ya se encuentra generando.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
@@ -106,7 +106,7 @@ int contgeneralv=0;
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 620, 440));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 930, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

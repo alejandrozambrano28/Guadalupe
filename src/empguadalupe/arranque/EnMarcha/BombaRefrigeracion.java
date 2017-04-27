@@ -66,8 +66,8 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         jLabel1.setText("BOMBA DE REFRIGERACION");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 8, 350, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/bombaderefrigeracion.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, 340));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/Sbomba2_1.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, 370));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 180, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 2, 810, 450));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 2, 960, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

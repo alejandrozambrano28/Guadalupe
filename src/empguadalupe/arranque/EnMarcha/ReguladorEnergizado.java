@@ -88,7 +88,7 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El regulador al recibir la señal de desbloqueado,recibe la señal para empezar a manejar los alabes por medio del aceite que es enviado desde la válvula de aislamiento.");
+        jTextArea1.setText("El regulador al recibir la señal de desbloqueado, recibe la señal para empezar a manejar los alabes por medio del aceite que es enviado desde la válvula de aislamiento.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

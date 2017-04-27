@@ -54,8 +54,8 @@ public class SincroDisponible extends javax.swing.JFrame {
         jLabel1.setText("SINCRONIZADOR DISPONIBLE");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 11, 390, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/Sincro.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 300, 220));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/SincroDispo.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 480, 200));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +68,7 @@ public class SincroDisponible extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El Sincronizador es el que logra hacer la conexión entre el generador y con el Sistema Interconectado Nacional (SIN). Este equipo es la encargada de lograr que el voltaje, la frecuencia y el angulo de fase del generador sea la misma del SIN y con esto evitar un daño en la maquina.\n\n\n");
+        jTextArea1.setText("El Sincronizador es el que logra hacer la conexión entre el generador y con el Sistema Interconectado Nacional (SIN). Este equipo es la encargada de lograr que el voltaje, la frecuencia y el ángulo de fase del generador sea la misma del SIN y con esto evitar un daño en la máquina.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
@@ -77,7 +77,7 @@ public class SincroDisponible extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 320));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

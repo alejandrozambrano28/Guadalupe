@@ -61,7 +61,7 @@ int contgeneralv=0;
         jLabel1.setText("LUBRICACION FORZADA OFF");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/LubricacionForzada.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GlubricacionF.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 46, 380, 375));
 
         jButton1.setText("Ubicacion en planta");

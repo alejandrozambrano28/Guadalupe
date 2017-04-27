@@ -63,7 +63,7 @@ public class Unidaddes extends javax.swing.JFrame {
         jLabel1.setText("UNIDAD DESELECCIONADA");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 390, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/sincro2.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/SincroNoDispo.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 43, -1, -1));
 
         jButton1.setText("Ubicación en planta");

@@ -64,8 +64,8 @@ public class VoltajeM63 extends javax.swing.JFrame {
         jLabel1.setText("VOLTAJE GENERADOR >63%");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/InterruptorCampo.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 58, 250, 340));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GinterruptorCampo.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 620, 390));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +95,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 480, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 890, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

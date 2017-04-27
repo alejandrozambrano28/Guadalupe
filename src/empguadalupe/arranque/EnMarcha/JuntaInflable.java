@@ -82,7 +82,7 @@ public class JuntaInflable extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Su funcion es sellar el rotor\ncuando este se encuentra sin funcionamiento,\npara evitar que las aguas donde esta \nsumergida la rueda, puedan subir al piso \nS1.\nEn caso de no poder utilizar la junta \ninflable de operacion se puede utilizar \nla de mantenimiento.");
+        jTextArea1.setText("Su función es sellar el rotor\ncuando este se encuentra sin funcionamiento,\npara evitar que las aguas donde esta \nsumergida la rueda, puedan subir al piso \nS1.\nEn caso de no poder utilizar la junta \ninflable de operación se puede utilizar \nla de mantenimiento.\n");
         jTextArea1.setToolTipText("");
         jScrollPane1.setViewportView(jTextArea1);
 

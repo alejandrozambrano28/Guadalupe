@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="El regulador al recibir la se&#xf1;al de desbloqueado,recibe la se&#xf1;al para empezar a manejar los alabes por medio del aceite que es enviado desde la v&#xe1;lvula de aislamiento."/>
+            <Property name="text" type="java.lang.String" value="El regulador al recibir la se&#xf1;al de desbloqueado, recibe la se&#xf1;al para empezar a manejar los alabes por medio del aceite que es enviado desde la v&#xe1;lvula de aislamiento."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
