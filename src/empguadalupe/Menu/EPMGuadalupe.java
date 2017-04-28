@@ -22,7 +22,7 @@ public class EPMGuadalupe {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-            JFrame ventana = new Arranque();
+            JFrame ventana = new Menu1();
             ventana.setLocationRelativeTo(null);
             ventana.setVisible(true);
    }
