@@ -296,6 +296,7 @@ public class Arranque extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -405,10 +406,12 @@ public class Arranque extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setUndecorated(true);
         setResizable(false);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(null);
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
-        getContentPane().add(logo);
+        jPanel1.add(logo);
         logo.setBounds(0, 0, 170, 50);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -418,7 +421,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel2);
+        jPanel1.add(jLabel2);
         jLabel2.setBounds(360, 270, 70, 50);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -428,7 +431,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel3);
+        jPanel1.add(jLabel3);
         jLabel3.setBounds(360, 360, 70, 50);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -438,7 +441,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel4);
+        jPanel1.add(jLabel4);
         jLabel4.setBounds(360, 460, 70, 50);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -448,7 +451,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel5);
+        jPanel1.add(jLabel5);
         jLabel5.setBounds(360, 560, 70, 59);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -458,7 +461,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel6);
+        jPanel1.add(jLabel6);
         jLabel6.setBounds(360, 660, 70, 50);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -468,7 +471,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel7);
+        jPanel1.add(jLabel7);
         jLabel7.setBounds(780, 220, 60, 50);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -478,7 +481,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel8);
+        jPanel1.add(jLabel8);
         jLabel8.setBounds(780, 310, 60, 50);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -488,7 +491,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel9);
+        jPanel1.add(jLabel9);
         jLabel9.setBounds(780, 400, 60, 50);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -498,13 +501,13 @@ public class Arranque extends javax.swing.JFrame {
         jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel10);
+        jPanel1.add(jLabel10);
         jLabel10.setBounds(770, 500, 60, 50);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("EN MARCHA");
-        getContentPane().add(jLabel12);
+        jPanel1.add(jLabel12);
         jLabel12.setBounds(270, 580, 74, 17);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -514,13 +517,13 @@ public class Arranque extends javax.swing.JFrame {
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel13);
+        jPanel1.add(jLabel13);
         jLabel13.setBounds(780, 130, 70, 59);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("ENERGIZADA");
-        getContentPane().add(jLabel14);
+        jPanel1.add(jLabel14);
         jLabel14.setBounds(770, 110, 81, 17);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -530,7 +533,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel11);
+        jPanel1.add(jLabel11);
         jLabel11.setBounds(760, 610, 60, 50);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -541,103 +544,103 @@ public class Arranque extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel1);
+        jPanel1.add(jLabel1);
         jLabel1.setBounds(360, 160, 60, 50);
 
         correct1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct1);
+        jPanel1.add(correct1);
         correct1.setBounds(330, 150, 20, 20);
 
         correct2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct2);
+        jPanel1.add(correct2);
         correct2.setBounds(330, 180, 20, 20);
 
         correct3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct3);
+        jPanel1.add(correct3);
         correct3.setBounds(330, 210, 20, 20);
 
         correct4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct4);
+        jPanel1.add(correct4);
         correct4.setBounds(430, 150, 20, 20);
 
         correct5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct5);
+        jPanel1.add(correct5);
         correct5.setBounds(430, 180, 20, 20);
 
         correct6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct6);
+        jPanel1.add(correct6);
         correct6.setBounds(330, 270, 20, 20);
 
         correct7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct7);
+        jPanel1.add(correct7);
         correct7.setBounds(330, 300, 20, 20);
 
         correct8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct8);
+        jPanel1.add(correct8);
         correct8.setBounds(330, 360, 20, 20);
 
         correct9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct9);
+        jPanel1.add(correct9);
         correct9.setBounds(330, 390, 20, 20);
 
         correct10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct10);
+        jPanel1.add(correct10);
         correct10.setBounds(330, 450, 20, 20);
 
         correct11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct11);
+        jPanel1.add(correct11);
         correct11.setBounds(330, 480, 20, 20);
 
         correct12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct12);
+        jPanel1.add(correct12);
         correct12.setBounds(330, 510, 20, 20);
 
         correct13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct13);
+        jPanel1.add(correct13);
         correct13.setBounds(330, 650, 20, 20);
 
         correct14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct14);
+        jPanel1.add(correct14);
         correct14.setBounds(330, 680, 20, 20);
 
         correct15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct15);
+        jPanel1.add(correct15);
         correct15.setBounds(330, 710, 20, 20);
 
         correct16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct16);
+        jPanel1.add(correct16);
         correct16.setBounds(850, 230, 20, 20);
 
         correct17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct17);
+        jPanel1.add(correct17);
         correct17.setBounds(850, 310, 20, 20);
 
         correct18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct18);
+        jPanel1.add(correct18);
         correct18.setBounds(850, 340, 20, 20);
 
         correct19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct19);
+        jPanel1.add(correct19);
         correct19.setBounds(850, 410, 20, 20);
 
         correct20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct20);
+        jPanel1.add(correct20);
         correct20.setBounds(850, 490, 20, 20);
 
         correct21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct21);
+        jPanel1.add(correct21);
         correct21.setBounds(850, 520, 20, 20);
 
         correct22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct22);
+        jPanel1.add(correct22);
         correct22.setBounds(850, 550, 20, 20);
 
         correct23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct23);
+        jPanel1.add(correct23);
         correct23.setBounds(850, 610, 20, 20);
 
         correct24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(correct24);
+        jPanel1.add(correct24);
         correct24.setBounds(850, 640, 20, 20);
 
         titulo.setBackground(new java.awt.Color(60, 188, 28));
@@ -646,7 +649,7 @@ public class Arranque extends javax.swing.JFrame {
         titulo.setText("SECUENCIA DE ARRANQUE UNIDAD X GUADALUPE IV");
         titulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 204, 0), null, null));
         titulo.setOpaque(true);
-        getContentPane().add(titulo);
+        jPanel1.add(titulo);
         titulo.setBounds(200, 0, 1120, 50);
 
         arranqueNormal.setText("SECUENCIA NORMAL");
@@ -655,42 +658,42 @@ public class Arranque extends javax.swing.JFrame {
                 arranqueNormalActionPerformed(evt);
             }
         });
-        getContentPane().add(arranqueNormal);
+        jPanel1.add(arranqueNormal);
         arranqueNormal.setBounds(550, 60, 180, 23);
 
         label3.setForeground(new java.awt.Color(255, 255, 255));
         label3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label3);
+        jPanel1.add(label3);
         label3.setBounds(290, 210, 20, 20);
 
         label1.setForeground(new java.awt.Color(255, 255, 255));
         label1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label1);
+        jPanel1.add(label1);
         label1.setBounds(290, 150, 20, 20);
 
         label4.setForeground(new java.awt.Color(255, 255, 255));
         label4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label4);
+        jPanel1.add(label4);
         label4.setBounds(470, 150, 20, 20);
 
         label5.setForeground(new java.awt.Color(255, 255, 255));
         label5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label5);
+        jPanel1.add(label5);
         label5.setBounds(470, 180, 20, 20);
 
         label2.setForeground(new java.awt.Color(255, 255, 255));
         label2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label2);
+        jPanel1.add(label2);
         label2.setBounds(290, 180, 20, 20);
 
         label6.setForeground(new java.awt.Color(255, 255, 255));
         label6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label6);
+        jPanel1.add(label6);
         label6.setBounds(290, 270, 20, 20);
 
         label7.setForeground(new java.awt.Color(255, 255, 255));
         label7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label7);
+        jPanel1.add(label7);
         label7.setBounds(290, 300, 20, 20);
 
         Plabel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -699,7 +702,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel2.setOpaque(true);
-        getContentPane().add(Plabel2);
+        jPanel1.add(Plabel2);
         Plabel2.setBounds(320, 260, 140, 70);
 
         Plabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -708,31 +711,31 @@ public class Arranque extends javax.swing.JFrame {
         Plabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel1.setOpaque(true);
-        getContentPane().add(Plabel1);
+        jPanel1.add(Plabel1);
         Plabel1.setBounds(320, 140, 140, 100);
 
         label10.setForeground(new java.awt.Color(255, 255, 255));
         label10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label10);
+        jPanel1.add(label10);
         label10.setBounds(290, 450, 20, 20);
 
         label8.setForeground(new java.awt.Color(255, 255, 255));
         label8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label8);
+        jPanel1.add(label8);
         label8.setBounds(290, 360, 20, 20);
 
         label9.setForeground(new java.awt.Color(255, 255, 255));
         label9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label9);
+        jPanel1.add(label9);
         label9.setBounds(290, 390, 20, 20);
 
         label11.setForeground(new java.awt.Color(255, 255, 255));
         label11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label11);
+        jPanel1.add(label11);
         label11.setBounds(290, 480, 20, 20);
 
         label12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label12);
+        jPanel1.add(label12);
         label12.setBounds(290, 510, 20, 20);
 
         Plabel4.setBackground(new java.awt.Color(0, 0, 0));
@@ -741,7 +744,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel4.setOpaque(true);
-        getContentPane().add(Plabel4);
+        jPanel1.add(Plabel4);
         Plabel4.setBounds(320, 440, 140, 100);
 
         Plabel3.setBackground(new java.awt.Color(0, 0, 0));
@@ -750,7 +753,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel3.setOpaque(true);
-        getContentPane().add(Plabel3);
+        jPanel1.add(Plabel3);
         Plabel3.setBounds(320, 350, 140, 70);
 
         jButton2.setText("Cerrar");
@@ -759,42 +762,42 @@ public class Arranque extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
+        jPanel1.add(jButton2);
         jButton2.setBounds(810, 60, 80, 23);
 
         label13.setForeground(new java.awt.Color(255, 255, 255));
         label13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label13);
+        jPanel1.add(label13);
         label13.setBounds(290, 650, 20, 20);
 
         label14.setForeground(new java.awt.Color(255, 255, 255));
         label14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label14);
+        jPanel1.add(label14);
         label14.setBounds(290, 680, 20, 20);
 
         label15.setForeground(new java.awt.Color(255, 255, 255));
         label15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label15);
+        jPanel1.add(label15);
         label15.setBounds(290, 710, 20, 20);
 
         label16.setForeground(new java.awt.Color(255, 255, 255));
         label16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label16);
+        jPanel1.add(label16);
         label16.setBounds(890, 230, 20, 20);
 
         label17.setForeground(new java.awt.Color(255, 255, 255));
         label17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label17);
+        jPanel1.add(label17);
         label17.setBounds(890, 310, 20, 20);
 
         label18.setForeground(new java.awt.Color(255, 255, 255));
         label18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label18);
+        jPanel1.add(label18);
         label18.setBounds(890, 340, 20, 20);
 
         label19.setForeground(new java.awt.Color(255, 255, 255));
         label19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label19);
+        jPanel1.add(label19);
         label19.setBounds(890, 410, 20, 20);
 
         Plabel6.setBackground(new java.awt.Color(0, 0, 0));
@@ -803,7 +806,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel6.setOpaque(true);
-        getContentPane().add(Plabel6);
+        jPanel1.add(Plabel6);
         Plabel6.setBounds(740, 210, 140, 70);
 
         Plabel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -812,7 +815,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel5.setOpaque(true);
-        getContentPane().add(Plabel5);
+        jPanel1.add(Plabel5);
         Plabel5.setBounds(320, 640, 140, 100);
 
         Plabel9.setBackground(new java.awt.Color(0, 0, 0));
@@ -821,7 +824,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel9.setOpaque(true);
-        getContentPane().add(Plabel9);
+        jPanel1.add(Plabel9);
         Plabel9.setBounds(740, 390, 140, 70);
 
         Plabel7.setBackground(new java.awt.Color(0, 0, 0));
@@ -830,12 +833,12 @@ public class Arranque extends javax.swing.JFrame {
         Plabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel7.setOpaque(true);
-        getContentPane().add(Plabel7);
+        jPanel1.add(Plabel7);
         Plabel7.setBounds(740, 300, 140, 70);
 
         label20.setForeground(new java.awt.Color(255, 255, 255));
         label20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label20);
+        jPanel1.add(label20);
         label20.setBounds(890, 490, 20, 20);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -845,18 +848,18 @@ public class Arranque extends javax.swing.JFrame {
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel15);
+        jPanel1.add(jLabel15);
         jLabel15.setBounds(770, 710, 70, 59);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("SINCRONIZADA");
-        getContentPane().add(jLabel16);
+        jPanel1.add(jLabel16);
         jLabel16.setBounds(760, 690, 100, 17);
 
         label21.setForeground(new java.awt.Color(255, 255, 255));
         label21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label21);
+        jPanel1.add(label21);
         label21.setBounds(890, 520, 20, 20);
 
         Plabel10.setBackground(new java.awt.Color(0, 0, 0));
@@ -865,22 +868,22 @@ public class Arranque extends javax.swing.JFrame {
         Plabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel10.setOpaque(true);
-        getContentPane().add(Plabel10);
+        jPanel1.add(Plabel10);
         Plabel10.setBounds(740, 480, 140, 100);
 
         label22.setForeground(new java.awt.Color(255, 255, 255));
         label22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label22);
+        jPanel1.add(label22);
         label22.setBounds(890, 550, 20, 20);
 
         label23.setForeground(new java.awt.Color(255, 255, 255));
         label23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label23);
+        jPanel1.add(label23);
         label23.setBounds(890, 610, 20, 20);
 
         label24.setForeground(new java.awt.Color(255, 255, 255));
         label24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(label24);
+        jPanel1.add(label24);
         label24.setBounds(890, 640, 20, 20);
 
         Plabel11.setBackground(new java.awt.Color(0, 0, 0));
@@ -889,7 +892,7 @@ public class Arranque extends javax.swing.JFrame {
         Plabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Plabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel11.setOpaque(true);
-        getContentPane().add(Plabel11);
+        jPanel1.add(Plabel11);
         Plabel11.setBounds(740, 600, 140, 70);
 
         boton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -908,7 +911,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton1MouseReleased(evt);
             }
         });
-        getContentPane().add(boton1);
+        jPanel1.add(boton1);
         boton1.setBounds(1130, 280, 290, 23);
 
         boton2.setBackground(new java.awt.Color(0, 0, 0));
@@ -930,7 +933,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton2MouseReleased(evt);
             }
         });
-        getContentPane().add(boton2);
+        jPanel1.add(boton2);
         boton2.setBounds(1130, 190, 250, 23);
 
         boton3.setBackground(new java.awt.Color(0, 0, 0));
@@ -952,7 +955,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton3MouseReleased(evt);
             }
         });
-        getContentPane().add(boton3);
+        jPanel1.add(boton3);
         boton3.setBounds(1130, 100, 220, 23);
 
         boton4.setBackground(new java.awt.Color(0, 0, 0));
@@ -974,7 +977,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton4MouseReleased(evt);
             }
         });
-        getContentPane().add(boton4);
+        jPanel1.add(boton4);
         boton4.setBounds(1130, 400, 300, 23);
 
         boton5.setBackground(new java.awt.Color(0, 0, 0));
@@ -996,7 +999,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton5MouseReleased(evt);
             }
         });
-        getContentPane().add(boton5);
+        jPanel1.add(boton5);
         boton5.setBounds(1130, 160, 200, 23);
 
         boton7.setBackground(new java.awt.Color(0, 0, 0));
@@ -1016,7 +1019,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton7MouseReleased(evt);
             }
         });
-        getContentPane().add(boton7);
+        jPanel1.add(boton7);
         boton7.setBounds(1130, 70, 200, 23);
 
         boton6.setBackground(new java.awt.Color(0, 0, 0));
@@ -1035,7 +1038,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton6MouseReleased(evt);
             }
         });
-        getContentPane().add(boton6);
+        jPanel1.add(boton6);
         boton6.setBounds(1130, 130, 150, 23);
 
         boton9.setBackground(new java.awt.Color(0, 0, 0));
@@ -1059,7 +1062,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton9ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton9);
+        jPanel1.add(boton9);
         boton9.setBounds(1130, 220, 190, 23);
 
         boton8.setBackground(new java.awt.Color(0, 0, 0));
@@ -1085,7 +1088,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton8);
+        jPanel1.add(boton8);
         boton8.setBounds(1130, 250, 180, 23);
 
         boton10.setBackground(new java.awt.Color(0, 0, 0));
@@ -1104,7 +1107,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton10MouseReleased(evt);
             }
         });
-        getContentPane().add(boton10);
+        jPanel1.add(boton10);
         boton10.setBounds(1130, 340, 210, 23);
 
         boton11.setBackground(new java.awt.Color(0, 0, 0));
@@ -1126,7 +1129,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton11MouseReleased(evt);
             }
         });
-        getContentPane().add(boton11);
+        jPanel1.add(boton11);
         boton11.setBounds(1130, 310, 190, 23);
 
         boton12.setBackground(new java.awt.Color(0, 0, 0));
@@ -1145,7 +1148,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton12MouseReleased(evt);
             }
         });
-        getContentPane().add(boton12);
+        jPanel1.add(boton12);
         boton12.setBounds(1130, 370, 140, 23);
 
         boton13.setBackground(new java.awt.Color(0, 0, 0));
@@ -1165,7 +1168,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton13MouseReleased(evt);
             }
         });
-        getContentPane().add(boton13);
+        jPanel1.add(boton13);
         boton13.setBounds(1130, 430, 240, 23);
 
         boton14.setBackground(new java.awt.Color(0, 0, 0));
@@ -1192,7 +1195,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton14ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton14);
+        jPanel1.add(boton14);
         boton14.setBounds(1130, 460, 200, 23);
 
         boton15.setBackground(new java.awt.Color(0, 0, 0));
@@ -1211,7 +1214,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton15MouseReleased(evt);
             }
         });
-        getContentPane().add(boton15);
+        jPanel1.add(boton15);
         boton15.setBounds(1130, 490, 290, 23);
 
         boton16.setBackground(new java.awt.Color(0, 0, 0));
@@ -1233,7 +1236,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton16MouseReleased(evt);
             }
         });
-        getContentPane().add(boton16);
+        jPanel1.add(boton16);
         boton16.setBounds(1130, 520, 220, 23);
 
         boton17.setBackground(new java.awt.Color(0, 0, 0));
@@ -1255,7 +1258,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton17MouseReleased(evt);
             }
         });
-        getContentPane().add(boton17);
+        jPanel1.add(boton17);
         boton17.setBounds(1130, 550, 190, 23);
 
         boton18.setBackground(new java.awt.Color(0, 0, 0));
@@ -1279,7 +1282,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton18);
+        jPanel1.add(boton18);
         boton18.setBounds(1130, 580, 230, 23);
 
         boton19.setBackground(new java.awt.Color(0, 0, 0));
@@ -1305,7 +1308,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton19ActionPerformed(evt);
             }
         });
-        getContentPane().add(boton19);
+        jPanel1.add(boton19);
         boton19.setBounds(1130, 610, 150, 23);
 
         boton20.setBackground(new java.awt.Color(0, 0, 0));
@@ -1324,7 +1327,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton20MouseReleased(evt);
             }
         });
-        getContentPane().add(boton20);
+        jPanel1.add(boton20);
         boton20.setBounds(1130, 640, 150, 23);
 
         boton21.setBackground(new java.awt.Color(0, 0, 0));
@@ -1346,7 +1349,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton21MouseReleased(evt);
             }
         });
-        getContentPane().add(boton21);
+        jPanel1.add(boton21);
         boton21.setBounds(1130, 670, 250, 23);
 
         boton22.setBackground(new java.awt.Color(0, 0, 0));
@@ -1365,7 +1368,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton22MouseReleased(evt);
             }
         });
-        getContentPane().add(boton22);
+        jPanel1.add(boton22);
         boton22.setBounds(1130, 700, 130, 23);
 
         boton23.setBackground(new java.awt.Color(0, 0, 0));
@@ -1384,7 +1387,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton23MouseReleased(evt);
             }
         });
-        getContentPane().add(boton23);
+        jPanel1.add(boton23);
         boton23.setBounds(1130, 730, 170, 23);
 
         boton24.setBackground(new java.awt.Color(0, 0, 0));
@@ -1406,7 +1409,7 @@ public class Arranque extends javax.swing.JFrame {
                 boton24MouseReleased(evt);
             }
         });
-        getContentPane().add(boton24);
+        jPanel1.add(boton24);
         boton24.setBounds(1130, 760, 190, 23);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
@@ -1415,8 +1418,10 @@ public class Arranque extends javax.swing.JFrame {
         icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(icono);
+        jPanel1.add(icono);
         icono.setBounds(-50, 0, 1540, 1010);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 840));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3157,7 +3162,7 @@ public class Arranque extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Documents\\NetBeansProjects\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
+        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
@@ -3184,7 +3189,7 @@ public class Arranque extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Documents\\NetBeansProjects\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
+        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
@@ -3337,6 +3342,7 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel label1;
     private javax.swing.JLabel label10;
     private javax.swing.JLabel label11;
