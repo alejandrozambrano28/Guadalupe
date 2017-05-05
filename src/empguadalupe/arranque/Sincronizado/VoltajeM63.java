@@ -85,7 +85,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 205, 140));
 
-        jButton3.setText("Condiciones Iniciales");
+        jButton3.setText("Control Interruptor");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -95,7 +95,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 890, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 890, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -103,14 +103,13 @@ public class VoltajeM63 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoVoltajeM plano = null;
                     plano = new PlanoVoltajeM();
-                    plano.setSize(1136, 384);
                     plano.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ControlVoltajeSup condiciones = null;
         condiciones = new ControlVoltajeSup();
-                    condiciones.setSize(500,300);
+                    
                     condiciones.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

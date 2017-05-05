@@ -151,6 +151,7 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
                            m.setVisible(true);
                            m.setLocationRelativeTo(null);
                            m.setLocationRelativeTo(null);
+                           
     }
     }//GEN-LAST:event_formWindowClosed
 

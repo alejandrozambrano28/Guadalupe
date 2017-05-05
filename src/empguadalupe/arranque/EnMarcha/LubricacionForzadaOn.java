@@ -63,8 +63,8 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
         jLabel1.setText("LUBRICACION FORZADA ON");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GlubricacionF.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 47, 473, 420));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/lubricacionF.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 360, 400));
 
         jButton1.setText("Ubicacion en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

@@ -61,8 +61,8 @@ int contgeneralv=0;
         jLabel1.setText("LUBRICACION FORZADA OFF");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GlubricacionF.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 46, 380, 375));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/lubricacionF.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(316, 46, 350, 375));
 
         jButton1.setText("Ubicacion en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ int contgeneralv=0;
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 730, 450));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 710, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

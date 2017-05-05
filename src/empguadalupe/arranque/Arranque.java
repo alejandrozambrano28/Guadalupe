@@ -46,6 +46,8 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import empguadalupe.arranque.Sincronizado.VoltajeM63;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 
@@ -93,6 +95,7 @@ public class Arranque extends javax.swing.JFrame {
     boolean bande22 = true;
     boolean bande23 = true;
     boolean bande24 = true;
+    ImageIcon romboon,rombooff;
     
     Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
     
@@ -101,36 +104,14 @@ public class Arranque extends javax.swing.JFrame {
      * Creates new form Vista
      */
     
+    
     public Arranque() {
         
         
         initComponents();
-        correct1.setBackground(black);
-        correct2.setBackground(black);
-        correct3.setBackground(black);
-        correct4.setBackground(black);
-        correct5.setBackground(black);
-        correct6.setBackground(black);
-        correct7.setBackground(black);
-        correct8.setBackground(black);
-        correct9.setBackground(black);
-        correct10.setBackground(black);
-        correct11.setBackground(black);
-        correct12.setBackground(black);
-        correct13.setBackground(black);
-        correct14.setBackground(black);
-        correct15.setBackground(black);
-        correct16.setBackground(black);
-        correct17.setBackground(black);
-        correct18.setBackground(black);
-        correct19.setBackground(black);
-        correct20.setBackground(black);
-        correct21.setBackground(black);
-        correct22.setBackground(black);
-        correct23.setBackground(black);
-        correct24.setBackground(black);
-        
-        
+        convertiranegro();
+        romboon= new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
+        rombooff= new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
         rec1 =label1.getBounds();
         rec2 =label2.getBounds();
         rec3 =label3.getBounds();
@@ -399,6 +380,8 @@ public class Arranque extends javax.swing.JFrame {
         boton22 = new javax.swing.JButton();
         boton23 = new javax.swing.JButton();
         boton24 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         icono = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -447,7 +430,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -513,7 +496,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -844,7 +827,7 @@ public class Arranque extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1168,6 +1151,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton13MouseReleased(evt);
             }
         });
+        boton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton13ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton13);
         boton13.setBounds(1130, 430, 240, 23);
 
@@ -1412,6 +1400,22 @@ public class Arranque extends javax.swing.JFrame {
         jPanel1.add(boton24);
         boton24.setBounds(1130, 760, 190, 23);
 
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("PRERREQUISITOS LISTOS");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(120, 90, 180, 17);
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(360, 70, 70, 59);
+
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
         icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1419,7 +1423,7 @@ public class Arranque extends javax.swing.JFrame {
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
-        icono.setBounds(-50, 0, 1540, 1010);
+        icono.setBounds(-50, -10, 1680, 1010);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 840));
 
@@ -1427,7 +1431,10 @@ public class Arranque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de arranque
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
-       CondicionesIniciales condi = new CondicionesIniciales();
+       convertiranegro();
+       contador=0;
+       contgeneral = 0;
+        CondicionesIniciales condi = new CondicionesIniciales();
        condi.setVisible(true);
         Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         int num0 = numero.get(0);
@@ -2423,7 +2430,7 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    interruptor.setSize(613, 474);
+             
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2484,7 +2491,6 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    lubrica.setSize(734, 424);
                     lubrica.setVisible(true);
                     lubrica.setLocationRelativeTo(null);
                 }
@@ -2553,7 +2559,6 @@ public class Arranque extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    interruptor.setSize(494, 494);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -3153,6 +3158,10 @@ public class Arranque extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_boton24MouseReleased
+
+    private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton13ActionPerformed
  
 
     public void generarsonido() {
@@ -3224,9 +3233,11 @@ public class Arranque extends javax.swing.JFrame {
                 break;
             case 12:
                 Plabel4.setBackground(green);
+                jLabel5.setIcon(romboon);
                 break;
             case 15:
                 Plabel5.setBackground(green);
+                jLabel13.setIcon(romboon);
                 break;
             case 16:
                 Plabel6.setBackground(green);
@@ -3242,6 +3253,7 @@ public class Arranque extends javax.swing.JFrame {
                 break;
             case 24:
                 Plabel11.setBackground(green);
+                jLabel15.setIcon(romboon);
                 break;
         }
 
@@ -3262,7 +3274,47 @@ public class Arranque extends javax.swing.JFrame {
             contgeneral = contgeneral + 1;
         }
     }
-
+ public void convertiranegro(){
+ Plabel1.setBackground(black);
+  Plabel2.setBackground(black);
+   Plabel3.setBackground(black);
+    Plabel4.setBackground(black);
+     Plabel5.setBackground(black);
+      Plabel6.setBackground(black);
+       Plabel7.setBackground(black);
+      
+         Plabel9.setBackground(black);
+          Plabel10.setBackground(black);
+           Plabel1.setBackground(black);
+           
+            
+ correct1.setBackground(black);
+        correct2.setBackground(black);
+        correct3.setBackground(black);
+        correct4.setBackground(black);
+        correct5.setBackground(black);
+        correct6.setBackground(black);
+        correct7.setBackground(black);
+        correct8.setBackground(black);
+        correct9.setBackground(black);
+        correct10.setBackground(black);
+        correct11.setBackground(black);
+        correct12.setBackground(black);
+        correct13.setBackground(black);
+        correct14.setBackground(black);
+        correct15.setBackground(black);
+        correct16.setBackground(black);
+        correct17.setBackground(black);
+        correct18.setBackground(black);
+        correct19.setBackground(black);
+        correct20.setBackground(black);
+        correct21.setBackground(black);
+        correct22.setBackground(black);
+        correct23.setBackground(black);
+        correct24.setBackground(black);
+        
+ 
+ }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Plabel1;
@@ -3334,6 +3386,8 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

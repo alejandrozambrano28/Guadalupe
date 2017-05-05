@@ -66,7 +66,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         jLabel1.setText("BOMBA DE REFRIGERACION");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 8, 350, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/Sbomba2_1.gif"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/sistema bombas2_1.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, 370));
 
         jButton1.setText("Ubicación en planta");

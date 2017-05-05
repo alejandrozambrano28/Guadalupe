@@ -64,8 +64,8 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         jLabel1.setText("VALVULA DE AISLAMIENTO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 11, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/valvula de aislamietook.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 58, -1, 402));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/aislamiento2.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 58, 390, 402));
 
         jButton1.setText("Ubicacion en Planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 490));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

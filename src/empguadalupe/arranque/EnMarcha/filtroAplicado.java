@@ -50,8 +50,8 @@ public class filtroAplicado extends javax.swing.JFrame {
         jLabel1.setText("FILTRO APLICADO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 11, -1, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/filtros (2).jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 231, 456, 251));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/filtro.gif"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 252, 440, 230));
 
         jButton1.setText("Ubicacion en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
