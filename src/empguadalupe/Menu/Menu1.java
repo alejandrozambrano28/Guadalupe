@@ -5,10 +5,10 @@
  */
 package empguadalupe.Menu;
 
-import ParoRapido.ParoRapido;
-import empguadalupe.ParoEmergencia.ParoEmergencia;
-import empguadalupe.ParoNormal.ParoNormal;
-import empguadalupe.arranque.Arranque;
+import empguadalupe.Menu.Aprendizaje.ParoRapido.ParoRapido;
+import empguadalupe.Menu.Aprendizaje.ParoEmergencia.ParoEmergencia;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
+import empguadalupe.Menu.Aprendizaje.arranque.Arranque;
 import javax.swing.JFrame;
 
 /**

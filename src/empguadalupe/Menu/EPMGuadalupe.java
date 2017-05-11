@@ -1,8 +1,8 @@
 package empguadalupe.Menu;
 
 
-import empguadalupe.arranque.Arranque;
-import empguadalupe.arranque.Arranque;
+import empguadalupe.Menu.Aprendizaje.arranque.Arranque;
+import empguadalupe.Menu.Aprendizaje.arranque.Arranque;
 import javax.swing.JFrame;
 
 /*
