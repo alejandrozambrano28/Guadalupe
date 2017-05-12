@@ -22,6 +22,7 @@ public class Menu1 extends javax.swing.JFrame {
      */
     public Menu1() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -88,6 +89,11 @@ public class Menu1 extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 80, 70));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/ARRANQUE.png"))); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 80, 70));
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/PARONORMAL.png"))); // NOI18N
@@ -134,6 +140,11 @@ public class Menu1 extends javax.swing.JFrame {
         JFrame ParoE = new ParoEmergencia();
             ParoE.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         JFrame Arranque = new empguadalupe.Menu.Evaluacion.arranque.Arranque();
+            Arranque.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

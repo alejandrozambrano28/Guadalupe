@@ -47,10 +47,16 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.VoltajeM63;
+import java.awt.event.ActionEvent;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.Timer;
 
 
 /**
@@ -98,6 +104,8 @@ public class Arranque extends javax.swing.JFrame {
     boolean bande24 = true;
     int contadorGError=0;
     ImageIcon romboon,rombooff;
+    Calendar calendario;
+    Timer timer;
     
     Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
     
@@ -194,6 +202,7 @@ public class Arranque extends javax.swing.JFrame {
         boton14.setEnabled(false);
         boton13.setEnabled(false);
         
+        
       
         
     }
@@ -221,10 +230,10 @@ public class Arranque extends javax.swing.JFrame {
         Rectangle a = label.getBounds();
         int[] tamaño = new int[4];
 
-        posmenorx = a.x;
-        posmayorx = a.x + 40;
-        posmenory = a.y + 10;
-        posmayory = a.y + 40;
+        posmenorx = a.x-20;
+        posmayorx = a.x + 20;
+        posmenory = a.y - 10;
+        posmayory = a.y + 20;
         tamaño[0] = posmenorx;
         tamaño[1] = posmayorx;
         tamaño[2] = posmenory;
@@ -387,6 +396,8 @@ public class Arranque extends javax.swing.JFrame {
         boton24 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        Reloj = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         icono = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1343,7 +1354,7 @@ public class Arranque extends javax.swing.JFrame {
             }
         });
         jPanel1.add(boton21);
-        boton21.setBounds(1130, 670, 250, 23);
+        boton21.setBounds(1130, 670, 270, 23);
 
         boton22.setBackground(new java.awt.Color(0, 0, 0));
         boton22.setForeground(new java.awt.Color(255, 255, 255));
@@ -1421,6 +1432,22 @@ public class Arranque extends javax.swing.JFrame {
         jPanel1.add(jLabel17);
         jLabel17.setBounds(360, 70, 70, 59);
 
+        Reloj.setBackground(new java.awt.Color(255, 255, 255));
+        Reloj.setFont(new java.awt.Font("BankGothic Md BT", 0, 48)); // NOI18N
+        Reloj.setText("00:00");
+        Reloj.setOpaque(true);
+        jPanel1.add(Reloj);
+        Reloj.setBounds(480, 740, 280, 90);
+
+        jButton1.setText("PUNTUACION");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(550, 690, 110, 23);
+
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
         icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1435,8 +1462,44 @@ public class Arranque extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de arranque
+    int dia, mes, año, hora, minutos, segundos; 
+    int Segundo,Minuto,Hora;
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
        convertiranegro();
+
+       calendario = new GregorianCalendar();
+       timer =  new Timer(1000, new java.awt.event.ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+              
+               java.util.Date actual = new java.util.Date(); 
+               if(Segundo!=59){
+                 Segundo=Segundo+1;
+               
+               }else if(Minuto!=59){
+               Minuto=Minuto+1;
+               Segundo=0;
+               }else{
+               Hora=Hora+1;
+               Minuto=0;
+               } 
+             
+                calendario.setTime(actual); 
+                dia = calendario.get(Calendar.DAY_OF_MONTH); 
+                mes = (calendario.get(Calendar.MONTH) + 1); 
+                año = calendario.get(Calendar.YEAR); 
+                hora = calendario.get(Calendar.HOUR_OF_DAY); 
+                minutos = calendario.get(Calendar.MINUTE); 
+                segundos = calendario.get(Calendar.SECOND); 
+                String hour = String.format("%02d : %02d : %02d", Hora, Minuto, Segundo); 
+                Reloj.setText("<html><center>" + hour ); 
+                } 
+                }); 
+                timer.start();
+                
+    
+           
+       
        contadorGError=0;
        contador=0;
        contgeneral = 0;
@@ -1778,12 +1841,11 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton3.setLocation(tam[1] - a.width , tam[3] - a.height);
                     System.out.println("correcto");
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
-                    label3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label3.setLocation(tam[1] - a.width , tam[3] - a.height);
                     bande3 = false;
-                    //boton3.setBackground(Color.green);
                     correct3.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
@@ -1843,10 +1905,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton4.setLocation(tam[0], tam[2] - 20);
+                    boton4.setLocation(tam[0]+20, tam[2]+10 );
                     System.out.println("correcto");
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
-                    label4.setLocation(tam[0], tam[2] - 20);
+                    label4.setLocation(tam[0]+20, tam[2]+10);
                     bande4 = false;
                     //boton4.setBackground(Color.green);
                     correct4.setBackground(Color.green);
@@ -1907,10 +1969,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton5.setLocation(tam[0], tam[2] - 20);
+                    boton5.setLocation(tam[0]+20, tam[2]+10);
                     System.out.println("correcto");
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
-                    label5.setLocation(tam[0], tam[2] - 20);
+                    label5.setLocation(tam[0]+20, tam[2]+10);
                     bande5 = false;
                     //boton5.setBackground(Color.green);
                     correct5.setBackground(Color.green);
@@ -1971,10 +2033,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
-                    label7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label7.setLocation(tam[1] - a.width, tam[3] - a.height );
                     bande7 = false;
                     //boton7.setBackground(Color.green);
                     correct7.setBackground(Color.green);
@@ -2033,10 +2095,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton6.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
-                    label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label6.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande6 = false;
                     //boton6.setBackground(Color.green);
                     correct6.setBackground(Color.green);
@@ -2095,10 +2157,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton9.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
-                    label9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label9.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande9 = false;
                     //boton9.setBackground(Color.green);
                     correct9.setBackground(Color.green);
@@ -2161,10 +2223,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton8.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
-                    label8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label8.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande8 = false;
 
                     //boton8.setBackground(Color.green);
@@ -2228,10 +2290,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton10.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
-                    label10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label10.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande10 = false;
                     //boton10.setBackground(Color.green);
                     correct10.setBackground(Color.green);
@@ -2295,10 +2357,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton11.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
-                    label11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label11.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande11 = false;
                     //boton11.setBackground(Color.green);
                     correct11.setBackground(Color.green);
@@ -2358,10 +2420,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton12.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
-                    label12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label12.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande12 = false;
                     //boton12.setBackground(Color.green);
                     correct12.setBackground(Color.green);
@@ -2419,10 +2481,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton13.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label13.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande13 = false;
                     //boton13.setBackground(Color.green);
                     correct13.setBackground(Color.green);
@@ -2484,10 +2546,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton14.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label14.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande14 = false;
                     //boton14.setBackground(Color.green);
                     correct14.setBackground(Color.green);
@@ -2547,10 +2609,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton15.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label15.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande15 = false;
                     //boton15.setBackground(Color.green);
                     correct15.setBackground(Color.green);
@@ -2611,10 +2673,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton16.setLocation(tam[0], tam[2] - 20);
+                    boton16.setLocation(tam[0]+20, tam[2]+10 );
                     System.out.println("correcto");
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
-                    label16.setLocation(tam[0], tam[2] - 20);
+                    label16.setLocation(tam[0]+20, tam[2] + 10);
                     bande16 = false;
                     //boton16.setBackground(Color.green);
                     correct16.setBackground(Color.green);
@@ -2674,10 +2736,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton17.setLocation(tam[0], tam[2] - 20);
+                    boton17.setLocation(tam[0]+20, tam[2] + 10);
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
-                    label17.setLocation(tam[0], tam[2] - 20);
+                    label17.setLocation(tam[0]+20, tam[2] + 10);
                     bande17 = false;
                     //boton17.setBackground(Color.green);
                     correct17.setBackground(Color.green);
@@ -2735,10 +2797,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton18.setLocation(tam[0], tam[2] - 20);
+                    boton18.setLocation(tam[0]+20, tam[2] +10);
                     System.out.println("correcto");
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
-                    label18.setLocation(tam[0], tam[2] - 20);
+                    label18.setLocation(tam[0]+20, tam[2] + 10);
                     bande18 = false;
                     //boton18.setBackground(Color.green);
                     correct18.setBackground(Color.green);
@@ -2799,10 +2861,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton19.setLocation(tam[0], tam[2] - 20);
+                    boton19.setLocation(tam[0]+20, tam[2] + 10);
                     System.out.println("correcto");
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
-                    label19.setLocation(tam[0], tam[2] - 20);
+                    label19.setLocation(tam[0]+20, tam[2] +10);
                     bande19 = false;
                     //boton19.setBackground(Color.green);
                     correct19.setBackground(Color.green);
@@ -2864,10 +2926,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton20.setLocation(tam[0], tam[2] - 20);
+                    boton20.setLocation(tam[0]+20, tam[2] +10);
                     System.out.println("correcto");
                     label20.setSize(boton20.getWidth(), boton20.getHeight());
-                    label20.setLocation(tam[0], tam[2] - 20);
+                    label20.setLocation(tam[0]+20, tam[2] +10);
                     bande20 = false;
                     //boton20.setBackground(Color.green);
                     correct20.setBackground(Color.green);
@@ -2926,10 +2988,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton21.setLocation(tam[0], tam[2] - 20);
+                    boton21.setLocation(tam[0]+20, tam[2] +10);
                     System.out.println("correcto");
                     label21.setSize(boton21.getWidth(), boton21.getHeight());
-                    label21.setLocation(tam[0], tam[2] - 20);
+                    label21.setLocation(tam[0]+20, tam[2] +10);
                     bande21 = false;
                     //boton21.setBackground(Color.green);
                     correct21.setBackground(Color.green);
@@ -2987,10 +3049,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton22.setLocation(tam[0], tam[2] - 20);
+                    boton22.setLocation(tam[0]+20, tam[2] + 10);
                     System.out.println("correcto");
                     label22.setSize(boton22.getWidth(), boton22.getHeight());
-                    label22.setLocation(tam[0], tam[2] - 20);
+                    label22.setLocation(tam[0]+20, tam[2] + 10);
                     bande22 = false;
                     //boton22.setBackground(Color.green);
                     correct22.setBackground(Color.green);
@@ -3048,10 +3110,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton23.setLocation(tam[0], tam[2] - 20);
+                    boton23.setLocation(tam[0]+20, tam[2] + 10);
                     System.out.println("correcto");
                     label23.setSize(boton23.getWidth(), boton23.getHeight());
-                    label23.setLocation(tam[0], tam[2] - 20);
+                    label23.setLocation(tam[0]+20, tam[2]+10);
                     bande23 = false;
                     //boton23.setBackground(Color.green);
                     correct23.setBackground(Color.green);
@@ -3115,10 +3177,10 @@ public class Arranque extends javax.swing.JFrame {
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
-                        boton24.setLocation(tam[0], tam[2] - 20);
+                        boton24.setLocation(tam[0]+20, tam[2] +10);
                         System.out.println("correcto");
                         label24.setSize(boton24.getWidth(), boton24.getHeight());
-                        label24.setLocation(tam[0], tam[2] - 20);
+                        label24.setLocation(tam[0]+20, tam[2] +10);
                         //boton24.setBackground(Color.green);
                         correct24.setBackground(Color.green);
                         bande24 = false;
@@ -3155,6 +3217,16 @@ public class Arranque extends javax.swing.JFrame {
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton13ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        timer.stop();
+        System.out.println(Hora);
+          System.out.println(Minuto);
+                System.out.println(Segundo);
+                      System.out.println(hora);
+                            System.out.println(minutos);
+                                  System.out.println(segundos);
+    }//GEN-LAST:event_jButton1ActionPerformed
  
 
     public void generarsonido() {
@@ -3210,6 +3282,7 @@ public class Arranque extends javax.swing.JFrame {
         }
         sonido.close();
     }
+    
 
     public void validarcuantos(int p) {
         contador = contador + 1;
@@ -3320,6 +3393,7 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JLabel Plabel6;
     private javax.swing.JLabel Plabel7;
     private javax.swing.JLabel Plabel9;
+    private javax.swing.JLabel Reloj;
     private javax.swing.JButton arranqueNormal;
     private javax.swing.JButton boton1;
     private javax.swing.JButton boton10;
@@ -3370,6 +3444,7 @@ public class Arranque extends javax.swing.JFrame {
     private javax.swing.JButton correct8;
     private javax.swing.JButton correct9;
     private javax.swing.JLabel icono;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
