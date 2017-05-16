@@ -9,6 +9,8 @@ import empguadalupe.Menu.Aprendizaje.ParoRapido.ParoRapido;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.ParoEmergencia;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
 import empguadalupe.Menu.Aprendizaje.arranque.Arranque;
+import empguadalupe.Menu.Evaluacion.arranque.ArranqueEva;
+import empguadalupe.Menu.Evaluacion.arranque.FormularioEvaluacion;
 import javax.swing.JFrame;
 
 /**
@@ -16,13 +18,16 @@ import javax.swing.JFrame;
  * @author lzambrs
  */
 public class Menu1 extends javax.swing.JFrame {
-
+    String Mu;
+    String label;
+  
     /**
      * Creates new form Menu1
      */
     public Menu1() {
         initComponents();
          this.setLocationRelativeTo(null);
+     
     }
 
     /**
@@ -45,9 +50,16 @@ public class Menu1 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        label2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -115,6 +127,17 @@ public class Menu1 extends javax.swing.JFrame {
         jLabel3.setText("APRENDIZAJE");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
+        jLabel5.setText("NOMBRE");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, -1, -1));
+
+        label2.setText("RAMON");
+        label2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                label2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(583, 110, 60, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/002.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 470));
 
@@ -140,11 +163,22 @@ public class Menu1 extends javax.swing.JFrame {
         JFrame ParoE = new ParoEmergencia();
             ParoE.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
-
+   
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-         JFrame Arranque = new empguadalupe.Menu.Evaluacion.arranque.Arranque();
-            Arranque.setVisible(true);
+      FormularioEvaluacion form = new FormularioEvaluacion();
+      form.setVisible(true);
+            
+         
+           
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void label2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label2ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+         
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -194,5 +228,7 @@ public class Menu1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField label2;
     // End of variables declaration//GEN-END:variables
 }

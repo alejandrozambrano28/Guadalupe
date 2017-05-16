@@ -14,7 +14,7 @@ import empguadalupe.Menu.Aprendizaje.arranque.*;
 public class CondicionesIniciales2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form CondicionesIniciales
+     * Creates new form CondicionesInicialesEva
      */
     public CondicionesIniciales2() {
         initComponents();
@@ -457,7 +457,7 @@ public class CondicionesIniciales2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       CondicionesIniciales condi1 = new CondicionesIniciales();
+       CondicionesInicialesEva condi1 = new CondicionesInicialesEva();
 condi1.setVisible(true);
 dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed

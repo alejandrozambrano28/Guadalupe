@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0df5742-cc99-4116-bb0f-5e217935be03">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="104" y="0" width="451" height="43" uuid="b19c1066-f96b-41bf-b14b-5d645965dede"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[RESULTADO DE EVALUACION SECUENCIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="43" width="163" height="36" uuid="b98c1b90-4c8b-481e-989f-8d9aaaecff24"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[GUADALUPE IV]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="250" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="15" width="133" height="20" uuid="430cdfc5-be48-4b22-b670-3deb220af9a3"/>
+				<text><![CDATA[NOMBRE DEL OPERARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="48" width="145" height="20" uuid="facef70e-829d-47a7-a53e-d2277cb24560"/>
+				<text><![CDATA[NOMBRE DEL SUPERVISOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="82" width="205" height="20" uuid="ddcbada6-69e5-4f62-911d-9c2c865c9594"/>
+				<text><![CDATA[# ERRORES SECUENCIA DE ARRANQUE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="115" width="220" height="20" uuid="b27f5641-b8b9-467c-a455-275f93c613dc"/>
+				<text><![CDATA[# ERRORES SECUENCIA DE PARO NORMAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="150" width="220" height="20" uuid="11663f1a-e646-42ae-a5c6-4b431ab3768f"/>
+				<text><![CDATA[# ERRORES SECUENCIA DE PARO RAPIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="186" width="252" height="20" uuid="db42dbbb-dca5-4295-a0c0-26dda8d00b50"/>
+				<text><![CDATA[# ERRORES SECUENCIA DE PARO EMERGENCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="48" width="100" height="20" uuid="1caabadd-da4b-4c3e-8427-ea18cff2bf0c"/>
+				<text><![CDATA[TIEMPO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="188" y="15" width="100" height="20" uuid="7ab92ad1-c2a2-40ae-922f-5be52b5b4cf7"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="48" width="100" height="20" uuid="fc819c07-4625-4c35-9f1c-1f928bc9737f"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="82" width="100" height="20" uuid="c00ead21-b228-411a-b8f6-f041fc5937a7"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="115" width="100" height="20" uuid="e373e39a-e0bc-4b35-bc94-c8ef8e0f8b31"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="150" width="100" height="20" uuid="a7e687e4-2e3c-431b-9651-cc74bb3df639"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="194" width="100" height="20" uuid="8e644fd5-8c9c-4bfe-bd3a-2ebc2d5073ef"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="82" width="100" height="20" uuid="4ae189ab-90c8-41e0-b348-ec918222b614"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="115" width="100" height="20" uuid="90d789ab-df1d-4f49-9183-911f35d8b74f"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="150" width="100" height="20" uuid="9b6901e4-e0fd-4372-9edf-cd9c5eb34c5a"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="194" width="100" height="20" uuid="66e9a624-d1a3-4262-85a0-bb4c81e26792"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
