@@ -167,9 +167,7 @@ public class Menu1 extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
       FormularioEvaluacion form = new FormularioEvaluacion();
       form.setVisible(true);
-            
-         
-           
+      dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void label2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label2ActionPerformed

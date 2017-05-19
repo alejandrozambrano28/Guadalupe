@@ -5,8 +5,7 @@
  */
 package empguadalupe.Menu.Evaluacion.arranque;
 
-import com.sun.glass.ui.Menu;
-import empguadalupe.Menu.Aprendizaje.arranque.*;
+
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.CerrarValvulaEsferica;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenosParoNormal;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.BombaRefrigeracion;
@@ -33,11 +32,9 @@ import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.Unidaddes;
 import java.awt.Color;
 import static java.awt.Color.black;
 import static java.awt.Color.green;
-
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Rectangle;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Stack;
@@ -48,26 +45,17 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.VoltajeM63;
-import empguadalupe.Menu.Menu1;
 import java.awt.AWTException;
-import java.awt.Dimension;
 import java.awt.Robot;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.util.Calendar;
-
+import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.Map;
 import javax.imageio.ImageIO;
-
 import javax.swing.ImageIcon;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
-
 import javax.swing.Timer;
 
 
@@ -83,6 +71,7 @@ public class ArranqueEva extends javax.swing.JFrame {
     String Anom;
 String Aced;
 String AnombS;
+
 
      Thread hiloA;
     int contador = 0;
@@ -123,7 +112,7 @@ String AnombS;
     boolean bande23 = true;
     boolean bande24 = true;
     boolean bandet=false;
-    int contadorGError=0;
+    int contadorGError=24;
     ImageIcon romboon,rombooff;
     Calendar calendario;
     Timer timer;
@@ -292,7 +281,6 @@ String AnombS;
 
 //calculo la posición del ratón y lo guardo en el p
         p = MouseInfo.getPointerInfo().getLocation();
-        System.out.println(p);
 
         //este if solo se ejecuta al principio de que empiece a mover la etiqueta
         if (calcular_diferencia) {
@@ -424,7 +412,6 @@ String AnombS;
         jLabel18 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         Reloj = new javax.swing.JLabel();
-        nombre = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         icono = new javax.swing.JLabel();
 
@@ -1467,10 +1454,6 @@ String AnombS;
         jPanel1.add(Reloj);
         Reloj.setBounds(480, 740, 280, 90);
 
-        nombre.setText("jTextField1");
-        jPanel1.add(nombre);
-        nombre.setBounds(510, 620, 120, 30);
-
         jButton1.setText("PUNTUACION");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1500,11 +1483,13 @@ String AnombS;
        convertiranegro();
        bandet=false;
        calendario = new GregorianCalendar();
+       
        timer =  new Timer(1000, new java.awt.event.ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
               
                java.util.Date actual = new java.util.Date(); 
+               
                if(Segundo!=59){
                  Segundo=Segundo+1;
                
@@ -1534,6 +1519,7 @@ String AnombS;
            
        
        contadorGError=0;
+       contadorGError=24;
        contador=0;
        contgeneral = 0;
         CondicionesInicialesEva condi = new CondicionesInicialesEva();
@@ -1741,39 +1727,38 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                    contadorGError--;
+                    generarsonidowell();
+                    contgeneral = contgeneral + 1;
+                    validarcuantos(contgeneral);
+                    boton1.setLocation(tam[1] - a.width , tam[3] - a.height);
+                    System.out.println("correcto");
+                    label1.setSize(boton1.getWidth(), boton1.getHeight());
+                    label1.setLocation(tam[1] - a.width, tam[3] - a.height);
+                    //boton1.setBackground(Color.black);
+                    correct1.setBackground(Color.green);
+                    bande1 = false;
                     try {
-                        generarsonidowell();
-                        contgeneral = contgeneral + 1;
-                        validarcuantos(contgeneral);
-                        boton1.setLocation(tam[1] - a.width , tam[3] - a.height);
-                        System.out.println("correcto");
-                        label1.setSize(boton1.getWidth(), boton1.getHeight());
-                        label1.setLocation(tam[1] - a.width, tam[3] - a.height);
-                        //boton1.setBackground(Color.black);
-                        correct1.setBackground(Color.green);
-                        bande1 = false;
-                        try {
-                            Thread.sleep(500);
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                        //llamado a la ventana de la bomba de refrigeracion
-                        BombaRefrigeracion bomba = null;
-                        bomba = new BombaRefrigeracion();
-                        //bomba.setSize(734, 494);
-                        bomba.setVisible(true);
-                        bomba.setLocationRelativeTo(null);
-
-                    } catch (IOException ex) {
+                        Thread.sleep(500);
+                    } catch (InterruptedException ex) {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
+                    //llamado a la ventana de la bomba de refrigeracion
+                    PlanoS1evaB bomba = null;
+                    bomba = new PlanoS1evaB();
+                    //bomba.setSize(734, 494);
+                    bomba.setVisible(true);
+                    bomba.setLocationRelativeTo(null);
+                    
                 }else{
                  System.out.println("incorrecto");
                 boton1.setLocation(location1);
                 boton1.setBackground(Color.red);
                 //codigo para la generacion del sonido
                 generarsonido();
+                contadorGError++;
                 }
+                 
             }
         }
                
@@ -1806,6 +1791,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -1838,6 +1824,7 @@ String AnombS;
                 boton2.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -1871,6 +1858,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -1903,6 +1891,7 @@ String AnombS;
                 boton3.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -1935,6 +1924,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -1968,6 +1958,7 @@ String AnombS;
                 boton4.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 
                 }
             }
@@ -1999,6 +1990,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2032,6 +2024,7 @@ String AnombS;
                 boton5.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2063,6 +2056,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 5)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2095,6 +2089,7 @@ String AnombS;
                 boton7.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2125,6 +2120,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 5)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2158,6 +2154,7 @@ String AnombS;
                 boton6.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2187,6 +2184,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 7)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2220,6 +2218,7 @@ String AnombS;
                 boton9.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2253,6 +2252,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 7)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2286,6 +2286,7 @@ String AnombS;
                 boton8.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2320,6 +2321,7 @@ String AnombS;
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 9)) {
 
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2353,6 +2355,7 @@ String AnombS;
                 boton10.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2387,6 +2390,7 @@ String AnombS;
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 9)) {
                     //
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2420,6 +2424,7 @@ String AnombS;
                 boton11.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2450,6 +2455,7 @@ String AnombS;
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 9)) {
                     // &&(contgeneral>=9)
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2483,6 +2489,7 @@ String AnombS;
                 boton12.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2511,6 +2518,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2543,6 +2551,7 @@ String AnombS;
                 boton13.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2576,6 +2585,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2607,6 +2617,7 @@ String AnombS;
                 boton14.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2639,6 +2650,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2670,6 +2682,7 @@ String AnombS;
                 boton15.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2703,6 +2716,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2735,6 +2749,7 @@ String AnombS;
                 boton16.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2766,6 +2781,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 16)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2798,6 +2814,7 @@ String AnombS;
                 boton17.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2827,6 +2844,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 16)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2859,6 +2877,7 @@ String AnombS;
                 boton18.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -2891,6 +2910,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 18)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2923,6 +2943,7 @@ String AnombS;
                 boton19.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -2956,6 +2977,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2988,6 +3010,7 @@ String AnombS;
                 boton20.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
             }
         }
@@ -3018,6 +3041,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -3050,6 +3074,7 @@ String AnombS;
                 boton21.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -3079,6 +3104,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 19)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -3111,6 +3137,7 @@ String AnombS;
                 boton22.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -3140,6 +3167,7 @@ String AnombS;
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 22)) {
+                    contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -3172,6 +3200,7 @@ String AnombS;
                 boton23.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -3207,6 +3236,7 @@ String AnombS;
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 22)) {
                     try {
+                        contadorGError--;
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
@@ -3239,6 +3269,7 @@ String AnombS;
                 boton24.setBackground(Color.red);
                 //codigo para la generacion de el sonido
                 generarsonido();
+                contadorGError++;
                 }
 
             }
@@ -3250,50 +3281,56 @@ String AnombS;
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton13ActionPerformed
-
+public static int pu2;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
         if(bandet==true){
-         
+            System.out.println( pu2+"errores");
+            contadorGError=contadorGError+pu2;
+            String [] cadena = new String[6];
+            int j=1;
                 timer.stop();
-                System.out.println(Hora);
-                System.out.println(Minuto);
-                System.out.println(Segundo);
-                System.out.println(hora);
-                System.out.println(minutos);
-                System.out.println(segundos);
-              
-       
                 Resultado res = new Resultado();
                 res.setVisible(true);
-                res.Rnom=Anom;
-                res.Rced=Aced;
-                res.RnombS=AnombS;
-                res.hora=Hora;
-                res.min=Minuto;
-                res.seg=Segundo;
+                Metodos met = new Metodos();
                 
+            try {
+                cadena= met.muestraContenido(met.ruta);
+                
+                int i=Integer.parseInt(cadena[0]);
+                
+                while(j!=i){
+                System.out.println(cadena[j]);
+                j++;
+                }  
+                
+            } catch (IOException ex) {
+                Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                met.guardaDatos(String.valueOf(Hora));
+                met.guardaDatos(String.valueOf(Minuto));
+                met.guardaDatos(String.valueOf(Segundo));
+                met.guardaDatos(String.valueOf(contadorGError));
+                met.guardaDatos(String.valueOf(cadena[j-1]));
+
+            } catch (IOException ex) {
+                Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
+            }    
         }
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
    public void CapturarPantalla () throws AWTException, IOException{
      Rectangle p = new Rectangle(1000, 100, 1000, 100);
-   CondicionesInicialesEva a=new  CondicionesInicialesEva();
-   a.label2=nombre.getText();
-
-   
-      
-
-	//maximal 70% of window size
-	//int screenWidth = (int)(screenSize.getWidth()*0.7f);
-	//int screenHeight = (int)(screenSize.getHeight()*0.7f);
-     // captura la pantalla completa
-     BufferedImage pantalla = new Robot().createScreenCapture(p);
-     // Lo guarda como un JPEG
-     File file = new File("C:\\Users\\lzambrs\\Pictures\\EPM2\\"+label2+"_"+".jpg");
-     ImageIO.write(pantalla, "jpg", file);
-   
+  
+    //maximal 70% of window size
+    //int screenWidth = (int)(screenSize.getWidth()*0.7f);
+    //int screenHeight = (int)(screenSize.getHeight()*0.7f);
+    // captura la pantalla completa
+    BufferedImage pantalla = new Robot().createScreenCapture(p);
+    // Lo guarda como un JPEG
+    File file = new File("C:\\Users\\lzambrs\\Pictures\\EPM2\\"+label2+"_"+".jpg");
+    ImageIO.write(pantalla, "jpg", file);
 }
-
     public void generarsonido() {
         Clip sonido = null;
         try {
@@ -3348,7 +3385,6 @@ String AnombS;
         sonido.close();
     }
     
-
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
@@ -3406,49 +3442,42 @@ String AnombS;
         }
     }
  public void convertiranegro(){
- Plabel1.setBackground(black);
-  Plabel2.setBackground(black);
-   Plabel3.setBackground(black);
+    Plabel1.setBackground(black);
+    Plabel2.setBackground(black);
+    Plabel3.setBackground(black);
     Plabel4.setBackground(black);
-     Plabel5.setBackground(black);
-      Plabel6.setBackground(black);
-       Plabel7.setBackground(black);
-      
-         Plabel9.setBackground(black);
-          Plabel10.setBackground(black);
-           Plabel1.setBackground(black);
-           
-            
- correct1.setBackground(black);
-        correct2.setBackground(black);
-        correct3.setBackground(black);
-        correct4.setBackground(black);
-        correct5.setBackground(black);
-        correct6.setBackground(black);
-        correct7.setBackground(black);
-        correct8.setBackground(black);
-        correct9.setBackground(black);
-        correct10.setBackground(black);
-        correct11.setBackground(black);
-        correct12.setBackground(black);
-        correct13.setBackground(black);
-        correct14.setBackground(black);
-        correct15.setBackground(black);
-        correct16.setBackground(black);
-        correct17.setBackground(black);
-        correct18.setBackground(black);
-        correct19.setBackground(black);
-        correct20.setBackground(black);
-        correct21.setBackground(black);
-        correct22.setBackground(black);
-        correct23.setBackground(black);
-        correct24.setBackground(black);
-        
- 
+    Plabel5.setBackground(black);
+    Plabel6.setBackground(black);
+    Plabel7.setBackground(black);    
+    Plabel9.setBackground(black);
+    Plabel10.setBackground(black);
+    Plabel1.setBackground(black);        
+    correct1.setBackground(black);
+    correct2.setBackground(black);
+    correct3.setBackground(black);
+    correct4.setBackground(black);
+    correct5.setBackground(black);
+    correct6.setBackground(black);
+    correct7.setBackground(black);
+    correct8.setBackground(black);
+    correct9.setBackground(black);
+    correct10.setBackground(black);
+    correct11.setBackground(black);
+    correct12.setBackground(black);
+    correct13.setBackground(black);
+    correct14.setBackground(black);
+    correct15.setBackground(black);
+    correct16.setBackground(black);
+    correct17.setBackground(black);
+    correct18.setBackground(black);
+    correct19.setBackground(black);
+    correct20.setBackground(black);
+    correct21.setBackground(black);
+    correct22.setBackground(black);
+    correct23.setBackground(black);
+    correct24.setBackground(black);
  }
     
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Plabel1;
     private javax.swing.JLabel Plabel10;
@@ -3557,7 +3586,6 @@ String AnombS;
     private javax.swing.JLabel label8;
     private javax.swing.JLabel label9;
     private javax.swing.JLabel logo;
-    private javax.swing.JTextField nombre;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
      public static void main(String args[]) {

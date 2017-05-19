@@ -5,8 +5,26 @@
  */
 package empguadalupe.Menu.Evaluacion.arranque;
 
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Date;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import com.itextpdf.text.Image;
+import java.awt.Font;
+import com.itextpdf.text.pdf.PdfPTable;
+import empguadalupe.Menu.Menu1;
+import java.awt.Desktop;
+import java.io.File;
+import javax.swing.JOptionPane;
 /**
  *
  * @author lzambrs
@@ -18,6 +36,8 @@ String RnombS;
 String RCalifA;
 int hora,min,seg;
 Date fecha;
+String tiempo;
+
     /**
      * Creates new form Resultado
      */
@@ -44,11 +64,24 @@ Date fecha;
         NombreS = new javax.swing.JTextField();
         CalificacionA = new javax.swing.JTextField();
         TiempoA = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        CalificacionA1 = new javax.swing.JTextField();
+        TiempoA1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        CalificacionA2 = new javax.swing.JTextField();
+        TiempoA2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        CalificacionA3 = new javax.swing.JTextField();
+        TiempoA3 = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
             }
         });
 
@@ -68,6 +101,19 @@ Date fecha;
             }
         });
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Calificacion Paro Normal");
+
+        jLabel7.setText("Calificacion Paro Rapido");
+
+        jLabel8.setText("Calificacion Paro de Emergencia");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -76,26 +122,44 @@ Date fecha;
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(CalificacionA, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(NombreOP)
-                            .addComponent(CedulaOP)
-                            .addComponent(NombreS, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))))
-                .addGap(18, 18, 18)
-                .addComponent(TiempoA, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(67, 67, 67))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NombreS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CedulaOP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NombreOP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CalificacionA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(CalificacionA3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                                .addComponent(CalificacionA2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(CalificacionA1)))))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel5))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TiempoA1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TiempoA, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TiempoA2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TiempoA3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,18 +172,34 @@ Date fecha;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(CedulaOP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(NombreS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NombreS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(CalificacionA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TiempoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(CalificacionA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TiempoA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(CalificacionA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TiempoA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(CalificacionA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TiempoA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         pack();
@@ -130,14 +210,190 @@ Date fecha;
     }//GEN-LAST:event_NombreOPActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        NombreOP.setText(Rnom);
-        NombreS.setText(RnombS);
-        CedulaOP.setText(Rced);
-        CalificacionA.setText(RCalifA);
-  
-    String tiempo = String.valueOf(hora)+":"+String.valueOf(min)+":"+String.valueOf(seg);
+        Metodos met = new Metodos();
+         String [] cadena = new String[11];
+            int j=1;
+          try {
+                cadena= met.muestraContenido(met.ruta);
+                
+                int i=Integer.parseInt(cadena[0]);
+                
+                while(j!=i){
+                    System.out.println(cadena[j]);
+                j++;
+                }  
+                
+            } catch (IOException ex) {
+                Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        NombreOP.setText(cadena[1]);
+        NombreS.setText(cadena[2]);
+        CedulaOP.setText(cadena[3]);
+        CalificacionA.setText(cadena[9]);
+
+        tiempo = cadena[6]+":"+cadena[7]+":"+cadena[8];
         TiempoA.setText(tiempo);
     }//GEN-LAST:event_formWindowActivated
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+       int dialogButton = JOptionPane.showConfirmDialog(rootPane, "DESEA HACER OTRA EVALUACION");
+          
+       if(dialogButton==JOptionPane.YES_OPTION){
+        FormularioEvaluacion formu = new FormularioEvaluacion();
+        formu.setVisible(true);
+        Metodos met = new Metodos();
+        met.eliminar();
+       }if(dialogButton==JOptionPane.NO_OPTION){
+       Menu1 menu = new Menu1();
+       menu.setVisible(true);
+       }
+       
+    }//GEN-LAST:event_formWindowClosed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                    FileOutputStream archivo = null;
+                    String nombrearchivo=NombreOP.getText()+"_"+CedulaOP.getText();
+           
+  
+    try {
+        archivo = new FileOutputStream(nombrearchivo+".pdf");
+    } catch (FileNotFoundException ex) {
+                      JOptionPane.showMessageDialog(rootPane,"Cierre la ventana del PDF para poder crear uno nuevo");
+                      return;         
+    }
+      Document documento = new Document();
+    try {
+        PdfWriter.getInstance(documento, archivo);
+    } catch (DocumentException ex) {
+      
+    }
+      documento.open();
+        try
+{
+	Image foto = Image.getInstance("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\thumbGRUPO20EPM20CON20CIERRE202013.jpg");
+	foto.scaleToFit(150, 150);
+	foto.setAlignment(Chunk.ALIGN_LEFT);
+	documento.add(foto);
+}
+catch ( Exception e )
+{
+	e.printStackTrace();
+}
+    try {
+       
+    documento.add(new Paragraph("RESULTADOS EVALUACION GENERAL",
+				FontFactory.getFont("arial",   // fuente
+				27,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  
+    try {
+        documento.add(new Paragraph("\r\n\r\n\r\n\r\n"));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     try {
+        documento.add(new Paragraph("Nombre del Operario:"+NombreOP.getText()+"\r\n\r\n"));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+         try {
+        documento.add(new Paragraph("Cedula del Operario:"+CedulaOP.getText()+"\r\n\r\n"));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }     try {
+        documento.add(new Paragraph("Nombre del Supervisor:"+NombreS.getText()+"\r\n\r\n"));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     try {
+        documento.add(new Paragraph("\r\n\r\n"));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+     try {
+       
+    documento.add(new Paragraph("RESULTADOS ",
+				FontFactory.getFont("arial",   // fuente
+				17,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+        try {     
+    documento.add(new Paragraph("\r\n\r\n"+"Arranque ",
+				FontFactory.getFont("arial",   // fuente
+				15,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     
+    try {
+        documento.add(new Paragraph("Numero de Intentos Negaativos:"+CalificacionA.getText()+"         "+"Tiempo:"+tiempo));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+          try {     
+    documento.add(new Paragraph("\r\n\r\n"+"Paro Normal ",
+				FontFactory.getFont("arial",   // fuente
+				15,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     
+    try {
+        documento.add(new Paragraph("Numero de Intentos Negaativos:"+CalificacionA1.getText()+"         "+"Tiempo:"+TiempoA1));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+          try {     
+    documento.add(new Paragraph("\r\n\r\n"+"Paro Rapido ",
+				FontFactory.getFont("arial",   // fuente
+				15,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     
+    try {
+        documento.add(new Paragraph("Numero de Intentos Negaativos:"+CalificacionA2.getText()+"         "+"Tiempo:"+TiempoA2));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+          try {     
+    documento.add(new Paragraph("\r\n\r\n"+"Paro de Emergencia ",
+				FontFactory.getFont("arial",   // fuente
+				15,                            // tamaño
+				Font.BOLD,
+				BaseColor.BLACK)));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+     
+    try {
+        documento.add(new Paragraph("Numero de Intentos Negaativos:"+CalificacionA3.getText()+"         "+"Tiempo:"+TiempoA3));
+    } catch (DocumentException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+      documento.close(); 
+      File path = new File (nombrearchivo+".pdf");
+    try {
+        Desktop.getDesktop().open(path);
+    } catch (IOException ex) {
+        Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,14 +432,24 @@ Date fecha;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CalificacionA;
+    private javax.swing.JTextField CalificacionA1;
+    private javax.swing.JTextField CalificacionA2;
+    private javax.swing.JTextField CalificacionA3;
     private javax.swing.JTextField CedulaOP;
     private javax.swing.JTextField NombreOP;
     private javax.swing.JTextField NombreS;
     private javax.swing.JTextField TiempoA;
+    private javax.swing.JTextField TiempoA1;
+    private javax.swing.JTextField TiempoA2;
+    private javax.swing.JTextField TiempoA3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

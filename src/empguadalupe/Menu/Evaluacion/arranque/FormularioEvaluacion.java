@@ -5,6 +5,12 @@
  */
 package empguadalupe.Menu.Evaluacion.arranque;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lzambrs
@@ -13,6 +19,9 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
 String nomb;
 String nombS;
 String cedu;
+int suma=1;
+int codigo;
+//File fichero=new File("Guardar.txt");
         
     /**
      * Creates new form FormularioEvaluacion
@@ -38,7 +47,12 @@ String cedu;
         jLabel3 = new javax.swing.JLabel();
         nomS = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jButton1.setText("jButton1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -49,15 +63,42 @@ String cedu;
 
         jLabel1.setText("Nombre Operario");
 
-        Nom.setText("jTextField1");
+        Nom.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                NomFocusLost(evt);
+            }
+        });
+        Nom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomActionPerformed(evt);
+            }
+        });
+        Nom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NomKeyTyped(evt);
+            }
+        });
 
         jLabel2.setText("Cedula Operario");
 
-        ced.setText("jTextField2");
+        ced.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cedKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Nombre Supervisor");
 
-        nomS.setText("jTextField3");
+        nomS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomSActionPerformed(evt);
+            }
+        });
+        nomS.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nomSKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,12 +150,62 @@ String cedu;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ArranqueEva arr  = new ArranqueEva();
-        arr.Anom=Nom.getText();
-        arr.AnombS=nomS.getText();
-        arr.Aced=ced.getText();
-        arr.setVisible(true);
+        Metodos met = new Metodos();
+       // met.Mnomop=Nom.getText();
+        //met.Mnoms=nomS.getText();
+        //met.Mced=ced.getText();
+       if(Nom.getText().isEmpty() || nomS.getText().isEmpty() || ced.getText().isEmpty()){
+           JOptionPane.showMessageDialog(rootPane, "Existe algun campo Vacio");
+       }else{
+                arr.setVisible(true);
+            try {
+                met.guardaDatos(Nom.getText());
+                met.guardaDatos(nomS.getText());
+                met.guardaDatos(ced.getText());
+                 met.guardaDatos("salto");
+                met.guardaDatos(String.valueOf(suma));
 
+            } catch (IOException ex) {
+                Logger.getLogger(FormularioEvaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+               suma=suma+1;
+                dispose();
+       }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+ Metodos met = new Metodos();
+                met.eliminar();
+               // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
+
+    private void NomFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NomFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomFocusLost
+
+    private void NomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NomKeyTyped
+            Metodos met = new Metodos();
+        met.verificarTxt(evt,Nom.getText());
+    }//GEN-LAST:event_NomKeyTyped
+
+    private void cedKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedKeyTyped
+        Metodos met = new Metodos();
+        met.verificarNum(evt,Nom.getText());
+    }//GEN-LAST:event_cedKeyTyped
+
+    private void nomSKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nomSKeyTyped
+   Metodos met = new Metodos();
+        met.verificarTxt(evt,Nom.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_nomSKeyTyped
+
+    private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomActionPerformed
+
+    private void nomSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomSActionPerformed
 
     /**
      * @param args the command line arguments

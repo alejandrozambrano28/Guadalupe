@@ -6,6 +6,7 @@
 package empguadalupe.Menu.Evaluacion.arranque;
 
 import empguadalupe.Menu.Menu1;
+import java.util.Stack;
 
 /**
  *
@@ -42,57 +43,57 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        labe2 = new javax.swing.JLabel();
+        labe1 = new javax.swing.JLabel();
+        labe3 = new javax.swing.JLabel();
+        labe4 = new javax.swing.JLabel();
+        labe7 = new javax.swing.JLabel();
+        labe14 = new javax.swing.JLabel();
+        labe6 = new javax.swing.JLabel();
+        labe5 = new javax.swing.JLabel();
+        labe13 = new javax.swing.JLabel();
+        labe12 = new javax.swing.JLabel();
+        labe11 = new javax.swing.JLabel();
+        labe10 = new javax.swing.JLabel();
+        labe9 = new javax.swing.JLabel();
+        labe8 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
+        labe18 = new javax.swing.JLabel();
+        labe17 = new javax.swing.JLabel();
+        labe16 = new javax.swing.JLabel();
+        labe15 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        labelt = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        labe20 = new javax.swing.JLabel();
+        labe19 = new javax.swing.JLabel();
+        labe21 = new javax.swing.JLabel();
+        labe22 = new javax.swing.JLabel();
+        labe24 = new javax.swing.JLabel();
+        labe23 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
+        labet2 = new javax.swing.JLabel();
+        labe26 = new javax.swing.JLabel();
+        labe25 = new javax.swing.JLabel();
+        labe27 = new javax.swing.JLabel();
+        labe28 = new javax.swing.JLabel();
+        labe31 = new javax.swing.JLabel();
+        labe30 = new javax.swing.JLabel();
+        labe29 = new javax.swing.JLabel();
+        labe34 = new javax.swing.JLabel();
+        labe33 = new javax.swing.JLabel();
+        labe32 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
+        labet3 = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
@@ -111,21 +112,21 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel83 = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
+        labe36 = new javax.swing.JLabel();
+        labe35 = new javax.swing.JLabel();
+        labe37 = new javax.swing.JLabel();
+        labe38 = new javax.swing.JLabel();
+        labe41 = new javax.swing.JLabel();
+        labe40 = new javax.swing.JLabel();
+        labe39 = new javax.swing.JLabel();
+        labe42 = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
+        labe44 = new javax.swing.JLabel();
+        labe43 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
@@ -139,7 +140,6 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel108 = new javax.swing.JLabel();
         jLabel109 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        label = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
 
         jLabel103.setBackground(new java.awt.Color(0, 0, 0));
@@ -209,98 +209,98 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 20, 20));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("VOLTAJES DE CONTROL DISPONIBLES*");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 240, 20));
+        labe2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe2.setForeground(new java.awt.Color(255, 255, 255));
+        labe2.setText("VOLTAJES DE CONTROL DISPONIBLES*");
+        getContentPane().add(labe2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 240, 20));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("SECUENCIA DE PARO INACTIVAS");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 240, 20));
+        labe1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe1.setForeground(new java.awt.Color(255, 255, 255));
+        labe1.setText("SECUENCIA DE PARO INACTIVAS");
+        getContentPane().add(labe1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 240, 20));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setText("VOLTAJES AUXILIARES NORMALES Ux *");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 240, 20));
+        labe3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe3.setForeground(new java.awt.Color(255, 255, 255));
+        labe3.setText("VOLTAJES AUXILIARES NORMALES Ux *");
+        getContentPane().add(labe3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 240, 20));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("SELECTORES EN POSICION NORMAL*");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 240, 20));
+        labe4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe4.setForeground(new java.awt.Color(255, 255, 255));
+        labe4.setText("SELECTORES EN POSICION NORMAL*");
+        getContentPane().add(labe4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 240, 20));
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 260, 20));
+        labe7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe7.setForeground(new java.awt.Color(255, 255, 255));
+        labe7.setText("ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*");
+        getContentPane().add(labe7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 260, 20));
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("VÀLVULA ESFÈRICA ADMISION LISTA");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 240, 20));
+        labe14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe14.setForeground(new java.awt.Color(255, 255, 255));
+        labe14.setText("VÀLVULA ESFÈRICA ADMISION LISTA");
+        getContentPane().add(labe14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, 240, 20));
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("ALABES MOVILES OK");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 20));
+        labe6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe6.setForeground(new java.awt.Color(255, 255, 255));
+        labe6.setText("ALABES MOVILES OK");
+        getContentPane().add(labe6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 20));
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("JUNTA INFLABLE MTT DESAPLICADA*");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 240, 20));
+        labe5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe5.setForeground(new java.awt.Color(255, 255, 255));
+        labe5.setText("JUNTA INFLABLE MTT DESAPLICADA*");
+        getContentPane().add(labe5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 240, 20));
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("REGULADOR VELOCIDAD TURBINA LISTO*");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 240, 20));
+        labe13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe13.setForeground(new java.awt.Color(255, 255, 255));
+        labe13.setText("REGULADOR VELOCIDAD TURBINA LISTO*");
+        getContentPane().add(labe13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 240, 20));
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("SISTEMA HIDRAULICO TURBINA LISTO*");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 240, 20));
+        labe12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe12.setForeground(new java.awt.Color(255, 255, 255));
+        labe12.setText("SISTEMA HIDRAULICO TURBINA LISTO*");
+        getContentPane().add(labe12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 240, 20));
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("SISTEMA DE FRENOS LISTO*");
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 240, 20));
+        labe11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe11.setForeground(new java.awt.Color(255, 255, 255));
+        labe11.setText("SISTEMA DE FRENOS LISTO*");
+        getContentPane().add(labe11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 240, 20));
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("RESET RELES DE BLOQUEO*");
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 240, 20));
+        labe10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe10.setForeground(new java.awt.Color(255, 255, 255));
+        labe10.setText("RESET RELES DE BLOQUEO*");
+        getContentPane().add(labe10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 240, 20));
 
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("NIVEL ACEITE COJIN SUPERIOR NORMAL");
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 240, 20));
+        labe9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe9.setForeground(new java.awt.Color(255, 255, 255));
+        labe9.setText("NIVEL ACEITE COJIN SUPERIOR NORMAL");
+        getContentPane().add(labe9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 240, 20));
 
-        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("NIVEL DE ACEITE COJIN INFERIOR NORMAL");
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 20));
+        labe8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe8.setForeground(new java.awt.Color(255, 255, 255));
+        labe8.setText("NIVEL DE ACEITE COJIN INFERIOR NORMAL");
+        getContentPane().add(labe8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 20));
 
         jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 20));
 
-        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel30.setText("VIBRACIONES UNIDAD X SIN DISPARO");
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 240, 20));
+        labe18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe18.setForeground(new java.awt.Color(255, 255, 255));
+        labe18.setText("VIBRACIONES UNIDAD X SIN DISPARO");
+        getContentPane().add(labe18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, 240, 20));
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel31.setText("SECCIONADOR GENERADOR CERRADO*");
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 240, 20));
+        labe17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe17.setForeground(new java.awt.Color(255, 255, 255));
+        labe17.setText("SECCIONADOR GENERADOR CERRADO*");
+        getContentPane().add(labe17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 570, 240, 20));
 
-        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("MCB POTENCIAL RED NORMAL*");
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 240, 20));
+        labe16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe16.setForeground(new java.awt.Color(255, 255, 255));
+        labe16.setText("MCB POTENCIAL RED NORMAL*");
+        getContentPane().add(labe16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 540, 240, 20));
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("SISTEMA REGULADOR DE VOLTAJE LISTO*");
-        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 240, 20));
+        labe15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe15.setForeground(new java.awt.Color(255, 255, 255));
+        labe15.setText("SISTEMA REGULADOR DE VOLTAJE LISTO*");
+        getContentPane().add(labe15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 240, 20));
 
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -324,11 +324,11 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 670, 30));
 
-        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setText("DESDE PARO TOTAL");
-        jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 310, 20));
+        labelt.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labelt.setForeground(new java.awt.Color(255, 255, 255));
+        labelt.setText("DESDE PARO TOTAL");
+        labelt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        getContentPane().add(labelt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 310, 20));
 
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -354,104 +354,104 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel46.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 20, 20));
 
-        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setText("CO2 NO ACTIVADO*");
-        getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 240, 20));
+        labe20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe20.setForeground(new java.awt.Color(255, 255, 255));
+        labe20.setText("CO2 NO ACTIVADO*");
+        getContentPane().add(labe20, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 240, 20));
 
-        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel48.setText("VALVULA DE ALIVIO CERRADA*");
-        getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 240, 20));
+        labe19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe19.setForeground(new java.awt.Color(255, 255, 255));
+        labe19.setText("VALVULA DE ALIVIO CERRADA*");
+        getContentPane().add(labe19, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 240, 20));
 
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setText("REGULADOR DE TENSION EN AUTOMATICO*");
-        getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 240, 20));
+        labe21.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe21.setForeground(new java.awt.Color(255, 255, 255));
+        labe21.setText("REGULADOR DE TENSION EN AUTOMATICO*");
+        getContentPane().add(labe21, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 240, 20));
 
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setText("REGULADOR DE TENSION EN REMOTO");
-        getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 240, 20));
+        labe22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe22.setForeground(new java.awt.Color(255, 255, 255));
+        labe22.setText("REGULADOR DE TENSION EN REMOTO");
+        getContentPane().add(labe22, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 240, 20));
 
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setText("DISTRIBUIDOR CERRADO");
-        getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 240, 20));
+        labe24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe24.setForeground(new java.awt.Color(255, 255, 255));
+        labe24.setText("DISTRIBUIDOR CERRADO");
+        getContentPane().add(labe24, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 240, 20));
 
-        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel52.setText("SISTEMA INTERRUPTOR GENERADOR LISTO");
-        getContentPane().add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 240, 20));
+        labe23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe23.setForeground(new java.awt.Color(255, 255, 255));
+        labe23.setText("SISTEMA INTERRUPTOR GENERADOR LISTO");
+        getContentPane().add(labe23, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 240, 20));
 
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         getContentPane().add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 310, 190));
 
-        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel54.setText("DESDE PARO TOTAL");
-        jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 310, 20));
+        labet2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labet2.setForeground(new java.awt.Color(255, 255, 255));
+        labet2.setText("DESDE PARO TOTAL");
+        labet2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        getContentPane().add(labet2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 310, 20));
 
-        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setText("VOLTAJES DE CONTROL DISPONIBLES*");
-        getContentPane().add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 240, 20));
+        labe26.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe26.setForeground(new java.awt.Color(255, 255, 255));
+        labe26.setText("VOLTAJES DE CONTROL DISPONIBLES*");
+        getContentPane().add(labe26, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 240, 20));
 
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setText("SECUENCIA DE PARO INACTIVAS");
-        getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 240, 20));
+        labe25.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe25.setForeground(new java.awt.Color(255, 255, 255));
+        labe25.setText("SECUENCIA DE PARO INACTIVAS");
+        getContentPane().add(labe25, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 240, 20));
 
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setText("VOLTAJES AUXILIARES NORMALES Ux *");
-        getContentPane().add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 240, 20));
+        labe27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe27.setForeground(new java.awt.Color(255, 255, 255));
+        labe27.setText("VOLTAJES AUXILIARES NORMALES Ux *");
+        getContentPane().add(labe27, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, 240, 20));
 
-        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setText("SELECTORES EN POSICION NORMAL*");
-        getContentPane().add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 20));
+        labe28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe28.setForeground(new java.awt.Color(255, 255, 255));
+        labe28.setText("SELECTORES EN POSICION NORMAL*");
+        getContentPane().add(labe28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 20));
 
-        jLabel59.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setText("ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*");
-        getContentPane().add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 240, 20));
+        labe31.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe31.setForeground(new java.awt.Color(255, 255, 255));
+        labe31.setText("ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*");
+        getContentPane().add(labe31, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, 240, 20));
 
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setText("ALABES MOVILES OK");
-        getContentPane().add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 240, 20));
+        labe30.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe30.setForeground(new java.awt.Color(255, 255, 255));
+        labe30.setText("ALABES MOVILES OK");
+        getContentPane().add(labe30, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, 240, 20));
 
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setText("JUNTA INFLABLE MTT DESAPLICADA*");
-        getContentPane().add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 240, 20));
+        labe29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe29.setForeground(new java.awt.Color(255, 255, 255));
+        labe29.setText("JUNTA INFLABLE MTT DESAPLICADA*");
+        getContentPane().add(labe29, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 240, 20));
 
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel62.setText("RESET RELES DE BLOQUEO*");
-        getContentPane().add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 240, 20));
+        labe34.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe34.setForeground(new java.awt.Color(255, 255, 255));
+        labe34.setText("RESET RELES DE BLOQUEO*");
+        getContentPane().add(labe34, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 240, 20));
 
-        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel63.setText("NIVEL ACEITE COJIN SUPERIOR NORMAL");
-        getContentPane().add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 240, 20));
+        labe33.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe33.setForeground(new java.awt.Color(255, 255, 255));
+        labe33.setText("NIVEL ACEITE COJIN SUPERIOR NORMAL");
+        getContentPane().add(labe33, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 560, 240, 20));
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setText("NIVEL DE ACEITE COJIN INFERIOR NORMAL");
-        getContentPane().add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, 240, 20));
+        labe32.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe32.setForeground(new java.awt.Color(255, 255, 255));
+        labe32.setText("NIVEL DE ACEITE COJIN INFERIOR NORMAL");
+        getContentPane().add(labe32, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 530, 240, 20));
 
         jLabel65.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, 240, 20));
 
-        jLabel67.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel67.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel67.setText("DESDE MARCHA");
-        jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 310, 20));
+        labet3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labet3.setForeground(new java.awt.Color(255, 255, 255));
+        labet3.setText("DESDE MARCHA");
+        labet3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        getContentPane().add(labet3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 310, 20));
 
         jLabel68.setForeground(new java.awt.Color(255, 255, 255));
         jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
@@ -525,45 +525,45 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel85.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 20, 20));
 
-        jLabel86.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel86.setText("VOLTAJES DE CONTROL DISPONIBLES*");
-        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 240, 20));
+        labe36.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe36.setForeground(new java.awt.Color(255, 255, 255));
+        labe36.setText("VOLTAJES DE CONTROL DISPONIBLES*");
+        getContentPane().add(labe36, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 170, 240, 20));
 
-        jLabel87.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel87.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel87.setText("SECUENCIA DE PARO INACTIVAS");
-        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 240, 20));
+        labe35.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe35.setForeground(new java.awt.Color(255, 255, 255));
+        labe35.setText("SECUENCIA DE PARO INACTIVAS");
+        getContentPane().add(labe35, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, 240, 20));
 
-        jLabel88.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel88.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel88.setText("NORMAL AUXILIAR DE LOS VOLTAJES UX");
-        getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 240, 20));
+        labe37.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe37.setForeground(new java.awt.Color(255, 255, 255));
+        labe37.setText("NORMAL AUXILIAR DE LOS VOLTAJES UX");
+        getContentPane().add(labe37, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 240, 20));
 
-        jLabel89.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel89.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel89.setText("SELECTORES EN POSICION NORMAL*");
-        getContentPane().add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 230, 240, 20));
+        labe38.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe38.setForeground(new java.awt.Color(255, 255, 255));
+        labe38.setText("SELECTORES EN POSICION NORMAL*");
+        getContentPane().add(labe38, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 230, 240, 20));
 
-        jLabel90.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel90.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel90.setText("CO2 NO ACTIVADO*");
-        getContentPane().add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 240, 20));
+        labe41.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe41.setForeground(new java.awt.Color(255, 255, 255));
+        labe41.setText("CO2 NO ACTIVADO*");
+        getContentPane().add(labe41, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 240, 20));
 
-        jLabel91.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel91.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel91.setText("SISTEMA DE FRENOS LISTO*");
-        getContentPane().add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 240, 20));
+        labe40.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe40.setForeground(new java.awt.Color(255, 255, 255));
+        labe40.setText("SISTEMA DE FRENOS LISTO*");
+        getContentPane().add(labe40, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 240, 20));
 
-        jLabel92.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel92.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel92.setText("RESET RELES BLOQUEO*");
-        getContentPane().add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 240, 20));
+        labe39.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe39.setForeground(new java.awt.Color(255, 255, 255));
+        labe39.setText("RESET RELES BLOQUEO*");
+        getContentPane().add(labe39, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 260, 240, 20));
 
-        jLabel93.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel93.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel93.setText("SISTEMA INTERRUPTOR GENERADOR NORMAL");
-        getContentPane().add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 260, 20));
+        labe42.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe42.setForeground(new java.awt.Color(255, 255, 255));
+        labe42.setText("SISTEMA INTERRUPTOR GENERADOR NORMAL");
+        getContentPane().add(labe42, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 260, 20));
 
         jLabel94.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 240, 20));
@@ -586,15 +586,15 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel98.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 20, 20));
 
-        jLabel99.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel99.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel99.setText("PUERTAS INTERRUPTOR MAQUINA CERRADAS*");
-        getContentPane().add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, 270, 20));
+        labe44.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe44.setForeground(new java.awt.Color(255, 255, 255));
+        labe44.setText("PUERTAS INTERRUPTOR MAQUINA CERRADAS*");
+        getContentPane().add(labe44, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, 270, 20));
 
-        jLabel100.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel100.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel100.setText("SINCRONIZADOR DISPONIBLE*");
-        getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, 240, 20));
+        labe43.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        labe43.setForeground(new java.awt.Color(255, 255, 255));
+        labe43.setText("SINCRONIZADOR DISPONIBLE*");
+        getContentPane().add(labe43, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, 240, 20));
 
         jLabel101.setForeground(new java.awt.Color(255, 255, 255));
         jLabel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
@@ -675,9 +675,6 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 310, 550));
 
-        label.setText("jTextField1");
-        getContentPane().add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 130, -1));
-
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 640));
@@ -708,7 +705,21 @@ dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 String label2;
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        label.setText(label2);
+    Metodos generar = new Metodos();
+        Stack<Integer> numero = generar.generaNumeroAleatorio(1,44);
+        int numero1 = numero.get(0);
+        int numero2 = numero.get(1);
+        int numero3 = numero.get(2);
+        int numero4 = numero.get(3);
+        int numero5 = numero.get(4);
+        int numero6 = numero.get(5);
+        
+        String nomlabel1,nomlabel2,nomlabel3,nomlabel4,nomlabel5,nomlabel6;
+        
+        
+       
+        
+        
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -754,9 +765,7 @@ String label2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
     private javax.swing.JLabel jLabel103;
@@ -771,26 +780,9 @@ String label2;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -798,36 +790,17 @@ String label2;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
@@ -848,21 +821,58 @@ String label2;
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel84;
     private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
-    private javax.swing.JTextField label;
+    private javax.swing.JLabel labe1;
+    private javax.swing.JLabel labe10;
+    private javax.swing.JLabel labe11;
+    private javax.swing.JLabel labe12;
+    private javax.swing.JLabel labe13;
+    private javax.swing.JLabel labe14;
+    private javax.swing.JLabel labe15;
+    private javax.swing.JLabel labe16;
+    private javax.swing.JLabel labe17;
+    private javax.swing.JLabel labe18;
+    private javax.swing.JLabel labe19;
+    private javax.swing.JLabel labe2;
+    private javax.swing.JLabel labe20;
+    private javax.swing.JLabel labe21;
+    private javax.swing.JLabel labe22;
+    private javax.swing.JLabel labe23;
+    private javax.swing.JLabel labe24;
+    private javax.swing.JLabel labe25;
+    private javax.swing.JLabel labe26;
+    private javax.swing.JLabel labe27;
+    private javax.swing.JLabel labe28;
+    private javax.swing.JLabel labe29;
+    private javax.swing.JLabel labe3;
+    private javax.swing.JLabel labe30;
+    private javax.swing.JLabel labe31;
+    private javax.swing.JLabel labe32;
+    private javax.swing.JLabel labe33;
+    private javax.swing.JLabel labe34;
+    private javax.swing.JLabel labe35;
+    private javax.swing.JLabel labe36;
+    private javax.swing.JLabel labe37;
+    private javax.swing.JLabel labe38;
+    private javax.swing.JLabel labe39;
+    private javax.swing.JLabel labe4;
+    private javax.swing.JLabel labe40;
+    private javax.swing.JLabel labe41;
+    private javax.swing.JLabel labe42;
+    private javax.swing.JLabel labe43;
+    private javax.swing.JLabel labe44;
+    private javax.swing.JLabel labe5;
+    private javax.swing.JLabel labe6;
+    private javax.swing.JLabel labe7;
+    private javax.swing.JLabel labe8;
+    private javax.swing.JLabel labe9;
+    private javax.swing.JLabel labelt;
+    private javax.swing.JLabel labet2;
+    private javax.swing.JLabel labet3;
     // End of variables declaration//GEN-END:variables
 }
