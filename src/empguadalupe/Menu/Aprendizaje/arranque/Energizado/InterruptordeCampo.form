@@ -65,7 +65,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="450" width="210" height="-1"/>
+          <AbsoluteConstraints x="50" y="450" width="210" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -75,7 +75,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="43" width="293" height="343"/>
+          <AbsoluteConstraints x="10" y="40" width="293" height="343"/>
         </Constraint>
       </Constraints>
 
@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Interruptor de campo&#xa;Cuando se ejecuta este paso, el interruptor cargado con corriente de los servicios auxiliares      (125V DC), aplica esta energ&#xed;a a anillo superior, con esto el rotor se magnetiza y comienza a generar energ&#xed;a con el movimiento antes dado por el agua.&#xa;En esta imagen la podemos ver como pre-excitaci&#xf3;n y excitaci&#xf3;n.&#xa;la maquina se auto excita cuando ya se encuentra generando.&#xa;"/>
+            <Property name="text" type="java.lang.String" value="Cuando se ejecuta este paso, el interruptor cierra y aplica un voltaje al anillo superior, con esto se adquiere una fuerza electromotriz al girar el rotor.&#xa;En esta imagen la podemos ver como pre-excitaci&#xf3;n y excitaci&#xf3;n.&#xa;la maquina se auto excita cuando ya se encuentra generando.&#xa;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
@@ -102,7 +102,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="420" width="210" height="-1"/>
+          <AbsoluteConstraints x="50" y="420" width="210" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -115,7 +115,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="390" width="210" height="-1"/>
+          <AbsoluteConstraints x="50" y="390" width="210" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

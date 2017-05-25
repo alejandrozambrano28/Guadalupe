@@ -64,12 +64,12 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Se busca la conexión entre la maquina anteriormente seleccionada y los servicios comunes se encuentren habilitados.");
+        jTextArea1.setText("Se busca la conexión entre la maquina anteriormente seleccionada y que los servicios comunes se encuentren habilitados para garantizar la generación del generador.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 289, 110));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 289, 130));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");

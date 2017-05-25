@@ -11,6 +11,9 @@ import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
 import empguadalupe.Menu.Aprendizaje.arranque.Arranque;
 import empguadalupe.Menu.Evaluacion.arranque.ArranqueEva;
 import empguadalupe.Menu.Evaluacion.arranque.FormularioEvaluacion;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -145,28 +148,68 @@ public class Menu1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    JFrame arranque = new Arranque();
-            arranque.setVisible(true);        // TODO add your handling code here:
+    JFrame arranque = null;
+        try {
+            arranque = new Arranque();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            arranque.setVisible(true);
+             ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
            JFrame ParoN = new ParoNormal();
             ParoN.setVisible(true);
+                  ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          JFrame ParoR = new ParoRapido();
             ParoR.setVisible(true);
+                  ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JFrame ParoE = new ParoEmergencia();
             ParoE.setVisible(true);
+                  ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
    
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
       FormularioEvaluacion form = new FormularioEvaluacion();
       form.setVisible(true);
+            ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);
       dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 

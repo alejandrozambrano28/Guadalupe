@@ -72,12 +72,12 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Cuando se llega al valor de 63% ya la maquina se encuentra generando suficiente energía como para auto-excitarse, este valor se tiene que mantener para poder lograr una conexión con la red exterior.  ");
+        jTextArea1.setText("Cuando se llega al valor de 63% (8.7 kV) de la tensión nominal en barraje salida estator ya la maquina se encuentra generando suficiente energía como para auto-excitarse, este valor se tiene que mantener para garantizar una conexión estable en cuanto nivel de tensión con la red exterior.  ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 205, 281));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 240, 281));
 
         jButton3.setText("Control Interruptor Generador");
         jButton3.addActionListener(new java.awt.event.ActionListener() {

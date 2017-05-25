@@ -41,7 +41,6 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
         jCheckBox7 = new javax.swing.JCheckBox();
         jCheckBox8 = new javax.swing.JCheckBox();
         jCheckBox9 = new javax.swing.JCheckBox();
@@ -62,24 +61,25 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setSelected(true);
-        jCheckBox1.setText("Reset reles paro y bloqueo");
+        jCheckBox1.setText("Reset reles paro y bloqueo no activos");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
 
         jCheckBox2.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setSelected(true);
         jCheckBox2.setText("Valvula esferica cerrada");
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
 
         jCheckBox3.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox3.setSelected(true);
-        jCheckBox3.setText("Sellos MTTO aguas arriba aplicados");
+        jCheckBox3.setText("Sellos MTTO aguas arriba desaplicados");
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
 
         jCheckBox4.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox4.setSelected(true);
-        jCheckBox4.setText("Boulon de bloqueo aplicado");
+        jCheckBox4.setText("Boulon de bloqueo desaplicado");
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -90,14 +90,8 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jCheckBox5.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox5.setSelected(true);
-        jCheckBox5.setText("Llave de bloqueo val 3 vias aplicada");
-        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, -1, -1));
-
-        jCheckBox6.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBox6.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox6.setSelected(true);
-        jCheckBox6.setText("Bypass posicion intermedia");
-        getContentPane().add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
+        jCheckBox5.setText("Llave de bloqueo val 3 vias desaplicada");
+        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
 
         jCheckBox7.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox7.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,6 +101,7 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
 
         jCheckBox8.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox8.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox8.setSelected(true);
         jCheckBox8.setText("Bypass cerrado");
         getContentPane().add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
 
@@ -170,7 +165,6 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;

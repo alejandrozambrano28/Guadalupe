@@ -67,11 +67,13 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
 
         jCheckBox3.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox3.setSelected(true);
         jCheckBox3.setText("Junta hinchable desaplicada");
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 101, -1, -1));
 
         jCheckBox4.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox4.setSelected(true);
         jCheckBox4.setText("Presion bomba lubricacion forzada normal");
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +84,7 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
 
         jCheckBox5.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox5.setSelected(true);
         jCheckBox5.setText("Sistema presion de aceite turbina listo");
         getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 49, -1, -1));
 
@@ -99,11 +102,13 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
 
         jCheckBox8.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox8.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox8.setSelected(true);
         jCheckBox8.setText("Servomotor cerrado");
         getContentPane().add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 127, -1, -1));
 
         jCheckBox9.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox9.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox9.setSelected(true);
         jCheckBox9.setText("Valvula piloto cerrada");
         getContentPane().add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 153, -1, -1));
 

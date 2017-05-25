@@ -6,7 +6,7 @@
 package empguadalupe.Menu.Aprendizaje.arranque;
 
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.CerrarValvulaEsferica;
-import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenosParoNormal;
+import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.BombaRefrigeracion;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.DesaplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.JuntaInflable;
@@ -57,6 +57,8 @@ import javax.swing.JButton;
  * @author lzambrs
  */
 public class Arranque extends javax.swing.JFrame {
+ 
+    
      Thread hiloA;
     int contador = 0;
     private Point location1, location2, location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
@@ -95,6 +97,30 @@ public class Arranque extends javax.swing.JFrame {
     boolean bande22 = true;
     boolean bande23 = true;
     boolean bande24 = true;
+        boolean bbande1 = false;
+    boolean bbande2 = false;
+    boolean bbande3 = false;
+    boolean bbande4 = false;
+    boolean bbande5 = false;
+    boolean bbande6 = false;
+    boolean bbande7 = false;
+    boolean bbande8 = false;
+    boolean bbande9 = false;
+    boolean bbande10 = false;
+    boolean bbande11 = false;
+    boolean bbande12 = false;
+    boolean bbande13 = false;
+    boolean bbande14 = false;
+    boolean bbande15 = false;
+    boolean bbande16 = false;
+    boolean bbande17 = false;
+    boolean bbande18 = false;
+    boolean bbande19 = false;
+    boolean bbande20 = false;
+    boolean bbande21 = false;
+    boolean bbande22 = false;
+    boolean bbande23 = false;
+    boolean bbande24 = false;
     ImageIcon romboon,rombooff;
     
     Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
@@ -105,8 +131,9 @@ public class Arranque extends javax.swing.JFrame {
      */
     
     
-    public Arranque() {
-        
+    public Arranque() throws IOException {
+          
+           
         
         initComponents();
         convertiranegro();
@@ -629,11 +656,11 @@ public class Arranque extends javax.swing.JFrame {
         titulo.setBackground(new java.awt.Color(60, 188, 28));
         titulo.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titulo.setText("SECUENCIA DE ARRANQUE UNIDAD X GUADALUPE IV");
+        titulo.setText("SECUENCIA DE ARRANQUE UNIDAD 1-2-3 GUADALUPE IV");
         titulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 204, 0), null, null));
         titulo.setOpaque(true);
         jPanel1.add(titulo);
-        titulo.setBounds(200, 0, 1120, 50);
+        titulo.setBounds(200, 0, 1200, 50);
 
         arranqueNormal.setText("SECUENCIA NORMAL");
         arranqueNormal.addActionListener(new java.awt.event.ActionListener() {
@@ -894,6 +921,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton1MouseReleased(evt);
             }
         });
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton1);
         boton1.setBounds(1130, 280, 290, 23);
 
@@ -914,6 +946,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton2MouseReleased(evt);
+            }
+        });
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
             }
         });
         jPanel1.add(boton2);
@@ -938,6 +975,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton3MouseReleased(evt);
             }
         });
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton3);
         boton3.setBounds(1130, 100, 220, 23);
 
@@ -958,6 +1000,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton4MouseReleased(evt);
+            }
+        });
+        boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton4ActionPerformed(evt);
             }
         });
         jPanel1.add(boton4);
@@ -982,6 +1029,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton5MouseReleased(evt);
             }
         });
+        boton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton5);
         boton5.setBounds(1130, 160, 200, 23);
 
@@ -1002,6 +1054,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton7MouseReleased(evt);
             }
         });
+        boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton7ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton7);
         boton7.setBounds(1130, 70, 200, 23);
 
@@ -1019,6 +1076,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton6MouseReleased(evt);
+            }
+        });
+        boton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton6ActionPerformed(evt);
             }
         });
         jPanel1.add(boton6);
@@ -1090,6 +1152,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton10MouseReleased(evt);
             }
         });
+        boton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton10ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton10);
         boton10.setBounds(1130, 340, 210, 23);
 
@@ -1112,6 +1179,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton11MouseReleased(evt);
             }
         });
+        boton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton11ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton11);
         boton11.setBounds(1130, 310, 190, 23);
 
@@ -1129,6 +1201,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton12MouseReleased(evt);
+            }
+        });
+        boton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton12ActionPerformed(evt);
             }
         });
         jPanel1.add(boton12);
@@ -1202,6 +1279,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton15MouseReleased(evt);
             }
         });
+        boton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton15ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton15);
         boton15.setBounds(1130, 490, 290, 23);
 
@@ -1224,6 +1306,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton16MouseReleased(evt);
             }
         });
+        boton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton16ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton16);
         boton16.setBounds(1130, 520, 220, 23);
 
@@ -1244,6 +1331,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton17MouseReleased(evt);
+            }
+        });
+        boton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton17ActionPerformed(evt);
             }
         });
         jPanel1.add(boton17);
@@ -1315,6 +1407,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton20MouseReleased(evt);
             }
         });
+        boton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton20ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton20);
         boton20.setBounds(1130, 640, 150, 23);
 
@@ -1337,6 +1434,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton21MouseReleased(evt);
             }
         });
+        boton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton21ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton21);
         boton21.setBounds(1130, 670, 250, 23);
 
@@ -1356,6 +1458,11 @@ public class Arranque extends javax.swing.JFrame {
                 boton22MouseReleased(evt);
             }
         });
+        boton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton22ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton22);
         boton22.setBounds(1130, 700, 130, 23);
 
@@ -1373,6 +1480,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton23MouseReleased(evt);
+            }
+        });
+        boton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton23ActionPerformed(evt);
             }
         });
         jPanel1.add(boton23);
@@ -1395,6 +1507,11 @@ public class Arranque extends javax.swing.JFrame {
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 boton24MouseReleased(evt);
+            }
+        });
+        boton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton24ActionPerformed(evt);
             }
         });
         jPanel1.add(boton24);
@@ -1587,6 +1704,31 @@ public class Arranque extends javax.swing.JFrame {
         bande22 = true;
         bande23 = true;
         bande24 = true;
+        
+     bbande1 = false;
+     bbande2 = false;
+     bbande3 = false;
+     bbande4 = false;
+     bbande5 = false;
+     bbande6 = false;
+     bbande7 = false;
+     bbande8 = false;
+     bbande9 = false;
+     bbande10 = false;
+     bbande11 = false;
+     bbande12 = false;
+     bbande13 = false;
+     bbande14 = false;
+     bbande15 = false;
+     bbande16 = false;
+     bbande17 = false;
+     bbande18 = false;
+     bbande19 = false;
+     bbande20 = false;
+     bbande21 = false;
+     bbande22 = false;
+     bbande23 = false;
+    bbande24 = false;
 
         boton1.setEnabled(true);
         boton2.setEnabled(true);
@@ -1633,6 +1775,7 @@ public class Arranque extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     try {
+                        bbande1=true;
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
@@ -1829,10 +1972,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton4.setLocation(tam[0], tam[2] - 20);
+                    boton4.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
-                    label4.setLocation(tam[0], tam[2] - 20);
+                    label4.setLocation(tam[0], tam[2] - 12);
                     bande4 = false;
                     //boton4.setBackground(Color.green);
                     correct4.setBackground(Color.green);
@@ -1894,10 +2037,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton5.setLocation(tam[0], tam[2] - 20);
+                    boton5.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
-                    label5.setLocation(tam[0], tam[2] - 20);
+                    label5.setLocation(tam[0], tam[2] - 12);
                     bande5 = false;
                     //boton5.setBackground(Color.green);
                     correct5.setBackground(Color.green);
@@ -2037,9 +2180,9 @@ public class Arranque extends javax.swing.JFrame {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                    AplicarFrenosParoNormal frenos = null;
+                    AplicarFrenos frenos = null;
                     try {
-                        frenos = new AplicarFrenosParoNormal();
+                        frenos = new AplicarFrenos();
                     } catch (IOException ex) {
                         Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -2134,7 +2277,18 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-        // TODO add your handling code here:
+   if (bbande9 == true) {
+                    LubricacionForzadaOn LFOn = null;
+            try {
+                LFOn = new LubricacionForzadaOn();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        LFOn.setVisible(true);
+                        LFOn.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
@@ -2201,7 +2355,18 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-        // TODO add your handling code here:
+   if (bbande8 == true) {
+                    DesaplicarFrenos DF = null;
+            try {
+                DF = new DesaplicarFrenos();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        DF.setVisible(true);
+                        DF.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
@@ -2523,7 +2688,20 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-        // TODO add your handling code here:
+  if (bbande14 == true) {
+                    LubricacionForzadaOff LFOff = null;
+            try {
+                LFOff = new LubricacionForzadaOff(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        LFOff.setVisible(true);
+                        LFOff.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+           
+                     // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
@@ -2600,10 +2778,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton16.setLocation(tam[0], tam[2] - 20);
+                    boton16.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
-                    label16.setLocation(tam[0], tam[2] - 20);
+                    label16.setLocation(tam[0], tam[2] - 12);
                     bande16 = false;
                     //boton16.setBackground(Color.green);
                     correct16.setBackground(Color.green);
@@ -2665,10 +2843,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton17.setLocation(tam[0], tam[2] - 20);
+                    boton17.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
-                    label17.setLocation(tam[0], tam[2] - 20);
+                    label17.setLocation(tam[0], tam[2] - 12);
                     bande17 = false;
                     //boton17.setBackground(Color.green);
                     correct17.setBackground(Color.green);
@@ -2730,10 +2908,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton18.setLocation(tam[0], tam[2] - 20);
+                    boton18.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
-                    label18.setLocation(tam[0], tam[2] - 20);
+                    label18.setLocation(tam[0], tam[2] - 12);
                     bande18 = false;
                     //boton18.setBackground(Color.green);
                     correct18.setBackground(Color.green);
@@ -2777,7 +2955,18 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton18MouseReleased
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-        // TODO add your handling code here:
+if (bbande18 == true) {
+                    ComunicacionG4ux CG4 = null;
+            try {
+                CG4 = new ComunicacionG4ux();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        CG4.setVisible(true);
+                        CG4.setLocationRelativeTo(null);
+
+        }            // TODO add your handling code here:
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
@@ -2794,10 +2983,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton19.setLocation(tam[0], tam[2] - 20);
+                    boton19.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
-                    label19.setLocation(tam[0], tam[2] - 20);
+                    label19.setLocation(tam[0], tam[2] - 12);
                     bande19 = false;
                     //boton19.setBackground(Color.green);
                     correct19.setBackground(Color.green);
@@ -2842,7 +3031,18 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
-        // TODO add your handling code here:
+     if (bbande19 == true) {
+                    SincroenMarcha SM = null;
+            try {
+                SM = new SincroenMarcha();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        SM.setVisible(true);
+                        SM.setLocationRelativeTo(null);
+
+        }     
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton20MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseDragged
@@ -2859,10 +3059,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton20.setLocation(tam[0], tam[2] - 20);
+                    boton20.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label20.setSize(boton20.getWidth(), boton20.getHeight());
-                    label20.setLocation(tam[0], tam[2] - 20);
+                    label20.setLocation(tam[0], tam[2] - 12);
                     bande20 = false;
                     //boton20.setBackground(Color.green);
                     correct20.setBackground(Color.green);
@@ -2919,10 +3119,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton21.setLocation(tam[0], tam[2] - 20);
+                    boton21.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label21.setSize(boton21.getWidth(), boton21.getHeight());
-                    label21.setLocation(tam[0], tam[2] - 20);
+                    label21.setLocation(tam[0], tam[2] - 12);
                     bande21 = false;
                     //boton21.setBackground(Color.green);
                     correct21.setBackground(Color.green);
@@ -2984,10 +3184,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton22.setLocation(tam[0], tam[2] - 20);
+                    boton22.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label22.setSize(boton22.getWidth(), boton22.getHeight());
-                    label22.setLocation(tam[0], tam[2] - 20);
+                    label22.setLocation(tam[0], tam[2] - 12);
                     bande22 = false;
                     //boton22.setBackground(Color.green);
                     correct22.setBackground(Color.green);
@@ -3045,10 +3245,10 @@ public class Arranque extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton23.setLocation(tam[0], tam[2] - 20);
+                    boton23.setLocation(tam[0], tam[2] - 12);
                     System.out.println("correcto");
                     label23.setSize(boton23.getWidth(), boton23.getHeight());
-                    label23.setLocation(tam[0], tam[2] - 20);
+                    label23.setLocation(tam[0], tam[2] - 12);
                     bande23 = false;
                     //boton23.setBackground(Color.green);
                     correct23.setBackground(Color.green);
@@ -3108,10 +3308,10 @@ public class Arranque extends javax.swing.JFrame {
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
-                        boton24.setLocation(tam[0], tam[2] - 20);
+                        boton24.setLocation(tam[0], tam[2] - 12);
                         System.out.println("correcto");
                         label24.setSize(boton24.getWidth(), boton24.getHeight());
-                        label24.setLocation(tam[0], tam[2] - 20);
+                        label24.setLocation(tam[0], tam[2] - 12);
                         //boton24.setBackground(Color.green);
                         correct24.setBackground(Color.green);
                         bande24 = false;
@@ -3160,8 +3360,292 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton24MouseReleased
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
-        // TODO add your handling code here:
+  if (bbande13 == true) {
+                    InterruptordeCampo IC = null;
+            try {
+                IC = new InterruptordeCampo(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        IC.setVisible(true);
+                        IC.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+           
     }//GEN-LAST:event_boton13ActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        if (bbande1 == true) {
+                    BombaRefrigeracion bomba = null;
+            try {
+                bomba = new BombaRefrigeracion();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        bomba.setVisible(true);
+                        bomba.setLocationRelativeTo(null);
+
+        }
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
+         if (bbande7 == true) {
+                    CerrarValvulaEsferica Ve = null;
+            try {
+                Ve = new CerrarValvulaEsferica();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        Ve.setVisible(true);
+                        Ve.setLocationRelativeTo(null);
+
+        }
+    }//GEN-LAST:event_boton7ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+            if (bbande3 == true) {
+                    ValvulaAlivio Va = null;
+            try {
+                Va = new ValvulaAlivio();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        Va.setVisible(true);
+                        Va.setLocationRelativeTo(null);
+
+        }
+    }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
+    if (bbande6 == true) {
+                    AplicarFrenos AF = null;
+            try {
+                AF = new AplicarFrenos();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        AF.setVisible(true);
+                        AF.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_boton6ActionPerformed
+
+    private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
+            if (bbande5 == true) {
+                    filtroAplicado FA = null;
+            try {
+                FA = new filtroAplicado();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        FA.setVisible(true);
+                        FA.setLocationRelativeTo(null);
+        }
+    }//GEN-LAST:event_boton5ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+          if (bbande2 == true) {
+                    ValvulaAislamiento Vais = null;
+            try {
+                Vais = new ValvulaAislamiento();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        Vais.setVisible(true);
+                        Vais.setLocationRelativeTo(null);
+
+        }
+    }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
+    if (bbande11 == true) {
+                    ReguladorEnergizado RE = null;
+            try {
+                RE = new ReguladorEnergizado(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        RE.setVisible(true);
+                        RE.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_boton11ActionPerformed
+
+    private void boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton10ActionPerformed
+         if (bbande10 == true) {
+                    ReguladorDesbloqueado RD = null;
+            try {
+                RD = new ReguladorDesbloqueado(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        RD.setVisible(true);
+                        RD.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+      
+    }//GEN-LAST:event_boton10ActionPerformed
+
+    private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
+   if (bbande12 == true) {
+                    VelocidadM90 VM = null;
+            try {
+                VM = new VelocidadM90(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        VM.setVisible(true);
+                        VM.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+           // TODO add your handling code here:
+    }//GEN-LAST:event_boton12ActionPerformed
+
+    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+   if (bbande4 == true) {
+                    JuntaInflable JI = null;
+            try {
+                JI = new JuntaInflable();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        JI.setVisible(true);
+                        JI.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
+            
+    }//GEN-LAST:event_boton4ActionPerformed
+
+    private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
+        if (bbande15 == true) {
+                    VoltajeInterruptor VI = null;
+            try {
+                VI = new VoltajeInterruptor(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        VI.setVisible(true);
+                        VI.setLocationRelativeTo(null);
+
+        }    
+    }//GEN-LAST:event_boton15ActionPerformed
+
+    private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
+ if (bbande16 == true) {
+                    SincroDisponible SD = null;
+            try {
+                SD = new SincroDisponible();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        SD.setVisible(true);
+                        SD.setLocationRelativeTo(null);
+
+        }            // TODO add your handling code here:
+    }//GEN-LAST:event_boton16ActionPerformed
+
+    private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
+ if (bbande17 == true) {
+                    UnidadXSeleccionada US = null;
+            try {
+                US = new UnidadXSeleccionada();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        US.setVisible(true);
+                        US.setLocationRelativeTo(null);
+
+        }            // TODO add your handling code here:
+    }//GEN-LAST:event_boton17ActionPerformed
+
+    private void boton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton20ActionPerformed
+ if (bbande20 == true) {
+                    SincroOk SOK = null;
+            try {
+                SOK = new SincroOk();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        SOK.setVisible(true);
+                        SOK.setLocationRelativeTo(null);
+
+        }          
+    }//GEN-LAST:event_boton20ActionPerformed
+
+    private void boton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton21ActionPerformed
+         if (bbande21 == true) {
+                    InterruptoGeneradorCerrado IGC = null;
+            try {
+                IGC = new InterruptoGeneradorCerrado();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        IGC.setVisible(true);
+                        IGC.setLocationRelativeTo(null);
+
+        }  
+    }//GEN-LAST:event_boton21ActionPerformed
+
+    private void boton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton22ActionPerformed
+ if (bbande22 == true) {
+                    VoltajeM63 VM = null;
+            try {
+                VM = new VoltajeM63();
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        VM.setVisible(true);
+                        VM.setLocationRelativeTo(null);
+
+        }          // TODO add your handling code here:
+    }//GEN-LAST:event_boton22ActionPerformed
+
+    private void boton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton23ActionPerformed
+         if (bbande23 == true) {
+                    LimitadorApertura100 LA = null;
+            try {
+                LA = new LimitadorApertura100(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        LA.setVisible(true);
+                        LA.setLocationRelativeTo(null);
+
+        }  
+    }//GEN-LAST:event_boton23ActionPerformed
+
+    private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
+         if (bbande24 == true) {
+                    Unidaddes UD = null;
+            try {
+                UD = new Unidaddes(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                        //bomba.setSize(734, 494);
+                        UD.setVisible(true);
+                        UD.setLocationRelativeTo(null);
+
+        }  
+    }//GEN-LAST:event_boton24ActionPerformed
  
 
     public void generarsonido() {
@@ -3451,7 +3935,11 @@ public class Arranque extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Arranque().setVisible(true);
+                try {
+                    new Arranque().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

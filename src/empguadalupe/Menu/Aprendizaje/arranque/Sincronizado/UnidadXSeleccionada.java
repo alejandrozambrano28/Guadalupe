@@ -51,7 +51,7 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
         jLabel1.setText("UNIDAD X SELECCIONADA");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 350, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GUnidadSelect.gif"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/comunicacionx_1.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 46, -1, -1));
 
         jButton1.setText("Ubicación en planta");
@@ -65,7 +65,7 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("\nComo solo existe un solo sincronoscopio , solo se podrá conectar una generadora a la vez al SIN, una vez sincronizada la máquina, el sincronizador vuelve a quedar disponible para ejecutar esta operación con otra máquina.\n");
+        jTextArea1.setText("Como solo existe un solo sincronoscopio, solo se podrá conectar una generadora a la vez al SIN, una vez sincronizada la máquina, el sincronizador vuelve a quedar disponible para ejecutar esta operación con otra máquina.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

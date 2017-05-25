@@ -7,7 +7,7 @@ package empguadalupe.Menu.Evaluacion.arranque;
 
 
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.CerrarValvulaEsferica;
-import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenosParoNormal;
+import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.BombaRefrigeracion;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.DesaplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.JuntaInflable;
@@ -116,6 +116,7 @@ String AnombS;
     ImageIcon romboon,rombooff;
     Calendar calendario;
     Timer timer;
+ 
     JFrame Arran;
     
     Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
@@ -130,7 +131,7 @@ String AnombS;
         
         
         initComponents();
-          
+        
         
 
  
@@ -1480,10 +1481,15 @@ String AnombS;
     int dia, mes, año, hora, minutos, segundos; 
     int Segundo,Minuto,Hora;
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
-       convertiranegro();
-       bandet=false;
+       convertiranegro();   
+       Segundo=0;
+       Minuto=0;
+       Hora=0;
        calendario = new GregorianCalendar();
-       
+       if (bandet == true){
+       timer.restart();
+         bandet=false;
+       }else{
        timer =  new Timer(1000, new java.awt.event.ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
@@ -1513,6 +1519,7 @@ String AnombS;
                 } 
                 }); 
                 timer.start();
+       }
                 bandet=true;
                 
     
@@ -2138,9 +2145,9 @@ String AnombS;
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                    AplicarFrenosParoNormal frenos = null;
+                    AplicarFrenos frenos = null;
                     try {
-                        frenos = new AplicarFrenosParoNormal();
+                        frenos = new AplicarFrenos();
                     } catch (IOException ex) {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -3319,7 +3326,7 @@ public static int pu2;
         }
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-   public void CapturarPantalla () throws AWTException, IOException{
+  /* public void CapturarPantalla () throws AWTException, IOException{
      Rectangle p = new Rectangle(1000, 100, 1000, 100);
   
     //maximal 70% of window size
@@ -3330,7 +3337,7 @@ public static int pu2;
     // Lo guarda como un JPEG
     File file = new File("C:\\Users\\lzambrs\\Pictures\\EPM2\\"+label2+"_"+".jpg");
     ImageIO.write(pantalla, "jpg", file);
-}
+}*/
     public void generarsonido() {
         Clip sonido = null;
         try {

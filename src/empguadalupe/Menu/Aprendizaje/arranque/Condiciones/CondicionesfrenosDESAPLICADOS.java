@@ -48,6 +48,7 @@ public class CondicionesfrenosDESAPLICADOS extends javax.swing.JFrame {
 
         jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setSelected(true);
         jCheckBox1.setText("Velocidad menor 1%");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 55, -1, -1));
 

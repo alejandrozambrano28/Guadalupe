@@ -111,7 +111,7 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoReguladorDes plano = null;
                     plano = new PlanoReguladorDes();
-                    plano.setSize(1090,474);
+             
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -119,7 +119,7 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
                     control = new ControlRegulador();
-                    control.setSize(240,390);
+                 
                     control.setVisible(true);
                      control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -131,7 +131,7 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(ReguladorDesbloqueado.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(580,220);
+                  
                     condiciones.setVisible(true);
                      condiciones.setLocationRelativeTo(null);
                  

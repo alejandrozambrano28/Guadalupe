@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="En los dos polos del interruptor de campo se posee energ&#xed;a la cual una proviene de la m&#xe1;quina y la otra del SIN, al intentar hacer la conexi&#xf3;n se provoca un arco el&#xe9;ctrico que puede producir una explosi&#xf3;n, esto se evita gracias a una corriente de aire que se le aplica para romper dicho arco. "/>
+            <Property name="text" type="java.lang.String" value="En los dos polos del interruptor se posee energ&#xed;a la cual una proviene de la m&#xe1;quina y la otra del SIN, al intentar hacer la conexi&#xf3;n se provoca un arco el&#xe9;ctrico que puede producir una explosi&#xf3;n, esto se evita gracias a una corriente de aire que se le aplica para romper dicho arco."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

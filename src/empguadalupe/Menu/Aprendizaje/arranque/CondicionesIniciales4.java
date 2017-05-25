@@ -87,7 +87,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
         jLabel96.setForeground(new java.awt.Color(255, 255, 255));
         jLabel96.setText("SISTEMA DE SINCRONIZACION LISTO");
         jLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 310, 20));
+        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 310, 40));
 
         jLabel97.setForeground(new java.awt.Color(255, 255, 255));
         jLabel97.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -115,7 +115,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
         jLabel102.setForeground(new java.awt.Color(255, 255, 255));
         jLabel102.setText("SIST. INTERRUPTOR GENERADOR NORMAL");
         jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 310, 20));
+        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 310, 40));
 
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N

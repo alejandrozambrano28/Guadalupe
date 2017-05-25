@@ -7,6 +7,7 @@ package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoFiltro;
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlFiltro;
+import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlFiltrofisico;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class filtroAplicado extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -47,11 +49,11 @@ public class filtroAplicado extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("FILTRO APLICADO");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 11, -1, 26));
+        jLabel1.setText("FILTRO EN FUNCIONAMIENTO");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/filtro.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 252, 440, 230));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/filtro50002.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 440, 310));
 
         jButton1.setText("Ubicacion en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,22 +61,21 @@ public class filtroAplicado extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 306, 239, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 210, -1));
 
         jTextArea1.setColumns(1);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(1);
         jTextArea1.setTabSize(1);
-        jTextArea1.setText("Con el fin de entregar las bombas de refrigeración agua libre de sólidos en suspensión, se diseñó un sistema dual de filtros que toma el agua del foso de descarga y la entrega por medio de un vertedero al foso de bombas.\n\nEl sistema está compuesto por dos filtros ubicados en dos cámaras independientes. Ambos filtros toman agua del mismo foso a través de compuertas independientes y lo entregan a un mismo foso, pero también de vertederos independientes.\n\nEl flujo de agua en estado normal es como sigue: El agua de foso de descarga pasa a través de la compuerta (por vasos comunicantes) hacia la cámara de entrada; la compuerta de entrada es comandada manualmente y permite regular el caudal de entrada. De la cámara de entrada el agua pasa al interior del filtro para pasar a través de la malla filtrante a la cámara de salida del filtro y de éste al foso de bombas por el vertedero.\n\nEn teoría, un solo filtro es capaz de suministrar la totalidad del agua filtrada que es necesaria para la refrigeración de las 3 máquinas. El filtro debe permanecer con su compuerta totalmente abierta, aún cuando en algunos casos será necesario colocarlas en posiciones intermedias para regular el caudal de entrada. También es posible trabajar simultáneamente ambos filtros, si las circunstancias lo exigen, o trabajar con uno solo y tener la compuerta del otro abierta; aunque esto último no es aconsejable.\n\nSe mencionó anteriormente que el flujo era para estado normal, ya que si se presenta obstrucción de la malla filtrante, la capacidad filtrante se pierde. Debido a que el lodo obstruirá la malla filtrante, cada filtro cuenta con un motor con reductor  que permite girar el tambor continuamente y con un sistema de lavado de la malla para mantenerlas limpias.\n\nLa velocidad del motor puede ser controlada manual o automáticamente, según se desee y lo mismo el sistema de lavado.\n\nEl agua que entra al canal de descarga proveniente de las descargas de máquinas deberá ser dosificada de tal forma que, solo aporte lo necesario para la refrigeración y no se presenten vertederos exagerados al canal de drenajes, ni niveles altos en la cámara de entrada a filtros.\n\nEn estado de trabajo normal y óptimo se espera que el nivel de la cámara de entrada esté por encima de la cámara de salida, ya que así el filtro trabaja más eficientemente. Normalmente, la diferencia estará entre 10 y 61 cm, pero las circunstancias determinarán el valor final.\n\nLas cámaras de entrada y salida pueden ser drenadas totalmente en los casos que se requiera. El agua saldrá por tapones de fondo hacia el foso de bombas.\n\n");
+        jTextArea1.setText("Con el fin de entregar las bombas de refrigeración agua libre de sólidos en suspensión, se diseñó un sistema dual de filtros que toma el agua del foso de descarga y la entrega por medio de un vertedero al foso de bombas.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setCaretPosition(1);
         jTextArea1.setFocusable(false);
         jTextArea1.setKeymap(null);
         jTextArea1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 43, 652, 170));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 43, 652, 90));
 
         jButton2.setText("Control Bombas");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -82,10 +83,18 @@ public class filtroAplicado extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 265, 239, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 210, -1));
+
+        jButton3.setText("Filtro Fisico");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 210, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 500));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 710, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -93,7 +102,7 @@ public class filtroAplicado extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoFiltro plano = null;
                     plano = new PlanoFiltro();
-                    plano.setSize(1090,474);
+              
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -101,10 +110,18 @@ public class filtroAplicado extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlFiltro control = null;
                     control = new ControlFiltro();
-                    control.setSize(530, 300);
+                   
                     control.setVisible(true);
                      control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+          ControlFiltrofisico control = null;
+                    control = new ControlFiltrofisico();
+                   
+                    control.setVisible(true);
+                     control.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,6 +145,7 @@ public class filtroAplicado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -65,7 +65,7 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("La lubricación forzada tiene la función de aplicar una presión de aceite tal que permita levantar o estabilizar el rotor y permitir que una capa de aceite forme una placa lubricada donde este girarà. \n\n");
+        jTextArea1.setText("La lubricación forzada tiene la función separar el runner del cojinete de carga con el fin de garantizarle la mínima película de aceite para su giro. ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

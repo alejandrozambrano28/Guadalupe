@@ -314,11 +314,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="VOLTAJES DE CONTROL DISPONIBLES*"/>
+        <Property name="text" type="java.lang.String" value="VOLTAJES DE CONTROL DISPONIBLES "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe2MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="120" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="120" width="280" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -330,11 +333,15 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="SECUENCIA DE PARO INACTIVAS"/>
+        <Property name="text" type="java.lang.String" value="SECUENCIA DE PARO INACTIVAS "/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe1MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="90" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="90" width="280" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -346,11 +353,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="VOLTAJES AUXILIARES NORMALES Ux *"/>
+        <Property name="text" type="java.lang.String" value="VOLTAJES AUXILIARES NORMALES U "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe3MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="150" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="150" width="270" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -362,11 +372,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="SELECTORES EN POSICION NORMAL*"/>
+        <Property name="text" type="java.lang.String" value="SELECTORES EN POSICION NORMAL "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe4MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="180" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="180" width="270" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -378,11 +391,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*"/>
+        <Property name="text" type="java.lang.String" value="ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe7MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="270" width="260" height="20"/>
+          <AbsoluteConstraints x="50" y="270" width="280" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -396,6 +412,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="V&#xc0;LVULA ESF&#xc8;RICA ADMISION LISTA"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe14MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="480" width="240" height="20"/>
@@ -410,8 +429,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="ALABES MOVILES OK"/>
+        <Property name="text" type="java.lang.String" value="ALABES MOVILES OK "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe6MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="240" width="240" height="20"/>
@@ -426,11 +448,14 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="JUNTA INFLABLE MTT DESAPLICADA*"/>
+        <Property name="text" type="java.lang.String" value="JUNTA INFLABLE MTT DESAPLICADA "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe5MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="210" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="210" width="270" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -444,6 +469,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="REGULADOR VELOCIDAD TURBINA LISTO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe13MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="450" width="240" height="20"/>
@@ -460,6 +488,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA HIDRAULICO TURBINA LISTO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe12MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="420" width="240" height="20"/>
@@ -476,6 +507,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA DE FRENOS LISTO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe11MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="390" width="240" height="20"/>
@@ -492,6 +526,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="RESET RELES DE BLOQUEO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe10MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="360" width="240" height="20"/>
@@ -508,6 +545,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NIVEL ACEITE COJIN SUPERIOR NORMAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe9MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="330" width="240" height="20"/>
@@ -524,9 +564,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NIVEL DE ACEITE COJIN INFERIOR NORMAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe8MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="300" width="240" height="20"/>
+          <AbsoluteConstraints x="50" y="300" width="270" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -552,6 +595,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="VIBRACIONES UNIDAD X SIN DISPARO"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe18MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="600" width="240" height="20"/>
@@ -568,6 +614,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SECCIONADOR GENERADOR CERRADO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe17MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="570" width="240" height="20"/>
@@ -584,6 +633,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="MCB POTENCIAL RED NORMAL*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe16MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="540" width="240" height="20"/>
@@ -600,6 +652,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA REGULADOR DE VOLTAJE LISTO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe15MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="50" y="510" width="240" height="20"/>
@@ -724,7 +779,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="50" width="310" height="20"/>
+          <AbsoluteConstraints x="10" y="40" width="320" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -852,6 +907,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="CO2 NO ACTIVADO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe20MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="120" width="240" height="20"/>
@@ -868,6 +926,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="VALVULA DE ALIVIO CERRADA*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe19MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="90" width="240" height="20"/>
@@ -884,6 +945,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="REGULADOR DE TENSION EN AUTOMATICO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe21MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="150" width="240" height="20"/>
@@ -900,6 +964,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="REGULADOR DE TENSION EN REMOTO"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe22MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="180" width="240" height="20"/>
@@ -916,6 +983,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="DISTRIBUIDOR CERRADO"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe24MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="240" width="240" height="20"/>
@@ -932,6 +1002,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA INTERRUPTOR GENERADOR LISTO"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe23MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="210" width="240" height="20"/>
@@ -976,7 +1049,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="340" y="50" width="310" height="20"/>
+          <AbsoluteConstraints x="340" y="40" width="310" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -990,6 +1063,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="VOLTAJES DE CONTROL DISPONIBLES*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe26MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="350" width="240" height="20"/>
@@ -1006,6 +1082,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SECUENCIA DE PARO INACTIVAS"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe25MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="320" width="240" height="20"/>
@@ -1022,6 +1101,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="VOLTAJES AUXILIARES NORMALES Ux *"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe27MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="380" width="240" height="20"/>
@@ -1038,6 +1120,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SELECTORES EN POSICION NORMAL*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe28MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="410" width="240" height="20"/>
@@ -1054,6 +1139,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="ENCLAVAMIENTO DISTRUIBUIDOR RETIRADO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe31MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="500" width="240" height="20"/>
@@ -1070,6 +1158,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="ALABES MOVILES OK"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe30MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="470" width="240" height="20"/>
@@ -1086,6 +1177,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="JUNTA INFLABLE MTT DESAPLICADA*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe29MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="440" width="240" height="20"/>
@@ -1102,6 +1196,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="RESET RELES DE BLOQUEO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe34MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="590" width="240" height="20"/>
@@ -1118,6 +1215,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NIVEL ACEITE COJIN SUPERIOR NORMAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe33MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="560" width="240" height="20"/>
@@ -1134,6 +1234,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NIVEL DE ACEITE COJIN INFERIOR NORMAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe32MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="380" y="530" width="240" height="20"/>
@@ -1171,7 +1274,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="340" y="280" width="310" height="20"/>
+          <AbsoluteConstraints x="340" y="270" width="310" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1380,7 +1483,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="170" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="190" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1399,7 +1502,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="320" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="340" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1418,7 +1521,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="140" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="160" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1437,7 +1540,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="200" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="220" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1456,7 +1559,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="230" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="250" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1475,7 +1578,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="260" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="280" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1494,7 +1597,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="290" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="310" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1513,7 +1616,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="350" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="370" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1527,9 +1630,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="VOLTAJES DE CONTROL DISPONIBLES*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe36MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="170" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="190" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1543,9 +1649,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SECUENCIA DE PARO INACTIVAS"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe35MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="140" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="160" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1559,9 +1668,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="NORMAL AUXILIAR DE LOS VOLTAJES UX"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe37MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="200" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="220" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1575,9 +1687,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SELECTORES EN POSICION NORMAL*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe38MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="230" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="250" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1591,9 +1706,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="CO2 NO ACTIVADO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe41MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="320" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="340" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1607,9 +1725,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA DE FRENOS LISTO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe40MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="290" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="310" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1623,9 +1744,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="RESET RELES BLOQUEO*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe39MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="260" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="280" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1639,9 +1763,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SISTEMA INTERRUPTOR GENERADOR NORMAL"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe42MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="350" width="260" height="20"/>
+          <AbsoluteConstraints x="710" y="370" width="260" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1672,7 +1799,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="670" y="130" width="310" height="250"/>
+          <AbsoluteConstraints x="670" y="150" width="310" height="250"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1695,7 +1822,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="670" y="100" width="310" height="20"/>
+          <AbsoluteConstraints x="670" y="110" width="310" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1714,7 +1841,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="460" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="480" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1733,7 +1860,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="430" width="20" height="20"/>
+          <AbsoluteConstraints x="680" y="450" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1747,9 +1874,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="PUERTAS INTERRUPTOR MAQUINA CERRADAS*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe44MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="460" width="270" height="20"/>
+          <AbsoluteConstraints x="710" y="480" width="270" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1763,9 +1893,12 @@
         </Property>
         <Property name="text" type="java.lang.String" value="SINCRONIZADOR DISPONIBLE*"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labe43MouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="710" y="430" width="240" height="20"/>
+          <AbsoluteConstraints x="710" y="450" width="240" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1784,7 +1917,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="670" y="420" width="310" height="80"/>
+          <AbsoluteConstraints x="670" y="440" width="310" height="80"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1826,7 +1959,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="670" y="390" width="310" height="20"/>
+          <AbsoluteConstraints x="670" y="400" width="310" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1960,7 +2093,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="800" y="100" width="20" height="20"/>
+          <AbsoluteConstraints x="810" y="120" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -1979,7 +2112,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="810" y="390" width="20" height="20"/>
+          <AbsoluteConstraints x="810" y="410" width="20" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -2017,7 +2150,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="80" width="310" height="550"/>
+          <AbsoluteConstraints x="10" y="80" width="320" height="550"/>
         </Constraint>
       </Constraints>
     </Component>

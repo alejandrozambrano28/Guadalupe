@@ -73,7 +73,7 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("La lubricación forzada ha cumplido su objetivo de aplicar la capa de aceite y permitir una fluidez en la maquina al girar.");
+        jTextArea1.setText("La lubricación forzada ha cumplido su objetivo de separar el runner del cojinete de carga, sale de servicio cuando la unidad está en el 90% de la velocidad.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

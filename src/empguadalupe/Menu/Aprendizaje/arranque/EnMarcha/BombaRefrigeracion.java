@@ -71,7 +71,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El sistema de refrigeración del generador tiene la función de estabilizar la temperatura limitando su elevación más allá de los limites previstos. La bomba de refrigeracion hace circular agua a cada unidad, y debe garantizar el flujo a través de los cojinetes y radiadores.\n\n\n");
+        jTextArea1.setText("El sistema de refrigeración del generador tiene la función de estabilizar la temperatura controlando incrementos de térmicos más allá de los rangos establecidos. La bomba de refrigeración hace circular agua a cada unidad, y debe garantizar el flujo a través de los cojinetes y radiadores.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
@@ -111,7 +111,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoBomba plano = null;
                     plano = new PlanoBomba();
-                    plano.setSize(1090,474);
+                
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -119,7 +119,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlBomba control = null;
                     control = new ControlBomba();
-                    control.setSize(920, 800);
+                 
                     control.setVisible(true);
                     control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -131,7 +131,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(BombaRefrigeracion.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(520, 190);
+                
                     condiciones.setVisible(true);
                     condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -139,7 +139,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         SistemadeRefrigeracion sistema = null;
                     sistema = new SistemadeRefrigeracion();
-                    sistema.setSize(920,541);
+               
                     sistema.setVisible(true);
                     sistema.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed

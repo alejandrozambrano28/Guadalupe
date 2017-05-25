@@ -70,17 +70,17 @@ int contgeneralv=0;
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 210, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 210, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Interruptor de campo\nCuando se ejecuta este paso, el interruptor cargado con corriente de los servicios auxiliares      (125V DC), aplica esta energía a anillo superior, con esto el rotor se magnetiza y comienza a generar energía con el movimiento antes dado por el agua.\nEn esta imagen la podemos ver como pre-excitación y excitación.\nla maquina se auto excita cuando ya se encuentra generando.\n");
+        jTextArea1.setText("Cuando se ejecuta este paso, el interruptor cierra y aplica un voltaje al anillo superior, con esto se adquiere una fuerza electromotriz al girar el rotor.\nEn esta imagen la podemos ver como pre-excitación y excitación.\nla maquina se auto excita cuando ya se encuentra generando.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 293, 343));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 293, 343));
 
         jButton2.setText("Control Interruptor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ int contgeneralv=0;
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 210, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 210, -1));
 
         jButton4.setText("Ubicación en planta operación");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +96,7 @@ int contgeneralv=0;
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 210, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 210, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");

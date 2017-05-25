@@ -69,7 +69,7 @@ public class AplicarFrenosParoRapido extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Su principal función es disminuir o anular progresivamente la velocidad de la máquina.\nEn caso de tener que hacer un uso local, no se tendrá un panel, se tendrá que hacer un uso mecánico de las válvulas ubicadas cerca a el generador numero dos (Ver ubicación). este solo se aplica si la maquina se encuentra a una velocidad menor al 10%.\n");
+        jTextArea1.setText("Su principal función es disminuir y/o anular progresivamente la velocidad de la máquina, además mantener la unidad de generación inmovilizada cuando no está en el proceso de giro.\nEn caso de tener que hacer un uso local, no se tendrá un panel, se tendrá que hacer una operación mecánica de las válvulas ubicadas cerca a el generador numero dos (Ver ubicación). Estos solo se aplican si la maquina se encuentra a una velocidad menor al 10%.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

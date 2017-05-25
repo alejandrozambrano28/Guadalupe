@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Al terminar la sincronizaci&#xf3;n, ya no se necesita m&#xe1;s la ayuda de este, la cual deja la conexi&#xf3;n existente y se retira para volver a quedar disponible por si existe otra sincronizaci&#xf3;n pendiente. "/>
+            <Property name="text" type="java.lang.String" value="Al terminar la sincronizaci&#xf3;n, ya no se necesita m&#xe1;s la ayuda de este, la cual deja la conexi&#xf3;n existente y se retira para volver a quedar disponible por si existe otra sincronizaci&#xf3;n pendiente."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

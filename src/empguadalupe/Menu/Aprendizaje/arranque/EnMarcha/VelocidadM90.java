@@ -58,7 +58,7 @@ int contgeneralv=0;
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VELOCIDAD MAYOR AL 90%");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 11, -1, 26));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 26));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/ezgif.com-crop.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, -1, -1));
@@ -74,12 +74,12 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Con este paso se da una señal de confirmación que los alabes se encuentran abriendo y tiene una velocidad mayor al 90%. ");
+        jTextArea1.setText("Con este paso se da una señal de confirmación de que la unidad está girando y tiene una velocidad mayor al 90% de su nominal.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 652, 61));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 390, 70));
 
         jButton2.setText("Control regulador");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +90,7 @@ int contgeneralv=0;
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 197, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 650, 350));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 440, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -98,7 +98,7 @@ int contgeneralv=0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoReguladorDes plano = null;
                     plano = new PlanoReguladorDes();
-                    plano.setSize(1090,474);
+             
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -106,7 +106,7 @@ int contgeneralv=0;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
                     control = new ControlRegulador();
-                    control.setSize(240,390);
+                   
                     control.setVisible(true);
                      control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed

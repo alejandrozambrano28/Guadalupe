@@ -72,11 +72,10 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(1);
         jTextArea1.setTabSize(1);
-        jTextArea1.setText("La válvula de aislamiento 216 de mando hidráulico es pilotada por la válvula 218, cuyo mando es eléctrico proveniente del sistema de control existente y puede ser accionada de una perilla ubicada en el tablero del regulador electrónico de velocidad reivax300 cuando se requiere realizar pruebas y ajustes del regulador. La válvula 216 tiene dos funciones:\n\n** Con maquina parada: bloquea el paso de flujo de aceite al sistema y permite mantener el acumulador lleno de aceite y a presión normal. Como el sistema posee fugas de aceite con retorno a tanque, la presión comienza a descender y cuando llega a 38 bar la motobomba se enciende, la intermitencia se energiza y se recupera presión en el tanque acumulador hasta los 40 bar.\n\n** Con maquina girando: permite el paso del flujo de aceite desde el acumulador hacia el circuito hidráulico que permite la maniobra del servomotor del distribuidor.\n\nEsta provista de 3 contactos eléctricos (uno común para los otros dos) de señalización de las posiciones de apertura y cierre de sí misma.\nLas bombas y su funcionamiento permanente dependen de la válvula de aislamiento. Si esta se cierra, las bombas paran de funcionar en modo de operación automático. En manual, las bombas están disponibles para su futuro encendido.\n");
+        jTextArea1.setText("La válvula de aislamiento 216 de mando hidráulico es pilotada por la válvula 218, cuyo mando es eléctrico, proveniente del sistema de control existente y puede ser accionada de un pulsador ubicado en el tablero del regulador de velocidad Reivax300");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
-        jTextArea1.setCaretPosition(1);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 413, 228));

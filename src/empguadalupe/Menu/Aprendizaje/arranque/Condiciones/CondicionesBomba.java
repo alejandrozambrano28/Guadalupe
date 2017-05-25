@@ -51,25 +51,29 @@ public class CondicionesBomba extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CONDICIONES INICIALES BOMBA DE REFRIGERACION");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 503, 26));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 503, 26));
 
         jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("Voltage control disponible");
+        jCheckBox1.setSelected(true);
+        jCheckBox1.setText("Voltaje control disponible");
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 44, -1, -1));
 
         jCheckBox2.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setSelected(true);
         jCheckBox2.setText("Interruptor Ok");
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 71, -1, -1));
 
         jCheckBox3.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox3.setSelected(true);
         jCheckBox3.setText("Arrancador X Ok");
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 97, -1, -1));
 
         jCheckBox4.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox4.setSelected(true);
         jCheckBox4.setText("Reserva 1 off");
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,17 +84,19 @@ public class CondicionesBomba extends javax.swing.JFrame {
 
         jCheckBox5.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox5.setSelected(true);
         jCheckBox5.setText("Reserva 2 off");
         getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 44, -1, -1));
 
         jCheckBox6.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox6.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox6.setSelected(true);
         jCheckBox6.setText("Nivel de foso Ok");
         getContentPane().add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 71, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 510, 150));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 530, 150));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

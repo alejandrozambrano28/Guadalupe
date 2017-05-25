@@ -162,7 +162,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("SIST. PRESIÒN DE ACEITE TURBINA LISTO");
         jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 310, 20));
+        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 310, 40));
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
@@ -211,7 +211,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel67.setForeground(new java.awt.Color(255, 255, 255));
         jLabel67.setText("REGULADOR VELOCIDAD TURBINA LISTO");
         jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 310, 20));
+        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 310, 40));
 
         jLabel70.setForeground(new java.awt.Color(255, 255, 255));
         jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
@@ -247,15 +247,15 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
 
         jLabel78.setForeground(new java.awt.Color(255, 255, 255));
         jLabel78.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 20, 20));
+        getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 20, 20));
 
         jLabel80.setForeground(new java.awt.Color(255, 255, 255));
         jLabel80.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 20, 20));
+        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 20, 20));
 
         jLabel81.setForeground(new java.awt.Color(255, 255, 255));
         jLabel81.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 20, 20));
+        getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 20, 20));
 
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
         jLabel82.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -264,17 +264,17 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel86.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel86.setForeground(new java.awt.Color(255, 255, 255));
         jLabel86.setText("VALVULA DE BYPASS CERRADA");
-        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 240, 20));
+        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 240, 20));
 
         jLabel87.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel87.setForeground(new java.awt.Color(255, 255, 255));
         jLabel87.setText("VALVULA ESFERICA CERRADA");
-        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 240, 20));
+        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 240, 20));
 
         jLabel88.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel88.setForeground(new java.awt.Color(255, 255, 255));
         jLabel88.setText("VALVULA ESFERICA LISTA");
-        getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 240, 20));
+        getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 240, 20));
 
         jLabel89.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel89.setForeground(new java.awt.Color(255, 255, 255));
@@ -283,13 +283,13 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
 
         jLabel95.setForeground(new java.awt.Color(255, 255, 255));
         jLabel95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 310, 110));
+        getContentPane().add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 310, 110));
 
         jLabel96.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel96.setForeground(new java.awt.Color(255, 255, 255));
         jLabel96.setText("SISTEMA DE VALVULA ESFERICA LISTO");
         jLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 310, 20));
+        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 310, 40));
 
         jLabel97.setForeground(new java.awt.Color(255, 255, 255));
         jLabel97.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -321,7 +321,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel102.setForeground(new java.awt.Color(255, 255, 255));
         jLabel102.setText("SISTEMA REGULADOR DE VOLTAJE LISTO");
         jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 310, 20));
+        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 310, 40));
 
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -374,7 +374,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
 
         jLabel107.setForeground(new java.awt.Color(255, 255, 255));
         jLabel107.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        getContentPane().add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 20, 20));
+        getContentPane().add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 20, 20));
 
         jLabel108.setForeground(new java.awt.Color(255, 255, 255));
         jLabel108.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -382,7 +382,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
 
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-        getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 630));
+        getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Con este paso se da una se&#xf1;al de confirmaci&#xf3;n que los alabes se encuentran abriendo y tiene una velocidad mayor al 10%. "/>
+            <Property name="text" type="java.lang.String" value="Con este paso se da una se&#xf1;al de confirmaci&#xf3;n que los alabes se encuentran CERRANDO y tiene una velocidad mayor al 10%. "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

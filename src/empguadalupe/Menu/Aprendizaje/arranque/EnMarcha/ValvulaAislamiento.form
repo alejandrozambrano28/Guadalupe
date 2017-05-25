@@ -85,11 +85,10 @@
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="1"/>
             <Property name="tabSize" type="int" value="1"/>
-            <Property name="text" type="java.lang.String" value="La v&#xe1;lvula de aislamiento 216 de mando hidr&#xe1;ulico es pilotada por la v&#xe1;lvula 218, cuyo mando es el&#xe9;ctrico proveniente del sistema de control existente y puede ser accionada de una perilla ubicada en el tablero del regulador electr&#xf3;nico de velocidad reivax300 cuando se requiere realizar pruebas y ajustes del regulador. La v&#xe1;lvula 216 tiene dos funciones:&#xa;&#xa;** Con maquina parada: bloquea el paso de flujo de aceite al sistema y permite mantener el acumulador lleno de aceite y a presi&#xf3;n normal. Como el sistema posee fugas de aceite con retorno a tanque, la presi&#xf3;n comienza a descender y cuando llega a 38 bar la motobomba se enciende, la intermitencia se energiza y se recupera presi&#xf3;n en el tanque acumulador hasta los 40 bar.&#xa;&#xa;** Con maquina girando: permite el paso del flujo de aceite desde el acumulador hacia el circuito hidr&#xe1;ulico que permite la maniobra del servomotor del distribuidor.&#xa;&#xa;Esta provista de 3 contactos el&#xe9;ctricos (uno com&#xfa;n para los otros dos) de se&#xf1;alizaci&#xf3;n de las posiciones de apertura y cierre de s&#xed; misma.&#xa;Las bombas y su funcionamiento permanente dependen de la v&#xe1;lvula de aislamiento. Si esta se cierra, las bombas paran de funcionar en modo de operaci&#xf3;n autom&#xe1;tico. En manual, las bombas est&#xe1;n disponibles para su futuro encendido.&#xa;"/>
+            <Property name="text" type="java.lang.String" value="La v&#xe1;lvula de aislamiento 216 de mando hidr&#xe1;ulico es pilotada por la v&#xe1;lvula 218, cuyo mando es el&#xe9;ctrico, proveniente del sistema de control existente y puede ser accionada de un pulsador ubicado en el tablero del regulador de velocidad Reivax300"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="autoscrolls" type="boolean" value="false"/>
-            <Property name="caretPosition" type="int" value="1"/>
           </Properties>
         </Component>
       </SubComponents>

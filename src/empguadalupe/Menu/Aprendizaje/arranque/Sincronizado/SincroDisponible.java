@@ -65,7 +65,7 @@ public class SincroDisponible extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El Sincronizador es el que logra hacer la conexión entre el generador y con el Sistema Interconectado Nacional (SIN). Este equipo es la encargada de lograr que el voltaje, la frecuencia y el ángulo de fase del generador sea la misma del SIN y con esto evitar un daño en la máquina.");
+        jTextArea1.setText("El Sincronizador es el que logra hacer la conexión entre el generador y el Sistema Interconectado Nacional (SIN). Este equipo es el encargado de lograr que el voltaje, la frecuencia y el ángulo de fase del generador sean los misma del SIN y con esto evitar un daño en la máquina.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

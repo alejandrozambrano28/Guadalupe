@@ -45,11 +45,19 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bomba = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        bomba = new javax.swing.JButton();
+        bomba1 = new javax.swing.JButton();
+        bomba2 = new javax.swing.JButton();
+        bomba3 = new javax.swing.JButton();
+        bomba4 = new javax.swing.JButton();
+        bomba5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
 
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
@@ -57,10 +65,47 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
                 bombaActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 50, 50));
+        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 50, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bomba1.setText("jButton1");
+        bomba1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 50, 50));
+
+        bomba2.setText("jButton1");
+        bomba2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 50, 50));
+
+        bomba3.setText("jButton1");
+        bomba3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 50, 50));
+
+        bomba4.setText("jButton1");
+        bomba4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 50, 50));
+
+        bomba5.setText("jButton1");
+        bomba5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 50, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -68,6 +113,26 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
         System.out.println("dio");
     }//GEN-LAST:event_bombaActionPerformed
+
+    private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba1ActionPerformed
+
+    private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba2ActionPerformed
+
+    private void bomba3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba3ActionPerformed
+
+    private void bomba4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba4ActionPerformed
+
+    private void bomba5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,6 +298,11 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bomba;
+    private javax.swing.JButton bomba1;
+    private javax.swing.JButton bomba2;
+    private javax.swing.JButton bomba3;
+    private javax.swing.JButton bomba4;
+    private javax.swing.JButton bomba5;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

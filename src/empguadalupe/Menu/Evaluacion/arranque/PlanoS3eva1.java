@@ -32,11 +32,14 @@ public class PlanoS3eva1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bomba = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        bomba = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1Operador.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
@@ -45,9 +48,6 @@ public class PlanoS3eva1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 90, 50));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1Operador.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -9,6 +9,7 @@ package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.movimiento;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.ControlRegulador1;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoReguladorDes1;
+import empguadalupe.Menu.Aprendizaje.arranque.Planos.movimiento1;
 import java.io.IOException;
 
 
@@ -44,6 +45,7 @@ int contgeneralv=0;
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -60,7 +62,7 @@ int contgeneralv=0;
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 11, -1, 26));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/ezgif.com-crop.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 122, -1, 172));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, 172));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,17 +70,17 @@ int contgeneralv=0;
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Con este paso se da una señal para abrir los alabes a su màxima amplitud. ");
+        jTextArea1.setText("Este indicador muestra el estado actual del limitador de apertura. Dando este valor en porcentaje, siendo el 100% una apertura total del limitador. Una vez la máquina esté la máquina sincronizada, automáticamente esta referencia del limitador de apertura es llevada al 100%");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 43, 590, 61));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 43, 380, 140));
 
         jButton2.setText("Control regulador");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -86,11 +88,15 @@ int contgeneralv=0;
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/ReferenciaLimitador.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 190, 210));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 650, 310));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 650, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,7 +117,7 @@ int contgeneralv=0;
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
                        if(contgeneralv==24){
-                           movimiento m = new movimiento();
+                           movimiento1 m = new movimiento1();
                            m.setVisible(true);
                            m.setLocationRelativeTo(null);
              
@@ -132,6 +138,7 @@ int contgeneralv=0;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

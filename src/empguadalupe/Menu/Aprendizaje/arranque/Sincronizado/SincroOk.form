@@ -89,7 +89,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#xa;El Sincronizador est&#xe1; recibiendo correctamente las se&#xf1;ales para hacer la conexi&#xf3;n y no genera ninguna falla.&#xa;"/>
+            <Property name="text" type="java.lang.String" value="El Sincronizador est&#xe1; recibiendo correctamente las se&#xf1;ales para hacer la conexi&#xf3;n y no genera ninguna falla, encontr&#xe1;ndose disponible para conectar el generador al SIN."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

@@ -322,7 +322,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
         jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("DESDE PARO TOTAL");
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 310, 20));
+        getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 310, 40));
 
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -386,7 +386,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("DESDE PARO TOTAL");
         jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 310, 20));
+        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 310, 40));
 
         jLabel55.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
@@ -445,7 +445,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
         jLabel67.setForeground(new java.awt.Color(255, 255, 255));
         jLabel67.setText("DESDE MARCHA");
         jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, 310, 20));
+        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 310, 40));
 
         jLabel68.setForeground(new java.awt.Color(255, 255, 255));
         jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
@@ -570,7 +570,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
         jLabel96.setForeground(new java.awt.Color(255, 255, 255));
         jLabel96.setText("DESDE ENERGIZADO");
         jLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 310, 20));
+        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 310, 40));
 
         jLabel97.setForeground(new java.awt.Color(255, 255, 255));
         jLabel97.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -602,7 +602,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
         jLabel102.setForeground(new java.awt.Color(255, 255, 255));
         jLabel102.setText("DESDE ENERGIZADO");
         jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, 310, 20));
+        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 380, 310, 40));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -612,7 +612,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 50, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 50, 40));
 
         jButton2.setBackground(new java.awt.Color(0, 153, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -622,7 +622,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 50, 50, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 40, 50, 40));
 
         jButton3.setBackground(new java.awt.Color(0, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -632,7 +632,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 50, 50, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 40, 50, 40));
 
         jButton4.setBackground(new java.awt.Color(0, 153, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -643,7 +643,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 50, 50, 40));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 40, 50, 40));
 
         jLabel105.setForeground(new java.awt.Color(255, 255, 255));
         jLabel105.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));

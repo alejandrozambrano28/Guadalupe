@@ -71,7 +71,7 @@ int contgeneralv=0;
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Con este paso se da una señal de confirmación que los alabes se encuentran abriendo y tiene una velocidad mayor al 90%. ");
+        jTextArea1.setText("Con este paso se da una señal de confirmación que los alabes se encuentran CERRANDO y tiene una velocidad mayor al 90%. ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

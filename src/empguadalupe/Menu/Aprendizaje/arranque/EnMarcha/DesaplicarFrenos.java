@@ -7,6 +7,7 @@ package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.Condiciones.Condicionesfrenos;
+import empguadalupe.Menu.Aprendizaje.arranque.Controles.SistemadeFrenos;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
@@ -43,6 +44,7 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -82,6 +84,14 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, -1, -1));
 
+        jButton2.setText("Sistema de Frenos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
+
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, 0, 810, 460));
@@ -92,7 +102,7 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoFrenos plano = null;
                     plano = new PlanoFrenos();
-                    plano.setSize(1090,474);
+            
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -104,10 +114,18 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(DesaplicarFrenos.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(508,210);
+                
                     condiciones.setVisible(true);
                      condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+              SistemadeFrenos plano = null;
+                    plano = new SistemadeFrenos();
+                
+                    plano.setVisible(true);
+                     plano.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +148,7 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

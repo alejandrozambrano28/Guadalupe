@@ -75,7 +75,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="58" width="205" height="281"/>
+          <AbsoluteConstraints x="10" y="58" width="240" height="281"/>
         </Constraint>
       </Constraints>
 
@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Cuando se llega al valor de 63% ya la maquina se encuentra generando suficiente energ&#xed;a como para auto-excitarse, este valor se tiene que mantener para poder lograr una conexi&#xf3;n con la red exterior.  "/>
+            <Property name="text" type="java.lang.String" value="Cuando se llega al valor de 63% (8.7 kV) de la tensi&#xf3;n nominal en barraje salida estator ya la maquina se encuentra generando suficiente energ&#xed;a como para auto-excitarse, este valor se tiene que mantener para garantizar una conexi&#xf3;n estable en cuanto nivel de tensi&#xf3;n con la red exterior.  "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

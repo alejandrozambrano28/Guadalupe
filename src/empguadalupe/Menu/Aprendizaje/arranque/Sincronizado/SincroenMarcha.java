@@ -65,7 +65,7 @@ public class SincroenMarcha extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El sincronizador comienza a comparar los valores de voltaje, frecuencia y ángulo de fase hasta entrar en un rango permisible entre la generadora y el SIN. ");
+        jTextArea1.setText("El sincronizador comienza a comparar los valores de voltaje, frecuencia y ángulo de fase hasta entrar en un rango permisible entre la generadora y el SIN.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

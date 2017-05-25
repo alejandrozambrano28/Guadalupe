@@ -78,7 +78,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Estas válvulas esféricas están situadas en la parte más baja de la tubería forzada, y en aguas arriba de cada turbina. Esta válvula permite el flujo de agua a la turbina y cuenta con una válvula Bypass, la cual cumple la función de igualar presiones a los dos lados de la válvula esférica y con esto evitar el golpe de ariete que puede ocasionar el daño en la tubería.   ");
+        jTextArea1.setText("Estas válvulas están situadas en la parte más baja de la tubería forzada, y en aguas arriba de cada turbina. Esta válvula permite el flujo de agua a la turbina y cuenta con un Bypass, la cual cumple la función de igualar presiones a los dos lados de la válvula esférica y con esto evitar el golpe de ariete que puede ocasionar el daño en la tubería.   ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
@@ -110,7 +110,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoValvulaEsferica plano = null;
                     plano = new PlanoValvulaEsferica();
-                    plano.setSize(1090,474);
+       
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -118,7 +118,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlValvulaEsfericaA control = null;
                     control = new ControlValvulaEsfericaA();
-                    control.setSize(380,330);
+    
                     control.setVisible(true);
                      control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -130,7 +130,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(CerrarValvulaEsferica.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(525,360);
+  
                     condiciones.setVisible(true);
                      condiciones.setLocationRelativeTo(null);
     

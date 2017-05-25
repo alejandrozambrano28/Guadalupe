@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Estas v&#xe1;lvulas esf&#xe9;ricas est&#xe1;n situadas en la parte m&#xe1;s baja de la tuber&#xed;a forzada, y en aguas arriba de cada turbina. Esta v&#xe1;lvula permite el flujo de agua a la turbina y cuenta con una v&#xe1;lvula Bypass, la cual cumple la funci&#xf3;n de igualar presiones a los dos lados de la v&#xe1;lvula esf&#xe9;rica y con esto evitar el golpe de ariete que puede ocasionar el da&#xf1;o en la tuber&#xed;a.   "/>
+            <Property name="text" type="java.lang.String" value="Estas v&#xe1;lvulas est&#xe1;n situadas en la parte m&#xe1;s baja de la tuber&#xed;a forzada, y en aguas arriba de cada turbina. Esta v&#xe1;lvula permite el flujo de agua a la turbina y cuenta con un Bypass, la cual cumple la funci&#xf3;n de igualar presiones a los dos lados de la v&#xe1;lvula esf&#xe9;rica y con esto evitar el golpe de ariete que puede ocasionar el da&#xf1;o en la tuber&#xed;a.   "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

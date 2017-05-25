@@ -86,7 +86,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="La lubricaci&#xf3;n forzada ha cumplido su objetivo de aplicar la capa de aceite y permitir una fluidez en la maquina al girar."/>
+            <Property name="text" type="java.lang.String" value="La lubricaci&#xf3;n forzada ha cumplido su objetivo de separar el runner del cojinete de carga, sale de servicio cuando la unidad est&#xe1; en el 90% de la velocidad."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

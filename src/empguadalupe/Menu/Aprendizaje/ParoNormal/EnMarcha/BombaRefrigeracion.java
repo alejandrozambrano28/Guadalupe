@@ -72,7 +72,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("El sistema de refrigeración del generador tiene la función de estabilizar la temperatura limitando su elevación más allá de los limites previstos. La bomba de refrigeracion hace circular agua a cada unidad, y debe garantizar el flujo a través de los cojinetes y radiadores.\n\n\n");
+        jTextArea1.setText("El sistema de refrigeración del generador tiene la función de estabilizar la temperatura controlando incrementos de térmicos más allá de los rangos establecidos. La bomba de refrigeración hace circular agua a cada unidad, y debe garantizar el flujo a través de los cojinetes y radiadores.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

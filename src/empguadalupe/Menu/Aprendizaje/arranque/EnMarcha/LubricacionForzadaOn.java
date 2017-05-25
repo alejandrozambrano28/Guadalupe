@@ -68,7 +68,7 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("La lubricación forzada tiene la función de aplicar una presión de aceite tal que permita levantar o estabilizar el rotor y permitir que una capa de aceite forme una placa lubricada donde este girarà. \n\n");
+        jTextArea1.setText("La lubricación forzada tiene la función separar el runner del cojinete de carga con el fin de garantizarle la mínima película de aceite para su giro. ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
@@ -92,7 +92,7 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoLubricacionf plano = null;
                     plano = new PlanoLubricacionf();
-                    plano.setSize(1300,900);
+                
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -100,7 +100,7 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlLubricacionF control = null;
                     control = new ControlLubricacionF();
-                    control.setSize(280,300);
+            
                     control.setVisible(true);
                      control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed

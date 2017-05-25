@@ -65,7 +65,7 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("En los dos polos del interruptor de campo se posee energía la cual una proviene de la máquina y la otra del SIN, al intentar hacer la conexión se provoca un arco eléctrico que puede producir una explosión, esto se evita gracias a una corriente de aire que se le aplica para romper dicho arco. ");
+        jTextArea1.setText("En los dos polos del interruptor se posee energía la cual una proviene de la máquina y la otra del SIN, al intentar hacer la conexión se provoca un arco eléctrico que puede producir una explosión, esto se evita gracias a una corriente de aire que se le aplica para romper dicho arco.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

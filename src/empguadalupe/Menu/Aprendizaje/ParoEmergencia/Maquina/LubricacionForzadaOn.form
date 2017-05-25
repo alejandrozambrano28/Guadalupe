@@ -83,7 +83,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="La lubricaci&#xf3;n forzada tiene la funci&#xf3;n de aplicar una presi&#xf3;n de aceite tal que permita levantar o estabilizar el rotor y permitir que una capa de aceite forme una placa lubricada donde este girar&#xe0;. &#xa;&#xa;"/>
+            <Property name="text" type="java.lang.String" value="La lubricaci&#xf3;n forzada tiene la funci&#xf3;n separar el runner del cojinete de carga con el fin de garantizarle la m&#xed;nima pel&#xed;cula de aceite para su giro. "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>

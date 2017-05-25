@@ -71,7 +71,7 @@ public class Unidaddes extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Al terminar la sincronización, ya no se necesita más la ayuda de este, la cual deja la conexión existente y se retira para volver a quedar disponible por si existe otra sincronización pendiente. ");
+        jTextArea1.setText("Al terminar la sincronización, ya no se necesita más la ayuda de este, la cual deja la conexión existente y se retira para volver a quedar disponible por si existe otra sincronización pendiente.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);

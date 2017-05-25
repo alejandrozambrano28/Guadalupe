@@ -98,7 +98,7 @@ public class Metodos {
       
        public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
         int pos;
-        int nCartas = 24;
+        int nCartas = maximo;
         Stack< Integer> pCartas = new Stack< Integer>();
         for (int i = 0; i < nCartas; i++) {
             pos = (int) Math.floor(Math.random() * nCartas);
@@ -109,6 +109,9 @@ public class Metodos {
         }
         return pCartas;
     }
+       
+       public void traertextos(){
+       }
 
 } 
     

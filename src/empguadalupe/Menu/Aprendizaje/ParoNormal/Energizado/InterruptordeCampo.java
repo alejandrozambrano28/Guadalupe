@@ -56,7 +56,7 @@ int contgeneralv=0;
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("INTERRUPTOR DE CAMPO CERRADO");
+        jLabel1.setText("INTERRUPTOR DE CAMPO ABIERTO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, 26));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/GinterruptorCampo.gif"))); // NOI18N

@@ -67,7 +67,7 @@ public class SincroOk extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("\nEl Sincronizador está recibiendo correctamente las señales para hacer la conexión y no genera ninguna falla.\n");
+        jTextArea1.setText("El Sincronizador está recibiendo correctamente las señales para hacer la conexión y no genera ninguna falla, encontrándose disponible para conectar el generador al SIN.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
