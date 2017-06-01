@@ -89,6 +89,10 @@
             <Property name="text" type="java.lang.String" value="La lubricaci&#xf3;n forzada ha cumplido su objetivo de separar el runner del cojinete de carga, sale de servicio cuando la unidad est&#xe1; en el 1% de la velocidad."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -109,13 +113,13 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="-6" y="0" width="780" height="380"/>
+          <AbsoluteConstraints x="-6" y="0" width="760" height="380"/>
         </Constraint>
       </Constraints>
     </Component>

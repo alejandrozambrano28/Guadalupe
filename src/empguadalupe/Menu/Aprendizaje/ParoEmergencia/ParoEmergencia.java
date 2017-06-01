@@ -282,7 +282,6 @@ public class ParoEmergencia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel18 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         logo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -375,10 +374,8 @@ public class ParoEmergencia extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         icono = new javax.swing.JLabel();
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEA.png"))); // NOI18N
-        jLabel18.setText("jLabel5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Secuencia de Arranque\n");
@@ -389,7 +386,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
         jPanel1.add(logo);
         logo.setBounds(0, 0, 170, 50);
 
@@ -466,12 +463,12 @@ public class ParoEmergencia extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(680, 80, 70, 40);
+        jLabel13.setBounds(680, 60, 70, 60);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -749,7 +746,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1272,49 +1269,53 @@ public class ParoEmergencia extends javax.swing.JFrame {
         jPanel1.add(Plabel12);
         Plabel12.setBounds(660, 700, 140, 60);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEA.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEA.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(750, 290, 260, 20);
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEA.png"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEA.png"))); // NOI18N
         jLabel19.setText("jLabel5");
         jPanel1.add(jLabel19);
-        jLabel19.setBounds(300, 130, 740, 20);
+        jLabel19.setBounds(300, 120, 740, 20);
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEA.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEA.png"))); // NOI18N
         jLabel20.setText("jLabel5");
         jPanel1.add(jLabel20);
         jLabel20.setBounds(300, 290, 380, 20);
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel21);
         jLabel21.setBounds(1010, 280, 10, 20);
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(300, 140, 10, 30);
+        jLabel22.setBounds(300, 130, 10, 40);
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel23);
-        jLabel23.setBounds(710, 120, 10, 40);
+        jLabel23.setBounds(710, 220, 10, 60);
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel24);
         jLabel24.setBounds(300, 230, 10, 70);
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel25);
-        jLabel25.setBounds(1020, 140, 10, 30);
+        jLabel25.setBounds(1020, 130, 10, 40);
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel26);
         jLabel26.setBounds(710, 220, 10, 60);
 
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
+        jPanel1.add(jLabel27);
+        jLabel27.setBounds(710, 120, 10, 40);
+
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
         icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
@@ -1352,6 +1353,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         contgeneral = 0;
         CondicionesInicialesParoEM condi = new CondicionesInicialesParoEM();
         condi.setVisible(true);
+        condi.setLocationRelativeTo(null);
         int num0 = numero.get(0);
         boton3.setLocation(1130, ubica[num0]);
         boton3.setBackground(color);
@@ -3000,7 +3002,6 @@ public class ParoEmergencia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -3010,6 +3011,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -5,13 +5,10 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoSincronizador;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
-
 
 /**
  *
@@ -23,8 +20,8 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public InterruptoGeneradorCerrado() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -52,7 +49,7 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 11, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/Ginterruptor.gif"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 51, 540, 400));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 51, 540, 390));
 
         jButton1.setText("Ubicación en planta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -68,42 +65,40 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
         jTextArea1.setText("En los dos polos del interruptor se posee energía la cual una proviene de la máquina y la otra del SIN, al intentar hacer la conexión se provoca un arco eléctrico que puede producir una explosión, esto se evita gracias a una corriente de aire que se le aplica para romper dicho arco.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 46, 350, 281));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 950, 470));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 910, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                PlanoSincronizador plano = null;
-                    plano = new PlanoSincronizador();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
+        PlanoSincronizador plano = null;
+        plano = new PlanoSincronizador();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        InterruptoGeneradorCerrado p = new InterruptoGeneradorCerrado();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		InterruptoGeneradorCerrado p = new InterruptoGeneradorCerrado();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

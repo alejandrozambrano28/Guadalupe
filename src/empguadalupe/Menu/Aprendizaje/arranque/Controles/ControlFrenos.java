@@ -48,6 +48,8 @@ public class ControlFrenos extends javax.swing.JFrame {
         jTextArea1.setText("En ésta pantalla aparecen los esquemas de los frenos. La presión que aparece al lado izquierdo de la pantalla se refiere a la presión del sistema de frenos para aplicar las zapatas. Reacuérdese que es necesaria cierta presión para hacer un buen frenado.\n\nJunto al esquema central de la pantalla, aparece la velocidad a la que va el rotor.\n\nCuando los esquemas de los frenos están de color naranja, implica que están desaplicados, pero cuando están de color rojo como se muestra en la figura de arriba indica que están activados los frenos.\n\nEn la esquina superior derecha, se ve dentro de un recuadro azul los modos de operación de la máquina, y si está o no en servicio la máquina. Generalmente se enciende ésta última etiqueta cuando se está en mantenimiento la máquina.\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jTextArea1.setKeymap(null);
         jTextArea1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTextArea1);
@@ -62,7 +64,7 @@ public class ControlFrenos extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/esquemaFrenos.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 223, -1, 477));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 820, 700));
 

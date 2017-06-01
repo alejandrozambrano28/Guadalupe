@@ -5,8 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoNormal.Energizado;
 
-
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlInterruptorCampo;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoInterruptorCampo;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoInterruptorCampoop;
@@ -17,15 +15,17 @@ import java.io.IOException;
  * @author lzambrs
  */
 public class InterruptordeCampo extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public InterruptordeCampo(int contador) throws IOException {
-        initComponents(); 
-        contgeneralv=contador;
-         System.out.println(contgeneralv);
-       
+        initComponents();
+        contgeneralv = contador;
+        System.out.println(contgeneralv);
+
     }
 
     /**
@@ -76,9 +76,11 @@ int contgeneralv=0;
         jTextArea1.setText("Después de abrir el interruptor del generador es necesario abrir el interruptor de campo para evitar que se siga generando energía, la maquina en este punto se encuentra girando ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 293, 270));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 293, 270));
 
         jButton2.setText("Control Interruptor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -96,50 +98,45 @@ int contgeneralv=0;
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 210, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 490));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoInterruptorCampo plano = null;
-                    plano = new PlanoInterruptorCampo();
-                    plano.setSize(1250, 900);
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoInterruptorCampo plano = null;
+        plano = new PlanoInterruptorCampo();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlInterruptorCampo control = null;
-                    control = new ControlInterruptorCampo();
-                    control.setSize(800, 450);
-                    control.setVisible(true);
-                    control.setLocationRelativeTo(null);
+        control = new ControlInterruptorCampo();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-                PlanoInterruptorCampoop plano = null;
-                    plano = new PlanoInterruptorCampoop();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
-       
+        PlanoInterruptorCampoop plano = null;
+        plano = new PlanoInterruptorCampoop();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-             
+
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

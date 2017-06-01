@@ -98,7 +98,7 @@ public class CondicionesValvulaAislamiento extends javax.swing.JFrame {
         jCheckBox7.setText("Bloqueo regulador (condición válida)");
         getContentPane().add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 205, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 520, 240));
 

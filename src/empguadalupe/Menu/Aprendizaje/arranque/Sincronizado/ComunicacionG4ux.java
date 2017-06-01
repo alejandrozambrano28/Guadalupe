@@ -67,11 +67,13 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
         jTextArea1.setText("Se busca la conexión entre la maquina anteriormente seleccionada y que los servicios comunes se encuentren habilitados para garantizar la generación del generador.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 289, 130));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 960, 460));
 
@@ -81,8 +83,8 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoSincronizador plano = null;
                     plano = new PlanoSincronizador();
-                    plano.setSize(1136, 384);
                     plano.setVisible(true);
+                    plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

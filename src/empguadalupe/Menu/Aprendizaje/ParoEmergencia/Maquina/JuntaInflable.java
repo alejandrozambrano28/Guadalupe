@@ -77,6 +77,8 @@ public class JuntaInflable extends javax.swing.JFrame {
         jTextArea1.setText("Su función es sellar el rotor\ncuando este se encuentra sin funcionamiento,\npara evitar que las aguas donde esta \nsumergida la rueda, puedan subir al piso \nS1.\nEn caso de no poder utilizar la junta \ninflable de operación se puede utilizar \nla de mantenimiento.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 43, 350, 220));
@@ -97,7 +99,7 @@ public class JuntaInflable extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 380));
 
         pack();

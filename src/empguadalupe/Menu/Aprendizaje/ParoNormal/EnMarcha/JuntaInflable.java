@@ -77,6 +77,8 @@ public class JuntaInflable extends javax.swing.JFrame {
         jTextArea1.setText("Su función es sellar el rotor cuando este se encuentra sin funcionamiento, para evitar que las aguas donde esta sumergida la rueda, puedan subir al piso S1.\n\nEn caso de no poder utilizar la junta \ninflable de operación se puede utilizar \nla de mantenimiento.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 355, 270));
@@ -97,7 +99,7 @@ public class JuntaInflable extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 140, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 460));
 
         pack();
@@ -106,7 +108,6 @@ public class JuntaInflable extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoJunta plano = null;
                     plano = new PlanoJunta();
-                    plano.setSize(1090,474);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                     
@@ -115,7 +116,6 @@ public class JuntaInflable extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlJunta control = null;
                     control = new ControlJunta();
-                    control.setSize(224, 400);
                     control.setVisible(true);
                     control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -127,7 +127,6 @@ public class JuntaInflable extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(JuntaInflable.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(450,170);
                     condiciones.setVisible(true);
                     condiciones.setBackground(Color.black);
                     condiciones.setLocationRelativeTo(null);

@@ -26,9 +26,27 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener{
      * Creates new form PlanoBomba
      */
 
-    public PlanoS1evaB() {    
+    public PlanoS1evaB(int numeroboton) { 
         initComponents();
+   
+        
+        switch (numeroboton){
+           case 1:btn1.setEnabled(true);break;
+           case 2:btn2.setEnabled(true);break;
+           case 3:btn3.setEnabled(true);btn9.setEnabled(true);btn10.setEnabled(true);break;
+           case 4:btn4.setEnabled(true);btn11.setEnabled(true);btn12.setEnabled(true);break;
+           case 5:btn5.setEnabled(true);btn13.setEnabled(true);btn14.setEnabled(true);break;
+           case 6:btn6.setEnabled(true);btn17.setEnabled(true);btn18.setEnabled(true);break;
+           case 7:btn7.setEnabled(true);btn15.setEnabled(true);btn16.setEnabled(true);break;
+           case 8:btn8.setEnabled(true);break;
+        }
+    
+        
     }                    
+
+    private PlanoS1evaB() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
                         
     /**
@@ -41,24 +59,24 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener{
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btn7 = new javax.swing.JButton();
+        btn8 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btn10 = new javax.swing.JButton();
+        btn11 = new javax.swing.JButton();
+        btn12 = new javax.swing.JButton();
+        btn13 = new javax.swing.JButton();
+        btn14 = new javax.swing.JButton();
+        btn15 = new javax.swing.JButton();
+        btn16 = new javax.swing.JButton();
+        btn17 = new javax.swing.JButton();
+        btn18 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -72,80 +90,302 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener{
         jLabel1.setOpaque(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setText("jButton1");
+        btn1.setEnabled(false);
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 90, 140));
+        getContentPane().add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 90, 140));
 
-        jButton2.setText("jButton2");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 120));
+        btn2.setText("jButton2");
+        btn2.setEnabled(false);
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 120));
 
-        jButton3.setText("jButton3");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 50, 40));
+        btn3.setText("jButton3");
+        btn3.setEnabled(false);
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 50, 40));
 
-        jButton4.setText("jButton4");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 60, 50));
+        btn4.setText("jButton4");
+        btn4.setEnabled(false);
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 60, 50));
 
-        jButton5.setText("jButton5");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 40, 40));
+        btn5.setText("jButton5");
+        btn5.setEnabled(false);
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 40, 40));
 
-        jButton6.setText("jButton6");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 30));
+        btn6.setText("jButton6");
+        btn6.setEnabled(false);
+        btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, 30));
 
-        jButton7.setText("jButton7");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 90, 70));
+        btn7.setText("jButton7");
+        btn7.setEnabled(false);
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 90, 70));
 
-        jButton8.setText("jButton8");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 353, 40, 30));
+        btn8.setText("jButton8");
+        btn8.setEnabled(false);
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 353, 40, 30));
 
-        jButton9.setText("jButton3");
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 50, 40));
+        btn9.setText("jButton3");
+        btn9.setEnabled(false);
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 330, 50, 40));
 
-        jButton10.setText("jButton3");
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 323, 50, 40));
+        btn10.setText("jButton3");
+        btn10.setEnabled(false);
+        btn10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 323, 50, 40));
 
-        jButton11.setText("jButton4");
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 60, 50));
+        btn11.setText("jButton4");
+        btn11.setEnabled(false);
+        btn11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 60, 50));
 
-        jButton12.setText("jButton4");
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 60, 50));
+        btn12.setText("jButton4");
+        btn12.setEnabled(false);
+        btn12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn12, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 60, 50));
 
-        jButton13.setText("jButton5");
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 40, 40));
+        btn13.setText("jButton5");
+        btn13.setEnabled(false);
+        btn13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn13ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 310, 40, 40));
 
-        jButton14.setText("jButton5");
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 40, 40));
+        btn14.setText("jButton5");
+        btn14.setEnabled(false);
+        btn14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn14ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 40, 40));
 
-        jButton15.setText("jButton7");
-        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 100, 90, 70));
+        btn15.setText("jButton7");
+        btn15.setEnabled(false);
+        btn15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn15ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn15, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 100, 90, 70));
 
-        jButton16.setText("jButton7");
-        getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 100, 90, 70));
+        btn16.setText("jButton7");
+        btn16.setEnabled(false);
+        btn16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn16ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn16, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 100, 90, 70));
 
-        jButton17.setText("jButton6");
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, -1, 30));
+        btn17.setText("jButton6");
+        btn17.setEnabled(false);
+        btn17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn17ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, -1, 30));
 
-        jButton18.setText("jButton6");
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 373, -1, 30));
+        btn18.setText("jButton6");
+        btn18.setEnabled(false);
+        btn18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn18ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 373, -1, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
      
         ArranqueEva arra = new ArranqueEva();
-     arra.pu2 = contErrores;
-     
+        arra.pu2 = contErrores;
         JOptionPane.showMessageDialog(rootPane, "correcto");
        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn1ActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
      contErrores=contErrores+1;
     }//GEN-LAST:event_formMousePressed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn14ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn14ActionPerformed
+
+    private void btn18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn18ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn18ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn16ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn16ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+    ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+   
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn13ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn13ActionPerformed
+
+    private void btn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn11ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn11ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn17ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn17ActionPerformed
+
+    private void btn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn10ActionPerformed
+
+    private void btn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn12ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn12ActionPerformed
+
+    private void btn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn15ActionPerformed
+  ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btn15ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,24 +456,24 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn10;
+    private javax.swing.JButton btn11;
+    private javax.swing.JButton btn12;
+    private javax.swing.JButton btn13;
+    private javax.swing.JButton btn14;
+    private javax.swing.JButton btn15;
+    private javax.swing.JButton btn16;
+    private javax.swing.JButton btn17;
+    private javax.swing.JButton btn18;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 

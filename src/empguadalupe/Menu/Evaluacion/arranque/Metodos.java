@@ -110,6 +110,26 @@ public class Metodos {
         return pCartas;
     }
        
+        public static Stack<Integer> generaNumeroAleatoriosin(int minimo, int maximo) {
+        int pos;
+        int nCartas = maximo;
+        Stack< Integer> pCartas = new Stack< Integer>();
+        for (int i = 0; i < nCartas; i++) {
+            pos = (int) Math.floor(Math.random() * nCartas);
+            
+            while (pCartas.contains(pos)) {
+                pos = (int) Math.floor(Math.random() * nCartas);
+            }
+            pCartas.push(pos);   
+        }
+           for (int j = 0; j < nCartas-1; j++) {
+                     if(pCartas.get(j)==0){
+                        pCartas.remove(j);
+   
+                 }
+           }
+        return pCartas;
+    }
        public void traertextos(){
        }
 

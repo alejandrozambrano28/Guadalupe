@@ -89,6 +89,10 @@
             <Property name="text" type="java.lang.String" value="Es una v&#xe1;lvula de control de operaci&#xf3;n hidr&#xe1;ulica, que alivia las presiones en el sistema, cuando &#xe9;stas se elevan por encima de un m&#xe1;ximo predefinido. Responde al aumento de presi&#xf3;n abri&#xe9;ndose totalmente."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -109,7 +113,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

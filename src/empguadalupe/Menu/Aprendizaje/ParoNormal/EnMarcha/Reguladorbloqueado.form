@@ -89,6 +89,10 @@
             <Property name="text" type="java.lang.String" value="la maquina se encuentra girando y con el regulador bloqueado se dejan de enviar se&#xf1;ales de manipulaci&#xf3;n de los alabes y se empieza con el proceso de frenado de la m&#xe1;quina."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -122,7 +126,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>

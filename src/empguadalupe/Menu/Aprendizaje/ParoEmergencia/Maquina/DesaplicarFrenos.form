@@ -86,6 +86,10 @@
             <Property name="text" type="java.lang.String" value="En caso tal de que los frenos se aplicaran de manera manual, solo ser&#xe1; necesario dejar de aplicar presi&#xf3;n sobre la electrov&#xe1;lvula lo que permitir&#xe1; que la presi&#xf3;n de aire salga a la atmosfera y bajen los frenos."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -122,7 +126,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

@@ -5,12 +5,10 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.Controlalivio;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoValvulaAlivio;
 
 import java.io.IOException;
-
 
 /**
  *
@@ -18,16 +16,14 @@ import java.io.IOException;
  */
 public class ValvulaAlivio extends javax.swing.JFrame {
 
-    
-
-
     /**
      * Creates new form BombaRefrigeracion
+     *
      * @param contador
      * @throws java.io.IOException
      */
-    public  ValvulaAlivio() throws IOException {
-        initComponents(); 
+    public ValvulaAlivio() throws IOException {
+        initComponents();
     }
 
     /**
@@ -77,6 +73,8 @@ public class ValvulaAlivio extends javax.swing.JFrame {
         jTextArea1.setText("Es una válvula de control de operación hidráulica, que alivia las presiones en el sistema, cuando éstas se elevan por encima de un máximo predefinido. Responde al aumento de presión abriéndose totalmente.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 317, 340));
@@ -89,18 +87,17 @@ public class ValvulaAlivio extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoValvulaAlivio plano = null;
-                    plano = new PlanoValvulaAlivio();
-         
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoValvulaAlivio plano = null;
+        plano = new PlanoValvulaAlivio();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -109,20 +106,17 @@ public class ValvulaAlivio extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Controlalivio aliv = null;
-                    aliv = new Controlalivio();
-         
-                    aliv.setVisible(true);
-                    aliv.setLocationRelativeTo(null);
+        aliv = new Controlalivio();
+        aliv.setVisible(true);
+        aliv.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public void main(String H[]) throws IOException {
 
-	public void main(String H[]) throws IOException
-	{
-			
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

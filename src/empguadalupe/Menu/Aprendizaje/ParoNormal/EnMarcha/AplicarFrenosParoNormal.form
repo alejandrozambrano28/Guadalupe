@@ -86,6 +86,10 @@
             <Property name="text" type="java.lang.String" value="Su principal funci&#xf3;n es disminuir y/o anular progresivamente la velocidad de la m&#xe1;quina, adem&#xe1;s mantener la unidad de generaci&#xf3;n inmovilizada cuando no est&#xe1; en el proceso de giro.&#xa;En caso de tener que hacer un uso local, no se tendr&#xe1; un panel, se tendr&#xe1; que hacer una operaci&#xf3;n mec&#xe1;nica de las v&#xe1;lvulas ubicadas cerca a el generador numero dos (Ver ubicaci&#xf3;n). Estos solo se aplican si la maquina se encuentra a una velocidad menor al 10%.&#xa;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -119,7 +123,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

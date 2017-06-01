@@ -75,6 +75,8 @@ int contgeneralv=0;
         jTextArea1.setText("Cuando se llega al valor de 63% (8.7 kV) de la tensión nominal en barraje salida estator ya la maquina se encuentra generando suficiente energía como para auto-excitarse, este valor se tiene que mantener para garantizar una conexión estable en cuanto nivel de tensión con la red exterior.  ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 240, 281));
@@ -87,7 +89,7 @@ int contgeneralv=0;
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 230, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 910, 460));
 
@@ -97,7 +99,6 @@ int contgeneralv=0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoVoltajeM plano = null;
                     plano = new PlanoVoltajeM();
-                    plano.setSize(1136, 384);
                     plano.setVisible(true);
                      plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -105,7 +106,6 @@ int contgeneralv=0;
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ControlVoltajeSup condiciones = null;
         condiciones = new ControlVoltajeSup();
-                    condiciones.setSize(800, 450);
                     condiciones.setVisible(true);
                      condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -114,7 +114,6 @@ int contgeneralv=0;
         if(contgeneralv==15){
                         Energizado m = new Energizado();
                            m.setVisible(true);
-                           m.setLocationRelativeTo(null);
                            m.setLocationRelativeTo(null);
                       }
     }//GEN-LAST:event_formWindowClosed

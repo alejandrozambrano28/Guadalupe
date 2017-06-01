@@ -10,8 +10,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
-
-
 /**
  *
  * @author lzambrs
@@ -22,8 +20,8 @@ public class potenciaReactivam5 extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public potenciaReactivam5() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -67,11 +65,13 @@ public class potenciaReactivam5 extends javax.swing.JFrame {
         jTextArea1.setText("Se da la señal automática de la activación de la secuencia de paro por alguna avería en la maquina o en la secuencia.  ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 260, 110));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 480, 340));
 
@@ -79,29 +79,26 @@ public class potenciaReactivam5 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanosPotencias plano = null;
-                    plano = new PlanosPotencias();
-                    plano.setVisible(true);
+        PlanosPotencias plano = null;
+        plano = new PlanosPotencias();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        potenciaReactivam5 p = new potenciaReactivam5();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		potenciaReactivam5 p = new potenciaReactivam5();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

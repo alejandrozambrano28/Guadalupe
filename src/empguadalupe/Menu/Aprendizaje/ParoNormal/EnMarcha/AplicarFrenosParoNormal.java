@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author lzambrs
@@ -25,8 +24,8 @@ public class AplicarFrenosParoNormal extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public AplicarFrenosParoNormal() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -72,6 +71,8 @@ public class AplicarFrenosParoNormal extends javax.swing.JFrame {
         jTextArea1.setText("Su principal función es disminuir y/o anular progresivamente la velocidad de la máquina, además mantener la unidad de generación inmovilizada cuando no está en el proceso de giro.\nEn caso de tener que hacer un uso local, no se tendrá un panel, se tendrá que hacer una operación mecánica de las válvulas ubicadas cerca a el generador numero dos (Ver ubicación). Estos solo se aplican si la maquina se encuentra a una velocidad menor al 10%.\n");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 46, 350, 240));
@@ -92,18 +93,17 @@ public class AplicarFrenosParoNormal extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoFrenos plano = null;
-                    plano = new PlanoFrenos();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoFrenos plano = null;
+        plano = new PlanoFrenos();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -113,37 +113,31 @@ public class AplicarFrenosParoNormal extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(AplicarFrenosParoNormal.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(508,210);
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SistemadeFrenos plano = null;
-                    plano = new SistemadeFrenos();
-                    plano.setSize(810, 540);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        plano = new SistemadeFrenos();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        AplicarFrenosParoNormal p = new AplicarFrenosParoNormal();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		AplicarFrenosParoNormal p = new AplicarFrenosParoNormal();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

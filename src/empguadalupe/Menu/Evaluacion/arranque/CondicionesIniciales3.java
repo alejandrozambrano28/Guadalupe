@@ -6,6 +6,9 @@
 package empguadalupe.Menu.Evaluacion.arranque;
 
 import empguadalupe.Menu.Aprendizaje.arranque.*;
+import java.awt.Color;
+import java.util.Stack;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,11 +16,28 @@ import empguadalupe.Menu.Aprendizaje.arranque.*;
  */
 public class CondicionesIniciales3 extends javax.swing.JFrame {
 
+    int contadorGeneral;
+    int contErrores;
+
     /**
      * Creates new form CondicionesInicialesEva
      */
     public CondicionesIniciales3() {
         initComponents();
+        Metodos generar = new Metodos();
+
+        Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 21);
+        int numero1;
+
+        String nomlabel, nomlabel1, nomlabel2, nomlabel3, nomlabel4, nomlabel5, nomlabel6;
+        String labels[] = new String[6];
+        int i;
+        // String label1,label2,label3,label4,label5,label6;
+        for (i = 0; i <= 5; i++) {
+            numero1 = numero.get(i);
+            labels = textos(numero1, i);
+            System.out.println(numero1);
+        }
     }
 
     /**
@@ -29,7 +49,6 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
@@ -37,22 +56,22 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        lab2 = new javax.swing.JLabel();
+        lab1 = new javax.swing.JLabel();
+        lab3 = new javax.swing.JLabel();
+        lab4 = new javax.swing.JLabel();
+        lab6 = new javax.swing.JLabel();
+        lab5 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
+        lab8 = new javax.swing.JLabel();
+        lab7 = new javax.swing.JLabel();
+        lab9 = new javax.swing.JLabel();
+        lab10 = new javax.swing.JLabel();
+        lab13 = new javax.swing.JLabel();
+        lab12 = new javax.swing.JLabel();
+        lab11 = new javax.swing.JLabel();
+        lab14 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
@@ -67,16 +86,16 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel80 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
+        lab16 = new javax.swing.JLabel();
+        lab15 = new javax.swing.JLabel();
+        lab17 = new javax.swing.JLabel();
+        lab18 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
+        lab20 = new javax.swing.JLabel();
+        lab19 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
@@ -90,10 +109,12 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel108 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
 
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -126,35 +147,65 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel46.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 20, 20));
 
-        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setText("PRESION Y NIVEL ACEITE REGULADOR ACOMULADOR NORMAL");
-        getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 240, 20));
+        lab2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab2.setForeground(new java.awt.Color(255, 255, 255));
+        lab2.setText("PRESION Y NIVEL ACEITE REGULADOR ACOMULADOR NORMAL");
+        lab2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 240, 20));
 
-        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel48.setText("PRESION ACOMULADOR NORMAL");
-        getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 240, 20));
+        lab1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab1.setForeground(new java.awt.Color(255, 255, 255));
+        lab1.setText("PRESION ACOMULADOR NORMAL");
+        lab1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 240, 20));
 
-        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel49.setText("BOMBAS 121 Y 122 NORMAL");
-        getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 240, 20));
+        lab3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab3.setForeground(new java.awt.Color(255, 255, 255));
+        lab3.setText("BOMBAS 121 Y 122 NORMAL");
+        lab3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 240, 20));
 
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setText("NIVEL Y TEMP ACEITE TANQUE SUMI NORMAL");
-        getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 240, 20));
+        lab4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab4.setForeground(new java.awt.Color(255, 255, 255));
+        lab4.setText("NIVEL Y TEMP ACEITE TANQUE SUMI NORMAL");
+        lab4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 240, 20));
 
-        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setText("REGULADOR BLOQUEADO");
-        getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 240, 20));
+        lab6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab6.setForeground(new java.awt.Color(255, 255, 255));
+        lab6.setText("REGULADOR BLOQUEADO");
+        lab6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab6MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 240, 20));
 
-        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel52.setText("VALVULA DE AISLAMIENTO CERRADA");
-        getContentPane().add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 240, 20));
+        lab5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab5.setForeground(new java.awt.Color(255, 255, 255));
+        lab5.setText("VALVULA DE AISLAMIENTO CERRADA");
+        lab5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 240, 20));
 
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
@@ -164,47 +215,87 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("SIST. PRESIÒN DE ACEITE TURBINA LISTO");
         jLabel54.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 310, 20));
+        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 310, 40));
 
-        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel55.setText("CONTROL AUTOMATIC REGULADOR");
-        getContentPane().add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 240, 20));
+        lab8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab8.setForeground(new java.awt.Color(255, 255, 255));
+        lab8.setText("CONTROL AUTOMATIC REGULADOR");
+        lab8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab8MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 240, 20));
 
-        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel56.setText("REGULADOR VELOC LISTO PARA ARRANCAR");
-        getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 240, 20));
+        lab7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab7.setForeground(new java.awt.Color(255, 255, 255));
+        lab7.setText("REGULADOR VELOC LISTO PARA ARRANCAR");
+        lab7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab7MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 240, 20));
 
-        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setText("FILTROS REGULADOR NORMAL");
-        getContentPane().add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 240, 20));
+        lab9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab9.setForeground(new java.awt.Color(255, 255, 255));
+        lab9.setText("FILTROS REGULADOR NORMAL");
+        lab9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab9MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 240, 20));
 
-        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setText("REG VEL SIN FALLA GRAVE");
-        getContentPane().add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 240, 20));
+        lab10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab10.setForeground(new java.awt.Color(255, 255, 255));
+        lab10.setText("REG VEL SIN FALLA GRAVE");
+        lab10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab10MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 240, 20));
 
-        jLabel59.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setText("VELOCIDAD MENOR 1%");
-        getContentPane().add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 240, 20));
+        lab13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab13.setForeground(new java.awt.Color(255, 255, 255));
+        lab13.setText("VELOCIDAD MENOR 1%");
+        lab13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab13MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 240, 20));
 
-        jLabel60.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel60.setText("REGULADOR SIN FALLA ALIM CA");
-        getContentPane().add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 240, 20));
+        lab12.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab12.setForeground(new java.awt.Color(255, 255, 255));
+        lab12.setText("REGULADOR SIN FALLA ALIM CA");
+        lab12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab12MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, 240, 20));
 
-        jLabel61.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel61.setText("REGULADOR SIN FALLA ALIM CD");
-        getContentPane().add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 240, 20));
+        lab11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab11.setForeground(new java.awt.Color(255, 255, 255));
+        lab11.setText("REGULADOR SIN FALLA ALIM CD");
+        lab11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 240, 20));
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setText("BOMBA COMPRESOR 1 GRUPO NORMAL");
-        getContentPane().add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 240, 20));
+        lab14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab14.setForeground(new java.awt.Color(255, 255, 255));
+        lab14.setText("BOMBA COMPRESOR 1 GRUPO NORMAL");
+        lab14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab14MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 550, 240, 20));
 
         jLabel65.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 240, 20));
@@ -213,7 +304,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel67.setForeground(new java.awt.Color(255, 255, 255));
         jLabel67.setText("REGULADOR VELOCIDAD TURBINA LISTO");
         jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 310, 20));
+        getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 310, 40));
 
         jLabel70.setForeground(new java.awt.Color(255, 255, 255));
         jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
@@ -263,25 +354,45 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel82.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 20, 20));
 
-        jLabel86.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel86.setText("VALVULA DE BYPASS CERRADA");
-        getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 240, 20));
+        lab16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab16.setForeground(new java.awt.Color(255, 255, 255));
+        lab16.setText("VALVULA DE BYPASS CERRADA");
+        lab16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab16MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 240, 20));
 
-        jLabel87.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel87.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel87.setText("VALVULA ESFERICA CERRADA");
-        getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 240, 20));
+        lab15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab15.setForeground(new java.awt.Color(255, 255, 255));
+        lab15.setText("VALVULA ESFERICA CERRADA");
+        lab15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab15MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 240, 20));
 
-        jLabel88.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel88.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel88.setText("VALVULA ESFERICA LISTA");
-        getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 240, 20));
+        lab17.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab17.setForeground(new java.awt.Color(255, 255, 255));
+        lab17.setText("VALVULA ESFERICA LISTA");
+        lab17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab17MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab17, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 240, 20));
 
-        jLabel89.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel89.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel89.setText("EXCITACIÒN SIN FALLA");
-        getContentPane().add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 240, 20));
+        lab18.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab18.setForeground(new java.awt.Color(255, 255, 255));
+        lab18.setText("EXCITACIÒN SIN FALLA");
+        lab18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab18MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab18, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 240, 20));
 
         jLabel95.setForeground(new java.awt.Color(255, 255, 255));
         jLabel95.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
@@ -291,7 +402,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel96.setForeground(new java.awt.Color(255, 255, 255));
         jLabel96.setText("SISTEMA DE VALVULA ESFERICA LISTO");
         jLabel96.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 310, 20));
+        getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 310, 40));
 
         jLabel97.setForeground(new java.awt.Color(255, 255, 255));
         jLabel97.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
@@ -301,15 +412,25 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel98.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 20, 20));
 
-        jLabel99.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel99.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel99.setText("INTERRUPTOR DE CAMPO ABIERTO");
-        getContentPane().add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 270, 20));
+        lab20.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab20.setForeground(new java.awt.Color(255, 255, 255));
+        lab20.setText("INTERRUPTOR DE CAMPO ABIERTO");
+        lab20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab20MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 270, 20));
 
-        jLabel100.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel100.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel100.setText("CTO DISPARO INT CAMPO SIN FALLA");
-        getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 240, 20));
+        lab19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lab19.setForeground(new java.awt.Color(255, 255, 255));
+        lab19.setText("CTO DISPARO INT CAMPO SIN FALLA");
+        lab19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lab19MouseClicked(evt);
+            }
+        });
+        getContentPane().add(lab19, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 240, 20));
 
         jLabel101.setForeground(new java.awt.Color(255, 255, 255));
         jLabel101.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
@@ -323,7 +444,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         jLabel102.setForeground(new java.awt.Color(255, 255, 255));
         jLabel102.setText("SISTEMA REGULADOR DE VOLTAJE LISTO");
         jLabel102.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 310, 20));
+        getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 310, 40));
 
         jButton1.setBackground(new java.awt.Color(51, 153, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -383,16 +504,14 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
         getContentPane().add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 20, 20));
 
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-              CondicionesInicialesEva condi = new CondicionesInicialesEva();
-condi.setVisible(true);
-dispose();
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -400,20 +519,506 @@ dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       CondicionesIniciales2 condi2 = new CondicionesIniciales2();
-condi2.setVisible(true);
-dispose();        // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-              CondicionesIniciales4 condi4 = new CondicionesIniciales4();
-condi4.setVisible(true);
-dispose();
+        if (contadorGeneral >= 6) {
+            CondicionesIniciales4 condi4 = new CondicionesIniciales4();
+            condi4.setVisible(true);
+            ArranqueEva arra = new ArranqueEva();
+            arra.pu2 = contErrores;
+            dispose();
+        } else {
+            close();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void lab1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab1MouseClicked
+        if (select[1] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(1);
+            if (respun == true) {
+                lab1.setForeground(Color.WHITE);
+                select[1] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }  // TODO add your handling code here:
+    }//GEN-LAST:event_lab1MouseClicked
+
+    private void lab2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab2MouseClicked
+        if (select[2] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(2);
+            if (respun == true) {
+                lab2.setForeground(Color.WHITE);
+                select[2] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab2MouseClicked
+
+    private void lab3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab3MouseClicked
+        if (select[3] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(3);
+            if (respun == true) {
+                lab3.setForeground(Color.WHITE);
+                select[3] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab3MouseClicked
+
+    private void lab4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab4MouseClicked
+        if (select[4] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(4);
+            if (respun == true) {
+                lab4.setForeground(Color.WHITE);
+                select[4] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab4MouseClicked
+
+    private void lab5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab5MouseClicked
+        if (select[5] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(5);
+            if (respun == true) {
+                lab5.setForeground(Color.WHITE);
+                select[5] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab5MouseClicked
+
+    private void lab6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab6MouseClicked
+        if (select[6] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(6);
+            if (respun == true) {
+                lab6.setForeground(Color.WHITE);
+                select[6] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab6MouseClicked
+
+    private void lab7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab7MouseClicked
+        if (select[7] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(7);
+            if (respun == true) {
+                lab7.setForeground(Color.WHITE);
+                select[7] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab7MouseClicked
+
+    private void lab8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab8MouseClicked
+        if (select[8] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(8);
+            if (respun == true) {
+                lab8.setForeground(Color.WHITE);
+                select[8] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab8MouseClicked
+
+    private void lab9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab9MouseClicked
+        if (select[9] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(9);
+            if (respun == true) {
+                lab9.setForeground(Color.WHITE);
+                select[9] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab9MouseClicked
+
+    private void lab10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab10MouseClicked
+        if (select[10] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(10);
+            if (respun == true) {
+                lab10.setForeground(Color.WHITE);
+                select[10] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab10MouseClicked
+
+    private void lab11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab11MouseClicked
+        if (select[11] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(11);
+            if (respun == true) {
+                lab11.setForeground(Color.WHITE);
+                select[11] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab11MouseClicked
+
+    private void lab12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab12MouseClicked
+        if (select[12] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(12);
+            if (respun == true) {
+                lab12.setForeground(Color.WHITE);
+                select[12] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab12MouseClicked
+
+    private void lab13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab13MouseClicked
+        if (select[13] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(13);
+            if (respun == true) {
+                lab13.setForeground(Color.WHITE);
+                select[13] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }
+    }//GEN-LAST:event_lab13MouseClicked
+
+    private void lab14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab14MouseClicked
+        if (select[14] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(14);
+            if (respun == true) {
+                lab14.setForeground(Color.WHITE);
+                select[14] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab14MouseClicked
+
+    private void lab15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab15MouseClicked
+        if (select[15] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(15);
+            if (respun == true) {
+                lab15.setForeground(Color.WHITE);
+                select[15] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab15MouseClicked
+
+    private void lab16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab16MouseClicked
+        if (select[16] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(16);
+            if (respun == true) {
+                lab16.setForeground(Color.WHITE);
+                select[16] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab16MouseClicked
+
+    private void lab17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab17MouseClicked
+        if (select[17] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(17);
+            if (respun == true) {
+                lab17.setForeground(Color.WHITE);
+                select[17] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab17MouseClicked
+
+    private void lab18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab18MouseClicked
+        if (select[18] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(18);
+            if (respun == true) {
+                lab18.setForeground(Color.WHITE);
+                select[18] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab18MouseClicked
+
+    private void lab19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab19MouseClicked
+        if (select[19] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(19);
+            if (respun == true) {
+                lab19.setForeground(Color.WHITE);
+                select[19] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab19MouseClicked
+
+    private void lab20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lab20MouseClicked
+        if (select[20] == true) {
+            boolean respun = false;
+            respun = generarpreguntas(20);
+            if (respun == true) {
+                lab20.setForeground(Color.WHITE);
+                select[20] = false;
+                contadorGeneral = contadorGeneral + 1;
+            }
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_lab20MouseClicked
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if (contadorGeneral < 6) {
+            JOptionPane.showMessageDialog(rootPane, "faltan preguntas por responder");
+
+        } else {
+            close();
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosing
+
+    boolean[] select = new boolean[21];
+
+    // el metodo textos tiene la funcion de traer los textos de los labels que serviran para hacer preguntas,
+    //son 6 label los cuales se elegiran de manera aleatoria
+    public String[] textos(int numero1, int i) {
+        String labels[] = new String[6];
+
+        switch (numero1) {
+            case 1:
+                labels[i] = lab1.getText();
+                lab1.setForeground(Color.BLACK);
+                select[1] = true;
+
+                break;
+            case 2:
+                labels[i] = lab2.getText();
+                lab2.setForeground(Color.black);
+                select[2] = true;
+                break;
+            case 3:
+                labels[i] = lab3.getText();
+                lab3.setForeground(Color.BLACK);
+                select[3] = true;
+                break;
+            case 4:
+                labels[i] = lab4.getText();
+                lab4.setForeground(Color.BLACK);
+                select[4] = true;
+                break;
+            case 5:
+                labels[i] = lab5.getText();
+                lab5.setForeground(Color.BLACK);
+                select[5] = true;
+                break;
+            case 6:
+                labels[i] = lab6.getText();
+                lab6.setForeground(Color.BLACK);
+                select[6] = true;
+                break;
+            case 7:
+                labels[i] = lab7.getText();
+                lab7.setForeground(Color.BLACK);
+                select[7] = true;
+                break;
+            case 8:
+                labels[i] = lab8.getText();
+                lab8.setForeground(Color.BLACK);
+                select[8] = true;
+                break;
+            case 9:
+                labels[i] = lab9.getText();
+                lab9.setForeground(Color.BLACK);
+                select[9] = true;
+                break;
+            case 10:
+                labels[i] = lab10.getText();
+                lab10.setForeground(Color.BLACK);
+                select[10] = true;
+                break;
+            case 11:
+                labels[i] = lab11.getText();
+                lab11.setForeground(Color.BLACK);
+                select[11] = true;
+                break;
+            case 12:
+                labels[i] = lab12.getText();
+                lab12.setForeground(Color.BLACK);
+                select[12] = true;
+                break;
+            case 13:
+                labels[i] = lab13.getText();
+                lab13.setForeground(Color.BLACK);
+                select[13] = true;
+                break;
+            case 14:
+                labels[i] = lab14.getText();
+                lab14.setForeground(Color.BLACK);
+                select[14] = true;
+                break;
+            case 15:
+                labels[i] = lab15.getText();
+                lab15.setForeground(Color.BLACK);
+                select[15] = true;
+                break;
+            case 16:
+                labels[i] = lab16.getText();
+                lab16.setForeground(Color.BLACK);
+                select[16] = true;
+                break;
+            case 17:
+                labels[i] = lab17.getText();
+                lab17.setForeground(Color.BLACK);
+                select[17] = true;
+                break;
+            case 18:
+                labels[i] = lab18.getText();
+                lab18.setForeground(Color.BLACK);
+                select[18] = true;
+                break;
+            case 19:
+                labels[i] = lab19.getText();
+                lab19.setForeground(Color.BLACK);
+                select[19] = true;
+                break;
+            case 20:
+                labels[i] = lab20.getText();
+                lab20.setForeground(Color.BLACK);
+                select[20] = true;
+                break;
+
+        }
+        return labels;
+    }
+    String[] textos = new String[21];
+
+    public String[] traertodo() {
+
+        textos[1] = lab1.getText();
+        textos[2] = lab2.getText();
+        textos[3] = lab3.getText();
+        textos[4] = lab4.getText();
+        textos[5] = lab5.getText();
+        textos[6] = lab6.getText();
+        textos[7] = lab7.getText();
+        textos[8] = lab8.getText();
+        textos[9] = lab9.getText();
+        textos[10] = lab10.getText();
+        textos[11] = lab11.getText();
+        textos[12] = lab12.getText();
+        textos[13] = lab13.getText();
+        textos[14] = lab14.getText();
+        textos[15] = lab15.getText();
+        textos[16] = lab16.getText();
+        textos[17] = lab17.getText();
+        textos[18] = lab18.getText();
+        textos[19] = lab19.getText();
+        textos[20] = lab20.getText();
+
+        return textos;
+    }
+
+    public Boolean generarpreguntas(int pos) {
+        Boolean resultado = false;
+        Metodos generar = new Metodos();
+        Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 21);
+        traertodo();
+        int selop[] = new int[4];
+        selop[0] = pos;
+        selop[1] = numero.get(0);
+        selop[2] = numero.get(1);
+        selop[3] = numero.get(2);
+        int acert0 = 0;
+        int acertar1, acertar2, acertar3, acertar4;
+
+        if (selop[1] == pos || selop[2] == pos || selop[3] == pos) {
+            selop[0] = pos;
+            selop[1] = numero.get(3);
+            selop[2] = numero.get(4);
+            selop[3] = numero.get(5);
+            Stack<Integer> pila = generar.generaNumeroAleatorio(1, 4);
+            String[] options = new String[]{textos[selop[pila.get(0)]], textos[selop[pila.get(1)]], textos[selop[pila.get(2)]], textos[selop[pila.get(3)]]};
+            int response = JOptionPane.showOptionDialog(null, "cual de las condiciones iniciales falta", "Title",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+                    null, options, options[0]);
+            acertar1 = pila.get(0);
+            acertar2 = pila.get(1);
+            acertar3 = pila.get(2);
+            acertar4 = pila.get(3);
+            if (acertar1 == 0) {
+                acert0 = 0;
+            }
+            if (acertar2 == 0) {
+                acert0 = 1;
+            }
+            if (acertar3 == 0) {
+                acert0 = 2;
+            }
+            if (acertar4 == 0) {
+                acert0 = 3;
+            }
+            if (response == acert0) {
+                JOptionPane.showMessageDialog(rootPane, "correcto");
+
+                resultado = true;
+
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "incorrecto");
+                contErrores = contErrores + 1;
+                resultado = false;
+            }
+        } else {
+
+            Stack<Integer> pila = generar.generaNumeroAleatorio(1, 4);
+            String[] options = new String[]{textos[selop[pila.get(0)]], textos[selop[pila.get(1)]], textos[selop[pila.get(2)]], textos[selop[pila.get(3)]]};
+            int response = JOptionPane.showOptionDialog(null, "cual de las condiciones iniciales falta", "Title",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+                    null, options, options[0]);
+            acertar1 = pila.get(0);
+            acertar2 = pila.get(1);
+            acertar3 = pila.get(2);
+            acertar4 = pila.get(3);
+            if (acertar1 == 0) {
+                acert0 = 0;
+            }
+            if (acertar2 == 0) {
+                acert0 = 1;
+            }
+            if (acertar3 == 0) {
+                acert0 = 2;
+            }
+            if (acertar4 == 0) {
+                acert0 = 3;
+            }
+            if (response == acert0) {
+                JOptionPane.showMessageDialog(rootPane, "correcto");
+
+                resultado = true;
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "incorrecto");
+                contErrores = contErrores + 1;
+                resultado = false;
+
+            }
+        }
+
+        return resultado;
+    }
 
     /**
      * @param args the command line arguments
      */
+    private void close() {
+        JOptionPane.showMessageDialog(rootPane, "Falta completar las condiciones iniciales 2");
+
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -454,10 +1059,8 @@ dispose();
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
@@ -470,22 +1073,8 @@ dispose();
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
@@ -501,14 +1090,29 @@ dispose();
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel lab1;
+    private javax.swing.JLabel lab10;
+    private javax.swing.JLabel lab11;
+    private javax.swing.JLabel lab12;
+    private javax.swing.JLabel lab13;
+    private javax.swing.JLabel lab14;
+    private javax.swing.JLabel lab15;
+    private javax.swing.JLabel lab16;
+    private javax.swing.JLabel lab17;
+    private javax.swing.JLabel lab18;
+    private javax.swing.JLabel lab19;
+    private javax.swing.JLabel lab2;
+    private javax.swing.JLabel lab20;
+    private javax.swing.JLabel lab3;
+    private javax.swing.JLabel lab4;
+    private javax.swing.JLabel lab5;
+    private javax.swing.JLabel lab6;
+    private javax.swing.JLabel lab7;
+    private javax.swing.JLabel lab8;
+    private javax.swing.JLabel lab9;
     // End of variables declaration//GEN-END:variables
 }

@@ -93,6 +93,10 @@
             <Property name="text" type="java.lang.String" value="Su funci&#xf3;n es garantizar estanquidad cuando la unidad esta parada, evitando as&#xed; que el agua del rio pase hacia el drenaje de la casa m&#xe1;quinas.&#xa;En caso de no poder utilizar la junta inflable de operaci&#xf3;n se puede utilizar la de mantenimiento.&#xa;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -126,7 +130,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

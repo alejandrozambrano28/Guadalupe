@@ -76,6 +76,8 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 58, 413, 270));
@@ -96,7 +98,7 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 420, 170, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 470));
 
         pack();

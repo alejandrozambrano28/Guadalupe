@@ -27,7 +27,6 @@ public class CondicionesIniciales2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -100,9 +99,6 @@ public class CondicionesIniciales2 extends javax.swing.JFrame {
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
-
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -448,28 +444,31 @@ public class CondicionesIniciales2 extends javax.swing.JFrame {
         getContentPane().add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 240, 20));
 
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       CondicionesIniciales condi1 = new CondicionesIniciales();
-condi1.setVisible(true);
-dispose();        // TODO add your handling code here:
+        CondicionesIniciales condi1 = new CondicionesIniciales();
+        condi1.setVisible(true);
+        condi1.setLocationRelativeTo(null);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       CondicionesIniciales3 condi3 = new CondicionesIniciales3();
-condi3.setVisible(true);
-dispose();        // TODO add your handling code here:
+        CondicionesIniciales3 condi3 = new CondicionesIniciales3();
+        condi3.setVisible(true);
+        condi3.setLocationRelativeTo(null);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       CondicionesIniciales4 condi4 = new CondicionesIniciales4();
-condi4.setVisible(true);
-dispose();        // TODO add your handling code here:
+        CondicionesIniciales4 condi4 = new CondicionesIniciales4();
+        condi4.setVisible(true);
+        condi4.setLocationRelativeTo(null);
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -518,7 +517,6 @@ dispose();        // TODO add your handling code here:
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;

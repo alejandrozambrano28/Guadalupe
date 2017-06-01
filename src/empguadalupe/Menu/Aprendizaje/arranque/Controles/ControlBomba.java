@@ -53,6 +53,8 @@ public class ControlBomba extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setCaretPosition(1);
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jTextArea1.setKeymap(null);
         jTextArea1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTextArea1);
@@ -67,7 +69,7 @@ public class ControlBomba extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/sistemadeRefrigeracion2.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 333, -1, 419));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 910, 760));
 

@@ -86,6 +86,10 @@
             <Property name="text" type="java.lang.String" value="Al dar la se&#xf1;al de cerrar la v&#xe1;lvula esf&#xe9;rica, esta manda a des energizar todas las electrov&#xe1;lvulas lo que provoca un cierre del bypass y la v&#xe1;lvula esf&#xe9;rica simult&#xe1;neamente."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -119,7 +123,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

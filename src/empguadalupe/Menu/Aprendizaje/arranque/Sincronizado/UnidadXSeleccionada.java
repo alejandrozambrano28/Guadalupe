@@ -5,13 +5,10 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoSincronizador;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
-
 
 /**
  *
@@ -23,8 +20,8 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public UnidadXSeleccionada() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -68,11 +65,13 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
         jTextArea1.setText("Como solo existe un solo sincronoscopio, solo se podrá conectar una generadora a la vez al SIN, una vez sincronizada la máquina, el sincronizador vuelve a quedar disponible para ejecutar esta operación con otra máquina.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 46, 264, 343));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 0, 940, 480));
 
@@ -80,30 +79,26 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         PlanoSincronizador plano = null;
-                    plano = new PlanoSincronizador();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
+        PlanoSincronizador plano = null;
+        plano = new PlanoSincronizador();
+        plano.setLocationRelativeTo(null);
+        plano.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        UnidadXSeleccionada p = new UnidadXSeleccionada();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		UnidadXSeleccionada p = new UnidadXSeleccionada();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

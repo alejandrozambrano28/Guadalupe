@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlBomba;
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.SistemadeRefrigeracion;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoBomba;
@@ -26,8 +25,8 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public BombaRefrigeracion() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -74,6 +73,8 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         jTextArea1.setText("El sistema de refrigeración del generador tiene la función de estabilizar la temperatura controlando incrementos de térmicos más allá de los rangos establecidos. La bomba de refrigeración hace circular agua a cada unidad, y debe garantizar el flujo a través de los cojinetes y radiadores.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 310, 207));
@@ -102,26 +103,24 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 180, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 2, 960, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoBomba plano = null;
-                    plano = new PlanoBomba();
-                
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoBomba plano = null;
+        plano = new PlanoBomba();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlBomba control = null;
-                    control = new ControlBomba();
-                 
-                    control.setVisible(true);
-                    control.setLocationRelativeTo(null);
+        control = new ControlBomba();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -131,37 +130,31 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(BombaRefrigeracion.class.getName()).log(Level.SEVERE, null, ex);
         }
-                
-                    condiciones.setVisible(true);
-                    condiciones.setLocationRelativeTo(null);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         SistemadeRefrigeracion sistema = null;
-                    sistema = new SistemadeRefrigeracion();
-               
-                    sistema.setVisible(true);
-                    sistema.setLocationRelativeTo(null);
+        sistema = new SistemadeRefrigeracion();
+        sistema.setVisible(true);
+        sistema.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        BombaRefrigeracion p = new BombaRefrigeracion();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		BombaRefrigeracion p = new BombaRefrigeracion();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

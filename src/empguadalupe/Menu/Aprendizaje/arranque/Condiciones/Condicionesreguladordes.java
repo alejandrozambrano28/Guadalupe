@@ -112,7 +112,7 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
         jCheckBox9.setText("Valvula piloto cerrada");
         getContentPane().add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 153, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 580, 190));
 

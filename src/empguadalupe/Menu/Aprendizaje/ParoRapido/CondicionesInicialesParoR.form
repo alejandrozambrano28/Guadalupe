@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JLabel" name="jLabel103">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
-        </Property>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -233,6 +221,9 @@
             <Property name="tabSize" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Este paro se da por un disparo de la m&#xe1;quina por lo que no aparece bot&#xf3;n alguno. Cuando se da dicho disparo, se enciende el circulo &#x201c;disp&#x201d; al igual que el recuadro &#x201c;parcial&#x201d;. El recuadro &#x201c;No&#x201d; indica el n&#xfa;mero del paso en que va la secuencia del paro parcial. &#xa;&#xa;Para ver la secuencia de paro parcial, basta con oprimir el bot&#xf3;n con la letra &#x201c;D&#x201d; y en la pantalla que aparecer&#xe1; se muestra el estado en que va la secuencia. La letra &#x201c;E&#x201d; muestra el estado de las condiciones previas para que se d&#xe9; el inicio de la secuencia de paro parcial, si en la pantalla que aparece despu&#xe9;s de oprimido este bot&#xf3;n aparece alguna condici&#xf3;n marcada con el color rojo, indica que dicha condici&#xf3;n aun no se cumple por lo que habr&#xe1; que remediarla si se quiere dar el paro parcial de la m&#xe1;quina.&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -265,7 +256,7 @@
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

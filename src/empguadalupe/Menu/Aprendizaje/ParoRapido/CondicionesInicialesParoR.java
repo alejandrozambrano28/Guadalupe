@@ -26,7 +26,6 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
@@ -40,9 +39,6 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel101 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
-
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,6 +94,7 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
         jTextArea1.setTabSize(4);
         jTextArea1.setText("Este paro se da por un disparo de la máquina por lo que no aparece botón alguno. Cuando se da dicho disparo, se enciende el circulo “disp” al igual que el recuadro “parcial”. El recuadro “No” indica el número del paso en que va la secuencia del paro parcial. \n\nPara ver la secuencia de paro parcial, basta con oprimir el botón con la letra “D” y en la pantalla que aparecerá se muestra el estado en que va la secuencia. La letra “E” muestra el estado de las condiciones previas para que se dé el inicio de la secuencia de paro parcial, si en la pantalla que aparece después de oprimido este botón aparece alguna condición marcada con el color rojo, indica que dicha condición aun no se cumple por lo que habrá que remediarla si se quiere dar el paro parcial de la máquina.\n");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 650, 220));
@@ -108,7 +105,7 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
 
         jLabel104.setBackground(new java.awt.Color(51, 153, 255));
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 770, 480));
 
         pack();
@@ -280,7 +277,6 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;

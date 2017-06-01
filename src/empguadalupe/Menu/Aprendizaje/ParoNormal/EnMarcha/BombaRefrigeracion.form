@@ -86,6 +86,10 @@
             <Property name="text" type="java.lang.String" value="El sistema de refrigeraci&#xf3;n del generador tiene la funci&#xf3;n de estabilizar la temperatura controlando incrementos de t&#xe9;rmicos m&#xe1;s all&#xe1; de los rangos establecidos. La bomba de refrigeraci&#xf3;n hace circular agua a cada unidad, y debe garantizar el flujo a trav&#xe9;s de los cojinetes y radiadores."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -132,7 +136,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

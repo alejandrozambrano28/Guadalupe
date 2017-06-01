@@ -5,30 +5,28 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlRegulador;
 
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoReguladorDes;
 
 import java.io.IOException;
 
-
 /**
  *
  * @author lzambrs
  */
 public class Velocidadm10 extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public Velocidadm10(int contador) throws IOException {
-        initComponents(); 
-         contgeneralv=contador;
-       
-    }
+        initComponents();
+        contgeneralv = contador;
 
-  
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -77,6 +75,8 @@ int contgeneralv=0;
         jTextArea1.setText("Con este paso se da una señal de confirmación que los alabes se encuentran CERRANDO y tiene una velocidad mayor al 10%. ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 410, 61));
@@ -89,26 +89,24 @@ int contgeneralv=0;
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 470, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoReguladorDes plano = null;
-                    plano = new PlanoReguladorDes();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoReguladorDes plano = null;
+        plano = new PlanoReguladorDes();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
-                    control = new ControlRegulador();
-                    control.setSize(240,390);
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlRegulador();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
@@ -118,10 +116,8 @@ int contgeneralv=0;
     /**
      * @param args the command line arguments
      */
-
-	public static void main(String H[]) throws IOException
-	{
-        }
+    public static void main(String H[]) throws IOException {
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

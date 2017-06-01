@@ -7,13 +7,14 @@ package empguadalupe.Menu.Evaluacion.arranque;
 
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.*;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author lzambrs
  */
 public class PlanoS3eva1 extends javax.swing.JFrame {
-
+int contErrores;
     /**
      * Creates new form PlanoBomba
      */
@@ -36,6 +37,11 @@ public class PlanoS3eva1 extends javax.swing.JFrame {
         bomba = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1Operador.png"))); // NOI18N
@@ -53,8 +59,15 @@ public class PlanoS3eva1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
-        System.out.println("dio");
+         ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();
     }//GEN-LAST:event_bombaActionPerformed
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+         contErrores=contErrores+1;
+    }//GEN-LAST:event_formMousePressed
 
     /**
      * @param args the command line arguments

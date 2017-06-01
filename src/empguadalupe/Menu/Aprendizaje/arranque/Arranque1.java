@@ -51,15 +51,13 @@ import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 
-
 /**
  *
  * @author lzambrs
  */
-public class Arranque extends javax.swing.JFrame {
- 
-    
-     Thread hiloA;
+public class Arranque1 extends javax.swing.JFrame {
+
+    Thread hiloA;
     int contador = 0;
     private Point location1, location2, location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
     private Point location21, location22, location13, location14, location15, location16, location17, location18, location19, location20, location23, location24;
@@ -97,7 +95,7 @@ public class Arranque extends javax.swing.JFrame {
     boolean bande22 = true;
     boolean bande23 = true;
     boolean bande24 = true;
-        boolean bbande1 = false;
+    boolean bbande1 = false;
     boolean bbande2 = false;
     boolean bbande3 = false;
     boolean bbande4 = false;
@@ -121,50 +119,43 @@ public class Arranque extends javax.swing.JFrame {
     boolean bbande22 = false;
     boolean bbande23 = false;
     boolean bbande24 = false;
-    ImageIcon romboon,rombooff;
-    
-    Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19,rec20,rec21,rec22,rec23,rec24;
-    
-    
+    ImageIcon romboon, rombooff;
+
+    Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19, rec20, rec21, rec22, rec23, rec24;
+
     /**
      * Creates new form Vista
      */
-    
-    
-    public Arranque() throws IOException {
-          
-           
-        
+    public Arranque1() throws IOException {
+
         initComponents();
         convertiranegro();
-        romboon= new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
-        rombooff= new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
-        rec1 =label1.getBounds();
-        rec2 =label2.getBounds();
-        rec3 =label3.getBounds();
-        rec4 =label4.getBounds();
-        rec5 =label5.getBounds();
-        rec6 =label6.getBounds();
-        rec7 =label7.getBounds();
-        rec8 =label8.getBounds();
-        rec9 =label9.getBounds();
-        rec10 =label10.getBounds();
-        rec11 =label11.getBounds();
-        rec12 =label12.getBounds();
-        rec13 =label13.getBounds();
-        rec14 =label14.getBounds();
-        rec15 =label15.getBounds();
-        rec16 =label16.getBounds();
-        rec17 =label17.getBounds();
-        rec18 =label18.getBounds();
-        rec19 =label19.getBounds();
-        rec20 =label20.getBounds();
-        rec21 =label21.getBounds();
-        rec22 =label22.getBounds();
-        rec23 =label23.getBounds();
-        rec24 =label24.getBounds();
-        
-        
+        romboon = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
+        rombooff = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
+        rec1 = label1.getBounds();
+        rec2 = label2.getBounds();
+        rec3 = label3.getBounds();
+        rec4 = label4.getBounds();
+        rec5 = label5.getBounds();
+        rec6 = label6.getBounds();
+        rec7 = label7.getBounds();
+        rec8 = label8.getBounds();
+        rec9 = label9.getBounds();
+        rec10 = label10.getBounds();
+        rec11 = label11.getBounds();
+        rec12 = label12.getBounds();
+        rec13 = label13.getBounds();
+        rec14 = label14.getBounds();
+        rec15 = label15.getBounds();
+        rec16 = label16.getBounds();
+        rec17 = label17.getBounds();
+        rec18 = label18.getBounds();
+        rec19 = label19.getBounds();
+        rec20 = label20.getBounds();
+        rec21 = label21.getBounds();
+        rec22 = label22.getBounds();
+        rec23 = label23.getBounds();
+        rec24 = label24.getBounds();
 
         ubica[0] = 70;
         ubica[1] = 100;
@@ -216,27 +207,29 @@ public class Arranque extends javax.swing.JFrame {
         boton15.setEnabled(false);
         boton14.setEnabled(false);
         boton13.setEnabled(false);
-        
-      
-        
+
     }
 
-    //crea numeros aleatorios para poner los botones en diferentes posiciones
-    public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
-        int pos;
-        int nCartas = 24;
-        Stack< Integer> pCartas = new Stack< Integer>();
-        for (int i = 0; i < nCartas; i++) {
-            pos = (int) Math.floor(Math.random() * nCartas);
-            while (pCartas.contains(pos)) {
-                pos = (int) Math.floor(Math.random() * nCartas);
-            }
-            pCartas.push(pos);
+    public void mover(JButton boton) {
+
+//calculo la posición del ratón y lo guardo en el p
+        p = MouseInfo.getPointerInfo().getLocation();
+
+        //este if solo se ejecuta al principio de que empiece a mover la etiqueta
+        if (calcular_diferencia) {
+            //calculo la posición de la etiqueta
+            pl = boton.getLocation();
+            //guardo la diferencia entre la posición del ratón y de la etiqueta
+            lx = p.x - pl.x;
+            ly = p.y - pl.y;
         }
-        return pCartas;
+        //ponemos false el calculo para que no lo vuelva a calcular otra vez
+        calcular_diferencia = false;
+
+        //cambio la posición de la etiqueta a la posición del ratón menos la diferencia calculada
+        boton.setLocation(p.x - lx, p.y - ly);
     }
 
-    //metodo para ajustar el boton en el label indicado en la izquierda
     public int[] tamañoIz(javax.swing.JLabel label) {
         int posmenorx, posmayorx;
         int posmenory, posmayory;
@@ -275,26 +268,23 @@ public class Arranque extends javax.swing.JFrame {
         return tamaño;
 
     }
-    public void mover(JButton boton) {
 
-//calculo la posición del ratón y lo guardo en el p
-        p = MouseInfo.getPointerInfo().getLocation();
-
-        //este if solo se ejecuta al principio de que empiece a mover la etiqueta
-        if (calcular_diferencia) {
-            //calculo la posición de la etiqueta
-            pl = boton.getLocation();
-            //guardo la diferencia entre la posición del ratón y de la etiqueta
-            lx = p.x - pl.x;
-            ly = p.y - pl.y;
+    //crea numeros aleatorios para poner los botones en diferentes posiciones
+    public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
+        int pos;
+        int nCartas = 24;
+        Stack< Integer> pCartas = new Stack< Integer>();
+        for (int i = 0; i < nCartas; i++) {
+            pos = (int) Math.floor(Math.random() * nCartas);
+            while (pCartas.contains(pos)) {
+                pos = (int) Math.floor(Math.random() * nCartas);
+            }
+            pCartas.push(pos);
         }
-        //ponemos false el calculo para que no lo vuelva a calcular otra vez
-        calcular_diferencia = false;
-
-        //cambio la posición de la etiqueta a la posición del ratón menos la diferencia calculada
-        boton.setLocation(p.x - lx, p.y - ly);
+        return pCartas;
     }
 
+    //metodo para ajustar el boton en el label indicado en la izquierda
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -420,7 +410,7 @@ public class Arranque extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
         jPanel1.add(logo);
         logo.setBounds(0, 0, 170, 50);
 
@@ -457,12 +447,12 @@ public class Arranque extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(360, 560, 70, 59);
+        jLabel5.setBounds(360, 560, 70, 50);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -523,12 +513,12 @@ public class Arranque extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(780, 130, 70, 59);
+        jLabel13.setBounds(780, 130, 70, 60);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -854,12 +844,12 @@ public class Arranque extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombooff.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(770, 710, 70, 59);
+        jLabel15.setBounds(770, 710, 70, 60);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -1526,17 +1516,17 @@ public class Arranque extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel17);
-        jLabel17.setBounds(360, 70, 70, 59);
+        jLabel17.setBounds(360, 70, 70, 50);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
         icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
@@ -1548,11 +1538,12 @@ public class Arranque extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de arranque
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
-       convertiranegro();
-       contador=0;
-       contgeneral = 0;
+        convertiranegro();
+        contador = 0;
+        contgeneral = 0;
         CondicionesIniciales condi = new CondicionesIniciales();
-       condi.setVisible(true);
+        condi.setVisible(true);
+        condi.setLocationRelativeTo(null);
         Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         int num0 = numero.get(0);
         boton1.setLocation(1130, ubica[num0]);
@@ -1626,10 +1617,7 @@ public class Arranque extends javax.swing.JFrame {
         int num23 = numero.get(23);
         boton24.setLocation(1130, ubica[num23]);
         boton24.setBackground(color);
-        
-        
-     
-        
+
         label1.setBounds(rec1);
         label2.setBounds(rec2);
         label3.setBounds(rec3);
@@ -1654,7 +1642,7 @@ public class Arranque extends javax.swing.JFrame {
         label22.setBounds(rec22);
         label23.setBounds(rec23);
         label24.setBounds(rec24);
-        
+
         location1 = boton1.getLocation();
         location2 = boton2.getLocation();
         location3 = boton3.getLocation();
@@ -1679,7 +1667,7 @@ public class Arranque extends javax.swing.JFrame {
         location22 = boton22.getLocation();
         location23 = boton23.getLocation();
         location24 = boton24.getLocation();
-        
+
         bande1 = true;
         bande2 = true;
         bande3 = true;
@@ -1704,31 +1692,31 @@ public class Arranque extends javax.swing.JFrame {
         bande22 = true;
         bande23 = true;
         bande24 = true;
-        
-     bbande1 = false;
-     bbande2 = false;
-     bbande3 = false;
-     bbande4 = false;
-     bbande5 = false;
-     bbande6 = false;
-     bbande7 = false;
-     bbande8 = false;
-     bbande9 = false;
-     bbande10 = false;
-     bbande11 = false;
-     bbande12 = false;
-     bbande13 = false;
-     bbande14 = false;
-     bbande15 = false;
-     bbande16 = false;
-     bbande17 = false;
-     bbande18 = false;
-     bbande19 = false;
-     bbande20 = false;
-     bbande21 = false;
-     bbande22 = false;
-     bbande23 = false;
-    bbande24 = false;
+
+        bbande1 = false;
+        bbande2 = false;
+        bbande3 = false;
+        bbande4 = false;
+        bbande5 = false;
+        bbande6 = false;
+        bbande7 = false;
+        bbande8 = false;
+        bbande9 = false;
+        bbande10 = false;
+        bbande11 = false;
+        bbande12 = false;
+        bbande13 = false;
+        bbande14 = false;
+        bbande15 = false;
+        bbande16 = false;
+        bbande17 = false;
+        bbande18 = false;
+        bbande19 = false;
+        bbande20 = false;
+        bbande21 = false;
+        bbande22 = false;
+        bbande23 = false;
+        bbande24 = false;
 
         boton1.setEnabled(true);
         boton2.setEnabled(true);
@@ -1762,7 +1750,7 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
-         // hiloA.start();
+        // hiloA.start();
         if (superbande == true) {
             if (bande1 == true) {
                 mover(boton1);
@@ -1775,7 +1763,7 @@ public class Arranque extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     try {
-                        bbande1=true;
+                        bbande1 = true;
                         generarsonidowell();
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
@@ -1784,13 +1772,13 @@ public class Arranque extends javax.swing.JFrame {
                         label1.setSize(boton1.getWidth(), boton1.getHeight());
                         label1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                         //boton1.setBackground(Color.black);
-                        
+
                         correct1.setBackground(Color.green);
                         bande1 = false;
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException ex) {
-                            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         //llamado a la ventana de la bomba de refrigeracion
                         BombaRefrigeracion bomba = null;
@@ -1800,13 +1788,13 @@ public class Arranque extends javax.swing.JFrame {
                         bomba.setLocationRelativeTo(null);
 
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
 
             }
         }
-       
+
     }//GEN-LAST:event_boton1MouseDragged
 
     private void boton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseEntered
@@ -1847,19 +1835,20 @@ public class Arranque extends javax.swing.JFrame {
                     label2.setSize(boton2.getWidth(), boton2.getHeight());
                     label2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande2 = false;
+                    bbande2 = true;
                     //boton2.setBackground(Color.green);
                     correct2.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ValvulaAislamiento valvula = null;
                     try {
                         valvula = new ValvulaAislamiento();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //valvula.setSize(720, 484);
                     valvula.setVisible(true);
@@ -1912,19 +1901,20 @@ public class Arranque extends javax.swing.JFrame {
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
                     label3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande3 = false;
+                    bbande3 = true;
                     //boton3.setBackground(Color.green);
                     correct3.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     ValvulaAlivio valvulaA = null;
 
                     try {
                         valvulaA = new ValvulaAlivio();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //valvulaA.setSize(630, 471);
                     valvulaA.setVisible(true);
@@ -1977,19 +1967,20 @@ public class Arranque extends javax.swing.JFrame {
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
                     label4.setLocation(tam[0], tam[2] - 12);
                     bande4 = false;
+                    bbande4 = true;
                     //boton4.setBackground(Color.green);
                     correct4.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     JuntaInflable junta = null;
 
                     try {
                         junta = new JuntaInflable();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //junta.setSize(884, 499);
                     junta.setVisible(true);
@@ -2042,19 +2033,20 @@ public class Arranque extends javax.swing.JFrame {
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
                     label5.setLocation(tam[0], tam[2] - 12);
                     bande5 = false;
+                    bbande5 = true;
                     //boton5.setBackground(Color.green);
                     correct5.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     filtroAplicado filtro = null;
 
                     try {
                         filtro = new filtroAplicado();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //filtro.setSize(720, 520);
                     filtro.setVisible(true);
@@ -2109,19 +2101,20 @@ public class Arranque extends javax.swing.JFrame {
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
                     label7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande7 = false;
+                    bbande7 = true;
                     //boton7.setBackground(Color.green);
                     correct7.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     CerrarValvulaEsferica valvulaE = null;
                     try {
                         valvulaE = new CerrarValvulaEsferica();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //valvulaE.setSize(734, 400);
                     valvulaE.setVisible(true);
@@ -2162,7 +2155,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label6);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 5)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 5)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2171,22 +2164,23 @@ public class Arranque extends javax.swing.JFrame {
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
                     label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande6 = false;
+                    bbande6 = true;
                     //boton6.setBackground(Color.green);
                     correct6.setBackground(Color.green);
-                    
+
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     AplicarFrenos frenos = null;
                     try {
                         frenos = new AplicarFrenos();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // frenos.setSize(734, 425);
+                    // frenos.setSize(734, 425);
                     frenos.setVisible(true);
                     frenos.setLocationRelativeTo(null);
                 }
@@ -2234,19 +2228,20 @@ public class Arranque extends javax.swing.JFrame {
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
                     label9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande9 = false;
+                    bbande9 = true;
                     //boton9.setBackground(Color.green);
                     correct9.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     LubricacionForzadaOn lubricar = null;
                     try {
                         lubricar = new LubricacionForzadaOn();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //lubricar.setSize(700, 499);
                     lubricar.setVisible(true);
@@ -2277,16 +2272,16 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-   if (bbande9 == true) {
-                    LubricacionForzadaOn LFOn = null;
+        if (bbande9 == true) {
+            LubricacionForzadaOn LFOn = null;
             try {
                 LFOn = new LubricacionForzadaOn();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        LFOn.setVisible(true);
-                        LFOn.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            LFOn.setVisible(true);
+            LFOn.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton9ActionPerformed
@@ -2311,20 +2306,21 @@ public class Arranque extends javax.swing.JFrame {
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
                     label8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande8 = false;
+                    bbande8 = true;
 
                     //boton8.setBackground(Color.green);
                     correct8.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     DesaplicarFrenos frenosd = null;
                     try {
                         frenosd = new DesaplicarFrenos();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //frenosd.setSize(734, 429);
                     frenosd.setVisible(true);
@@ -2355,16 +2351,16 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-   if (bbande8 == true) {
-                    DesaplicarFrenos DF = null;
+        if (bbande8 == true) {
+            DesaplicarFrenos DF = null;
             try {
                 DF = new DesaplicarFrenos();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        DF.setVisible(true);
-                        DF.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            DF.setVisible(true);
+            DF.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton8ActionPerformed
@@ -2390,19 +2386,20 @@ public class Arranque extends javax.swing.JFrame {
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
                     label10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande10 = false;
+                    bbande10 = true;
                     //boton10.setBackground(Color.green);
                     correct10.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ReguladorDesbloqueado reguladordes = null;
                     try {
                         reguladordes = new ReguladorDesbloqueado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //reguladordes.setSize(660, 410);
                     reguladordes.setVisible(true);
@@ -2453,21 +2450,22 @@ public class Arranque extends javax.swing.JFrame {
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
                     label11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande11 = false;
+                    bbande11 = true;
                     //boton11.setBackground(Color.green);
                     correct11.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ReguladorEnergizado reguladorene = null;
                     try {
                         reguladorene = new ReguladorEnergizado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // reguladorene.setSize(660, 410);
+                    // reguladorene.setSize(660, 410);
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
 
@@ -2522,19 +2520,19 @@ public class Arranque extends javax.swing.JFrame {
                     bande12 = false;
                     //boton12.setBackground(Color.green);
                     correct12.setBackground(Color.green);
+                    bbande12 = true;
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     VelocidadM90 velocidad = null;
                     try {
                         velocidad = new VelocidadM90(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    velocidad.setSize(660, 380);
                     velocidad.setVisible(true);
                     velocidad.setLocationRelativeTo(null);
 
@@ -2572,7 +2570,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label13);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2581,21 +2579,22 @@ public class Arranque extends javax.swing.JFrame {
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
                     label13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande13 = false;
+                    bbande13 = true;
                     //boton13.setBackground(Color.green);
                     correct13.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptordeCampo interruptor = null;
                     try {
                         interruptor = new InterruptordeCampo(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-             
+
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2633,7 +2632,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label14);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2644,17 +2643,18 @@ public class Arranque extends javax.swing.JFrame {
                     bande14 = false;
                     //boton14.setBackground(Color.green);
                     correct14.setBackground(Color.green);
+                    bbande14 = true;
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LubricacionForzadaOff lubrica = null;
                     try {
                         lubrica = new LubricacionForzadaOff(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     lubrica.setVisible(true);
                     lubrica.setLocationRelativeTo(null);
@@ -2688,20 +2688,20 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-  if (bbande14 == true) {
-                    LubricacionForzadaOff LFOff = null;
+        if (bbande14 == true) {
+            LubricacionForzadaOff LFOff = null;
             try {
                 LFOff = new LubricacionForzadaOff(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        LFOff.setVisible(true);
-                        LFOff.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            LFOff.setVisible(true);
+            LFOff.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
-           
-                     // TODO add your handling code here:
+
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
@@ -2714,7 +2714,7 @@ public class Arranque extends javax.swing.JFrame {
                 tam = tamaño(label15);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2725,17 +2725,18 @@ public class Arranque extends javax.swing.JFrame {
                     bande15 = false;
                     //boton15.setBackground(Color.green);
                     correct15.setBackground(Color.green);
+                    bbande15 = true;
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     VoltajeInterruptor interruptor = null;
                     try {
                         interruptor = new VoltajeInterruptor(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
@@ -2783,21 +2784,22 @@ public class Arranque extends javax.swing.JFrame {
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
                     label16.setLocation(tam[0], tam[2] - 12);
                     bande16 = false;
+                    bbande16 = true;
                     //boton16.setBackground(Color.green);
                     correct16.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     SincroDisponible sincro = null;
                     try {
                         sincro = new SincroDisponible();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // sincro.setSize(734, 494);
+                    // sincro.setSize(734, 494);
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -2848,19 +2850,20 @@ public class Arranque extends javax.swing.JFrame {
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
                     label17.setLocation(tam[0], tam[2] - 12);
                     bande17 = false;
+                    bbande17 = true;
                     //boton17.setBackground(Color.green);
                     correct17.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     UnidadXSeleccionada unidad = null;
                     try {
                         unidad = new UnidadXSeleccionada();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //unidad.setSize(734, 494);
                     unidad.setVisible(true);
@@ -2913,19 +2916,20 @@ public class Arranque extends javax.swing.JFrame {
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
                     label18.setLocation(tam[0], tam[2] - 12);
                     bande18 = false;
+                    bbande18 = true;
                     //boton18.setBackground(Color.green);
                     correct18.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     ComunicacionG4ux comunicacion = null;
                     try {
                         comunicacion = new ComunicacionG4ux();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //comunicacion.setSize(734, 494);
                     comunicacion.setVisible(true);
@@ -2955,16 +2959,16 @@ public class Arranque extends javax.swing.JFrame {
     }//GEN-LAST:event_boton18MouseReleased
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-if (bbande18 == true) {
-                    ComunicacionG4ux CG4 = null;
+        if (bbande18 == true) {
+            ComunicacionG4ux CG4 = null;
             try {
                 CG4 = new ComunicacionG4ux();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        CG4.setVisible(true);
-                        CG4.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            CG4.setVisible(true);
+            CG4.setLocationRelativeTo(null);
 
         }            // TODO add your handling code here:
     }//GEN-LAST:event_boton18ActionPerformed
@@ -2988,19 +2992,20 @@ if (bbande18 == true) {
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
                     label19.setLocation(tam[0], tam[2] - 12);
                     bande19 = false;
+                    bbande19 = true;
                     //boton19.setBackground(Color.green);
                     correct19.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     SincroenMarcha sincro = null;
                     try {
                         sincro = new SincroenMarcha();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //sincro.setSize(734, 494);
                     sincro.setVisible(true);
@@ -3031,18 +3036,18 @@ if (bbande18 == true) {
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
-     if (bbande19 == true) {
-                    SincroenMarcha SM = null;
+        if (bbande19 == true) {
+            SincroenMarcha SM = null;
             try {
                 SM = new SincroenMarcha();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        SM.setVisible(true);
-                        SM.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            SM.setVisible(true);
+            SM.setLocationRelativeTo(null);
 
-        }     
+        }
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton20MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseDragged
@@ -3064,21 +3069,22 @@ if (bbande18 == true) {
                     label20.setSize(boton20.getWidth(), boton20.getHeight());
                     label20.setLocation(tam[0], tam[2] - 12);
                     bande20 = false;
+                    bbande20 = true;
                     //boton20.setBackground(Color.green);
                     correct20.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     SincroOk sincro = null;
                     try {
                         sincro = new SincroOk();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // sincro.setSize(734, 494);
+                    // sincro.setSize(734, 494);
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -3124,21 +3130,22 @@ if (bbande18 == true) {
                     label21.setSize(boton21.getWidth(), boton21.getHeight());
                     label21.setLocation(tam[0], tam[2] - 12);
                     bande21 = false;
+                    bbande21 = true;
                     //boton21.setBackground(Color.green);
                     correct21.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptoGeneradorCerrado interruptor = null;
                     try {
                         interruptor = new InterruptoGeneradorCerrado();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // interruptor.setSize(734, 494);
+                    // interruptor.setSize(734, 494);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -3191,17 +3198,18 @@ if (bbande18 == true) {
                     bande22 = false;
                     //boton22.setBackground(Color.green);
                     correct22.setBackground(Color.green);
+                    bbande22 = true;
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     VoltajeM63 tension = null;
                     try {
                         tension = new VoltajeM63();
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //tension.setSize(734, 494);
                     tension.setVisible(true);
@@ -3250,19 +3258,20 @@ if (bbande18 == true) {
                     label23.setSize(boton23.getWidth(), boton23.getHeight());
                     label23.setLocation(tam[0], tam[2] - 12);
                     bande23 = false;
+                    bbande23 = true;
                     //boton23.setBackground(Color.green);
                     correct23.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LimitadorApertura100 limite = null;
                     try {
                         limite = new LimitadorApertura100(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //limite.setSize(734, 494);
                     limite.setVisible(true);
@@ -3315,10 +3324,11 @@ if (bbande18 == true) {
                         //boton24.setBackground(Color.green);
                         correct24.setBackground(Color.green);
                         bande24 = false;
+                        bbande24 = true;
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException ex) {
-                            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         //llamado a la ventana de la bomba de refrigeracion
                         Unidaddes unidadd = null;
@@ -3328,7 +3338,7 @@ if (bbande18 == true) {
                         unidadd.setLocationRelativeTo(null);
 
                     } catch (IOException ex) {
-                        Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
 
@@ -3360,317 +3370,316 @@ if (bbande18 == true) {
     }//GEN-LAST:event_boton24MouseReleased
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
-  if (bbande13 == true) {
-                    InterruptordeCampo IC = null;
+        if (bbande13 == true) {
+            InterruptordeCampo IC = null;
             try {
                 IC = new InterruptordeCampo(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        IC.setVisible(true);
-                        IC.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            IC.setVisible(true);
+            IC.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
-           
+
     }//GEN-LAST:event_boton13ActionPerformed
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
         if (bbande1 == true) {
-                    BombaRefrigeracion bomba = null;
+            BombaRefrigeracion bomba = null;
             try {
                 bomba = new BombaRefrigeracion();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        bomba.setVisible(true);
-                        bomba.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            bomba.setVisible(true);
+            bomba.setLocationRelativeTo(null);
 
         }
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-         if (bbande7 == true) {
-                    CerrarValvulaEsferica Ve = null;
+        if (bbande7 == true) {
+            CerrarValvulaEsferica Ve = null;
             try {
                 Ve = new CerrarValvulaEsferica();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        Ve.setVisible(true);
-                        Ve.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            Ve.setVisible(true);
+            Ve.setLocationRelativeTo(null);
 
         }
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-            if (bbande3 == true) {
-                    ValvulaAlivio Va = null;
+        if (bbande3 == true) {
+            ValvulaAlivio Va = null;
             try {
                 Va = new ValvulaAlivio();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        Va.setVisible(true);
-                        Va.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            Va.setVisible(true);
+            Va.setLocationRelativeTo(null);
 
         }
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-    if (bbande6 == true) {
-                    AplicarFrenos AF = null;
+        if (bbande6 == true) {
+            AplicarFrenos AF = null;
             try {
                 AF = new AplicarFrenos();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        AF.setVisible(true);
-                        AF.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            AF.setVisible(true);
+            AF.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-            if (bbande5 == true) {
-                    filtroAplicado FA = null;
+        if (bbande5 == true) {
+            filtroAplicado FA = null;
             try {
                 FA = new filtroAplicado();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        FA.setVisible(true);
-                        FA.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            FA.setVisible(true);
+            FA.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-          if (bbande2 == true) {
-                    ValvulaAislamiento Vais = null;
+        if (bbande2 == true) {
+            ValvulaAislamiento Vais = null;
             try {
                 Vais = new ValvulaAislamiento();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        Vais.setVisible(true);
-                        Vais.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            Vais.setVisible(true);
+            Vais.setLocationRelativeTo(null);
 
         }
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-    if (bbande11 == true) {
-                    ReguladorEnergizado RE = null;
+        if (bbande11 == true) {
+            ReguladorEnergizado RE = null;
             try {
                 RE = new ReguladorEnergizado(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        RE.setVisible(true);
-                        RE.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            RE.setVisible(true);
+            RE.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton10ActionPerformed
-         if (bbande10 == true) {
-                    ReguladorDesbloqueado RD = null;
+        if (bbande10 == true) {
+            ReguladorDesbloqueado RD = null;
             try {
                 RD = new ReguladorDesbloqueado(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        RD.setVisible(true);
-                        RD.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            RD.setVisible(true);
+            RD.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_boton10ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
-   if (bbande12 == true) {
-                    VelocidadM90 VM = null;
+        if (bbande12 == true) {
+            VelocidadM90 VM = null;
             try {
                 VM = new VelocidadM90(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        VM.setVisible(true);
-                        VM.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            VM.setVisible(true);
+            VM.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
-           // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-   if (bbande4 == true) {
-                    JuntaInflable JI = null;
+        if (bbande4 == true) {
+            JuntaInflable JI = null;
             try {
                 JI = new JuntaInflable();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        JI.setVisible(true);
-                        JI.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            JI.setVisible(true);
+            JI.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
-            
+
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
         if (bbande15 == true) {
-                    VoltajeInterruptor VI = null;
+            VoltajeInterruptor VI = null;
             try {
                 VI = new VoltajeInterruptor(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        VI.setVisible(true);
-                        VI.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            VI.setVisible(true);
+            VI.setLocationRelativeTo(null);
 
-        }    
+        }
     }//GEN-LAST:event_boton15ActionPerformed
 
     private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
- if (bbande16 == true) {
-                    SincroDisponible SD = null;
+        if (bbande16 == true) {
+            SincroDisponible SD = null;
             try {
                 SD = new SincroDisponible();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        SD.setVisible(true);
-                        SD.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            SD.setVisible(true);
+            SD.setLocationRelativeTo(null);
 
         }            // TODO add your handling code here:
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
- if (bbande17 == true) {
-                    UnidadXSeleccionada US = null;
+        if (bbande17 == true) {
+            UnidadXSeleccionada US = null;
             try {
                 US = new UnidadXSeleccionada();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        US.setVisible(true);
-                        US.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            US.setVisible(true);
+            US.setLocationRelativeTo(null);
 
         }            // TODO add your handling code here:
     }//GEN-LAST:event_boton17ActionPerformed
 
     private void boton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton20ActionPerformed
- if (bbande20 == true) {
-                    SincroOk SOK = null;
+        if (bbande20 == true) {
+            SincroOk SOK = null;
             try {
                 SOK = new SincroOk();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        SOK.setVisible(true);
-                        SOK.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            SOK.setVisible(true);
+            SOK.setLocationRelativeTo(null);
 
-        }          
+        }
     }//GEN-LAST:event_boton20ActionPerformed
 
     private void boton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton21ActionPerformed
-         if (bbande21 == true) {
-                    InterruptoGeneradorCerrado IGC = null;
+        if (bbande21 == true) {
+            InterruptoGeneradorCerrado IGC = null;
             try {
                 IGC = new InterruptoGeneradorCerrado();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        IGC.setVisible(true);
-                        IGC.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            IGC.setVisible(true);
+            IGC.setLocationRelativeTo(null);
 
-        }  
+        }
     }//GEN-LAST:event_boton21ActionPerformed
 
     private void boton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton22ActionPerformed
- if (bbande22 == true) {
-                    VoltajeM63 VM = null;
+        if (bbande22 == true) {
+            VoltajeM63 VM = null;
             try {
                 VM = new VoltajeM63();
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        VM.setVisible(true);
-                        VM.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            VM.setVisible(true);
+            VM.setLocationRelativeTo(null);
 
         }          // TODO add your handling code here:
     }//GEN-LAST:event_boton22ActionPerformed
 
     private void boton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton23ActionPerformed
-         if (bbande23 == true) {
-                    LimitadorApertura100 LA = null;
+        if (bbande23 == true) {
+            LimitadorApertura100 LA = null;
             try {
                 LA = new LimitadorApertura100(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        LA.setVisible(true);
-                        LA.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            LA.setVisible(true);
+            LA.setLocationRelativeTo(null);
 
-        }  
+        }
     }//GEN-LAST:event_boton23ActionPerformed
 
     private void boton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton24ActionPerformed
-         if (bbande24 == true) {
-                    Unidaddes UD = null;
+        if (bbande24 == true) {
+            Unidaddes UD = null;
             try {
                 UD = new Unidaddes(contador);
             } catch (IOException ex) {
-                Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
             }
-                        //bomba.setSize(734, 494);
-                        UD.setVisible(true);
-                        UD.setLocationRelativeTo(null);
+            //bomba.setSize(734, 494);
+            UD.setVisible(true);
+            UD.setLocationRelativeTo(null);
 
-        }  
+        }
     }//GEN-LAST:event_boton24ActionPerformed
- 
 
     public void generarsonido() {
         Clip sonido = null;
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(1000); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
     }
@@ -3680,24 +3689,24 @@ if (bbande18 == true) {
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(500); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
     }
@@ -3742,7 +3751,7 @@ if (bbande18 == true) {
         }
 
     }
-    
+
     private void tamaño() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -3758,21 +3767,21 @@ if (bbande18 == true) {
             contgeneral = contgeneral + 1;
         }
     }
- public void convertiranegro(){
- Plabel1.setBackground(black);
-  Plabel2.setBackground(black);
-   Plabel3.setBackground(black);
-    Plabel4.setBackground(black);
-     Plabel5.setBackground(black);
-      Plabel6.setBackground(black);
-       Plabel7.setBackground(black);
-      
-         Plabel9.setBackground(black);
-          Plabel10.setBackground(black);
-           Plabel1.setBackground(black);
-           
-            
- correct1.setBackground(black);
+
+    public void convertiranegro() {
+        Plabel1.setBackground(black);
+        Plabel2.setBackground(black);
+        Plabel3.setBackground(black);
+        Plabel4.setBackground(black);
+        Plabel5.setBackground(black);
+        Plabel6.setBackground(black);
+        Plabel7.setBackground(black);
+
+        Plabel9.setBackground(black);
+        Plabel10.setBackground(black);
+        Plabel1.setBackground(black);
+
+        correct1.setBackground(black);
         correct2.setBackground(black);
         correct3.setBackground(black);
         correct4.setBackground(black);
@@ -3796,9 +3805,8 @@ if (bbande18 == true) {
         correct22.setBackground(black);
         correct23.setBackground(black);
         correct24.setBackground(black);
-        
- 
- }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Plabel1;
@@ -3936,9 +3944,9 @@ if (bbande18 == true) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new Arranque().setVisible(true);
+                    new Arranque1().setVisible(true);
                 } catch (IOException ex) {
-                    Logger.getLogger(Arranque.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

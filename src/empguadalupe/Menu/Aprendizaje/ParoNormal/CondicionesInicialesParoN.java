@@ -27,7 +27,6 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jLabel98 = new javax.swing.JLabel();
@@ -41,9 +40,6 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel101 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
-
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,6 +95,7 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
         jTextArea1.setTabSize(4);
         jTextArea1.setText("La máquina se puede parar normalmente siempre y cuando no estén activas ninguna de las secuencias de paro: Parcial, rápido o de emergencia. Estas secuencias de paro se hacen automáticamente cuando ocurre alguna falla en la unidad. \nPara hacer un paro normal de la máquina se debe dar clic en el botón  AUTO o \nPASO según se quiera hacer este procedimiento automáticamente una vez dada la orden o paso a paso respectivamente. \n\nLuego debe darse clic en el botón  PARAR. Después en la ventana que sale, se  debe reconfirmar el proceso de paro normal. Una vez hecho esto el proceso de  paro, automático o paso a paso (según se haya seleccionado) es equivalente al proceso seguido para arrancar la máquina en cada caso respectivamente.\n");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 650, 210));
@@ -109,7 +106,7 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
 
         jLabel104.setBackground(new java.awt.Color(51, 153, 255));
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 750, 440));
 
         pack();
@@ -185,7 +182,6 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;

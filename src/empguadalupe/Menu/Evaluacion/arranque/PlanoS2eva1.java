@@ -7,6 +7,7 @@ package empguadalupe.Menu.Evaluacion.arranque;
 
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -14,23 +15,26 @@ import javax.swing.JOptionPane;
  *
  * @author lzambrs
  */
-public class PlanoS2eva1 extends javax.swing.JFrame {
-
+public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener{
+ int contErrores;
     /**
      * Creates new form PlanoBomba
      */
-    public PlanoS2eva1() {
+    public PlanoS2eva1(int numeroboton) {
         initComponents();
        
-
-        String boton = "filtro";
-        switch (boton){
-                case "filtro":
-                    JButton filtro = new JButton();
-                    filtro.setBounds(20, 30, 130, 100);
-                    ActionPerformed((ActionEvent) filtro.getAction());
-                    break;
+         switch (numeroboton){
+    
+           case 1:bomba1.setEnabled(true);bomba2.setEnabled(true);bomba5.setEnabled(true);break;
+           case 2:bomba.setEnabled(true);bomba3.setEnabled(true);bomba4.setEnabled(true);break;
+    
+      
         }
+   
+    }
+
+    private PlanoS2eva1() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      public void ActionPerformed(ActionEvent e){
                         JOptionPane.showMessageDialog(rootPane, "correcto");
@@ -54,6 +58,11 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
         bomba5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
@@ -111,28 +120,51 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
-        System.out.println("dio");
+        ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();
     }//GEN-LAST:event_bombaActionPerformed
 
     private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
-        // TODO add your handling code here:
+       ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_bomba1ActionPerformed
 
     private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
-        // TODO add your handling code here:
+       ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_bomba2ActionPerformed
 
     private void bomba3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba3ActionPerformed
-        // TODO add your handling code here:
+             ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();
     }//GEN-LAST:event_bomba3ActionPerformed
 
     private void bomba4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba4ActionPerformed
-        // TODO add your handling code here:
+              ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose();   // TODO add your handling code here:
+  // TODO add your handling code here:
     }//GEN-LAST:event_bomba4ActionPerformed
 
     private void bomba5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba5ActionPerformed
-        // TODO add your handling code here:
+        ArranqueEva arra = new ArranqueEva();
+        arra.pu2 = contErrores;
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+       dispose(); // TODO add your handling code here:
     }//GEN-LAST:event_bomba5ActionPerformed
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+         contErrores=contErrores+1;
+    }//GEN-LAST:event_formMousePressed
 
     /**
      * @param args the command line arguments
@@ -160,133 +192,7 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PlanoS2eva1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -305,4 +211,11 @@ public class PlanoS2eva1 extends javax.swing.JFrame {
     private javax.swing.JButton bomba5;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
 }

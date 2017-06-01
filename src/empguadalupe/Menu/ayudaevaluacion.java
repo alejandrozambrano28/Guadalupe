@@ -51,20 +51,22 @@ public class ayudaevaluacion extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 140, 26));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/instrucciones2.gif"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/instrucciones2.gif"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 370, 240));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 370, 240));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText("Al iniciar la secuencia de evaluación es necesario dar clic en el botón Secuencia, donde aparecerán algunos recuadros negros en los enclavamientos, en estos usted deberá dar clic, y aparecerá una pregunta de selección múltiple, después de esto, se activarán los recuadros. para lograr que el recuadro encaje en su respuesta correcta, se deberá arrastrar el recuadro y pasar el puntero por el recuadro adecuado, en este caso no se tendrá ningún tipo de ayuda como en el aprendizaje. ");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 320, 260));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 800, 330));
 

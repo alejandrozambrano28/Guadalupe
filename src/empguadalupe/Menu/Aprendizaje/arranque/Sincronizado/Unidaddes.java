@@ -5,27 +5,25 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
-
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoSincronizador;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.movimiento1;
 import java.io.IOException;
-
 
 /**
  *
  * @author lzambrs
  */
 public class Unidaddes extends javax.swing.JFrame {
-    int contgeneralv=0;
+
+    int contgeneralv = 0;
 
     /**
      * Creates new form BombaRefrigeracion
      */
     public Unidaddes(int contador) throws IOException {
-        contgeneralv=contador;
-        initComponents(); 
-       
+        contgeneralv = contador;
+        initComponents();
+
     }
 
     /**
@@ -74,41 +72,40 @@ public class Unidaddes extends javax.swing.JFrame {
         jTextArea1.setText("Al terminar la sincronización, ya no se necesita más la ayuda de este, la cual deja la conexión existente y se retira para volver a quedar disponible por si existe otra sincronización pendiente.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 265, 213));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 800, 370));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 800, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       PlanoSincronizador plano = null;
-                    plano = new PlanoSincronizador();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
+        PlanoSincronizador plano = null;
+        plano = new PlanoSincronizador();
+        plano.setLocationRelativeTo(null);
+        plano.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-          if(contgeneralv==24){
-                        movimiento1 m = new movimiento1();
-                           m.setVisible(true);
-                           m.setLocationRelativeTo(null);
-                      }
+        if (contgeneralv == 24) {
+            movimiento1 m = new movimiento1();
+            m.setVisible(true);
+            m.setLocationRelativeTo(null);
+        }
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-	
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

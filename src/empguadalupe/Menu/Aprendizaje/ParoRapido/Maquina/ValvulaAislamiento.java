@@ -76,6 +76,8 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 413, 250));
@@ -96,7 +98,7 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 160, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 470));
 
         pack();
@@ -105,7 +107,6 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoValvulaAislamiento plano = null;
                     plano = new PlanoValvulaAislamiento();
-                    plano.setSize(1090,474);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -113,7 +114,6 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlValvulaAislamiento control = null;
                     control = new ControlValvulaAislamiento();
-                    control.setSize(224,400);
                     control.setVisible(true);
                     control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -125,7 +125,6 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(ValvulaAislamiento.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(515,250);
                     condiciones.setVisible(true);
                     condiciones.setLocationRelativeTo(null);
     

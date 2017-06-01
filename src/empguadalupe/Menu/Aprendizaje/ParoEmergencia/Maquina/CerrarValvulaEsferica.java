@@ -71,6 +71,8 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         jTextArea1.setText("Al dar la señal de cerrar la válvula esférica, esta manda a des energizar todas las electroválvulas lo que provoca un cierre del bypass y la válvula esférica simultáneamente.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 43, 400, 205));
@@ -91,7 +93,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 190, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 1040, 430));
 
         pack();

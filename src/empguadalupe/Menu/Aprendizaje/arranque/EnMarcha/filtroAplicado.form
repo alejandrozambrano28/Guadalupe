@@ -87,6 +87,10 @@
             <Property name="text" type="java.lang.String" value="Con el fin de entregar las bombas de refrigeraci&#xf3;n agua libre de s&#xf3;lidos en suspensi&#xf3;n, se dise&#xf1;&#xf3; un sistema dual de filtros que toma el agua del foso de descarga y la entrega por medio de un vertedero al foso de bombas."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="keymap" type="javax.swing.text.Keymap" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="null"/>
@@ -125,7 +129,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

@@ -5,12 +5,9 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlVoltajeSup;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoVoltajeM;
 import java.io.IOException;
-
-
 
 /**
  *
@@ -22,7 +19,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public VoltajeM63() throws IOException {
-        initComponents(); 
+        initComponents();
     }
 
     /**
@@ -72,6 +69,8 @@ public class VoltajeM63 extends javax.swing.JFrame {
         jTextArea1.setText("La máquina envía señales de que se encuentra en un nivel superior al 63% y se encuentra         auto-excitada.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 205, 140));
@@ -84,7 +83,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 890, 450));
 
@@ -92,30 +91,29 @@ public class VoltajeM63 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoVoltajeM plano = null;
-                    plano = new PlanoVoltajeM();
-                    plano.setVisible(true);
+        PlanoVoltajeM plano = null;
+        plano = new PlanoVoltajeM();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ControlVoltajeSup condiciones = null;
         condiciones = new ControlVoltajeSup();
-                    
-                    condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+        condiciones.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-     
+
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

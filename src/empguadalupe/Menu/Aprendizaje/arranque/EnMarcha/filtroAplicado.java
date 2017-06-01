@@ -22,8 +22,8 @@ public class filtroAplicado extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public filtroAplicado() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -70,6 +70,8 @@ public class filtroAplicado extends javax.swing.JFrame {
         jTextArea1.setText("Con el fin de entregar las bombas de refrigeración agua libre de sólidos en suspensión, se diseñó un sistema dual de filtros que toma el agua del foso de descarga y la entrega por medio de un vertedero al foso de bombas.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jTextArea1.setFocusable(false);
         jTextArea1.setKeymap(null);
         jTextArea1.setRequestFocusEnabled(false);
@@ -93,54 +95,47 @@ public class filtroAplicado extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 210, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 710, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoFiltro plano = null;
-                    plano = new PlanoFiltro();
-              
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoFiltro plano = null;
+        plano = new PlanoFiltro();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlFiltro control = null;
-                    control = new ControlFiltro();
-                   
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlFiltro();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-          ControlFiltrofisico control = null;
-                    control = new ControlFiltrofisico();
-                   
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        ControlFiltrofisico control = null;
+        control = new ControlFiltrofisico();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        filtroAplicado p = new filtroAplicado();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		filtroAplicado p = new filtroAplicado();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

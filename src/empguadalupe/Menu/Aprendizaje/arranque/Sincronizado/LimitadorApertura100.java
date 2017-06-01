@@ -5,30 +5,28 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.movimiento;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.ControlRegulador1;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoReguladorDes1;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.movimiento1;
 import java.io.IOException;
 
-
 /**
  *
  * @author lzambrs
  */
 public class LimitadorApertura100 extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public LimitadorApertura100(int contador) throws IOException {
-        initComponents(); 
-         contgeneralv=contador;
-       
-    }
+        initComponents();
+        contgeneralv = contador;
 
-  
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,6 +76,8 @@ int contgeneralv=0;
         jTextArea1.setText("Este indicador muestra el estado actual del limitador de apertura. Dando este valor en porcentaje, siendo el 100% una apertura total del limitador. Una vez la máquina esté la máquina sincronizada, automáticamente esta referencia del limitador de apertura es llevada al 100%");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 43, 380, 140));
@@ -94,7 +94,7 @@ int contgeneralv=0;
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 190, 210));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, 650, 380));
 
@@ -102,35 +102,33 @@ int contgeneralv=0;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoReguladorDes1 plano = null;
-                    plano = new PlanoReguladorDes1();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
+        PlanoReguladorDes1 plano = null;
+        plano = new PlanoReguladorDes1();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador1 control = null;
-                    control = new ControlRegulador1();
-                    control.setSize(240,390);
-                    control.setVisible(true);
+        control = new ControlRegulador1();
+        control.setLocationRelativeTo(null);
+        control.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-                       if(contgeneralv==24){
-                           movimiento1 m = new movimiento1();
-                           m.setVisible(true);
-                           m.setLocationRelativeTo(null);
-             
-    }
+        if (contgeneralv == 24) {
+            movimiento1 m = new movimiento1();
+            m.setVisible(true);
+            m.setLocationRelativeTo(null);
+
+        }
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
-
-	public static void main(String H[]) throws IOException
-	{
-        }
+    public static void main(String H[]) throws IOException {
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

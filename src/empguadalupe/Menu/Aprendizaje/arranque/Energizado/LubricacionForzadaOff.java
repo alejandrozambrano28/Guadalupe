@@ -78,6 +78,8 @@ int contgeneralv=0;
         jTextArea1.setText("La lubricación forzada ha cumplido su objetivo de aplicar la capa de aceite y permitir una fluidez en la maquina al girar.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 298, 151));
@@ -90,7 +92,7 @@ int contgeneralv=0;
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 370));
 
@@ -100,7 +102,6 @@ int contgeneralv=0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            PlanoLubricacionf1 plano = null;
                     plano = new PlanoLubricacionf1();
-                    plano.setSize(1300,900);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -108,7 +109,6 @@ int contgeneralv=0;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlLubricacionF control = null;
                     control = new ControlLubricacionF();
-                    control.setSize(280,300);
                     control.setVisible(true);
                     control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -117,7 +117,6 @@ int contgeneralv=0;
             if(contgeneralv==15){
                         Energizado m = new Energizado();
                            m.setVisible(true);
-                           m.setLocationRelativeTo(null);
                            m.setLocationRelativeTo(null);
                       }
     }//GEN-LAST:event_formWindowClosed

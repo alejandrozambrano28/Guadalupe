@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author lzambrs
@@ -26,8 +25,8 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public DesaplicarFrenos() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -73,6 +72,8 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         jTextArea1.setText("En caso tal de que los frenos se aplicaran de manera manual, solo será necesario dejar de aplicar presión sobre la electroválvula lo que permitirá que la presión de aire salga a la atmosfera y bajen los frenos.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 46, 350, 281));
@@ -94,18 +95,17 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, 0, 810, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoFrenos plano = null;
-                    plano = new PlanoFrenos();
-            
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoFrenos plano = null;
+        plano = new PlanoFrenos();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -115,37 +115,32 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(DesaplicarFrenos.class.getName()).log(Level.SEVERE, null, ex);
         }
-                
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
+
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-              SistemadeFrenos plano = null;
-                    plano = new SistemadeFrenos();
-                
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        SistemadeFrenos plano = null;
+        plano = new SistemadeFrenos();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        DesaplicarFrenos p = new DesaplicarFrenos();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		DesaplicarFrenos p = new DesaplicarFrenos();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

@@ -25,19 +25,18 @@ import javax.swing.JOptionPane;
  * @author lzambrs
  */
 public class Reguladorbloqueado extends javax.swing.JFrame {
-    int contgeneralv=0;
+
+    int contgeneralv = 0;
 
     /**
      * Creates new form BombaRefrigeracion
      */
     public Reguladorbloqueado(int contador) throws IOException {
-        initComponents(); 
-         contgeneralv=contador;
-        int a=0;
-       
-    }
+        initComponents();
+        contgeneralv = contador;
+        int a = 0;
 
-  
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -107,7 +106,7 @@ public class Reguladorbloqueado extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setOpaque(true);
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 470, 370));
 
@@ -115,32 +114,29 @@ public class Reguladorbloqueado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoReguladorDes plano = null;
-                    plano = new PlanoReguladorDes();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoReguladorDes plano = null;
+        plano = new PlanoReguladorDes();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
-                    control = new ControlRegulador();
-                    control.setSize(240,390);
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlRegulador();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         Condicionesreguladordes condiciones = null;
+        Condicionesreguladordes condiciones = null;
         try {
             condiciones = new Condicionesreguladordes();
         } catch (IOException ex) {
             Logger.getLogger(Reguladorbloqueado.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(580,220);
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
-                 
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
@@ -150,11 +146,9 @@ public class Reguladorbloqueado extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

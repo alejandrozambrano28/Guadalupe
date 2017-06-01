@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlValvulaEsfericaA;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoValvulaEsferica;
 
@@ -34,8 +33,8 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public CerrarValvulaEsferica() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -73,7 +72,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 266, 189, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 189, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
@@ -81,6 +80,8 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         jTextArea1.setText("Estas válvulas están situadas en la parte más baja de la tubería forzada, y en aguas arriba de cada turbina. Esta válvula permite el flujo de agua a la turbina y cuenta con un Bypass, la cual cumple la función de igualar presiones a los dos lados de la válvula esférica y con esto evitar el golpe de ariete que puede ocasionar el daño en la tubería.   ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 43, 414, 205));
@@ -91,7 +92,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 266, 189, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 189, -1));
 
         jButton3.setText("Condiciones Iniciales");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -101,59 +102,53 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 1040, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoValvulaEsferica plano = null;
-                    plano = new PlanoValvulaEsferica();
-       
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoValvulaEsferica plano = null;
+        plano = new PlanoValvulaEsferica();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlValvulaEsfericaA control = null;
-                    control = new ControlValvulaEsfericaA();
-    
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlValvulaEsfericaA();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-          CondicionesValvulaEsferica condiciones = null;
+        CondicionesValvulaEsferica condiciones = null;
         try {
             condiciones = new CondicionesValvulaEsferica();
         } catch (IOException ex) {
             Logger.getLogger(CerrarValvulaEsferica.class.getName()).log(Level.SEVERE, null, ex);
         }
-  
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
-    
+
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        CerrarValvulaEsferica p = new CerrarValvulaEsferica();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		CerrarValvulaEsferica p = new CerrarValvulaEsferica();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

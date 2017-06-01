@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.EnMarcha;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlRegulador;
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.movimiento;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoReguladorDes;
@@ -19,19 +18,18 @@ import java.util.logging.Logger;
  * @author lzambrs
  */
 public class ReguladorDesbloqueado extends javax.swing.JFrame {
-    int contgeneralv=0;
+
+    int contgeneralv = 0;
 
     /**
      * Creates new form BombaRefrigeracion
      */
     public ReguladorDesbloqueado(int contador) throws IOException {
-        initComponents(); 
-         contgeneralv=contador;
-        int a=0;
-       
-    }
+        initComponents();
+        contgeneralv = contador;
+        int a = 0;
 
-  
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +60,7 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("REGULADOR DESBLOQUEADO");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 0, -1, 26));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 26));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/ezgif.com-crop.gif"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 155, -1, -1));
@@ -81,9 +79,11 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
         jTextArea1.setText("El regulador de velocidad tiene esta señal eléctrica de bloqueo por seguridad. Al desbloquear el regulador, esta manda la señal de que se encuentra lista para efectuar la labor.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 32, 630, 105));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 32, 410, 105));
 
         jButton2.setText("Control regalador");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -101,60 +101,53 @@ public class ReguladorDesbloqueado extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 650, 370));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 450, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoReguladorDes plano = null;
-                    plano = new PlanoReguladorDes();
-             
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoReguladorDes plano = null;
+        plano = new PlanoReguladorDes();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
-                    control = new ControlRegulador();
-                 
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlRegulador();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         Condicionesreguladordes condiciones = null;
+        Condicionesreguladordes condiciones = null;
         try {
             condiciones = new Condicionesreguladordes();
         } catch (IOException ex) {
             Logger.getLogger(ReguladorDesbloqueado.class.getName()).log(Level.SEVERE, null, ex);
         }
-                  
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
-                 
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-                       if(contgeneralv==12){
-                             movimiento m = new movimiento();
-                           m.setVisible(true);
-                           m.setLocationRelativeTo(null);
-                           m.setLocationRelativeTo(null);
-                           
-    }
+        if (contgeneralv == 12) {
+            movimiento m = new movimiento();
+            m.setVisible(true);
+            m.setLocationRelativeTo(null);
+        }
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

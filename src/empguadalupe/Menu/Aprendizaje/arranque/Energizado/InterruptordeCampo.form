@@ -89,6 +89,10 @@
             <Property name="text" type="java.lang.String" value="Cuando se ejecuta este paso, el interruptor cierra y aplica un voltaje al anillo superior, con esto se adquiere una fuerza electromotriz al girar el rotor.&#xa;En esta imagen la podemos ver como pre-excitaci&#xf3;n y excitaci&#xf3;n.&#xa;la maquina se auto excita cuando ya se encuentra generando.&#xa;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -122,7 +126,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>

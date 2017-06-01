@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JLabel" name="jLabel103">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
-        </Property>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -86,6 +74,10 @@
             <Property name="tabSize" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="Aqu&#xed; aparece un bot&#xf3;n que al oprimirlo y teniendo el control de la m&#xe1;quina de forma remota, inmediatamente se da el paro de emergencia. Cuando el paro de emergencia no ha sido generado por el operador sino de forma autom&#xe1;tica por alguna falla grave en el sistema, se enciende el circulo &#x201c;disp&#x201d; y en el recuadro &#x201c;No&#x201d; se podr&#xe1; ver el n&#xfa;mero de la secuencia en que va. &#xa;&#xa;Para este paro, no se necesitan condiciones previas, pues &#xe9;ste ocurre de forma abrupta&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -99,7 +91,7 @@
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

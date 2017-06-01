@@ -17,28 +17,29 @@ import javax.swing.JOptionPane;
 public class CondicionesInicialesEva extends javax.swing.JFrame {
 
     int contadorGeneral;
+    int contErrores;
     //en las condiciones iniciales se da un if para tener un control de cuantas preguntas va respuestas y para que no pueda 
     //pasar a la siguiente prueba sin completar las 6 preguntas. cuando se ejecuta el for es para escoger cuales son 
     //las 5 preguntas a desaparecer 
 
     public CondicionesInicialesEva() {
         initComponents();
-        if (contadorGeneral <= 6) {
-            Metodos generar = new Metodos();
 
-            Stack<Integer> numero = generar.generaNumeroAleatorio(1, 44);
-            int numero1;
+        Metodos generar = new Metodos();
 
-            String nomlabel, nomlabel1, nomlabel2, nomlabel3, nomlabel4, nomlabel5, nomlabel6;
-            String labels[] = new String[6];
-            int i;
-            // String label1,label2,label3,label4,label5,label6;
-            for (i = 0; i <= 5; i++) {
-                numero1 = numero.get(i);
-                labels = textos(numero1, i);
-                System.out.println(numero1);
-            }
+        Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 45);
+        int numero1;
+
+        String nomlabel, nomlabel1, nomlabel2, nomlabel3, nomlabel4, nomlabel5, nomlabel6;
+        String labels[] = new String[6];
+        int i;
+        // String label1,label2,label3,label4,label5,label6;
+        for (i = 0; i <= 5; i++) {
+            numero1 = numero.get(i);
+            labels = textos(numero1, i);
+            System.out.println(numero1);
         }
+
     }
 
     /**
@@ -50,7 +51,6 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -164,13 +164,13 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
 
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -919,7 +919,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 320, 550));
 
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 640));
 
         pack();
@@ -930,21 +930,23 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        CondicionesIniciales3 condi3 = new CondicionesIniciales3();
-        condi3.setVisible(true);
-        dispose();        // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        CondicionesIniciales4 condi4 = new CondicionesIniciales4();
-        condi4.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        CondicionesIniciales2 condi2 = new CondicionesIniciales2();
-        condi2.setVisible(true);
-        dispose();// TODO add your handling code here:
+        if (contadorGeneral >= 6) {
+            CondicionesIniciales2 condi2 = new CondicionesIniciales2();
+            condi2.setVisible(true);
+            ArranqueEva arra = new ArranqueEva();
+            arra.pu2 = contErrores;
+            dispose();
+        } else {
+            close();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     String label2;
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -1134,7 +1136,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe15MouseClicked
 
     private void labe16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe16MouseClicked
-       if (select[16] == true) {
+        if (select[16] == true) {
             boolean respun = false;
             respun = generarpreguntas(16);
             if (respun == true) {
@@ -1146,7 +1148,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe16MouseClicked
 
     private void labe17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe17MouseClicked
-         if (select[17] == true) {
+        if (select[17] == true) {
             boolean respun = false;
             respun = generarpreguntas(17);
             if (respun == true) {
@@ -1170,7 +1172,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe18MouseClicked
 
     private void labe19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe19MouseClicked
-          if (select[19] == true) {
+        if (select[19] == true) {
             boolean respun = false;
             respun = generarpreguntas(19);
             if (respun == true) {
@@ -1182,7 +1184,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe19MouseClicked
 
     private void labe20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe20MouseClicked
-          if (select[20] == true) {
+        if (select[20] == true) {
             boolean respun = false;
             respun = generarpreguntas(20);
             if (respun == true) {
@@ -1194,7 +1196,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe20MouseClicked
 
     private void labe21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe21MouseClicked
-         if (select[21] == true) {
+        if (select[21] == true) {
             boolean respun = false;
             respun = generarpreguntas(21);
             if (respun == true) {
@@ -1206,7 +1208,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe21MouseClicked
 
     private void labe22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe22MouseClicked
-          if (select[22] == true) {
+        if (select[22] == true) {
             boolean respun = false;
             respun = generarpreguntas(22);
             if (respun == true) {
@@ -1230,7 +1232,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe23MouseClicked
 
     private void labe24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe24MouseClicked
-         if (select[24] == true) {
+        if (select[24] == true) {
             boolean respun = false;
             respun = generarpreguntas(24);
             if (respun == true) {
@@ -1242,7 +1244,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe24MouseClicked
 
     private void labe25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe25MouseClicked
-          if (select[25] == true) {
+        if (select[25] == true) {
             boolean respun = false;
             respun = generarpreguntas(25);
             if (respun == true) {
@@ -1254,7 +1256,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe25MouseClicked
 
     private void labe26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe26MouseClicked
-          if (select[26] == true) {
+        if (select[26] == true) {
             boolean respun = false;
             respun = generarpreguntas(26);
             if (respun == true) {
@@ -1266,7 +1268,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe26MouseClicked
 
     private void labe27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe27MouseClicked
-          if (select[27] == true) {
+        if (select[27] == true) {
             boolean respun = false;
             respun = generarpreguntas(27);
             if (respun == true) {
@@ -1278,7 +1280,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe27MouseClicked
 
     private void labe28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe28MouseClicked
-         if (select[28] == true) {
+        if (select[28] == true) {
             boolean respun = false;
             respun = generarpreguntas(28);
             if (respun == true) {
@@ -1290,7 +1292,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe28MouseClicked
 
     private void labe29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe29MouseClicked
-          if (select[29] == true) {
+        if (select[29] == true) {
             boolean respun = false;
             respun = generarpreguntas(29);
             if (respun == true) {
@@ -1314,7 +1316,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe30MouseClicked
 
     private void labe31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe31MouseClicked
-         if (select[31] == true) {
+        if (select[31] == true) {
             boolean respun = false;
             respun = generarpreguntas(31);
             if (respun == true) {
@@ -1326,7 +1328,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe31MouseClicked
 
     private void labe32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe32MouseClicked
-         if (select[32] == true) {
+        if (select[32] == true) {
             boolean respun = false;
             respun = generarpreguntas(32);
             if (respun == true) {
@@ -1338,7 +1340,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe32MouseClicked
 
     private void labe33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe33MouseClicked
-          if (select[33] == true) {
+        if (select[33] == true) {
             boolean respun = false;
             respun = generarpreguntas(33);
             if (respun == true) {
@@ -1350,7 +1352,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe33MouseClicked
 
     private void labe34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe34MouseClicked
-          if (select[34] == true) {
+        if (select[34] == true) {
             boolean respun = false;
             respun = generarpreguntas(34);
             if (respun == true) {
@@ -1362,7 +1364,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe34MouseClicked
 
     private void labe35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe35MouseClicked
-  if (select[35] == true) {
+        if (select[35] == true) {
             boolean respun = false;
             respun = generarpreguntas(35);
             if (respun == true) {
@@ -1374,7 +1376,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe35MouseClicked
 
     private void labe36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe36MouseClicked
-          if (select[36] == true) {
+        if (select[36] == true) {
             boolean respun = false;
             respun = generarpreguntas(36);
             if (respun == true) {
@@ -1386,7 +1388,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe36MouseClicked
 
     private void labe37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe37MouseClicked
-       if (select[37] == true) {
+        if (select[37] == true) {
             boolean respun = false;
             respun = generarpreguntas(37);
             if (respun == true) {
@@ -1398,7 +1400,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe37MouseClicked
 
     private void labe38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe38MouseClicked
-          if (select[38] == true) {
+        if (select[38] == true) {
             boolean respun = false;
             respun = generarpreguntas(38);
             if (respun == true) {
@@ -1410,7 +1412,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe38MouseClicked
 
     private void labe39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe39MouseClicked
-          if (select[39] == true) {
+        if (select[39] == true) {
             boolean respun = false;
             respun = generarpreguntas(39);
             if (respun == true) {
@@ -1422,7 +1424,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe39MouseClicked
 
     private void labe40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe40MouseClicked
-          if (select[40] == true) {
+        if (select[40] == true) {
             boolean respun = false;
             respun = generarpreguntas(40);
             if (respun == true) {
@@ -1434,7 +1436,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe40MouseClicked
 
     private void labe41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe41MouseClicked
-          if (select[41] == true) {
+        if (select[41] == true) {
             boolean respun = false;
             respun = generarpreguntas(41);
             if (respun == true) {
@@ -1446,7 +1448,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe41MouseClicked
 
     private void labe42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe42MouseClicked
-         if (select[42] == true) {
+        if (select[42] == true) {
             boolean respun = false;
             respun = generarpreguntas(42);
             if (respun == true) {
@@ -1458,7 +1460,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe42MouseClicked
 
     private void labe43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe43MouseClicked
-         if (select[43] == true) {
+        if (select[43] == true) {
             boolean respun = false;
             respun = generarpreguntas(43);
             if (respun == true) {
@@ -1470,7 +1472,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe43MouseClicked
 
     private void labe44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labe44MouseClicked
-         if (select[44] == true) {
+        if (select[44] == true) {
             boolean respun = false;
             respun = generarpreguntas(44);
             if (respun == true) {
@@ -1480,6 +1482,15 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_labe44MouseClicked
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        if (contadorGeneral < 6) {
+            JOptionPane.showMessageDialog(rootPane, "faltan preguntas por responder");
+
+        } else {
+            close();
+        }
+    }//GEN-LAST:event_formWindowClosing
     boolean[] select = new boolean[45];
 
     // el metodo textos tiene la funcion de traer los textos de los labels que serviran para hacer preguntas,
@@ -1772,7 +1783,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     public Boolean generarpreguntas(int pos) {
         Boolean resultado = false;
         Metodos generar = new Metodos();
-        Stack<Integer> numero = generar.generaNumeroAleatorio(1, 44);
+        Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 45);
         traertodo();
         int selop[] = new int[4];
         selop[0] = pos;
@@ -1810,10 +1821,12 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
             }
             if (response == acert0) {
                 JOptionPane.showMessageDialog(rootPane, "correcto");
+
                 resultado = true;
 
             } else {
                 JOptionPane.showMessageDialog(rootPane, "incorrecto");
+                contErrores = contErrores + 1;
                 resultado = false;
             }
         } else {
@@ -1841,14 +1854,22 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
             }
             if (response == acert0) {
                 JOptionPane.showMessageDialog(rootPane, "correcto");
+
                 resultado = true;
             } else {
                 JOptionPane.showMessageDialog(rootPane, "incorrecto");
+                contErrores = contErrores + 1;
                 resultado = false;
+
             }
         }
 
         return resultado;
+    }
+
+    private void close() {
+        JOptionPane.showMessageDialog(rootPane, "Falta completar las condiciones iniciales 2");
+
     }
 
     /**
@@ -1897,7 +1918,6 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;

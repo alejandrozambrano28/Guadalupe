@@ -27,14 +27,10 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel103 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel104 = new javax.swing.JLabel();
-
-        jLabel103.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,13 +49,15 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
         jTextArea1.setTabSize(4);
         jTextArea1.setText("Aquí aparece un botón que al oprimirlo y teniendo el control de la máquina de forma remota, inmediatamente se da el paro de emergencia. Cuando el paro de emergencia no ha sido generado por el operador sino de forma automática por alguna falla grave en el sistema, se enciende el circulo “disp” y en el recuadro “No” se podrá ver el número de la secuencia en que va. \n\nPara este paro, no se necesitan condiciones previas, pues éste ocurre de forma abrupta\n");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 650, 160));
 
         jLabel104.setBackground(new java.awt.Color(51, 153, 255));
         jLabel104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 770, 260));
 
         pack();
@@ -164,7 +162,6 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JScrollPane jScrollPane1;

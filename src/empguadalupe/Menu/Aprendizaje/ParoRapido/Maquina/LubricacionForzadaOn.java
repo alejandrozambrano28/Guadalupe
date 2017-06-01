@@ -5,13 +5,11 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlLubricacionF;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoLubricacionf;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
 
 /**
  *
@@ -23,8 +21,8 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public LubricacionForzadaOn() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -69,9 +67,11 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
         jTextArea1.setText("La lubricación forzada tiene la función separar el runner del cojinete de carga con el fin de garantizarle la mínima película de aceite para su giro. ");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 318, 220));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 50, 300, 220));
 
         jButton2.setText("Control lubricación");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,45 +81,40 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 130, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 780, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoLubricacionf plano = null;
-                    plano = new PlanoLubricacionf();
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoLubricacionf plano = null;
+        plano = new PlanoLubricacionf();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlLubricacionF control = null;
-                    control = new ControlLubricacionF();
-                    control.setSize(280,300);
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlLubricacionF();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        LubricacionForzadaOn p = new LubricacionForzadaOn();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		LubricacionForzadaOn p = new LubricacionForzadaOn();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

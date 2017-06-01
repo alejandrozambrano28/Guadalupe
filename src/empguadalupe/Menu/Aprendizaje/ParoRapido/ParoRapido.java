@@ -398,7 +398,7 @@ public class ParoRapido extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
         jPanel1.add(logo);
         logo.setBounds(0, 0, 170, 50);
 
@@ -475,12 +475,12 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(370, 100, 70, 59);
+        jLabel13.setBounds(370, 100, 70, 50);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -776,12 +776,12 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/rombo.png"))); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(830, 630, 70, 59);
+        jLabel15.setBounds(830, 630, 70, 60);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -1327,7 +1327,7 @@ public class ParoRapido extends javax.swing.JFrame {
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
         icono.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
@@ -2521,7 +2521,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 tam = tamañoIz(label12);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 11)) {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2587,7 +2587,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 tam = tamañoIz(label14);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     generarsonidowell();
                     //(tam[0], tam[2] - 12)
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)

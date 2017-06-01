@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JLabel" name="jLabel103">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
-        </Property>
-      </Properties>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -233,6 +221,9 @@
             <Property name="tabSize" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="La m&#xe1;quina se puede parar normalmente siempre y cuando no est&#xe9;n activas ninguna de las secuencias de paro: Parcial, r&#xe1;pido o de emergencia. Estas secuencias de paro se hacen autom&#xe1;ticamente cuando ocurre alguna falla en la unidad. &#xa;Para hacer un paro normal de la m&#xe1;quina se debe dar clic en el bot&#xf3;n  AUTO o &#xa;PASO seg&#xfa;n se quiera hacer este procedimiento autom&#xe1;ticamente una vez dada la orden o paso a paso respectivamente. &#xa;&#xa;Luego debe darse clic en el bot&#xf3;n  PARAR. Despu&#xe9;s en la ventana que sale, se  debe reconfirmar el proceso de paro normal. Una vez hecho esto el proceso de  paro, autom&#xe1;tico o paso a paso (seg&#xfa;n se haya seleccionado) es equivalente al proceso seguido para arrancar la m&#xe1;quina en cada caso respectivamente.&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -265,7 +256,7 @@
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imgdise&#xf1;o/color.png"/>
+          <Image iconType="3" name="/imgfondo/color.png"/>
         </Property>
       </Properties>
       <Constraints>

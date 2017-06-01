@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoSincronizador;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -21,8 +20,8 @@ public class posiciondist0 extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public posiciondist0() throws IOException {
-        initComponents(); 
-       
+        initComponents();
+
     }
 
     /**
@@ -66,11 +65,13 @@ public class posiciondist0 extends javax.swing.JFrame {
         jTextArea1.setText("se da la señal de que el distribuidor ha llegado a su posición 0%, con esto se evita el paso del agua para el giro de la maquina");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 291, 170));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 270));
 
@@ -78,30 +79,26 @@ public class posiciondist0 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                PlanoSincronizador plano = null;
-                    plano = new PlanoSincronizador();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
+        PlanoSincronizador plano = null;
+        plano = new PlanoSincronizador();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        posiciondist0 p = new posiciondist0();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		posiciondist0 p = new posiciondist0();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

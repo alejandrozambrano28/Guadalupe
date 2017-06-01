@@ -5,26 +5,25 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.Energizado;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanosPotencias;
 import java.io.IOException;
-
-
 
 /**
  *
  * @author lzambrs
  */
 public class PotenciaActivam5 extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public PotenciaActivam5(int contador) throws IOException {
-        initComponents(); 
-        contgeneralv=contador;
-       
+        initComponents();
+        contgeneralv = contador;
+
     }
 
     /**
@@ -73,11 +72,13 @@ int contgeneralv=0;
         jTextArea1.setText("Se disminuye la energía que se envía al sistema de manera progresiva de tal manera que se pueda abrir el interruptor de generador sin problemas para la maquina o para el sistema.");
         jTextArea1.setToolTipText("");
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 430, 90));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/color.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, 460, 300));
 
@@ -85,30 +86,27 @@ int contgeneralv=0;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanosPotencias plano = null;
-                    plano = new PlanosPotencias();
-                    plano.setSize(1136, 384);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanosPotencias plano = null;
+        plano = new PlanosPotencias();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-        if(contgeneralv==15){
-                        Energizado m = new Energizado();
-                           m.setVisible(true);
-                           m.setLocationRelativeTo(null);
-                           m.setLocationRelativeTo(null);
-                      }
+        /*if (contgeneralv == 15) {
+            Energizado m = new Energizado();
+            m.setVisible(true);
+            m.setLocationRelativeTo(null);
+            m.setLocationRelativeTo(null);
+        }*/
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
