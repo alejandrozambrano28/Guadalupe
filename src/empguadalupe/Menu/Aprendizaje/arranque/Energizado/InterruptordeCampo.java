@@ -24,6 +24,7 @@ public class InterruptordeCampo extends javax.swing.JFrame {
      */
     public InterruptordeCampo(int contador) throws IOException {
         initComponents();
+          this.setResizable(false);
         contgeneralv = contador;
         System.out.println(contgeneralv);
 

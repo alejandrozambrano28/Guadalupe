@@ -29,6 +29,7 @@ public class Menu1 extends javax.swing.JFrame {
      */
     public Menu1() {
         initComponents();
+          this.setResizable(false);
          this.setLocationRelativeTo(null);
      
     }
@@ -48,9 +49,6 @@ public class Menu1 extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -107,21 +105,12 @@ public class Menu1 extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 80, 70));
-
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/PARONORMAL.png"))); // NOI18N
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 80, 80));
-
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/PARORAPIDO.png"))); // NOI18N
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 80, 80));
-
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/PAROEMERGENCIA.png"))); // NOI18N
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 80, 70));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 80, 70));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("EVALUACION");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -195,14 +184,7 @@ public class Menu1 extends javax.swing.JFrame {
       FormularioEvaluacion form = new FormularioEvaluacion();
       form.setVisible(true);
       form.setLocationRelativeTo(null);
-            ayudaaprendizaje ayuda = null;
-        try {
-            ayuda = new ayudaaprendizaje();
-        } catch (IOException ex) {
-            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
-        }
-           ayuda.setVisible(true);
-            ayuda.setLocationRelativeTo(null);
+           
       dispose();
      
       
@@ -253,9 +235,6 @@ public class Menu1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

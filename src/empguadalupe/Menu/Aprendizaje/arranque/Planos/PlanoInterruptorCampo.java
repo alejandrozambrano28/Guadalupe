@@ -18,6 +18,7 @@ public class PlanoInterruptorCampo extends javax.swing.JFrame {
      */
     public PlanoInterruptorCampo() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

@@ -23,6 +23,7 @@ public class Unidaddes extends javax.swing.JFrame {
     public Unidaddes(int contador) throws IOException {
         contgeneralv = contador;
         initComponents();
+          this.setResizable(false);
 
     }
 

@@ -21,6 +21,7 @@ public class SincroenMarcha extends javax.swing.JFrame {
      */
     public SincroenMarcha() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 

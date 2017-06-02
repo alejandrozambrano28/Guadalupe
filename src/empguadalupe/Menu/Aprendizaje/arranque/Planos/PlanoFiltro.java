@@ -16,6 +16,7 @@ public class PlanoFiltro extends javax.swing.JFrame {
      */
     public PlanoFiltro() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

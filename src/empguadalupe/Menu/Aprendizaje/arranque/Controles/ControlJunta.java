@@ -20,6 +20,7 @@ public class ControlJunta extends javax.swing.JFrame {
      */
     public ControlJunta() {
         initComponents();
+          this.setResizable(false);
      
     }
 

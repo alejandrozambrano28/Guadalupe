@@ -18,6 +18,7 @@ public class ControlVoltajeSup extends javax.swing.JFrame {
      */
     public ControlVoltajeSup() {
         initComponents();
+          this.setResizable(false);
      
     }
 

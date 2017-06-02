@@ -25,6 +25,7 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
      */
     public DesaplicarFrenos() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 

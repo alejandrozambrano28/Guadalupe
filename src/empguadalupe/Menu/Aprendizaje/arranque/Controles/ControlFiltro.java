@@ -20,6 +20,7 @@ public class ControlFiltro extends javax.swing.JFrame {
      */
     public ControlFiltro() {
         initComponents();
+          this.setResizable(false);
      
     }
 

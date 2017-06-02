@@ -18,6 +18,7 @@ public class PlanoVoltajeM extends javax.swing.JFrame {
      */
     public PlanoVoltajeM() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

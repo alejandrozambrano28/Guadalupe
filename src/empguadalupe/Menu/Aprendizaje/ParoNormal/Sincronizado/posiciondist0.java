@@ -21,6 +21,7 @@ public class posiciondist0 extends javax.swing.JFrame {
      */
     public posiciondist0() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 

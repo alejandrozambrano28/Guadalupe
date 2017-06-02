@@ -24,6 +24,7 @@ public class ReguladorEnergizado extends javax.swing.JFrame {
      */
     public ReguladorEnergizado(int contador) throws IOException {
         initComponents();
+          this.setResizable(false);
         contgeneralv = contador;
 
     }

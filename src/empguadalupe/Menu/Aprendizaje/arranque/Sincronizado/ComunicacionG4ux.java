@@ -23,6 +23,7 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
      */
     public ComunicacionG4ux() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

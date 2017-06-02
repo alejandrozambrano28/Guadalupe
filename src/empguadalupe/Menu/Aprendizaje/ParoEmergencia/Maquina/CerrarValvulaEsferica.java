@@ -25,6 +25,7 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
      */
     public CerrarValvulaEsferica() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

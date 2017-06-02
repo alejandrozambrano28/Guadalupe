@@ -20,6 +20,7 @@ public class ControlInterruptorCampo extends javax.swing.JFrame {
      */
     public ControlInterruptorCampo() {
         initComponents();
+          this.setResizable(false);
      
     }
 

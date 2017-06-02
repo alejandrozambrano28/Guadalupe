@@ -20,6 +20,7 @@ public class SistemadeFrenos extends javax.swing.JFrame {
      */
     public SistemadeFrenos() {
         initComponents();
+          this.setResizable(false);
      
     }
 

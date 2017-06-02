@@ -16,6 +16,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
      */
     public CondicionesIniciales3() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

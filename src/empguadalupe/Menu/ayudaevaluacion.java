@@ -23,6 +23,7 @@ public class ayudaevaluacion extends javax.swing.JFrame {
      */
     public ayudaevaluacion() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

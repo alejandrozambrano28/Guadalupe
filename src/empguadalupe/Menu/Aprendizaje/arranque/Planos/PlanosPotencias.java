@@ -20,6 +20,7 @@ public class PlanosPotencias extends javax.swing.JFrame {
      */
     public PlanosPotencias() {
         initComponents();
+          this.setResizable(false);
      
     }
 

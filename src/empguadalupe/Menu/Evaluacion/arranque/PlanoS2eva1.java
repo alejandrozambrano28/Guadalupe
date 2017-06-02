@@ -22,6 +22,7 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener{
      */
     public PlanoS2eva1(int numeroboton) {
         initComponents();
+          this.setResizable(false);
        
          switch (numeroboton){
     

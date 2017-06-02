@@ -16,6 +16,7 @@ public class movimiento extends javax.swing.JFrame {
      */
     public movimiento() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

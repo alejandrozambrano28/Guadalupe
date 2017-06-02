@@ -25,6 +25,7 @@ int contgeneralv=0;
      */
     public LubricacionForzadaOff(int contador) throws IOException {
         initComponents(); 
+          this.setResizable(false);
                 contgeneralv=contador;
 
         

@@ -43,6 +43,7 @@ String tiempo;
      */
     public Resultado() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

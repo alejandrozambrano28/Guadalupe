@@ -16,6 +16,7 @@ public class PlanoFrenos extends javax.swing.JFrame {
      */
     public PlanoFrenos() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

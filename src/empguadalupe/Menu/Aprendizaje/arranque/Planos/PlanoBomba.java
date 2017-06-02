@@ -16,6 +16,7 @@ public class PlanoBomba extends javax.swing.JFrame {
      */
     public PlanoBomba() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

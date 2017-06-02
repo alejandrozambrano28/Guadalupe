@@ -20,6 +20,7 @@ int contErrores;
      */
     public PlanoS3eva1() {
         initComponents();
+          this.setResizable(false);
         JButton filtro = new JButton();
      
     }

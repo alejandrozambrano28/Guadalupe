@@ -20,6 +20,7 @@ public class SistemadeRefrigeracion extends javax.swing.JFrame {
      */
     public SistemadeRefrigeracion() {
         initComponents();
+          this.setResizable(false);
      
     }
 

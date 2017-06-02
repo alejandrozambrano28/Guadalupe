@@ -21,6 +21,7 @@ public class SincroDisponible extends javax.swing.JFrame {
      */
     public SincroDisponible() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 

@@ -16,6 +16,7 @@ public class PlanoJunta extends javax.swing.JFrame {
      */
     public PlanoJunta() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

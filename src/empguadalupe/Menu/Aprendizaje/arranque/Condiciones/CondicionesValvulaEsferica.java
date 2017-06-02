@@ -23,6 +23,7 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
      */
     public CondicionesValvulaEsferica() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

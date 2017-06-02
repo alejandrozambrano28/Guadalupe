@@ -20,6 +20,7 @@ public class Energizado extends javax.swing.JFrame {
      */
     public Energizado() {
         initComponents();
+          this.setResizable(false);
      
     }
 

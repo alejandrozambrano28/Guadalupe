@@ -16,6 +16,7 @@ public class CondicionesInicialesParoN extends javax.swing.JFrame {
      */
     public CondicionesInicialesParoN() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

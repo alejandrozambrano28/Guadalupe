@@ -16,6 +16,7 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
      */
     public CondicionesInicialesParoEM() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

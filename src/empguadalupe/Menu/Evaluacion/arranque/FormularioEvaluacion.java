@@ -5,6 +5,8 @@
  */
 package empguadalupe.Menu.Evaluacion.arranque;
 
+import empguadalupe.Menu.Menu1;
+import empguadalupe.Menu.ayudaaprendizaje;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -28,6 +30,7 @@ int codigo;
      */
     public FormularioEvaluacion() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**
@@ -196,7 +199,14 @@ int codigo;
             }
 
                suma=suma+1;
-                dispose();
+                ayudaaprendizaje ayuda = null;
+        try {
+            ayuda = new ayudaaprendizaje();
+        } catch (IOException ex) {
+            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           ayuda.setVisible(true);
+            ayuda.setLocationRelativeTo(null);
        }
     }//GEN-LAST:event_jButton1ActionPerformed
 

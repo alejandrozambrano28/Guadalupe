@@ -27,7 +27,8 @@ public class JuntaInflable extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public JuntaInflable() throws IOException {
-        initComponents(); 
+        initComponents();
+          this.setResizable(false);
        
     }
 

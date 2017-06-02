@@ -20,7 +20,7 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
      */
     public Condicionesreguladordes() throws IOException {
         initComponents(); 
-       
+         this.setResizable(false);
     }
 
     /**

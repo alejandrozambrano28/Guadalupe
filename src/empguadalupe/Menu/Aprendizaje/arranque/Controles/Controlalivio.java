@@ -20,6 +20,7 @@ public class Controlalivio extends javax.swing.JFrame {
      */
     public Controlalivio() {
         initComponents();
+          this.setResizable(false);
      
     }
 

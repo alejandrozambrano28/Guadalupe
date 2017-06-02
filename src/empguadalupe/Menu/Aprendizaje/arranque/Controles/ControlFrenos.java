@@ -20,6 +20,7 @@ public class ControlFrenos extends javax.swing.JFrame {
      */
     public ControlFrenos() {
         initComponents();
+          this.setResizable(false);
      
     }
 

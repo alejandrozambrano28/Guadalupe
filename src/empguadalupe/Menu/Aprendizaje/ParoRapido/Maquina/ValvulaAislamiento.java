@@ -26,7 +26,8 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public ValvulaAislamiento() throws IOException {
-        initComponents(); 
+        initComponents();
+          this.setResizable(false);
        
     }
 

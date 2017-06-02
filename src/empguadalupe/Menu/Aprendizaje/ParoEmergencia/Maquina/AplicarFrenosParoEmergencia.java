@@ -25,7 +25,8 @@ public class AplicarFrenosParoEmergencia extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public AplicarFrenosParoEmergencia() throws IOException {
-        initComponents(); 
+        initComponents();
+          this.setResizable(false);
        
     }
 

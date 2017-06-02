@@ -22,6 +22,7 @@ int contgeneralv=0;
      */
     public ReguladorEnergizado(int contador) throws IOException {
         initComponents(); 
+          this.setResizable(false);
          contgeneralv=contador;
         
        

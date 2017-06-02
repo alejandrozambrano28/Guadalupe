@@ -21,7 +21,7 @@ public class CondicionesfrenosDESAPLICADOS extends javax.swing.JFrame {
      */
     public CondicionesfrenosDESAPLICADOS() throws IOException {
         initComponents(); 
-       
+         this.setResizable(false);
     }
 
     /**

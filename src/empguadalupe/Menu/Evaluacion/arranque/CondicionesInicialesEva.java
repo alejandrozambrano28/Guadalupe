@@ -24,6 +24,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
 
     public CondicionesInicialesEva() {
         initComponents();
+          this.setResizable(false);
 
         Metodos generar = new Metodos();
 

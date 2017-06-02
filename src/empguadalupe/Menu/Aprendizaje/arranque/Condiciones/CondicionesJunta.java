@@ -22,6 +22,7 @@ public class CondicionesJunta extends javax.swing.JFrame {
      */
     public CondicionesJunta() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

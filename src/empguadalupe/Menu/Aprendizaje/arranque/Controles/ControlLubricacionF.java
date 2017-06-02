@@ -21,6 +21,7 @@ public class ControlLubricacionF extends javax.swing.JFrame {
      */
     public ControlLubricacionF() {
         initComponents();
+          this.setResizable(false);
         jLabel3.setBackground(Color.BLACK);
      
     }

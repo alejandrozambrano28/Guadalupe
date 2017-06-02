@@ -22,6 +22,7 @@ public class PotenciaActivam5 extends javax.swing.JFrame {
      */
     public PotenciaActivam5(int contador) throws IOException {
         initComponents();
+          this.setResizable(false);
         contgeneralv = contador;
 
     }

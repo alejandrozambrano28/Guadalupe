@@ -3,27 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package empguadalupe.Menu.Aprendizaje.ParoRapido;
+package empguadalupe.Menu.Evaluacion.arranque;
 
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.CerrarValvulaEsferica;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.AplicarFrenosParoRapido;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.BombaRefrigeracion;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.DesaplicarFrenos;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.JuntaInflable;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.LubricacionForzadaOn;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.ReguladorEnergizado;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.ValvulaAislamiento;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.VelocidadM90;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.Velocidadm1;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.Velocidadm10;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.InterruptordeCampo;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.LubricacionForzadaOff;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.InterruptoGeneradorCerrado;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.LimitadorApertura0;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.PotenciaActivam5;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.Reguladorbloqueado;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.posiciondist0;
-import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.potenciaReactivam5;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.*;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.CerrarValvulaEsferica;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.AplicarFrenosParoNormal;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.BombaRefrigeracion;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.DesaplicarFrenos;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.JuntaInflable;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.LubricacionForzadaOn;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Reguladorbloqueado;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.ReguladorEnergizado;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.ValvulaAislamiento;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.VelocidadM90;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Velocidadm1;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Velocidadm10;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Energizado.InterruptordeCampo;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Energizado.LubricacionForzadaOff;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.InterruptoGeneradorCerrado;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.LimitadorApertura0;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.PotenciaActivam5;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.posiciondist0;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.potenciaReactivam5;
 
 import java.awt.Color;
 import static java.awt.Color.black;
@@ -40,15 +41,14 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
  *
  * @author lzambrs
  */
-public class ParoRapido extends javax.swing.JFrame {
-    //(tam[0], tam[2] - 12)
-//(tam[1] - a.width - 20, tam[3] - a.height - 20)
+public class ParoNormalEVA extends javax.swing.JFrame {
 
     Thread hiloA;
     int contador = 0;
@@ -83,7 +83,7 @@ public class ParoRapido extends javax.swing.JFrame {
     boolean bande17 = true;
     boolean bande18 = true;
     boolean bande19 = true;
-
+    
     boolean bbande1 = false;
     boolean bbande2 = false;
     boolean bbande3 = false;
@@ -104,34 +104,20 @@ public class ParoRapido extends javax.swing.JFrame {
     boolean bbande18 = false;
     boolean bbande19 = false;
 
+    ImageIcon romboon, rombooff;
+
     Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19;
 
     /**
      * Creates new form Vista
      */
-    public ParoRapido() {
+    public ParoNormalEVA() {
 
         initComponents();
+        convertiranegro();
+        romboon = new ImageIcon("imgfondo\\rombo.png");
+        rombooff = new ImageIcon("imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
-        correct1.setBackground(black);
-        correct2.setBackground(black);
-        correct3.setBackground(black);
-        correct4.setBackground(black);
-        correct5.setBackground(black);
-        correct6.setBackground(black);
-        correct7.setBackground(black);
-        correct8.setBackground(black);
-        correct9.setBackground(black);
-        correct10.setBackground(black);
-        correct11.setBackground(black);
-        correct12.setBackground(black);
-        correct13.setBackground(black);
-        correct14.setBackground(black);
-        correct15.setBackground(black);
-        correct16.setBackground(black);
-        correct17.setBackground(black);
-        correct18.setBackground(black);
-        correct19.setBackground(black);
 
 //define el tamaño de cada recuandro hembra 
         rec1 = label1.getBounds();
@@ -212,7 +198,7 @@ public class ParoRapido extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ParoRapido().setVisible(true);
+                new ParoNormalEVA().setVisible(true);
             }
         });
     }
@@ -306,10 +292,12 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -333,8 +321,7 @@ public class ParoRapido extends javax.swing.JFrame {
         correct18 = new javax.swing.JButton();
         correct19 = new javax.swing.JButton();
         titulo = new javax.swing.JLabel();
-        ParoRapido = new javax.swing.JButton();
-        label8 = new javax.swing.JLabel();
+        ParoNormal = new javax.swing.JButton();
         label1 = new javax.swing.JLabel();
         label17 = new javax.swing.JLabel();
         label2 = new javax.swing.JLabel();
@@ -363,6 +350,7 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         label3 = new javax.swing.JLabel();
+        label8 = new javax.swing.JLabel();
         boton17 = new javax.swing.JButton();
         boton16 = new javax.swing.JButton();
         boton1 = new javax.swing.JButton();
@@ -382,11 +370,9 @@ public class ParoRapido extends javax.swing.JFrame {
         boton14 = new javax.swing.JButton();
         boton3 = new javax.swing.JButton();
         boton7 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        Plabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         label18 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        Plabel11 = new javax.swing.JLabel();
         icono = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -420,7 +406,7 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(360, 360, 70, 50);
+        jLabel3.setBounds(360, 430, 70, 50);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -430,7 +416,17 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(360, 460, 60, 50);
+        jLabel4.setBounds(360, 610, 60, 50);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(360, 510, 70, 50);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -440,7 +436,7 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(360, 580, 60, 50);
+        jLabel6.setBounds(790, 190, 60, 50);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -450,7 +446,7 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(360, 680, 60, 50);
+        jLabel7.setBounds(790, 300, 60, 50);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -460,7 +456,7 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(840, 190, 60, 50);
+        jLabel8.setBounds(790, 390, 60, 50);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -470,7 +466,13 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(840, 280, 60, 50);
+        jLabel9.setBounds(790, 480, 60, 50);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("EN MARCHA");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(270, 530, 74, 17);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -480,13 +482,13 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(370, 100, 70, 50);
+        jLabel13.setBounds(360, 340, 70, 50);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("CONDICION PREVIA LISTO");
+        jLabel14.setText("ENERGIZADA");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(160, 100, 164, 40);
+        jLabel14.setBounds(260, 350, 81, 17);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -501,11 +503,11 @@ public class ParoRapido extends javax.swing.JFrame {
 
         correct1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct1);
-        correct1.setBounds(330, 210, 20, 20);
+        correct1.setBounds(330, 180, 20, 20);
 
         correct2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct2);
-        correct2.setBounds(330, 180, 20, 20);
+        correct2.setBounds(330, 210, 20, 20);
 
         correct3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct3);
@@ -513,27 +515,27 @@ public class ParoRapido extends javax.swing.JFrame {
 
         correct4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct4);
-        correct4.setBounds(330, 360, 20, 20);
+        correct4.setBounds(330, 430, 20, 20);
 
         correct5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct5);
-        correct5.setBounds(330, 510, 20, 20);
+        correct5.setBounds(330, 600, 20, 20);
 
         correct6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct6);
-        correct6.setBounds(430, 450, 20, 20);
+        correct6.setBounds(330, 630, 20, 20);
 
         correct7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct7);
-        correct7.setBounds(330, 480, 20, 20);
+        correct7.setBounds(330, 660, 20, 20);
 
         correct8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct8);
-        correct8.setBounds(330, 450, 20, 20);
+        correct8.setBounds(430, 600, 20, 20);
 
         correct9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct9);
-        correct9.setBounds(330, 570, 20, 20);
+        correct9.setBounds(760, 180, 20, 20);
 
         correct10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         correct10.addActionListener(new java.awt.event.ActionListener() {
@@ -542,106 +544,91 @@ public class ParoRapido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(correct10);
-        correct10.setBounds(330, 600, 20, 20);
+        correct10.setBounds(760, 210, 20, 20);
 
         correct11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct11);
-        correct11.setBounds(330, 630, 20, 20);
+        correct11.setBounds(760, 240, 20, 20);
 
         correct12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct12);
-        correct12.setBounds(330, 680, 20, 20);
+        correct12.setBounds(860, 180, 20, 20);
 
         correct13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct13);
-        correct13.setBounds(810, 190, 20, 20);
+        correct13.setBounds(860, 300, 20, 20);
 
         correct14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        correct14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                correct14ActionPerformed(evt);
-            }
-        });
         jPanel1.add(correct14);
-        correct14.setBounds(810, 280, 20, 20);
+        correct14.setBounds(860, 330, 20, 20);
 
         correct15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct15);
-        correct15.setBounds(810, 370, 20, 20);
+        correct15.setBounds(860, 390, 20, 20);
 
         correct16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct16);
-        correct16.setBounds(810, 510, 20, 20);
+        correct16.setBounds(760, 480, 20, 20);
 
         correct17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct17);
-        correct17.setBounds(810, 540, 20, 20);
+        correct17.setBounds(860, 480, 20, 20);
 
         correct18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        correct18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                correct18ActionPerformed(evt);
-            }
-        });
         jPanel1.add(correct18);
-        correct18.setBounds(810, 570, 20, 20);
+        correct18.setBounds(860, 510, 20, 20);
 
         correct19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(correct19);
-        correct19.setBounds(910, 510, 20, 20);
+        correct19.setBounds(860, 540, 20, 20);
 
         titulo.setBackground(new java.awt.Color(60, 188, 28));
         titulo.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titulo.setText("SECUENCIA DE PARO RAPIDO UNIDAD 1-2-3 GUADALUPE IV");
+        titulo.setText("SECUENCIA DE PARO NORMAL UNIDAD 1-2-3 GUADALUPE IV");
         titulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 204, 0), null, null));
         titulo.setOpaque(true);
         jPanel1.add(titulo);
-        titulo.setBounds(180, 0, 1230, 50);
+        titulo.setBounds(170, 0, 1250, 50);
 
-        ParoRapido.setText("SECUENCIA PARO RAPIDO");
-        ParoRapido.addActionListener(new java.awt.event.ActionListener() {
+        ParoNormal.setText("SECUENCIA PARO NORMAL");
+        ParoNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ParoRapidoActionPerformed(evt);
+                ParoNormalActionPerformed(evt);
             }
         });
-        jPanel1.add(ParoRapido);
-        ParoRapido.setBounds(540, 60, 210, 23);
-
-        label8.setForeground(new java.awt.Color(255, 255, 255));
-        label8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        jPanel1.add(label8);
-        label8.setBounds(290, 450, 20, 20);
+        jPanel1.add(ParoNormal);
+        ParoNormal.setBounds(550, 60, 200, 23);
 
         label1.setForeground(new java.awt.Color(255, 255, 255));
         label1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label1);
-        label1.setBounds(290, 210, 20, 20);
+        label1.setBounds(290, 180, 20, 20);
 
         label17.setForeground(new java.awt.Color(255, 255, 255));
         label17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label17);
-        label17.setBounds(770, 540, 20, 20);
+        label17.setBounds(900, 480, 20, 20);
 
         label2.setForeground(new java.awt.Color(255, 255, 255));
         label2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label2);
-        label2.setBounds(290, 180, 20, 20);
+        label2.setBounds(290, 210, 20, 20);
 
         label16.setForeground(new java.awt.Color(255, 255, 255));
         label16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label16);
-        label16.setBounds(770, 510, 20, 20);
+        label16.setBounds(720, 480, 20, 20);
 
         label13.setForeground(new java.awt.Color(255, 255, 255));
         label13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label13);
-        label13.setBounds(770, 190, 20, 20);
+        label13.setBounds(900, 300, 20, 20);
 
         label10.setForeground(new java.awt.Color(255, 255, 255));
         label10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label10);
-        label10.setBounds(290, 600, 20, 20);
+        label10.setBounds(720, 210, 20, 20);
 
         Plabel2.setBackground(new java.awt.Color(0, 0, 0));
         Plabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -664,26 +651,26 @@ public class ParoRapido extends javax.swing.JFrame {
         label5.setForeground(new java.awt.Color(255, 255, 255));
         label5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label5);
-        label5.setBounds(290, 510, 20, 20);
+        label5.setBounds(290, 600, 20, 20);
 
         label19.setForeground(new java.awt.Color(255, 255, 255));
         label19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label19);
-        label19.setBounds(950, 510, 20, 20);
+        label19.setBounds(900, 540, 20, 20);
 
         label9.setForeground(new java.awt.Color(255, 255, 255));
         label9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label9);
-        label9.setBounds(290, 570, 20, 20);
+        label9.setBounds(720, 180, 20, 20);
 
         label6.setForeground(new java.awt.Color(255, 255, 255));
         label6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label6);
-        label6.setBounds(470, 450, 20, 20);
+        label6.setBounds(290, 630, 20, 20);
 
         label7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label7);
-        label7.setBounds(290, 480, 20, 20);
+        label7.setBounds(290, 660, 20, 20);
 
         Plabel4.setBackground(new java.awt.Color(0, 0, 0));
         Plabel4.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -692,7 +679,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel4.setOpaque(true);
         jPanel1.add(Plabel4);
-        Plabel4.setBounds(320, 440, 140, 100);
+        Plabel4.setBounds(320, 590, 140, 100);
 
         Plabel3.setBackground(new java.awt.Color(0, 0, 0));
         Plabel3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -701,7 +688,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel3.setOpaque(true);
         jPanel1.add(Plabel3);
-        Plabel3.setBounds(320, 350, 140, 70);
+        Plabel3.setBounds(320, 420, 140, 70);
 
         jButton2.setText("Cerrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -715,27 +702,27 @@ public class ParoRapido extends javax.swing.JFrame {
         label4.setForeground(new java.awt.Color(255, 255, 255));
         label4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label4);
-        label4.setBounds(290, 360, 20, 20);
+        label4.setBounds(290, 430, 20, 20);
 
         label15.setForeground(new java.awt.Color(255, 255, 255));
         label15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label15);
-        label15.setBounds(770, 370, 20, 20);
+        label15.setBounds(900, 390, 20, 20);
 
         label11.setForeground(new java.awt.Color(255, 255, 255));
         label11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label11);
-        label11.setBounds(290, 630, 20, 20);
+        label11.setBounds(720, 240, 20, 20);
 
         label12.setForeground(new java.awt.Color(255, 255, 255));
         label12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label12);
-        label12.setBounds(290, 680, 20, 20);
+        label12.setBounds(900, 180, 20, 20);
 
         label14.setForeground(new java.awt.Color(255, 255, 255));
         label14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label14);
-        label14.setBounds(770, 280, 20, 20);
+        label14.setBounds(900, 330, 20, 20);
 
         Plabel6.setBackground(new java.awt.Color(0, 0, 0));
         Plabel6.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -744,7 +731,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel6.setOpaque(true);
         jPanel1.add(Plabel6);
-        Plabel6.setBounds(320, 670, 140, 70);
+        Plabel6.setBounds(750, 290, 140, 70);
 
         Plabel5.setBackground(new java.awt.Color(0, 0, 0));
         Plabel5.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -753,7 +740,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel5.setOpaque(true);
         jPanel1.add(Plabel5);
-        Plabel5.setBounds(320, 560, 140, 100);
+        Plabel5.setBounds(750, 170, 140, 100);
 
         Plabel9.setBackground(new java.awt.Color(0, 0, 0));
         Plabel9.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -762,7 +749,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel9.setOpaque(true);
         jPanel1.add(Plabel9);
-        Plabel9.setBounds(800, 270, 140, 70);
+        Plabel9.setBounds(750, 470, 140, 100);
 
         Plabel7.setBackground(new java.awt.Color(0, 0, 0));
         Plabel7.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -771,7 +758,7 @@ public class ParoRapido extends javax.swing.JFrame {
         Plabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
         Plabel7.setOpaque(true);
         jPanel1.add(Plabel7);
-        Plabel7.setBounds(800, 180, 140, 70);
+        Plabel7.setBounds(750, 380, 140, 70);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -781,18 +768,23 @@ public class ParoRapido extends javax.swing.JFrame {
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(830, 630, 70, 60);
+        jLabel15.setBounds(780, 610, 70, 60);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("PARO");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(840, 610, 50, 17);
+        jLabel16.setBounds(790, 590, 50, 17);
 
         label3.setForeground(new java.awt.Color(255, 255, 255));
         label3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label3);
         label3.setBounds(290, 270, 20, 20);
+
+        label8.setForeground(new java.awt.Color(255, 255, 255));
+        label8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(label8);
+        label8.setBounds(470, 600, 20, 20);
 
         boton17.setBackground(new java.awt.Color(0, 0, 0));
         boton17.setForeground(new java.awt.Color(255, 255, 255));
@@ -847,7 +839,7 @@ public class ParoRapido extends javax.swing.JFrame {
 
         boton1.setBackground(new java.awt.Color(0, 0, 0));
         boton1.setForeground(new java.awt.Color(255, 255, 255));
-        boton1.setText("POTENCIA ACTIVA MENOR 3MW");
+        boton1.setText("POTENCIA ACTIVA MENOR 5%");
         boton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 boton1MouseDragged(evt);
@@ -901,7 +893,7 @@ public class ParoRapido extends javax.swing.JFrame {
 
         boton2.setBackground(new java.awt.Color(0, 0, 0));
         boton2.setForeground(new java.awt.Color(255, 255, 255));
-        boton2.setText("SECUENCIA DE PARO RAPIDO ACTIVA");
+        boton2.setText("POTENCIA REACTIVA MENOR 5%");
         boton2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 boton2MouseDragged(evt);
@@ -924,7 +916,7 @@ public class ParoRapido extends javax.swing.JFrame {
             }
         });
         jPanel1.add(boton2);
-        boton2.setBounds(1130, 160, 260, 23);
+        boton2.setBounds(1130, 160, 230, 23);
 
         boton10.setBackground(new java.awt.Color(0, 0, 0));
         boton10.setForeground(new java.awt.Color(255, 255, 255));
@@ -1281,48 +1273,26 @@ public class ParoRapido extends javax.swing.JFrame {
         jPanel1.add(boton7);
         boton7.setBounds(1130, 620, 250, 23);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("9");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(840, 370, 60, 50);
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/rombooff.png"))); // NOI18N
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(370, 100, 70, 50);
 
-        Plabel10.setBackground(new java.awt.Color(0, 0, 0));
-        Plabel10.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        Plabel10.setForeground(new java.awt.Color(255, 255, 255));
-        Plabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        Plabel10.setOpaque(true);
-        jPanel1.add(Plabel10);
-        Plabel10.setBounds(800, 360, 140, 70);
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("PRERREQUISITO LISTO");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(340, 70, 160, 17);
 
         label18.setForeground(new java.awt.Color(255, 255, 255));
         label18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(label18);
-        label18.setBounds(770, 570, 20, 20);
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("10");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(840, 520, 60, 50);
-
-        Plabel11.setBackground(new java.awt.Color(0, 0, 0));
-        Plabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        Plabel11.setForeground(new java.awt.Color(255, 255, 255));
-        Plabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Plabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 255), 3));
-        Plabel11.setOpaque(true);
-        jPanel1.add(Plabel11);
-        Plabel11.setBounds(800, 500, 140, 100);
+        label18.setBounds(900, 510, 20, 20);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -1331,41 +1301,21 @@ public class ParoRapido extends javax.swing.JFrame {
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
-        icono.setBounds(-20, -20, 1460, 840);
+        icono.setBounds(0, 0, 1440, 870);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 840));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-//boton principal para arrancar la secuencia de ParoRapido
-    private void ParoRapidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoRapidoActionPerformed
-        bbande1 = false;
-        bbande2 = false;
-        bbande3 = false;
-        bbande4 = false;
-        bbande5 = false;
-        bbande6 = false;
-        bbande7 = false;
-        bbande8 = false;
-        bbande9 = false;
-        bbande10 = false;
-        bbande11 = false;
-        bbande12 = false;
-        bbande13 = false;
-        bbande14 = false;
-        bbande15 = false;
-        bbande16 = false;
-        bbande17 = false;
-        bbande18 = false;
-        bbande19 = false;
-//coloca los botones macho en orden aleatorio (el 1130 es la posicion de manera horizontal en pixeles)
-
+//boton principal para arrancar la secuencia de ParoNormal
+    private void ParoNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoNormalActionPerformed
+        //coloca los botones macho en orden aleatorio (el 1130 es la posicion de manera horizontal en pixeles)
         convertiranegro();
+        Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         contador = 0;
         contgeneral = 0;
-        CondicionesInicialesParoR condi = new CondicionesInicialesParoR();
+        CondicionesInicialesParoN condi = new CondicionesInicialesParoN();
         condi.setVisible(true);
-        Stack<Integer> numero = generaNumeroAleatorio(170, 700);
         int num0 = numero.get(0);
         boton1.setLocation(1130, ubica[num0]);
         boton1.setBackground(color);
@@ -1485,6 +1435,26 @@ public class ParoRapido extends javax.swing.JFrame {
         bande18 = true;
         bande19 = true;
 
+        bbande1 = false;
+        bbande2 = false;
+        bbande3 = false;
+        bbande4 = false;
+        bbande5 = false;
+        bbande6 = false;
+        bbande7 = false;
+        bbande8 = false;
+        bbande9 = false;
+        bbande10 = false;
+        bbande11 = false;
+        bbande12 = false;
+        bbande13 = false;
+        bbande14 = false;
+        bbande15 = false;
+        bbande16 = false;
+        bbande17 = false;
+        bbande18 = false;
+        bbande19 = false;
+
         boton17.setEnabled(true);
         boton16.setEnabled(true);
         boton1.setEnabled(true);
@@ -1506,7 +1476,7 @@ public class ParoRapido extends javax.swing.JFrame {
         boton4.setEnabled(true);
 
         superbande = true;
-    }//GEN-LAST:event_ParoRapidoActionPerformed
+    }//GEN-LAST:event_ParoNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -1524,22 +1494,21 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     try {
+                        bbande17 = true;
                         generarsonidowell();
-                        bbande17=true;
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
-                        boton17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                        boton17.setLocation(tam[0], tam[2] - 20);
                         System.out.println("correcto");
-
                         label17.setSize(boton17.getWidth(), boton17.getHeight());
-                        label17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                        label17.setLocation(tam[0], tam[2] - 20);
                         //boton1.setBackground(Color.black);
                         correct17.setBackground(Color.green);
                         bande17 = false;
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException ex) {
-                            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         //llamado a la ventana de la bomba de refrigeracion
                         BombaRefrigeracion bomba = null;
@@ -1548,7 +1517,7 @@ public class ParoRapido extends javax.swing.JFrame {
                         bomba.setLocationRelativeTo(null);
 
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
 
@@ -1588,7 +1557,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande16=true;
+                    bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1601,15 +1570,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ValvulaAislamiento valvula = null;
                     try {
                         valvula = new ValvulaAislamiento();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     valvula.setVisible(true);
                     valvula.setLocationRelativeTo(null);
                 }
@@ -1653,7 +1623,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                    bbande1=true;
+                    bbande1 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1666,15 +1636,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PotenciaActivam5 valvulaA = null;
 
                     try {
                         valvulaA = new PotenciaActivam5(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     valvulaA.setVisible(true);
                     valvulaA.setLocationRelativeTo(null);
 
@@ -1718,30 +1689,29 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande18=true;
-                    //(tam[0], tam[2] - 12)
-                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    bbande18 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton18.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton18.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
-                    label18.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label18.setLocation(tam[0], tam[2] - 20);
                     bande18 = false;
                     //boton4.setBackground(Color.green);
                     correct18.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     JuntaInflable junta = null;
 
                     try {
                         junta = new JuntaInflable();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     junta.setVisible(true);
                     junta.setLocationRelativeTo(null);
 
@@ -1785,7 +1755,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                    bbande2=true;
+                    bbande2 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1798,15 +1768,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     potenciaReactivam5 filtro = null;
 
                     try {
                         filtro = new potenciaReactivam5();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     filtro.setVisible(true);
                     filtro.setLocationRelativeTo(null);
 
@@ -1852,7 +1823,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande10=true;
+                    bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1865,15 +1836,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     CerrarValvulaEsferica valvulaE = null;
                     try {
                         valvulaE = new CerrarValvulaEsferica();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     valvulaE.setVisible(true);
                     valvulaE.setLocationRelativeTo(null);
                 }
@@ -1914,15 +1886,13 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
-                    bbande13=true;
-                    //(tam[0], tam[2] - 12)
-                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    bbande13 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton13.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label13.setLocation(tam[0], tam[2] - 20);
                     bande13 = false;
                     //boton6.setBackground(Color.green);
                     correct13.setBackground(Color.green);
@@ -1930,15 +1900,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                    AplicarFrenosParoRapido frenos = null;
+                    AplicarFrenosParoNormal frenos = null;
                     try {
-                        frenos = new AplicarFrenosParoRapido();
+                        frenos = new AplicarFrenosParoNormal();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     frenos.setVisible(true);
                     frenos.setLocationRelativeTo(null);
                 }
@@ -1979,7 +1950,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande9=true;
+                    bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1992,15 +1963,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     LubricacionForzadaOn lubricar = null;
                     try {
                         lubricar = new LubricacionForzadaOn();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     lubricar.setVisible(true);
                     lubricar.setLocationRelativeTo(null);
 
@@ -2030,15 +2002,17 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
         if (bbande9 == true) {
-     LubricacionForzadaOn lubricar = null;
-                    try {
-                        lubricar = new LubricacionForzadaOn();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubricar.setVisible(true);
-                    lubricar.setLocationRelativeTo(null);
-        }
+            LubricacionForzadaOn lubricar = null;
+            try {
+                lubricar = new LubricacionForzadaOn();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            lubricar.setVisible(true);
+            lubricar.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
@@ -2054,13 +2028,13 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande19=true;
+                    bbande19 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton19.setLocation(tam[0], tam[2] - 12);
+                    boton19.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
-                    label19.setLocation(tam[0], tam[2] - 12);
+                    label19.setLocation(tam[0], tam[2] - 20);
                     bande19 = false;
 
                     //boton8.setBackground(Color.green);
@@ -2068,15 +2042,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     DesaplicarFrenos frenosd = null;
                     try {
                         frenosd = new DesaplicarFrenos();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     frenosd.setVisible(true);
                     frenosd.setLocationRelativeTo(null);
                 }
@@ -2106,14 +2081,15 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
         if (bbande19 == true) {
-                 DesaplicarFrenos frenosd = null;
-                    try {
-                        frenosd = new DesaplicarFrenos();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenosd.setVisible(true);
-                    frenosd.setLocationRelativeTo(null);
+            DesaplicarFrenos frenosd = null;
+            try {
+                frenosd = new DesaplicarFrenos();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            frenosd.setVisible(true);
+            frenosd.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton19ActionPerformed
 
@@ -2129,7 +2105,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande5=true;
+                    bbande5 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2143,15 +2119,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     Reguladorbloqueado reguladordes = null;
                     try {
                         reguladordes = new Reguladorbloqueado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
 
@@ -2191,30 +2168,30 @@ public class ParoRapido extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande6=true;
+                    bbande6 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-
-                    boton6.setLocation(tam[0], tam[2] - 12);
+                    boton6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
-                    label6.setLocation(tam[0], tam[2] - 12);
+                    label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     bande6 = false;
                     //boton11.setBackground(Color.green);
                     correct6.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ReguladorEnergizado reguladorene = null;
                     try {
                         reguladorene = new ReguladorEnergizado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
 
@@ -2259,30 +2236,31 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     // &&(contgeneral>=9)
-                    bbande8=true;
+                    bbande8 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
 
-                    boton8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton8.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
-                    label8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label8.setLocation(tam[0], tam[2] - 20);
                     bande8 = false;
                     //boton12.setBackground(Color.green);
                     correct8.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     VelocidadM90 velocidad = null;
                     try {
                         velocidad = new VelocidadM90(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     velocidad.setVisible(true);
                     velocidad.setLocationRelativeTo(null);
 
@@ -2322,7 +2300,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 3)) {
                     generarsonidowell();
-                    bbande4=true;
+                    bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2335,15 +2313,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptordeCampo interruptor = null;
                     try {
                         interruptor = new InterruptordeCampo(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2383,29 +2362,29 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 14)) {
                     generarsonidowell();
-                    bbande15=true;
-
+                    bbande15 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton15.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label15.setLocation(tam[0], tam[2] - 20);
                     bande15 = false;
                     //boton14.setBackground(Color.green);
                     correct15.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LubricacionForzadaOff lubrica = null;
                     try {
                         lubrica = new LubricacionForzadaOff(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     lubrica.setVisible(true);
                     lubrica.setLocationRelativeTo(null);
                 }
@@ -2439,15 +2418,16 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
         if (bbande15 == true) {
-    LubricacionForzadaOff lubrica = null;
-                    try {
-                        lubrica = new LubricacionForzadaOff(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubrica.setVisible(true);
-                    lubrica.setLocationRelativeTo(null);
-        }
+            LubricacionForzadaOff lubrica = null;
+            try {
+                lubrica = new LubricacionForzadaOff(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            lubrica.setVisible(true);
+            lubrica.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton15ActionPerformed
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
@@ -2462,7 +2442,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande11=true;
+                    bbande11 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2475,15 +2455,16 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     posiciondist0 interruptor = null;
                     try {
                         interruptor = new posiciondist0();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2521,31 +2502,31 @@ public class ParoRapido extends javax.swing.JFrame {
                 tam = tamañoIz(label12);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 11)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
+                    bbande12 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    bbande12=true;
-                    boton12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton12.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
-                    label12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label12.setLocation(tam[0], tam[2] - 20);
                     bande12 = false;
                     //boton16.setBackground(Color.green);
                     correct12.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     Velocidadm10 sincro = null;
                     try {
                         sincro = new Velocidadm10(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    // sincro.setSize(734, 494);
+
                     sincro.setVisible(true);
                     sincro.setLocationRelativeTo(null);
                 }
@@ -2587,31 +2568,29 @@ public class ParoRapido extends javax.swing.JFrame {
                 tam = tamañoIz(label14);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
-                    //(tam[0], tam[2] - 12)
-//(tam[1] - a.width - 20, tam[3] - a.height - 20)
-                    bbande14=true;
+                    bbande14 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton14.setLocation(tam[0], tam[2] - 20);
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label14.setLocation(tam[0], tam[2] - 20);
                     bande14 = false;
                     //boton17.setBackground(Color.green);
                     correct14.setBackground(Color.green);
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     Velocidadm1 unidad = null;
                     try {
                         unidad = new Velocidadm1(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //unidad.setSize(734, 494);
                     unidad.setVisible(true);
@@ -2657,7 +2636,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 2)) {
                     generarsonidowell();
-                    bbande3=true;
+                    bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2670,14 +2649,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptoGeneradorCerrado interruptor = null;
                     try {
                         interruptor = new InterruptoGeneradorCerrado();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     // interruptor.setSize(734, 494);
                     interruptor.setVisible(true);
@@ -2723,7 +2702,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     generarsonidowell();
-                    bbande7=true;
+                    bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2736,14 +2715,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LimitadorApertura0 limite = null;
                     try {
                         limite = new LimitadorApertura0(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //limite.setSize(734, 494);
                     limite.setVisible(true);
@@ -2780,8 +2759,9 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 valvulaA = new PotenciaActivam5(contador);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             valvulaA.setVisible(true);
             valvulaA.setLocationRelativeTo(null);
         }
@@ -2793,8 +2773,9 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 valvulaE = new CerrarValvulaEsferica();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             valvulaE.setVisible(true);
             valvulaE.setLocationRelativeTo(null);
 
@@ -2803,74 +2784,47 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
         if (bbande11 == true) {
-posiciondist0 interruptor = null;
-                    try {
-                        interruptor = new posiciondist0();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+            posiciondist0 interruptor = null;
+            try {
+                interruptor = new posiciondist0();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
         if (bbande7 == true) {
             LimitadorApertura0 limite = null;
-                    try {
-                        limite = new LimitadorApertura0(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    //limite.setSize(734, 494);
-                    limite.setVisible(true);
-                    limite.setLocationRelativeTo(null);
+            try {
+                limite = new LimitadorApertura0(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //limite.setSize(734, 494);
+            limite.setVisible(true);
+            limite.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void correct10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct10ActionPerformed
-        if (bbande10 == true) {
-
-        }
-    }//GEN-LAST:event_correct10ActionPerformed
-
-    private void correct14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct14ActionPerformed
-        if (bbande14 == true) {
-
-        }
-    }//GEN-LAST:event_correct14ActionPerformed
-
-    private void correct18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct18ActionPerformed
-        if (bbande18 == true) {
-
-        }
-    }//GEN-LAST:event_correct18ActionPerformed
-
-    private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-        if (bbande8 == true) {
-VelocidadM90 velocidad = null;
-                    try {
-                        velocidad = new VelocidadM90(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    velocidad.setVisible(true);
-                    velocidad.setLocationRelativeTo(null);
-
-        }
-    }//GEN-LAST:event_boton8ActionPerformed
+     }//GEN-LAST:event_correct10ActionPerformed
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
         if (bbande13 == true) {
-AplicarFrenosParoRapido frenos = null;
-                    try {
-                        frenos = new AplicarFrenosParoRapido();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenos.setVisible(true);
-                    frenos.setLocationRelativeTo(null);
-        }
+            AplicarFrenosParoNormal frenos = null;
+            try {
+                frenos = new AplicarFrenosParoNormal();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            frenos.setVisible(true);
+            frenos.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton13ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
@@ -2880,8 +2834,9 @@ AplicarFrenosParoRapido frenos = null;
             try {
                 filtro = new potenciaReactivam5();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             filtro.setVisible(true);
             filtro.setLocationRelativeTo(null);
         }
@@ -2893,11 +2848,12 @@ AplicarFrenosParoRapido frenos = null;
             try {
                 valvula = new ValvulaAislamiento();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             valvula.setVisible(true);
             valvula.setLocationRelativeTo(null);
-        }
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
@@ -2906,39 +2862,55 @@ AplicarFrenosParoRapido frenos = null;
             try {
                 bomba = new BombaRefrigeracion();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
             bomba.setVisible(true);
             bomba.setLocationRelativeTo(null);
-
-        }
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton17ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
         if (bbande6 == true) {
- ReguladorEnergizado reguladorene = null;
-                    try {
-                        reguladorene = new ReguladorEnergizado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reguladorene.setVisible(true);
-                    reguladorene.setLocationRelativeTo(null);
-        }
+            ReguladorEnergizado reguladorene = null;
+            try {
+                reguladorene = new ReguladorEnergizado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            reguladorene.setVisible(true);
+            reguladorene.setLocationRelativeTo(null);
+
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
         if (bbande5 == true) {
- Reguladorbloqueado reguladordes = null;
-                    try {
-                        reguladordes = new Reguladorbloqueado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reguladordes.setVisible(true);
-                    reguladordes.setLocationRelativeTo(null);
-        }
+            Reguladorbloqueado reguladordes = null;
+            try {
+                reguladordes = new Reguladorbloqueado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            reguladordes.setVisible(true);
+            reguladordes.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton5ActionPerformed
+
+    private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
+        if (bbande8 == true) {
+            VelocidadM90 velocidad = null;
+            try {
+                velocidad = new VelocidadM90(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            velocidad.setVisible(true);
+            velocidad.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
         if (bbande18 == true) {
@@ -2947,66 +2919,68 @@ AplicarFrenosParoRapido frenos = null;
             try {
                 junta = new JuntaInflable();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             junta.setVisible(true);
             junta.setLocationRelativeTo(null);
-        }
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
         if (bbande4 == true) {
-InterruptordeCampo interruptor = null;
-                    try {
-                        interruptor = new InterruptordeCampo(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+            InterruptordeCampo interruptor = null;
+            try {
+                interruptor = new InterruptordeCampo(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }
-    }//GEN-LAST:event_boton4ActionPerformed
+     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
         if (bbande12 == true) {
-  Velocidadm10 sincro = null;
-                    try {
-                        sincro = new Velocidadm10(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    // sincro.setSize(734, 494);
-                    sincro.setVisible(true);
-                    sincro.setLocationRelativeTo(null);
-        }
+            Velocidadm10 sincro = null;
+            try {
+                sincro = new Velocidadm10(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            sincro.setVisible(true);
+            sincro.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
         if (bbande14 == true) {
-  Velocidadm1 unidad = null;
-                    try {
-                        unidad = new Velocidadm1(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    //unidad.setSize(734, 494);
-                    unidad.setVisible(true);
-                    unidad.setLocationRelativeTo(null);
-        }
+            Velocidadm1 unidad = null;
+            try {
+                unidad = new Velocidadm1(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //unidad.setSize(734, 494);
+            unidad.setVisible(true);
+            unidad.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
         if (bbande3 == true) {
-  InterruptoGeneradorCerrado interruptor = null;
-                    try {
-                        interruptor = new InterruptoGeneradorCerrado();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    // interruptor.setSize(734, 494);
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
-        }
+            InterruptoGeneradorCerrado interruptor = null;
+            try {
+                interruptor = new InterruptoGeneradorCerrado();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            // interruptor.setSize(734, 494);
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_boton3ActionPerformed
 
     public void generarsonido() {
@@ -3014,24 +2988,24 @@ InterruptordeCampo interruptor = null;
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(1000); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
     }
@@ -3041,26 +3015,66 @@ InterruptordeCampo interruptor = null;
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(500); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
+    }
+
+    public void validarcuantos(int p) {
+        contador = contador + 1;
+        switch (p) {
+
+            case 2:
+                Plabel1.setBackground(green);
+                break;
+            case 3:
+                Plabel2.setBackground(green);
+                jLabel13.setIcon(romboon);
+                break;
+            case 4:
+                Plabel3.setBackground(green);
+                jLabel5.setIcon(romboon);
+                break;
+            case 8:
+                Plabel4.setBackground(green);
+                break;
+            case 12:
+                Plabel5.setBackground(green);
+                break;
+            case 14:
+                Plabel6.setBackground(green);
+                break;
+            case 15:
+                Plabel7.setBackground(green);
+                break;
+            case 19:
+                Plabel9.setBackground(green);
+                jLabel15.setIcon(romboon);
+                break;
+
+        }
+
+    }
+
+    private void tamaño() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public void convertiranegro() {
@@ -3071,7 +3085,9 @@ InterruptordeCampo interruptor = null;
         Plabel5.setBackground(black);
         Plabel6.setBackground(black);
         Plabel7.setBackground(black);
+
         Plabel9.setBackground(black);
+
         Plabel1.setBackground(black);
 
         correct1.setBackground(black);
@@ -3096,49 +3112,6 @@ InterruptordeCampo interruptor = null;
 
     }
 
-    public void validarcuantos(int p) {
-        contador = contador + 1;
-        switch (p) {
-
-            case 2:
-                Plabel1.setBackground(green);
-                break;
-            case 3:
-                Plabel2.setBackground(green);
-                break;
-            case 4:
-                Plabel3.setBackground(green);
-                break;
-            case 8:
-                Plabel4.setBackground(green);
-                break;
-            case 11:
-                Plabel5.setBackground(green);
-                break;
-            case 12:
-                Plabel6.setBackground(green);
-                break;
-            case 13:
-                Plabel7.setBackground(green);
-                break;
-            case 14:
-                Plabel9.setBackground(green);
-                break;
-            case 15:
-                Plabel10.setBackground(green);
-                break;
-            case 19:
-                Plabel11.setBackground(green);
-                break;
-
-        }
-
-    }
-
-    private void tamaño() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public void cerro(int a) {
 
         if (a == 12) {
@@ -3153,10 +3126,8 @@ InterruptordeCampo interruptor = null;
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ParoRapido;
+    private javax.swing.JButton ParoNormal;
     private javax.swing.JLabel Plabel1;
-    private javax.swing.JLabel Plabel10;
-    private javax.swing.JLabel Plabel11;
     private javax.swing.JLabel Plabel2;
     private javax.swing.JLabel Plabel3;
     private javax.swing.JLabel Plabel4;
@@ -3205,15 +3176,17 @@ InterruptordeCampo interruptor = null;
     private javax.swing.JLabel icono;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

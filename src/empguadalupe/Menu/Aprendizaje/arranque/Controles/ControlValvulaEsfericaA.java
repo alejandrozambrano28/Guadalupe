@@ -20,6 +20,7 @@ public class ControlValvulaEsfericaA extends javax.swing.JFrame {
      */
     public ControlValvulaEsfericaA() {
         initComponents();
+          this.setResizable(false);
      
     }
 

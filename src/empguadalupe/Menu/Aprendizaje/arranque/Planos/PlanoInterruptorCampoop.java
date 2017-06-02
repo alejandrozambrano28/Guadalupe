@@ -18,6 +18,7 @@ public class PlanoInterruptorCampoop extends javax.swing.JFrame {
      */
     public PlanoInterruptorCampoop() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

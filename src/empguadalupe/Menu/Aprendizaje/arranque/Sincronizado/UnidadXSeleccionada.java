@@ -21,6 +21,7 @@ public class UnidadXSeleccionada extends javax.swing.JFrame {
      */
     public UnidadXSeleccionada() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 

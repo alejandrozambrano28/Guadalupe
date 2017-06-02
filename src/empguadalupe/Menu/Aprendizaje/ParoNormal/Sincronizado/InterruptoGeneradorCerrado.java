@@ -24,6 +24,7 @@ public class InterruptoGeneradorCerrado extends javax.swing.JFrame {
      */
     public InterruptoGeneradorCerrado() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

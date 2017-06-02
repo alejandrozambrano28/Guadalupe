@@ -110,6 +110,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     
     public ParoEmergencia() {
         initComponents();
+          this.setResizable(false);
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         convertiranegro();
         correct3.setBackground(black);
@@ -1304,7 +1305,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         jPanel1.add(jLabel25);
         jLabel25.setBounds(1020, 130, 10, 40);
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgdiseño/LINEAVERTICAL.png"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/LINEAVERTICAL.png"))); // NOI18N
         jPanel1.add(jLabel26);
         jLabel26.setBounds(710, 220, 10, 60);
 
@@ -2822,7 +2823,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
+        File a = new File("src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
@@ -2849,7 +2850,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
+        File a = new File("src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {

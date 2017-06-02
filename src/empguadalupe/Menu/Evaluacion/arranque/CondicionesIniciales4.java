@@ -22,6 +22,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
      */
     public CondicionesIniciales4() {
         initComponents();
+          this.setResizable(false);
               Metodos generar = new Metodos();
 
             Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 5);

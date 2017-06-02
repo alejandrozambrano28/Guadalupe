@@ -23,6 +23,7 @@ int contgeneralv=0;
      */
     public LimitadorApertura0(int contador) throws IOException {
         initComponents(); 
+          this.setResizable(false);
          contgeneralv=contador;
        
     }

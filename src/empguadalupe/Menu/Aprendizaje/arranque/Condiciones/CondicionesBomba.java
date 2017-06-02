@@ -22,6 +22,7 @@ public class CondicionesBomba extends javax.swing.JFrame {
      */
     public CondicionesBomba() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

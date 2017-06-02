@@ -20,6 +20,7 @@ public class ControlBomba extends javax.swing.JFrame {
      */
     public ControlBomba() {
         initComponents();
+          this.setResizable(false);
      
     }
 

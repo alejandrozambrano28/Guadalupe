@@ -16,6 +16,7 @@ public class PlanoValvulaEsferica extends javax.swing.JFrame {
      */
     public PlanoValvulaEsferica() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

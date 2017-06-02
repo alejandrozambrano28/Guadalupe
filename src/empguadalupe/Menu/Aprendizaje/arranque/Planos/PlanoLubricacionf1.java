@@ -18,6 +18,7 @@ public class PlanoLubricacionf1 extends javax.swing.JFrame {
      */
     public PlanoLubricacionf1() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

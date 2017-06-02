@@ -5,6 +5,7 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque;
 
+
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.CerrarValvulaEsferica;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.BombaRefrigeracion;
@@ -46,10 +47,11 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.VoltajeM63;
-import javax.swing.Icon;
+
 import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
+
 
 /**
  *
@@ -130,8 +132,8 @@ public class Arranque1 extends javax.swing.JFrame {
 
         initComponents();
         convertiranegro();
-        romboon = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
-        rombooff = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
+        romboon = new ImageIcon("imgfondo\\rombo.png");
+        rombooff = new ImageIcon("imgfondo\\rombooff.png");
         rec1 = label1.getBounds();
         rec2 = label2.getBounds();
         rec3 = label3.getBounds();
@@ -3664,7 +3666,7 @@ public class Arranque1 extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
+        File a = new File("src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
@@ -3683,15 +3685,22 @@ public class Arranque1 extends javax.swing.JFrame {
         }
         sonido.close();
     }
-
-    public void generarsonidowell() {
+  
+       
+    public void generarsonidowell(){
         Clip sonido = null;
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
             Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
+       // logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg")))
+       ///InputStream u = new 
+      //URL u = getClass().getResource("/resources/Well_1.wav");
+     String u = ("src\\sonidos\\Well_1.wav");
+       
+       File a = new File(u.toString()); 
+        //System.out.println(a.getAbsolutePath());
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {

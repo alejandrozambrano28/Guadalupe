@@ -20,7 +20,8 @@ int contgeneralv=0;
      * Creates new form BombaRefrigeracion
      */
     public Velocidadm10(int contador) throws IOException {
-        initComponents(); 
+        initComponents();
+          this.setResizable(false);
          contgeneralv=contador;
        
     }

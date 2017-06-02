@@ -114,8 +114,8 @@ public class ParoNormal extends javax.swing.JFrame {
 
         initComponents();
         convertiranegro();
-        romboon = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
-        rombooff = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
+        romboon = new ImageIcon("imgfondo\\rombo.png");
+        rombooff = new ImageIcon("imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
 
 //define el tamaño de cada recuandro hembra 
@@ -2989,7 +2989,7 @@ public class ParoNormal extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(ParoNormal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Track_No01_1.wav");
+        File a = new File("src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
@@ -3016,7 +3016,7 @@ public class ParoNormal extends javax.swing.JFrame {
         } catch (LineUnavailableException ex) {
             Logger.getLogger(ParoNormal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File a = new File("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\sonidos\\Well_1.wav");
+        File a = new File("src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {

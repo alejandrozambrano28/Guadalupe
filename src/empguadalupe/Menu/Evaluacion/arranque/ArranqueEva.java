@@ -37,6 +37,7 @@ import java.util.GregorianCalendar;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 /**
@@ -106,8 +107,8 @@ public class ArranqueEva extends javax.swing.JFrame {
 
         contadorGError = 0;
         convertiranegro();
-        romboon = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombo.png");
-        rombooff = new ImageIcon("C:\\Users\\lzambrs\\Desktop\\EPM\\EpmGudalupeIV\\src\\imgdiseño\\rombooff.png");
+        romboon = new ImageIcon("src\\imgdiseño\\rombo.png");
+        rombooff = new ImageIcon("src\\imgdiseño\\rombooff.png");
         rec1 = label1.getBounds();
         rec2 = label2.getBounds();
         rec3 = label3.getBounds();
@@ -1447,8 +1448,10 @@ public class ArranqueEva extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de arranque
     int dia, mes, año, hora, minutos, segundos;
-    int Segundo, Minuto, Hora;
+    int Segundo, Minuto, Hora,cuantos;
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
+       
+        
         convertiranegro();
         Segundo = 0;
         Minuto = 0;
@@ -1671,6 +1674,7 @@ public class ArranqueEva extends javax.swing.JFrame {
         boton13.setEnabled(true);
 
         superbande = true;
+    
     }//GEN-LAST:event_arranqueNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();

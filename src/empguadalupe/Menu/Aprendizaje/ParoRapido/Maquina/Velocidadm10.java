@@ -24,6 +24,7 @@ public class Velocidadm10 extends javax.swing.JFrame {
      */
     public Velocidadm10(int contador) throws IOException {
         initComponents();
+          this.setResizable(false);
         contgeneralv = contador;
 
     }

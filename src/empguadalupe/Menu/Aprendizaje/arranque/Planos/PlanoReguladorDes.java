@@ -16,6 +16,7 @@ public class PlanoReguladorDes extends javax.swing.JFrame {
      */
     public PlanoReguladorDes() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

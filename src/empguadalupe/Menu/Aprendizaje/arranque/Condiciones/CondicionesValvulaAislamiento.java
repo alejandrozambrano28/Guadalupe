@@ -21,6 +21,7 @@ public class CondicionesValvulaAislamiento extends javax.swing.JFrame {
      */
     public CondicionesValvulaAislamiento() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

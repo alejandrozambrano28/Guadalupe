@@ -18,6 +18,7 @@ public class PlanoSincronizador extends javax.swing.JFrame {
      */
     public PlanoSincronizador() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

@@ -20,6 +20,7 @@ public class ControlRegulador1 extends javax.swing.JFrame {
      */
     public ControlRegulador1() {
         initComponents();
+          this.setResizable(false);
      
     }
 

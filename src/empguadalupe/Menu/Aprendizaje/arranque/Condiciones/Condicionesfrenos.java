@@ -23,6 +23,7 @@ public class Condicionesfrenos extends javax.swing.JFrame {
      */
     public Condicionesfrenos() throws IOException {
         initComponents(); 
+          this.setResizable(false);
        
     }
 

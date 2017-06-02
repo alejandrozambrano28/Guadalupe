@@ -20,6 +20,7 @@ public class ControlValvulaAislamiento extends javax.swing.JFrame {
      */
     public ControlValvulaAislamiento() {
         initComponents();
+          this.setResizable(false);
      
     }
 

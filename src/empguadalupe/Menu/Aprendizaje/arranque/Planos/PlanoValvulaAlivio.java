@@ -16,6 +16,7 @@ public class PlanoValvulaAlivio extends javax.swing.JFrame {
      */
     public PlanoValvulaAlivio() {
         initComponents();
+          this.setResizable(false);
     }
 
     /**

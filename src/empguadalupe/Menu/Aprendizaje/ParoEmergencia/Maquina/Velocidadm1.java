@@ -23,6 +23,7 @@ int contgeneralv=0;
      */
     public Velocidadm1(int contador) throws IOException {
         initComponents(); 
+          this.setResizable(false);
          contgeneralv=contador;
        
     }

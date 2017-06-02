@@ -29,6 +29,7 @@ public class JuntaInflable extends javax.swing.JFrame {
      */
     public JuntaInflable() throws IOException {
         initComponents();
+          this.setResizable(false);
 
     }
 
