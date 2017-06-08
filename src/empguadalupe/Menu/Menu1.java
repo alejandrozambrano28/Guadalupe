@@ -9,12 +9,13 @@ import empguadalupe.Menu.Aprendizaje.ParoRapido.ParoRapido;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.ParoEmergencia;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
 import empguadalupe.Menu.Aprendizaje.arranque.Arranque1;
-import empguadalupe.Menu.Evaluacion.arranque.ArranqueEva;
-import empguadalupe.Menu.Evaluacion.arranque.FormularioEvaluacion;
+import empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva;
+import empguadalupe.Menu.Evaluacion.Menu.FormularioEvaluacion;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -186,7 +187,9 @@ public class Menu1 extends javax.swing.JFrame {
       form.setLocationRelativeTo(null);
            
       dispose();
-     
+     String texto="arranque";
+        String encriptMD5=DigestUtils.md5Hex(texto);
+        System.out.println("md5:"+encriptMD5);
       
     }//GEN-LAST:event_jButton5ActionPerformed
 
