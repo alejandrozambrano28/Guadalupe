@@ -3180,7 +3180,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                 Metodos met = new Metodos();
 
                 try {
-                    cadena = met.muestraContenido(met.ruta);
+                    cadena = met.muestraContenido(1);
                     int i = Integer.parseInt(cadena[0]);
                     while (j != i) {
                         System.out.println(cadena[j]);
@@ -3191,11 +3191,11 @@ public class ArranqueEva extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora));
-                    met.guardaDatos(String.valueOf(Minuto));
-                    met.guardaDatos(String.valueOf(Segundo));
-                    met.guardaDatos(String.valueOf(contadorGError));
-                    met.guardaDatos(String.valueOf(contadorPreguntas));
+                    met.guardaDatos(String.valueOf(Hora),1);
+                    met.guardaDatos(String.valueOf(Minuto),1);
+                    met.guardaDatos(String.valueOf(Segundo),1);
+                    met.guardaDatos(String.valueOf(contadorGError),1);
+                    met.guardaDatos(String.valueOf(contadorPreguntas),1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);

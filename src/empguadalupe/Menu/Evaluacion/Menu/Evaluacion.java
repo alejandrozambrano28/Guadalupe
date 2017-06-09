@@ -129,7 +129,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Arranque");
+            met.guardaDatos("Arranque",1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -148,7 +148,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Normal");
+            met.guardaDatos("Paro Normal",1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -167,7 +167,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Rapido");
+            met.guardaDatos("Paro Rapido",1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -186,7 +186,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Emergencia");
+            met.guardaDatos("Paro Emergencia",1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -229,10 +229,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
         int posmenory, posmayory;
         Rectangle a = label.getBounds();
         int[] tamaño = new int[4];
-        posmenorx = a.x;
-        posmayorx = a.x + 40;
-        posmenory = a.y + 10;
-        posmayory = a.y + 40;
+        posmenorx = a.x - 20;
+        posmayorx = a.x + 20;
+        posmenory = a.y - 10;
+        posmayory = a.y + 20;
         tamaño[0] = posmenorx;
         tamaño[1] = posmayorx;
         tamaño[2] = posmenory;
@@ -246,10 +246,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
         int posmenory, posmayory;
         Rectangle a = label.getBounds();
         int[] tamaño = new int[4];
-        posmenorx = a.x;
-        posmayorx = a.x + 40;
-        posmenory = a.y + 10;
-        posmayory = a.y + 40;
+        posmenorx = a.x - 20;
+        posmayorx = a.x + 20;
+        posmenory = a.y - 20;
+        posmayory = a.y + 20;
         tamaño[0] = posmenorx;
         tamaño[1] = posmayorx;
         tamaño[2] = posmenory;
@@ -1568,10 +1568,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande17 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton17.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
-                    label17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label17.setLocation(tam[1] - a.width , tam[3] - a.height );
                     correct17.setBackground(Color.green);
                     bande17 = false;
                     try {
@@ -1628,10 +1628,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton16.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
-                    label16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label16.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande16 = false;
                     //boton2.setBackground(Color.green);
                     correct16.setBackground(Color.green);
@@ -1689,7 +1689,7 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     preguntas[18] = 1;
                     bbande18 = true;
                     //(tam[0], tam[2] - 12)
-                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    //(tam[1] - a.width , tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton18.setLocation(tam[0], tam[2] - 12);
@@ -1751,10 +1751,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton10.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
-                    label10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label10.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande10 = false;
                     //boton7.setBackground(Color.green);
                     correct10.setBackground(Color.green);
@@ -1813,10 +1813,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton13.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label13.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande13 = false;
                     //boton6.setBackground(Color.green);
                     correct13.setBackground(Color.green);
@@ -1873,10 +1873,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton9.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
-                    label9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label9.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande9 = false;
                     //boton9.setBackground(Color.green);
                     correct9.setBackground(Color.green);
@@ -2001,10 +2001,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     preguntas[5] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton5.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton5.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
-                    label5.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label5.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande5 = false;
                     //boton10.setBackground(Color.green);
                     correct5.setBackground(Color.green);
@@ -2066,10 +2066,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
 
-                    boton6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton6.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
-                    label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label6.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande6 = false;
                     //boton11.setBackground(Color.green);
                     correct6.setBackground(Color.green);
@@ -2127,10 +2127,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     bbande8 = true;
-                    boton8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton8.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
-                    label8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label8.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande8 = false;
                     //boton12.setBackground(Color.green);
                     correct8.setBackground(Color.green);
@@ -2187,10 +2187,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton4.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
-                    label4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label4.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande4 = false;
                     //boton13.setBackground(Color.green);
                     correct4.setBackground(Color.green);
@@ -2251,10 +2251,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande15 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton15.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label15.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande15 = false;
                     //boton14.setBackground(Color.green);
                     correct15.setBackground(Color.green);
@@ -2380,10 +2380,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     bbande12 = true;
-                    boton12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton12.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
-                    label12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label12.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande12 = false;
                     correct12.setBackground(Color.green);
                     try {
@@ -2442,10 +2442,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton14.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label14.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande14 = false;
                     //boton17.setBackground(Color.green);
                     correct14.setBackground(Color.green);
@@ -2503,10 +2503,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton3.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
-                    label3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label3.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande3 = false;
                     //boton21.setBackground(Color.green);
                     correct3.setBackground(Color.green);
@@ -2563,10 +2563,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton7.setLocation(tam[1] - a.width , tam[3] - a.height );
                     System.out.println("correcto");
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
-                    label7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label7.setLocation(tam[1] - a.width , tam[3] - a.height );
                     bande7 = false;
                     //boton23.setBackground(Color.green);
                     correct7.setBackground(Color.green);
@@ -2679,7 +2679,7 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                 Metodos met = new Metodos();
 
                 try {
-                    cadena = met.muestraContenido(met.ruta);
+                    cadena = met.muestraContenido(1);
                     int i = Integer.parseInt(cadena[0]);
                     while (j != i) {
                         System.out.println(cadena[j]);
@@ -2690,11 +2690,11 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora));
-                    met.guardaDatos(String.valueOf(Minuto));
-                    met.guardaDatos(String.valueOf(Segundo));
-                    met.guardaDatos(String.valueOf(contGError));
-                    met.guardaDatos(String.valueOf(contPreguntas));
+                    met.guardaDatos(String.valueOf(Hora),1);
+                    met.guardaDatos(String.valueOf(Minuto),1);
+                    met.guardaDatos(String.valueOf(Segundo),1);
+                    met.guardaDatos(String.valueOf(contGError),1);
+                    met.guardaDatos(String.valueOf(contPreguntas),1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);

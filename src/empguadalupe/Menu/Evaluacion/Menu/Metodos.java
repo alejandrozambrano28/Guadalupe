@@ -27,9 +27,11 @@ import javax.swing.JOptionPane;
 public class Metodos {
 
     public String ruta = "lib\\archivo.txt";
+    public String ruta2="src\\info.txt";
+    
  
-   public void guardaDatos(String a) throws IOException { 
-      
+   public void guardaDatos(String a,int i) throws IOException { 
+      if(i==1){
         File archivo = new File(ruta);
         BufferedWriter bw;
         if(archivo.exists()) {
@@ -41,19 +43,36 @@ public class Metodos {
             bw.write(a+"\r\n");
         }
         bw.close();
+    }if (i==2){
+         File archivo = new File(ruta2);
+        BufferedWriter bw;
+        if(archivo.exists()) {
+            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(archivo, true)));
+            bw.write(a+"\r\n");
+        } else {
+            bw = new BufferedWriter(new FileWriter(archivo));
+      
+            bw.write(a+"\r\n");
+        }
+        bw.close();
     }
-   public void eliminar(){
-        
+   }
+   public void eliminar(int i){
+        if (i==1){
         File archivo = new File(ruta);
         archivo.delete();
-    
+        }if(i==2){
+        File archivo = new File(ruta2);
+        archivo.delete();
+        }
    }
    
-   public String[] muestraContenido(String archivo) throws FileNotFoundException, IOException {
+   public String[] muestraContenido(int a) throws FileNotFoundException, IOException {
       String cadena;
        String [] cad = new String[29];
+       if (a==1){
       int i=1;    
-      FileReader f = new FileReader(archivo);
+      FileReader f = new FileReader(ruta);
       BufferedReader b = new BufferedReader(f);
       while((cadena = b.readLine())!=null) {
           cad[i]=cadena;
@@ -61,6 +80,17 @@ public class Metodos {
       }
       b.close();
       cad[0]=String.valueOf(i);
+       }if(a==2){
+        int i=1;    
+      FileReader f = new FileReader(ruta2);
+      BufferedReader b = new BufferedReader(f);
+      while((cadena = b.readLine())!=null) {
+          cad[i]=cadena;
+          i++;
+      }
+      b.close();
+      cad[0]=String.valueOf(i);
+       }
       return cad;
 }
    public void verificarNum(java.awt.event.KeyEvent evt,String a) { 

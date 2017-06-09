@@ -233,7 +233,7 @@ public class Resultado extends javax.swing.JFrame {
         int j = 1;
         int cuantos=4;
         try {
-            cadena = met.muestraContenido(met.ruta);
+            cadena = met.muestraContenido(1);
 
             int i = Integer.parseInt(cadena[0]);
 
@@ -296,7 +296,7 @@ public class Resultado extends javax.swing.JFrame {
     public void comparar(int posicion) throws IOException {
         Metodos met = new Metodos();
         String[] cadena = new String[29];
-        cadena = met.muestraContenido(met.ruta);
+        cadena = met.muestraContenido(1);
         if (cadena[posicion].equals("Arranque")) {
             tiempoA = cadena[posicion + 1] + ":" + cadena[posicion + 2] + ":" + cadena[posicion + 3];
             CalificacionA.setText(cadena[posicion + 4]);
@@ -325,12 +325,12 @@ public class Resultado extends javax.swing.JFrame {
             FormularioEvaluacion formu = new FormularioEvaluacion();
             formu.setVisible(true);
 
-            met.eliminar();
+            met.eliminar(1);
         }
         if (dialogButton == JOptionPane.NO_OPTION) {
             Menu1 menu = new Menu1();
             menu.setVisible(true);
-            met.eliminar();
+            met.eliminar(1);
         }
 
     }//GEN-LAST:event_formWindowClosed

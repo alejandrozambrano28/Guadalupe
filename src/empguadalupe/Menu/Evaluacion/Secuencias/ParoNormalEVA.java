@@ -269,7 +269,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
         posmenorx = a.x-20;
         posmayorx = a.x + 20;
-        posmenory = a.y - 10;
+        posmenory = a.y - 20;
         posmayory = a.y + 20;
         tamaño[0] = posmenorx;
         tamaño[1] = posmayorx;
@@ -2794,7 +2794,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                 Metodos met = new Metodos();
 
                 try {
-                    cadena = met.muestraContenido(met.ruta);
+                    cadena = met.muestraContenido(1);
                     int i = Integer.parseInt(cadena[0]);
                     while (j != i) {
                         System.out.println(cadena[j]);
@@ -2805,11 +2805,11 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora));
-                    met.guardaDatos(String.valueOf(Minuto));
-                    met.guardaDatos(String.valueOf(Segundo));
-                    met.guardaDatos(String.valueOf(contGError));
-                    met.guardaDatos(String.valueOf(contPreguntas));
+                    met.guardaDatos(String.valueOf(Hora),1);
+                    met.guardaDatos(String.valueOf(Minuto),1);
+                    met.guardaDatos(String.valueOf(Segundo),1);
+                    met.guardaDatos(String.valueOf(contGError),1);
+                    met.guardaDatos(String.valueOf(contPreguntas),1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
