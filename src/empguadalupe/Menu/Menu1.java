@@ -11,6 +11,7 @@ import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
 import empguadalupe.Menu.Aprendizaje.arranque.Arranque1;
 import empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva;
 import empguadalupe.Menu.Evaluacion.Menu.FormularioEvaluacion;
+import empguadalupe.Menu.Evaluacion.Menu.Login;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -182,7 +183,7 @@ public class Menu1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
    
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      FormularioEvaluacion form = new FormularioEvaluacion();
+        Login form = new Login();
       form.setVisible(true);
       form.setLocationRelativeTo(null);
            

@@ -27,7 +27,7 @@ import javax.swing.JOptionPane;
 public class Metodos {
 
     public String ruta = "lib\\archivo.txt";
-    public String ruta2="src\\info.txt";
+    public String ruta2="src\\lib\\info.txt";
     
  
    public void guardaDatos(String a,int i) throws IOException { 

@@ -5,6 +5,7 @@
  */
 package empguadalupe.Menu.Evaluacion.Menu;
 
+import empguadalupe.Menu.Menu1;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,7 +41,12 @@ public class Login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setText("USUARIO");
 
@@ -150,6 +156,12 @@ public class Login extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        Menu1 formu = new Menu1();
+        formu.setVisible(true);
+        formu.setLocationRelativeTo(null);         // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosing
 
 /**
  * @param args the command line arguments

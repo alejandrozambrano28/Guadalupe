@@ -59,6 +59,9 @@ int codigo;
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
         });
 
         jButton1.setText("Comenzar");
@@ -282,6 +285,12 @@ int codigo;
         pas.setVisible(true);
         pas.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+            Menu1 menu = new Menu1();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
