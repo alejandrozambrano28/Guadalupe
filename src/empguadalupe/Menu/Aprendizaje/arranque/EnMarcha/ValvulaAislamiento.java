@@ -25,7 +25,7 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
      */
     public ValvulaAislamiento() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

@@ -5,11 +5,9 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Condiciones;
 
-
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
 
 /**
  *
@@ -21,9 +19,9 @@ public class CondicionesBomba extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public CondicionesBomba() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -109,21 +107,17 @@ public class CondicionesBomba extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        CondicionesBomba p = new CondicionesBomba();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		CondicionesBomba p = new CondicionesBomba();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox jCheckBox1;

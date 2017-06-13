@@ -23,7 +23,7 @@ public class filtroAplicado extends javax.swing.JFrame {
      */
     public filtroAplicado() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

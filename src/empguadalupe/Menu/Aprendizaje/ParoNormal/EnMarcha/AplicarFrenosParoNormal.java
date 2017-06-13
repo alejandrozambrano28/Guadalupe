@@ -25,7 +25,7 @@ public class AplicarFrenosParoNormal extends javax.swing.JFrame {
      */
     public AplicarFrenosParoNormal() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

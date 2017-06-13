@@ -24,7 +24,7 @@ public class ReguladorEnergizado extends javax.swing.JFrame {
      */
     public ReguladorEnergizado(int contador) throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         contgeneralv = contador;
 
     }
@@ -115,7 +115,7 @@ public class ReguladorEnergizado extends javax.swing.JFrame {
             movimiento m = new movimiento();
             m.setVisible(true);
             m.setLocationRelativeTo(null);
-          
+
         }
     }//GEN-LAST:event_formWindowClosed
 

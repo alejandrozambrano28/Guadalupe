@@ -1,7 +1,5 @@
 package empguadalupe.Menu;
 
-
-
 import javax.swing.JFrame;
 
 /*
@@ -9,7 +7,6 @@ import javax.swing.JFrame;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author lzambrs
@@ -21,8 +18,8 @@ public class EPMGuadalupe {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-            JFrame ventana = new Menu1();
-            ventana.setLocationRelativeTo(null);
-            ventana.setVisible(true);
-   }
+        JFrame ventana = new Menu1();
+        ventana.setLocationRelativeTo(null);
+        ventana.setVisible(true);
+    }
 }

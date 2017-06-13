@@ -5,12 +5,10 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlBomba;
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.SistemadeRefrigeracion;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoBomba;
 import empguadalupe.Menu.Aprendizaje.arranque.Condiciones.CondicionesBomba;
-
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -29,9 +27,9 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public BombaRefrigeracion() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -115,19 +113,19 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoBomba plano = null;
-                    plano = new PlanoBomba();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoBomba plano = null;
+        plano = new PlanoBomba();
+        plano.setSize(1090, 474);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlBomba control = null;
-                    control = new ControlBomba();
-                    control.setSize(920, 800);
-                    control.setVisible(true);
-                    control.setLocationRelativeTo(null);
+        control = new ControlBomba();
+        control.setSize(920, 800);
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -137,37 +135,33 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(BombaRefrigeracion.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(520, 190);
-                    condiciones.setVisible(true);
-                    condiciones.setLocationRelativeTo(null);
+        condiciones.setSize(520, 190);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         SistemadeRefrigeracion sistema = null;
-                    sistema = new SistemadeRefrigeracion();
-                    sistema.setSize(920,541);
-                    sistema.setVisible(true);
-                    sistema.setLocationRelativeTo(null);
+        sistema = new SistemadeRefrigeracion();
+        sistema.setSize(920, 541);
+        sistema.setVisible(true);
+        sistema.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        BombaRefrigeracion p = new BombaRefrigeracion();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		BombaRefrigeracion p = new BombaRefrigeracion();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

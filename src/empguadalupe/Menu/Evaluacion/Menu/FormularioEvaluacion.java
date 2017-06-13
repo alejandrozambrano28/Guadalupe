@@ -18,19 +18,20 @@ import javax.swing.JOptionPane;
  * @author lzambrs
  */
 public class FormularioEvaluacion extends javax.swing.JFrame {
-String nomb;
-String nombS;
-String cedu;
 
-int codigo;
+    String nomb;
+    String nombS;
+    String cedu;
+
+    int codigo;
 //File fichero=new File("Guardar.txt");
-        
+
     /**
      * Creates new form FormularioEvaluacion
      */
     public FormularioEvaluacion() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**
@@ -71,8 +72,10 @@ int codigo;
             }
         });
 
-        jLabel1.setText("Nombre Operario");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Nombre del Funcionario");
 
+        Nom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Nom.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 NomFocusLost(evt);
@@ -89,16 +92,20 @@ int codigo;
             }
         });
 
-        jLabel2.setText("Cedula Operario");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setText("Cedula del Funcionario");
 
+        ced.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ced.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 cedKeyTyped(evt);
             }
         });
 
-        jLabel3.setText("Nombre Supervisor");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Nombre del Gestor");
 
+        nomS.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         nomS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomSActionPerformed(evt);
@@ -110,6 +117,7 @@ int codigo;
             }
         });
 
+        reg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regActionPerformed(evt);
@@ -121,6 +129,7 @@ int codigo;
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("Registro EPM");
 
         jButton2.setText("Cambio de Usuario");
@@ -150,7 +159,10 @@ int codigo;
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                                .addComponent(Nom, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -164,8 +176,7 @@ int codigo;
                                         .addComponent(jLabel4)
                                         .addGap(55, 55, 55)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(Nom, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-                                    .addComponent(ced)
+                                    .addComponent(ced, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
                                     .addComponent(reg)
                                     .addComponent(nomS)))))
                     .addGroup(layout.createSequentialGroup()
@@ -173,7 +184,7 @@ int codigo;
                         .addComponent(jButton2)
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,36 +218,34 @@ int codigo;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Evaluacion eva = new Evaluacion();
+        Evaluacion eva = new Evaluacion();
         Metodos met = new Metodos();
-          
-        
-       // met.Mnomop=Nom.getText();
+
+        // met.Mnomop=Nom.getText();
         //met.Mnoms=nomS.getText();
         //met.Mced=ced.getText();
-       if(Nom.getText().isEmpty() || nomS.getText().isEmpty() || ced.getText().isEmpty() || reg.getText().isEmpty()){
-           JOptionPane.showMessageDialog(rootPane, "Existe algun campo Vacio");
-       }else{
-              eva.setVisible(true);
-              eva.setLocationRelativeTo(null);
+        if (Nom.getText().isEmpty() || nomS.getText().isEmpty() || ced.getText().isEmpty() || reg.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "Existe algun campo Vacio");
+        } else {
+            eva.setVisible(true);
+            eva.setLocationRelativeTo(null);
             try {
-                met.guardaDatos(Nom.getText(),1);
-                met.guardaDatos(nomS.getText(),1);
-                met.guardaDatos(reg.getText(),1);
-                met.guardaDatos(ced.getText(),1);
+                met.guardaDatos(Nom.getText(), 1);
+                met.guardaDatos(nomS.getText(), 1);
+                met.guardaDatos(reg.getText(), 1);
+                met.guardaDatos(ced.getText(), 1);
+                dispose();
             } catch (IOException ex) {
                 Logger.getLogger(FormularioEvaluacion.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-           
-              
-       }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
- Metodos met = new Metodos();
-                met.eliminar(1);
-               // TODO add your handling code here:
+        Metodos met = new Metodos();
+        met.eliminar(1);
+        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
     private void NomFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_NomFocusLost
@@ -244,18 +253,18 @@ int codigo;
     }//GEN-LAST:event_NomFocusLost
 
     private void NomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NomKeyTyped
-            Metodos met = new Metodos();
-        met.verificarTxt(evt,Nom.getText());
+        Metodos met = new Metodos();
+        met.verificarTxt(evt, Nom.getText());
     }//GEN-LAST:event_NomKeyTyped
 
     private void cedKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cedKeyTyped
         Metodos met = new Metodos();
-        met.verificarNum(evt,Nom.getText());
+        met.verificarNum(evt, Nom.getText());
     }//GEN-LAST:event_cedKeyTyped
 
     private void nomSKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nomSKeyTyped
-   Metodos met = new Metodos();
-        met.verificarTxt(evt,Nom.getText());        // TODO add your handling code here:
+        Metodos met = new Metodos();
+        met.verificarTxt(evt, Nom.getText());        // TODO add your handling code here:
     }//GEN-LAST:event_nomSKeyTyped
 
     private void NomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomActionPerformed
@@ -267,7 +276,8 @@ int codigo;
     }//GEN-LAST:event_nomSActionPerformed
 
     private void regKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_regKeyTyped
-        // TODO add your handling code here:
+          Metodos met = new Metodos();
+        met.verificarNum(evt, reg.getText());
     }//GEN-LAST:event_regKeyTyped
 
     private void regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regActionPerformed
@@ -281,13 +291,13 @@ int codigo;
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-              CambioPass pas = new CambioPass();
+        CambioPass pas = new CambioPass();
         pas.setVisible(true);
         pas.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-            Menu1 menu = new Menu1();
+        Menu1 menu = new Menu1();
         menu.setVisible(true);
         menu.setLocationRelativeTo(null);
     }//GEN-LAST:event_formWindowClosing

@@ -24,9 +24,9 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public CerrarValvulaEsferica() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -101,52 +101,48 @@ public class CerrarValvulaEsferica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoValvulaEsferica plano = null;
-                    plano = new PlanoValvulaEsferica();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoValvulaEsferica plano = null;
+        plano = new PlanoValvulaEsferica();
+        plano.setSize(1090, 474);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlValvulaEsfericaA control = null;
-                    control = new ControlValvulaEsfericaA();
-                    control.setSize(380,330);
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlValvulaEsfericaA();
+        control.setSize(380, 330);
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-          CondicionesValvulaEsferica condiciones = null;
+        CondicionesValvulaEsferica condiciones = null;
         try {
             condiciones = new CondicionesValvulaEsferica();
         } catch (IOException ex) {
             Logger.getLogger(CerrarValvulaEsferica.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(525,360);
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
-    
+        condiciones.setSize(525, 360);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        CerrarValvulaEsferica p = new CerrarValvulaEsferica();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		CerrarValvulaEsferica p = new CerrarValvulaEsferica();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

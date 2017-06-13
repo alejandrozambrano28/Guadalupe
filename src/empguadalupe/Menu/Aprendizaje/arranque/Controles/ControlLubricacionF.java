@@ -21,9 +21,9 @@ public class ControlLubricacionF extends javax.swing.JFrame {
      */
     public ControlLubricacionF() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         jLabel3.setBackground(Color.BLACK);
-     
+
     }
 
     /**
@@ -101,14 +101,13 @@ public class ControlLubricacionF extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlLubricacionF().setVisible(true);
-                ControlLubricacionF control =new ControlLubricacionF();
+                ControlLubricacionF control = new ControlLubricacionF();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

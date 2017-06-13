@@ -20,8 +20,8 @@ public class PlanosPotencias extends javax.swing.JFrame {
      */
     public PlanosPotencias() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -213,14 +213,13 @@ public class PlanosPotencias extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new PlanosPotencias().setVisible(true);
-                PlanosPotencias control =new PlanosPotencias();
+                PlanosPotencias control = new PlanosPotencias();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

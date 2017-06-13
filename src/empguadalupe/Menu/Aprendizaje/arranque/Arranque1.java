@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.CerrarValvulaEsferica;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.AplicarFrenos;
 import empguadalupe.Menu.Aprendizaje.arranque.EnMarcha.BombaRefrigeracion;
@@ -51,7 +50,6 @@ import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.VoltajeM63;
 import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
-
 
 /**
  *
@@ -3685,21 +3683,20 @@ public class Arranque1 extends javax.swing.JFrame {
         }
         sonido.close();
     }
-  
-       
-    public void generarsonidowell(){
+
+    public void generarsonidowell() {
         Clip sonido = null;
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
             Logger.getLogger(Arranque1.class.getName()).log(Level.SEVERE, null, ex);
         }
-       // logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg")))
-       ///InputStream u = new 
-      //URL u = getClass().getResource("/resources/Well_1.wav");
-     String u = ("src\\sonidos\\Well_1.wav");
-       
-       File a = new File(u.toString()); 
+        // logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg")))
+        ///InputStream u = new 
+        //URL u = getClass().getResource("/resources/Well_1.wav");
+        String u = ("src\\sonidos\\Well_1.wav");
+
+        File a = new File(u.toString());
         //System.out.println(a.getAbsolutePath());
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));

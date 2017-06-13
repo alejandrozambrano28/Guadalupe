@@ -5,13 +5,11 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlLubricacionF;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoLubricacionf;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
 
 /**
  *
@@ -23,9 +21,9 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public LubricacionForzadaOn() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -91,38 +89,34 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoLubricacionf plano = null;
-                    plano = new PlanoLubricacionf();
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoLubricacionf plano = null;
+        plano = new PlanoLubricacionf();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlLubricacionF control = null;
-                    control = new ControlLubricacionF();
-                    control.setSize(280,300);
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlLubricacionF();
+        control.setSize(280, 300);
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        LubricacionForzadaOn p = new LubricacionForzadaOn();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		LubricacionForzadaOn p = new LubricacionForzadaOn();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

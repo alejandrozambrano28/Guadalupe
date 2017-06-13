@@ -22,7 +22,7 @@ public class LubricacionForzadaOn extends javax.swing.JFrame {
      */
     public LubricacionForzadaOn() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

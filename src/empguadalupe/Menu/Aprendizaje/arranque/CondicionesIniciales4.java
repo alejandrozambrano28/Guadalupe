@@ -16,7 +16,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
      */
     public CondicionesIniciales4() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

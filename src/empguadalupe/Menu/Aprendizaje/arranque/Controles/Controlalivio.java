@@ -20,8 +20,8 @@ public class Controlalivio extends javax.swing.JFrame {
      */
     public Controlalivio() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -89,14 +89,13 @@ public class Controlalivio extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Controlalivio().setVisible(true);
-                Controlalivio control =new Controlalivio();
+                Controlalivio control = new Controlalivio();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

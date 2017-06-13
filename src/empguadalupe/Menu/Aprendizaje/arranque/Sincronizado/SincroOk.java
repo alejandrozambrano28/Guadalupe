@@ -21,7 +21,7 @@ public class SincroOk extends javax.swing.JFrame {
      */
     public SincroOk() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

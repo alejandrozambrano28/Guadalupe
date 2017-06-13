@@ -20,8 +20,8 @@ public class ControlValvulaEsfericafisico extends javax.swing.JFrame {
      */
     public ControlValvulaEsfericafisico() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -101,14 +101,13 @@ public class ControlValvulaEsfericafisico extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlValvulaEsfericafisico().setVisible(true);
-                ControlValvulaEsfericafisico control =new ControlValvulaEsfericafisico();
+                ControlValvulaEsfericafisico control = new ControlValvulaEsfericafisico();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

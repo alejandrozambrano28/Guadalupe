@@ -21,43 +21,65 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-
 /**
  *
  * @author lzambrs
  */
-public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener{
+public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
 
- int contErrores;
- int conPreguntas;
+    int contErrores;
+    int conPreguntas;
+
     /**
      * Creates new form PlanoBomba
      */
-
-    public PlanoS1evaPR(int numeroboton) { 
+    public PlanoS1evaPR(int numeroboton) {
         initComponents();
-          this.setResizable(false);
-   
-        
-        switch (numeroboton){
-           case 1:btn1.setEnabled(true);break;
-           case 2:btn2.setEnabled(true);break;
-           case 3:btn3.setEnabled(true);btn9.setEnabled(true);btn10.setEnabled(true);break;
-           case 4:btn4.setEnabled(true);btn11.setEnabled(true);btn12.setEnabled(true);break;
-           case 5:btn5.setEnabled(true);btn13.setEnabled(true);btn14.setEnabled(true);break;
-           case 6:btn6.setEnabled(true);btn17.setEnabled(true);btn18.setEnabled(true);break;
-           case 7:btn7.setEnabled(true);btn15.setEnabled(true);btn16.setEnabled(true);break;
-           case 8:btn8.setEnabled(true);break;
+        this.setResizable(false);
+
+        switch (numeroboton) {
+            case 1:
+                btn1.setEnabled(true);
+                break;
+            case 2:
+                btn2.setEnabled(true);
+                break;
+            case 3:
+                btn3.setEnabled(true);
+                btn9.setEnabled(true);
+                btn10.setEnabled(true);
+                break;
+            case 4:
+                btn4.setEnabled(true);
+                btn11.setEnabled(true);
+                btn12.setEnabled(true);
+                break;
+            case 5:
+                btn5.setEnabled(true);
+                btn13.setEnabled(true);
+                btn14.setEnabled(true);
+                break;
+            case 6:
+                btn6.setEnabled(true);
+                btn17.setEnabled(true);
+                btn18.setEnabled(true);
+                break;
+            case 7:
+                btn7.setEnabled(true);
+                btn15.setEnabled(true);
+                btn16.setEnabled(true);
+                break;
+            case 8:
+                btn8.setEnabled(true);
+                break;
         }
-    
-        
-    }                    
+
+    }
 
     private PlanoS1evaPR() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  
-                        
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -265,163 +287,163 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-      
+
         ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[1] = contErrores;
-     arra.preguntas[1]=1;
+        arra.preguntas[1] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();
+        dispose();
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
-     contErrores=contErrores+1;
-   Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png"); 
-     java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im,new Point(10, 10),"WILL"); 
-    setCursor(cur); 
-     try {
+        contErrores = contErrores + 1;
+        Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+        java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+        setCursor(cur);
+        try {
             Thread.sleep(300); // 1000 milisegundos (10 segundos)
-            
+
         } catch (InterruptedException ex) {
             Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
-      this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
     }//GEN-LAST:event_formMousePressed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[2] = contErrores;
-          arra.preguntas[2]=1;
+        arra.preguntas[2] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn14ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[5] = contErrores;
-        arra.preguntas[5]=1;
+        arra.preguntas[5] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn14ActionPerformed
 
     private void btn18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn18ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[6] = contErrores;
-        arra.preguntas[6]=1;
+        arra.preguntas[6] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn18ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[3] = contErrores;
-        arra.preguntas[3]=1;
+        arra.preguntas[3] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[4] = contErrores;
-        arra.preguntas[4]=1;
+        arra.preguntas[4] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn16ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[7] = contErrores;
-        arra.preguntas[7]=1;
+        arra.preguntas[7] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn16ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[8] = contErrores;
-      arra.preguntas[8]=1;
+        arra.preguntas[8] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[5] = contErrores;
-    arra.preguntas[5]=1;
+        arra.preguntas[5] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-    ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[6] = contErrores;
-arra.preguntas[6]=1;
+        arra.preguntas[6] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
         ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[3] = contErrores;
-arra.preguntas[3]=1;
+        arra.preguntas[3] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
-   
+        dispose();        // TODO add your handling code here:
+
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btn13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn13ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[5] = contErrores;
-     arra.preguntas[5]=1;
+        arra.preguntas[5] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn13ActionPerformed
 
     private void btn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn11ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[4] = contErrores;
-    arra.preguntas[4]=1;
+        arra.preguntas[4] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn11ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[7] = contErrores;
-  arra.preguntas[7]=1;
+        arra.preguntas[7] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn17ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[6] = contErrores;
-     arra.preguntas[6]=1;
+        arra.preguntas[6] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn17ActionPerformed
 
     private void btn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[3] = contErrores;
-     arra.preguntas[3]=1;
+        arra.preguntas[3] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn10ActionPerformed
 
     private void btn12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn12ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[4] = contErrores;
-      arra.preguntas[4]=1;
+        arra.preguntas[4] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn12ActionPerformed
 
     private void btn15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn15ActionPerformed
-  ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[7] = contErrores;
-     arra.preguntas[7]=1;
+        arra.preguntas[7] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();        // TODO add your handling code here:
+        dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btn15ActionPerformed
 
     /**
@@ -965,9 +987,8 @@ arra.preguntas[3]=1;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               new PlanoS1evaPR().setVisible(true);
-               
-                
+                new PlanoS1evaPR().setVisible(true);
+
             }
         });
     }

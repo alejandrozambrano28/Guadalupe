@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package empguadalupe.Menu.Aprendizaje.ParoRapido;
+
 /**
  *
  * @author lzambrs
@@ -15,7 +16,7 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
      */
     public CondicionesInicialesParoR() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

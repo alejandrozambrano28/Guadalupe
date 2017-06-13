@@ -19,8 +19,8 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public Condicionesreguladordes() throws IOException {
-        initComponents(); 
-         this.setResizable(false);
+        initComponents();
+        this.setResizable(false);
     }
 
     /**
@@ -126,21 +126,17 @@ public class Condicionesreguladordes extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        Condicionesreguladordes p = new Condicionesreguladordes();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		Condicionesreguladordes p = new Condicionesreguladordes();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox jCheckBox1;

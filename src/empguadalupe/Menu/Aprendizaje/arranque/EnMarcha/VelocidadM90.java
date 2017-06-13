@@ -24,7 +24,7 @@ public class VelocidadM90 extends javax.swing.JFrame {
      */
     public VelocidadM90(int contador) throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         contgeneralv = contador;
 
     }

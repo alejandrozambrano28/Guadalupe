@@ -22,7 +22,7 @@ public class LimitadorApertura0 extends javax.swing.JFrame {
      */
     public LimitadorApertura0(int contador) throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         contgeneralv = contador;
 
     }

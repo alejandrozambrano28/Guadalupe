@@ -82,7 +82,7 @@ public class ParoNormal extends javax.swing.JFrame {
     boolean bande17 = true;
     boolean bande18 = true;
     boolean bande19 = true;
-    
+
     boolean bbande1 = false;
     boolean bbande2 = false;
     boolean bbande3 = false;
@@ -3122,7 +3122,6 @@ public class ParoNormal extends javax.swing.JFrame {
             contgeneral = contgeneral + 1;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ParoNormal;

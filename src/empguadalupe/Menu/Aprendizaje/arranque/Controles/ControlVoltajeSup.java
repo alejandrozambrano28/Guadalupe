@@ -18,8 +18,8 @@ public class ControlVoltajeSup extends javax.swing.JFrame {
      */
     public ControlVoltajeSup() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -145,14 +145,13 @@ public class ControlVoltajeSup extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlVoltajeSup().setVisible(true);
-                ControlVoltajeSup control =new ControlVoltajeSup();
+                ControlVoltajeSup control = new ControlVoltajeSup();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

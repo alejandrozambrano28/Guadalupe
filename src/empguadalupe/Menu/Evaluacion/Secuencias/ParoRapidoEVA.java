@@ -10,6 +10,7 @@ import empguadalupe.Menu.Evaluacion.planos.PlanoS2evaPR;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS1evaPR;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS3evaPR;
 import empguadalupe.Menu.Aprendizaje.ParoRapido.*;
+import empguadalupe.Menu.Evaluacion.Menu.Evaluacion;
 import java.awt.Color;
 import static java.awt.Color.black;
 import static java.awt.Color.green;
@@ -94,16 +95,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     boolean bbande18 = false;
     boolean bbande19 = false;
     int contPreguntas;
-    int totalPreguntas=67;
-    int contGError=24;
-    public static int [] pu2= new int[67];
-    public static int [] preguntas= new int[67];
-      int dia, mes, año, hora, minutos, segundos;
+    int totalPreguntas = 67;
+    int contGError = 24;
+    public static int[] pu2 = new int[67];
+    public static int[] preguntas = new int[67];
+    int dia, mes, año, hora, minutos, segundos;
     int Segundo, Minuto, Hora, cuantos;
-      Calendar calendario;
+    Calendar calendario;
     Timer timer;
-    boolean bandet=false;
-
+    boolean bandet = false;
 
     Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19;
 
@@ -129,10 +129,11 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
         //cambio la posición de la etiqueta a la posición del ratón menos la diferencia calculada
         boton.setLocation(p.x - lx, p.y - ly);
     }
+
     public ParoRapidoEVA() {
 
         initComponents();
-        
+
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         correct1.setBackground(black);
         correct2.setBackground(black);
@@ -1328,18 +1329,20 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
         Plabel11.setBounds(800, 500, 140, 100);
 
         jButton1.setText("PUNTUACIÓN");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(560, 580, 110, 23);
+        jButton1.setBounds(570, 650, 110, 23);
 
         Reloj.setFont(new java.awt.Font("BankGothic Lt BT", 1, 48)); // NOI18N
+        Reloj.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Reloj.setText("00:00:00");
         jPanel1.add(Reloj);
-        Reloj.setBounds(480, 690, 300, 120);
+        Reloj.setBounds(480, 690, 330, 120);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -1356,10 +1359,11 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de ParoRapido
     private void ParoRapidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoRapidoActionPerformed
-         Segundo = 0;
-         Minuto = 0;
-         Hora = 0;
+        Segundo = 0;
+        Minuto = 0;
+        Hora = 0;
         calendario = new GregorianCalendar();
+        jButton1.enable();
         if (bandet == true) {
             timer.restart();
             bandet = false;
@@ -1569,11 +1573,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
-       
-                mover(boton17);
-            
-
-
+ if (bande17=true){
+        mover(boton17);
+ }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -1585,7 +1587,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton17MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseReleased
         if (superbande == true) {
             if (bande17 == true) {
-                    int tam[];
+                int tam[];
                 //ubicacion del puntero en el presiso momento
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton17.getBounds();
@@ -1596,13 +1598,13 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     generarsonidowell();
                     contGError--;
                     preguntas[17] = 1;
-                    bbande17=true;
+                    bbande17 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton17.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton17.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
-                    label17.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label17.setLocation(tam[1] - a.width, tam[3] - a.height);
                     //boton1.setBackground(Color.black);
                     correct17.setBackground(Color.green);
                     bande17 = false;
@@ -1616,13 +1618,13 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano = new PlanoS1evaPR(1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton17.setLocation(location17);
-                boton17.setBackground(Color.red);
-                //codigo para la generacion del sonido
-                generarsonido();
-                pu2[17]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton17.setLocation(location17);
+                    boton17.setBackground(Color.red);
+                    //codigo para la generacion del sonido
+                    generarsonido();
+                    pu2[17] = 1;
                 }
 
             }
@@ -1630,9 +1632,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
-        
-                mover(boton16);
-       
+ if (bande16=true){
+        mover(boton16);
+ }
     }//GEN-LAST:event_boton16MouseDragged
 
     private void boton16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseEntered
@@ -1648,7 +1650,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton16MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseReleased
         if (superbande == true) {
             if (bande16 == true) {
-                 int tam[];
+                int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton16.getBounds();
                 tam = tamaño(label16);
@@ -1656,15 +1658,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[16] = 1;
-                    bbande16=true;
+                    bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton16.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton16.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
-                    label16.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label16.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande16 = false;
                     //boton2.setBackground(Color.green);
                     correct16.setBackground(Color.green);
@@ -1674,28 +1676,29 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                       PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(3);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton16.setLocation(location16);
-                //codigo para el cambio de color del boton
-                boton16.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[16]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton16.setLocation(location16);
+                    //codigo para el cambio de color del boton
+                    boton16.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[16] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton16MouseReleased
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
-       
-                mover(boton1);
-               
-   
+
+         if (bande1=true){
+        mover(boton1);
+ }
+
     }//GEN-LAST:event_boton1MouseDragged
 
     private void boton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseEntered
@@ -1711,7 +1714,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseReleased
         if (superbande == true) {
             if (bande1 == true) {
-                 int tam[];
+                int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton1.getBounds();
                 tam = tamaño(label1);
@@ -1719,15 +1722,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[1] = 1;
-                    bbande1=true;
+                    bbande1 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton1.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton1.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label1.setSize(boton1.getWidth(), boton1.getHeight());
-                    label1.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label1.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande1 = false;
                     //boton3.setBackground(Color.green);
                     correct1.setBackground(Color.green);
@@ -1736,24 +1739,25 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     } catch (InterruptedException ex) {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
-               
-                }else{
-                System.out.println("incorrecto");
-                boton1.setLocation(location1);
-                //codigo para el cambio de color del boton
-                boton1.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[1]=1;
+
+                } else {
+                    System.out.println("incorrecto");
+                    boton1.setLocation(location1);
+                    //codigo para el cambio de color del boton
+                    boton1.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[1] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton1MouseReleased
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
-      
-                mover(boton18);
-      
+
+        if (bande18=true){
+        mover(boton18);
+ }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -1769,7 +1773,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton18MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseReleased
         if (superbande == true) {
             if (bande18 == true) {
-                   int tam[];
+                int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton18.getBounds();
                 tam = tamañoIz(label18);
@@ -1777,17 +1781,17 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[18] = 1;
-                    bbande18=true;
+                    bbande18 = true;
                     //(tam[0], tam[2] - 12)
                     //(tam[1] - a.width , tam[3] - a.height )
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton18.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton18.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
-                    label18.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label18.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande18 = false;
                     //boton4.setBackground(Color.green);
                     correct18.setBackground(Color.green);
@@ -1796,27 +1800,29 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     } catch (InterruptedException ex) {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                       PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(5);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
-                }else{
-                System.out.println("incorrecto");
-                boton18.setLocation(location18);
-                //codigo para el cambio de color del boton
-                boton18.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[18]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton18.setLocation(location18);
+                    //codigo para el cambio de color del boton
+                    boton18.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[18] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton18MouseReleased
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
-       
-                mover(boton2);
+
+        if (bande2=true){
+        mover(boton2);
+ }
 
     }//GEN-LAST:event_boton2MouseDragged
 
@@ -1841,15 +1847,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[2] = 1;
-                    bbande2=true;
+                    bbande2 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton2.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton2.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label2.setSize(boton2.getWidth(), boton2.getHeight());
-                    label2.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label2.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande2 = false;
                     //boton5.setBackground(Color.green);
                     correct2.setBackground(Color.green);
@@ -1858,24 +1864,25 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     } catch (InterruptedException ex) {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   
 
-                }else{
-                System.out.println("incorrecto");
-                boton2.setLocation(location2);
-                //codigo para el cambio de color del boton
-                boton2.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[2]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton2.setLocation(location2);
+                    //codigo para el cambio de color del boton
+                    boton2.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[2] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton2MouseReleased
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
-      
-                mover(boton10);
+
+         if (bande10=true){
+        mover(boton10);
+ }
 
     }//GEN-LAST:event_boton10MouseDragged
 
@@ -1896,15 +1903,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[10] = 1;
-                    bbande10=true;
+                    bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton10.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
-                    label10.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande10 = false;
                     //boton7.setBackground(Color.green);
                     correct10.setBackground(Color.green);
@@ -1917,25 +1924,24 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano = new PlanoS1evaPR(7);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton10.setLocation(location10);
-                //codigo para el cambio de color del boton
-                boton10.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[10]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton10.setLocation(location10);
+                    //codigo para el cambio de color del boton
+                    boton10.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[10] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton10MouseReleased
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
-    
-                mover(boton13);
 
-                
-       
+    if (bande13=true){
+        mover(boton13);
+ }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -1955,17 +1961,17 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[13] = 1;
-                    bbande13=true;
+                    bbande13 = true;
                     //(tam[0], tam[2] - 12)
                     //(tam[1] - a.width , tam[3] - a.height )
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton13.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label13.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande13 = false;
                     //boton6.setBackground(Color.green);
                     correct13.setBackground(Color.green);
@@ -1980,14 +1986,14 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano = new PlanoS1evaPR(8);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton13.setLocation(location13);
-                //codigo para el cambio de color del boton
-                boton13.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[13]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton13.setLocation(location13);
+                    //codigo para el cambio de color del boton
+                    boton13.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[13] = 1;
                 }
             }
 
@@ -1995,11 +2001,11 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton13MouseReleased
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
-       
-                mover(boton9);
 
-                
-        
+        if (bande9=true){
+        mover(boton9);
+ }
+
     }//GEN-LAST:event_boton9MouseDragged
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
@@ -2019,15 +2025,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[9] = 1;
-                    bbande9=true;
+                    bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton9.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
-                    label9.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande9 = false;
                     //boton9.setBackground(Color.green);
                     correct9.setBackground(Color.green);
@@ -2037,34 +2043,35 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                      PlanoS2evaPR plano = null;
+                    PlanoS2evaPR plano = null;
                     plano = new PlanoS2evaPR(2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
-                }else{
-                System.out.println("incorrecto");
-                boton9.setLocation(location9);
-                //codigo para el cambio de color del boton
-                boton9.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[9]=1;
-                
+                } else {
+                    System.out.println("incorrecto");
+                    boton9.setLocation(location9);
+                    //codigo para el cambio de color del boton
+                    boton9.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[9] = 1;
+
                 }
             }
         }
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-   
+
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
-        
-                mover(boton19);
 
-     
+        if (bande19=true){
+        mover(boton19);
+ }
+
     }//GEN-LAST:event_boton19MouseDragged
 
     private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
@@ -2076,7 +2083,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton19MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseReleased
         if (superbande == true) {
             if (bande19 == true) {
-                
+
                 int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton19.getBounds();
@@ -2085,9 +2092,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[19] = 1;
-                    bbande19=true;
+                    bbande19 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton19.setLocation(tam[0], tam[2] - 12);
@@ -2104,33 +2111,33 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                 PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(8);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
+                } else {
+                    System.out.println("incorrecto");
 
-                boton19.setLocation(location19);
-                //codigo para el cambio de color del boton
-                boton19.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[19]=1;
-            }
+                    boton19.setLocation(location19);
+                    //codigo para el cambio de color del boton
+                    boton19.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[19] = 1;
+                }
             }
         }
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
-      
+
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
-       
-                mover(boton5);
 
-     
+       if (bande5=true){
+        mover(boton5);
+ }
     }//GEN-LAST:event_boton5MouseDragged
 
     private void boton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseEntered
@@ -2142,23 +2149,23 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseReleased
         if (superbande == true) {
             if (bande5 == true) {
-                 int tam[];
+                int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton5.getBounds();
                 tam = tamaño(label5);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande5=true;
+                    bbande5 = true;
                     generarsonidowell();
                     contGError--;
                     preguntas[5] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton5.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton5.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
-                    label5.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label5.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande5 = false;
                     //boton10.setBackground(Color.green);
                     correct5.setBackground(Color.green);
@@ -2173,25 +2180,24 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
-                }else{
-                System.out.println("incorrecto");
-                boton5.setLocation(location5);
-                //codigo para el cambio de color del boton
-                boton5.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[5]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton5.setLocation(location5);
+                    //codigo para el cambio de color del boton
+                    boton5.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[5] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton5MouseReleased
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
-    
-                mover(boton6);
 
-               
-    
+         if (bande6=true){
+        mover(boton6);
+ }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2207,16 +2213,16 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseReleased
         if (superbande == true) {
             if (bande6 == true) {
-                 int tam[];
+                int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton6.getBounds();
                 tam = tamaño(label6);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande6=true;
+                    bbande6 = true;
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[6] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2234,29 +2240,30 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
-                   PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
-                }else{
-                System.out.println("incorrecto");
-                boton6.setLocation(location6);
-                //codigo para el cambio de color del boton
-                boton6.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[6]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton6.setLocation(location6);
+                    //codigo para el cambio de color del boton
+                    boton6.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[6] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton6MouseReleased
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
-     
-                mover(boton8);
 
-      
+        if (bande8=true){
+        mover(boton8);
+ }
+
     }//GEN-LAST:event_boton8MouseDragged
 
     private void boton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseEntered
@@ -2268,7 +2275,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     private void boton8MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseReleased
         if (superbande == true) {
             if (bande8 == true) {
-                
+
                 int tam[];
                 p = MouseInfo.getPointerInfo().getLocation();
                 Rectangle a = boton8.getBounds();
@@ -2277,17 +2284,17 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     // &&(contgeneral>=9)
-                    bbande8=true;
+                    bbande8 = true;
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[8] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
 
-                    boton8.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton8.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
-                    label8.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label8.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande8 = false;
                     //boton12.setBackground(Color.green);
                     correct8.setBackground(Color.green);
@@ -2302,25 +2309,25 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
-                }else{
-                System.out.println("incorrecto");
-                boton8.setLocation(location8);
-                //codigo para el cambio de color del boton
-                boton8.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[8]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton8.setLocation(location8);
+                    //codigo para el cambio de color del boton
+                    boton8.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[8] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
-       
-                mover(boton4);
-                
 
-       
+        if (bande4=true){
+        mover(boton4);
+ }
+
     }//GEN-LAST:event_boton4MouseDragged
 
     private void boton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseEntered
@@ -2340,15 +2347,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 3)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[4] = 1;
-                    bbande4=true;
+                    bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton4.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton4.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
-                    label4.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label4.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande4 = false;
                     //boton13.setBackground(Color.green);
                     correct4.setBackground(Color.green);
@@ -2358,28 +2365,29 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                   PlanoS2evaPR plano = null;
+                    PlanoS2evaPR plano = null;
                     plano = new PlanoS2evaPR(1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton4.setLocation(location4);
-                //codigo para el cambio de color del boton
-                boton4.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[4]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton4.setLocation(location4);
+                    //codigo para el cambio de color del boton
+                    boton4.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[4] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton4MouseReleased
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
-       
-                mover(boton15);
-                
-       
+
+     if (bande15=true){
+        mover(boton15);
+ }
+
     }//GEN-LAST:event_boton15MouseDragged
 
     private void boton15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseEntered
@@ -2403,16 +2411,16 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 14)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[15] = 1;
-                    bbande15=true;
+                    bbande15 = true;
 
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton15.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label15.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande15 = false;
                     //boton14.setBackground(Color.green);
                     correct15.setBackground(Color.green);
@@ -2422,34 +2430,33 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                   PlanoS2evaPR plano = null;
+                    PlanoS2evaPR plano = null;
                     plano = new PlanoS2evaPR(2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
+                } else {
 
-                System.out.println("incorrecto");
-                boton15.setLocation(location15);
-                //codigo para el cambio de color del boton
-                boton15.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[15]=1;
+                    System.out.println("incorrecto");
+                    boton15.setLocation(location15);
+                    //codigo para el cambio de color del boton
+                    boton15.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[15] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton15MouseReleased
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-   
+
     }//GEN-LAST:event_boton15ActionPerformed
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
- 
-                mover(boton11);
-                
 
-        
+        if (bande11=true){
+        mover(boton11);
+ }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2469,15 +2476,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[11] = 1;
-                    bbande11=true;
+                    bbande11 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton11.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
-                    label11.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande11 = false;
                     //boton15.setBackground(Color.green);
                     correct11.setBackground(Color.green);
@@ -2487,29 +2494,29 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                   PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton11.setLocation(location11);
-                //codigo para el cambio de color del boton
-                boton11.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[11]=1;
-            }
+                } else {
+                    System.out.println("incorrecto");
+                    boton11.setLocation(location11);
+                    //codigo para el cambio de color del boton
+                    boton11.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[11] = 1;
+                }
             }
         }
     }//GEN-LAST:event_boton11MouseReleased
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
-      
-                mover(boton12);
-                
 
-       
+        if (bande12=true){
+        mover(boton12);
+ }
+
     }//GEN-LAST:event_boton12MouseDragged
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
@@ -2533,15 +2540,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 11)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[12] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    bbande12=true;
-                    boton12.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    bbande12 = true;
+                    boton12.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
-                    label12.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label12.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande12 = false;
                     //boton16.setBackground(Color.green);
                     correct12.setBackground(Color.green);
@@ -2555,25 +2562,25 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano = new PlanoS1evaPR(6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton12.setLocation(location12);
-                //codigo para el cambio de color del boton
-                boton12.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[12]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton12.setLocation(location12);
+                    //codigo para el cambio de color del boton
+                    boton12.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[12] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton12MouseReleased
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
-       
-                mover(boton14);
-                
 
-     
+         if (bande14=true){
+        mover(boton14);
+ }
+
     }//GEN-LAST:event_boton14MouseDragged
 
     private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
@@ -2597,17 +2604,17 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[14] = 1;
                     //(tam[0], tam[2] - 12)
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)
-                    bbande14=true;
+                    bbande14 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton14.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label14.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande14 = false;
                     //boton17.setBackground(Color.green);
                     correct14.setBackground(Color.green);
@@ -2617,28 +2624,29 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                     PlanoS1evaPR plano = null;
+                    PlanoS1evaPR plano = null;
                     plano = new PlanoS1evaPR(6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton14.setLocation(location14);
-                //codigo para el cambio de color del boton
-                boton14.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[14]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton14.setLocation(location14);
+                    //codigo para el cambio de color del boton
+                    boton14.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[14] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
-      
-                mover(boton3);
-                
-              
+
+        if (bande3=true){
+        mover(boton3);
+ }
+
     }//GEN-LAST:event_boton3MouseDragged
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
@@ -2662,15 +2670,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 2)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[3] = 1;
-                    bbande3=true;
+                    bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton3.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton3.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
-                    label3.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label3.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande3 = false;
                     //boton21.setBackground(Color.green);
                     correct3.setBackground(Color.green);
@@ -2680,28 +2688,28 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-                   PlanoS3evaPR plano = null;
+                    PlanoS3evaPR plano = null;
                     plano = new PlanoS3evaPR();
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
-                System.out.println("incorrecto");
-                boton3.setLocation(location3);
-                //codigo para el cambio de color del boton
-                boton3.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[3]=1;
+                } else {
+                    System.out.println("incorrecto");
+                    boton3.setLocation(location3);
+                    //codigo para el cambio de color del boton
+                    boton3.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[3] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton3MouseReleased
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
-       
-                mover(boton7);
-                
-      
+
+       if (bande7=true){
+        mover(boton7);
+ }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2721,15 +2729,15 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     generarsonidowell();
-                      contGError--;
+                    contGError--;
                     preguntas[7] = 1;
-                    bbande7=true;
+                    bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton7.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    boton7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
-                    label7.setLocation(tam[1] - a.width , tam[3] - a.height );
+                    label7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande7 = false;
                     //boton23.setBackground(Color.green);
                     correct7.setBackground(Color.green);
@@ -2743,26 +2751,26 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     plano = new PlanoS1evaPR(6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
-                }else{
+                } else {
 
-                System.out.println("incorrecto");
-                boton7.setLocation(location7);
-                //codigo para el cambio de color del boton
-                boton7.setBackground(Color.red);
-                //codigo para la generacion de el sonido
-                generarsonido();
-                pu2[7]=1;
+                    System.out.println("incorrecto");
+                    boton7.setLocation(location7);
+                    //codigo para el cambio de color del boton
+                    boton7.setBackground(Color.red);
+                    //codigo para la generacion de el sonido
+                    generarsonido();
+                    pu2[7] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton7MouseReleased
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-       
+
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton10ActionPerformed
-   
+
     }//GEN-LAST:event_boton10ActionPerformed
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
@@ -2770,23 +2778,23 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-   
+
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void correct10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct10ActionPerformed
-     
+
     }//GEN-LAST:event_correct10ActionPerformed
 
     private void correct14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct14ActionPerformed
-    
+
     }//GEN-LAST:event_correct14ActionPerformed
 
     private void correct18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct18ActionPerformed
-     
+
     }//GEN-LAST:event_correct18ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
- 
+
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
@@ -2794,27 +2802,27 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton13ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-   
+
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
-    
+
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
-      
+
     }//GEN-LAST:event_boton17ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-    
+
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-   
+
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-    
+
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
@@ -2822,11 +2830,11 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
-       
+
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
- 
+
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
@@ -2834,7 +2842,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         int pre = suma(preguntas);
+        int pre = suma(preguntas);
         int faltan = totalPreguntas - pre;
         if (pre != totalPreguntas) {
             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan" + faltan + "preguntas por responder, desea continuar con la evaluacion");
@@ -2843,11 +2851,11 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
             } else {
 
                 System.out.println(pu2 + "errores");
-                contGError= contGError + suma(pu2);
+                contGError = contGError + suma(pu2);
                 String[] cadena = new String[6];
                 int j = 1;
                 timer.stop();
-                
+
                 Metodos met = new Metodos();
 
                 try {
@@ -2862,27 +2870,30 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora),1);
-                    met.guardaDatos(String.valueOf(Minuto),1);
-                    met.guardaDatos(String.valueOf(Segundo),1);
-                    met.guardaDatos(String.valueOf(contGError),1);
-                    met.guardaDatos(String.valueOf(contPreguntas),1);
+                    met.guardaDatos(String.valueOf(Hora), 1);
+                    met.guardaDatos(String.valueOf(Minuto), 1);
+                    met.guardaDatos(String.valueOf(Segundo), 1);
+                    met.guardaDatos(String.valueOf(contGError), 1);
+                    met.guardaDatos(String.valueOf(contPreguntas), 1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                //  }
+                Evaluacion eva = new Evaluacion();
+                eva.setVisible(true);
+                eva.setLocationRelativeTo(null);
                 dispose();
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-   public int suma(int[] numeros) {
+    public int suma(int[] numeros) {
         int sum = 0;
         for (int i = 0; i < totalPreguntas; i++) {
             sum = sum + numeros[i];
         }
         return sum;
     }
+
     public void generarsonido() {
         Clip sonido = null;
         try {
@@ -3024,7 +3035,6 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
             contgeneral = contgeneral + 1;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ParoRapido;

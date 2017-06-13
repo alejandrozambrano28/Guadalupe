@@ -21,7 +21,7 @@ public class potenciaReactivam5 extends javax.swing.JFrame {
      */
     public potenciaReactivam5() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

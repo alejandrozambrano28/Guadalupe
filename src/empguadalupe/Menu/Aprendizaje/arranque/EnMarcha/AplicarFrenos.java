@@ -25,7 +25,7 @@ public class AplicarFrenos extends javax.swing.JFrame {
      */
     public AplicarFrenos() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

@@ -20,8 +20,8 @@ public class ControlBomba extends javax.swing.JFrame {
      */
     public ControlBomba() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -108,14 +108,13 @@ public class ControlBomba extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlBomba().setVisible(true);
-                ControlBomba control =new ControlBomba();
+                ControlBomba control = new ControlBomba();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

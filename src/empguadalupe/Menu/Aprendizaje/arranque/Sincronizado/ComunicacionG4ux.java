@@ -5,12 +5,10 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Sincronizado;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoSincronizador;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
-
 
 /**
  *
@@ -22,9 +20,9 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public ComunicacionG4ux() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -82,30 +80,26 @@ public class ComunicacionG4ux extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoSincronizador plano = null;
-                    plano = new PlanoSincronizador();
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoSincronizador plano = null;
+        plano = new PlanoSincronizador();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        ComunicacionG4ux p = new ComunicacionG4ux();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		ComunicacionG4ux p = new ComunicacionG4ux();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

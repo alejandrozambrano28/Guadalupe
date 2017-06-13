@@ -20,7 +20,7 @@ public class VoltajeM63 extends javax.swing.JFrame {
      */
     public VoltajeM63() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

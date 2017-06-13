@@ -25,7 +25,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
 
     public CondicionesInicialesEva() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
         Metodos generar = new Metodos();
 
@@ -945,7 +945,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
             condi2.setVisible(true);
             ArranqueEva arra = new ArranqueEva();
             arra.pu2[12] = contErrores;
-            arra.preguntas[12]=6;
+            arra.preguntas[12] = 6;
             dispose();
         } else {
             close();
@@ -1487,16 +1487,16 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
     }//GEN-LAST:event_labe44MouseClicked
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        
+
         if (contadorGeneral < 6) {
             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan preguntas por responder, desea continuar con la evaluacion de las condiciones");
-            if(dialogButton== JOptionPane.YES_OPTION){
-            
-            }else{
-            ArranqueEva arr = new ArranqueEva();
-            arr.pu2 [12]=contErrores;
-            arr.preguntas[12]=contadorGeneral;
-            dispose();
+            if (dialogButton == JOptionPane.YES_OPTION) {
+
+            } else {
+                ArranqueEva arr = new ArranqueEva();
+                arr.pu2[12] = contErrores;
+                arr.preguntas[12] = contadorGeneral;
+                dispose();
             }
 
         } else {

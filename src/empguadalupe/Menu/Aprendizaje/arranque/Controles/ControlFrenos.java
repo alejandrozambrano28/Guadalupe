@@ -20,8 +20,8 @@ public class ControlFrenos extends javax.swing.JFrame {
      */
     public ControlFrenos() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -104,14 +104,13 @@ public class ControlFrenos extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlFrenos().setVisible(true);
-                ControlFrenos control =new ControlFrenos();
+                ControlFrenos control = new ControlFrenos();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

@@ -281,20 +281,20 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        if (contadorGeneral ==1) {
-                ArranqueEva arr = new ArranqueEva();
-                arr.preguntas[15] = contadorGeneral;
-                dispose();
+        if (contadorGeneral == 1) {
+            ArranqueEva arr = new ArranqueEva();
+            arr.preguntas[15] = contadorGeneral;
+            dispose();
         } else {
-             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan preguntas por responder, desea continuar con la evaluacion de las condiciones");
-             if(dialogButton == JOptionPane.YES_OPTION){
-                 
-             }else{
+            int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan preguntas por responder, desea continuar con la evaluacion de las condiciones");
+            if (dialogButton == JOptionPane.YES_OPTION) {
+
+            } else {
                 ArranqueEva arr = new ArranqueEva();
-                arr.pu2 [15]=contErrores;
+                arr.pu2[15] = contErrores;
                 arr.preguntas[15] = 0;
                 dispose();
-             }
+            }
         } // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
     boolean[] select = new boolean[5];

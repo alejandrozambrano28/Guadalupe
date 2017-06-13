@@ -91,21 +91,45 @@ public class Resultado extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Nombre del Funcionario");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Cedula del Funcionario");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Nombre del Gestor");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("Calificacion Arranque");
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Tiempo");
 
+        NombreOP.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        NombreOP.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        NombreOP.setEnabled(false);
         NombreOP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreOPActionPerformed(evt);
             }
         });
+
+        CedulaOP.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CedulaOP.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        CedulaOP.setEnabled(false);
+
+        NombreS.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        NombreS.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        NombreS.setEnabled(false);
+
+        CalificacionA.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        CalificacionA.setEnabled(false);
+
+        TiempoA.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        TiempoA.setEnabled(false);
 
         jButton1.setText("PDF");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,13 +138,45 @@ public class Resultado extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setText("Calificacion Paro Normal");
 
+        CalificacionA1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        CalificacionA1.setEnabled(false);
+
+        TiempoA1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        TiempoA1.setEnabled(false);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("Calificacion Paro Rapido");
 
+        CalificacionA2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        CalificacionA2.setEnabled(false);
+
+        TiempoA2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        TiempoA2.setEnabled(false);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel8.setText("Calificacion Paro de Emergencia");
 
+        CalificacionA3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        CalificacionA3.setEnabled(false);
+
+        TiempoA3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        TiempoA3.setEnabled(false);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("Registro EPM");
+
+        Registro.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Registro.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        Registro.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -231,7 +287,7 @@ public class Resultado extends javax.swing.JFrame {
         Metodos met = new Metodos();
         String[] cadena = new String[29];
         int j = 1;
-        int cuantos=4;
+        int cuantos = 4;
         try {
             cadena = met.muestraContenido(1);
 
@@ -245,42 +301,46 @@ public class Resultado extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if(cadena[23]==null){
-           cuantos=3;
-        }if(cadena[17]==null){
-          cuantos=2;
-        } if (cadena[11]==null){
-            cuantos=1;
-        } 
-        
+        if (cadena[23] == null) {
+            cuantos = 3;
+        }
+        if (cadena[17] == null) {
+            cuantos = 2;
+        }
+        if (cadena[11] == null) {
+            cuantos = 1;
+        }
 
         NombreOP.setText(cadena[1]);
         NombreS.setText(cadena[2]);
         CedulaOP.setText(cadena[4]);
         Registro.setText(cadena[3]);
         switch (cuantos) {
-            case 1: 
+            case 1:
                 try {
                     comparar(5);
                 } catch (IOException ex) {
                     Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
-                }break;
-            case 2: 
+                }
+                break;
+            case 2:
                 try {
                     comparar(5);
                     comparar(11);
                 } catch (IOException ex) {
                     Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
-                }break;
-             case 3: 
+                }
+                break;
+            case 3:
                 try {
                     comparar(5);
                     comparar(11);
                     comparar(17);
                 } catch (IOException ex) {
                     Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
-                }break;
-                  case 4: 
+                }
+                break;
+            case 4:
                 try {
                     comparar(5);
                     comparar(11);
@@ -288,7 +348,8 @@ public class Resultado extends javax.swing.JFrame {
                     comparar(23);
                 } catch (IOException ex) {
                     Logger.getLogger(Resultado.class.getName()).log(Level.SEVERE, null, ex);
-                }break;
+                }
+                break;
         }
 
     }//GEN-LAST:event_formWindowActivated
@@ -320,6 +381,7 @@ public class Resultado extends javax.swing.JFrame {
     }
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         int dialogButton = JOptionPane.showConfirmDialog(rootPane, "DESEA HACER OTRA EVALUACION");
+        TiempoA.setEditable(false);
         Metodos met = new Metodos();
         if (dialogButton == JOptionPane.YES_OPTION) {
             FormularioEvaluacion formu = new FormularioEvaluacion();

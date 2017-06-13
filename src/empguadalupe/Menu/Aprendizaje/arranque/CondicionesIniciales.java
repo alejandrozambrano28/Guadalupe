@@ -16,7 +16,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
      */
     public CondicionesIniciales() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**
@@ -687,7 +687,7 @@ public class CondicionesIniciales extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         CondicionesIniciales4 condi4 = new CondicionesIniciales4();
         condi4.setVisible(true);
-         condi4.setLocationRelativeTo(null);
+        condi4.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 

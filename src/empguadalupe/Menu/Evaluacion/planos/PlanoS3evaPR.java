@@ -21,15 +21,17 @@ import javax.swing.JOptionPane;
  * @author lzambrs
  */
 public class PlanoS3evaPR extends javax.swing.JFrame {
-int contErrores;
+
+    int contErrores;
+
     /**
      * Creates new form PlanoBomba
      */
     public PlanoS3evaPR() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         JButton filtro = new JButton();
-     
+
     }
 
     /**
@@ -67,25 +69,25 @@ int contErrores;
     }// </editor-fold>//GEN-END:initComponents
 
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
-         ParoRapidoEVA arra = new ParoRapidoEVA();
+        ParoRapidoEVA arra = new ParoRapidoEVA();
         arra.pu2[11] = contErrores;
-        arra.preguntas[11]=1;
+        arra.preguntas[11] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();
+        dispose();
     }//GEN-LAST:event_bombaActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
-         contErrores=contErrores+1;
-         Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png"); 
-     java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im,new Point(10, 10),"WILL"); 
-    setCursor(cur); 
-     try {
+        contErrores = contErrores + 1;
+        Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+        java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+        setCursor(cur);
+        try {
             Thread.sleep(300); // 1000 milisegundos (10 segundos)
-            
+
         } catch (InterruptedException ex) {
             Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
-      this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
     }//GEN-LAST:event_formMousePressed
 
     /**

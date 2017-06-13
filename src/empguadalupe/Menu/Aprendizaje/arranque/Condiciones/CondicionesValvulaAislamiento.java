@@ -20,9 +20,9 @@ public class CondicionesValvulaAislamiento extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public CondicionesValvulaAislamiento() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -113,21 +113,17 @@ public class CondicionesValvulaAislamiento extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        CondicionesValvulaAislamiento p = new CondicionesValvulaAislamiento();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		CondicionesValvulaAislamiento p = new CondicionesValvulaAislamiento();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox jCheckBox1;

@@ -5,8 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Planos;
 
-
-
 /**
  *
  * @author lzambrs
@@ -18,7 +16,7 @@ public class PlanoLubricacionf1 extends javax.swing.JFrame {
      */
     public PlanoLubricacionf1() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

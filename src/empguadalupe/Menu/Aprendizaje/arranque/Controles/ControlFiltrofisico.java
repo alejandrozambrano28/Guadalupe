@@ -20,8 +20,8 @@ public class ControlFiltrofisico extends javax.swing.JFrame {
      */
     public ControlFiltrofisico() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -92,14 +92,13 @@ public class ControlFiltrofisico extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlFiltrofisico().setVisible(true);
-                ControlFiltrofisico control =new ControlFiltrofisico();
+                ControlFiltrofisico control = new ControlFiltrofisico();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

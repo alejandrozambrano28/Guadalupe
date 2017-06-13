@@ -5,8 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Planos;
 
-
-
 /**
  *
  * @author lzambrs
@@ -18,7 +16,7 @@ public class PlanoInterruptorCampo extends javax.swing.JFrame {
      */
     public PlanoInterruptorCampo() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

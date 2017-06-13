@@ -20,8 +20,8 @@ public class ControlInterruptorCampo extends javax.swing.JFrame {
      */
     public ControlInterruptorCampo() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -125,14 +125,13 @@ public class ControlInterruptorCampo extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlInterruptorCampo().setVisible(true);
-                ControlInterruptorCampo control =new ControlInterruptorCampo();
+                ControlInterruptorCampo control = new ControlInterruptorCampo();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

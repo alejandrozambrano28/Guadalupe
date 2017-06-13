@@ -20,8 +20,8 @@ public class ControlRegulador1 extends javax.swing.JFrame {
      */
     public ControlRegulador1() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -215,14 +215,13 @@ public class ControlRegulador1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlRegulador1().setVisible(true);
-                ControlRegulador1 control =new ControlRegulador1();
+                ControlRegulador1 control = new ControlRegulador1();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

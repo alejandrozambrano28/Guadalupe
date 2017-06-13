@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlValvulaAislamiento;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoValvulaAislamiento;
 import empguadalupe.Menu.Aprendizaje.arranque.Condiciones.CondicionesValvulaAislamiento;
@@ -14,7 +13,6 @@ import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 /**
  *
@@ -26,9 +24,9 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public ValvulaAislamiento() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -106,52 +104,48 @@ public class ValvulaAislamiento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoValvulaAislamiento plano = null;
-                    plano = new PlanoValvulaAislamiento();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
+        PlanoValvulaAislamiento plano = null;
+        plano = new PlanoValvulaAislamiento();
+        plano.setSize(1090, 474);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlValvulaAislamiento control = null;
-                    control = new ControlValvulaAislamiento();
-                    control.setSize(224,400);
-                    control.setVisible(true);
-                    control.setLocationRelativeTo(null);
+        control = new ControlValvulaAislamiento();
+        control.setSize(224, 400);
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-             CondicionesValvulaAislamiento condiciones = null;
+        CondicionesValvulaAislamiento condiciones = null;
         try {
             condiciones = new CondicionesValvulaAislamiento();
         } catch (IOException ex) {
             Logger.getLogger(ValvulaAislamiento.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(515,250);
-                    condiciones.setVisible(true);
-                    condiciones.setLocationRelativeTo(null);
-    
+        condiciones.setSize(515, 250);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        ValvulaAislamiento p = new ValvulaAislamiento();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		ValvulaAislamiento p = new ValvulaAislamiento();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

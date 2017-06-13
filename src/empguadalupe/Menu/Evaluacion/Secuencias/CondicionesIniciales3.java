@@ -25,7 +25,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
      */
     public CondicionesIniciales3() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         Metodos generar = new Metodos();
 
         Stack<Integer> numero = generar.generaNumeroAleatoriosin(1, 21);
@@ -530,7 +530,7 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
             condi4.setVisible(true);
             ArranqueEva arra = new ArranqueEva();
             arra.pu2[14] = contErrores;
-            arra.preguntas[14]=6;
+            arra.preguntas[14] = 6;
             dispose();
         } else {
             close();
@@ -780,13 +780,13 @@ public class CondicionesIniciales3 extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         if (contadorGeneral < 6) {
             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan preguntas por responder, desea continuar con la evaluacion de las condiciones");
-            if(dialogButton== JOptionPane.YES_OPTION){
-            
-            }else{
-            ArranqueEva arr = new ArranqueEva();
-            arr.pu2 [14]=contErrores;
-            arr.preguntas[14]=contadorGeneral;
-            dispose();
+            if (dialogButton == JOptionPane.YES_OPTION) {
+
+            } else {
+                ArranqueEva arr = new ArranqueEva();
+                arr.pu2[14] = contErrores;
+                arr.preguntas[14] = contadorGeneral;
+                dispose();
             }
 
         } else {

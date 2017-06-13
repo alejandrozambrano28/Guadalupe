@@ -103,36 +103,35 @@ public class CambioUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            try {
+        try {
             String User1 = jTextField1.getText();
             String User2 = jTextField2.getText();
             String User3 = jTextField3.getText();
-            
+
             String[] cad = new String[4];
             String encript1 = DigestUtils.sha256Hex(User1);
-             String encript2 = DigestUtils.sha256Hex(User2);
-              String encript3 = DigestUtils.sha256Hex(User3);
+            String encript2 = DigestUtils.sha256Hex(User2);
+            String encript3 = DigestUtils.sha256Hex(User3);
 
             Metodos met = new Metodos();
-         
-           
-            cad=met.muestraContenido(2);
-            if(cad[3].equals(encript1)){       
-                if(encript2.equals(encript3)){
+
+            cad = met.muestraContenido(2);
+            if (cad[3].equals(encript1)) {
+                if (encript2.equals(encript3)) {
                     met.eliminar(2);
-                    met.guardaDatos(cad[1],2);
-                    met.guardaDatos(cad[2],2);
-                    met.guardaDatos(encript2,2);
-                    met.guardaDatos(cad[4],2);
+                    met.guardaDatos(cad[1], 2);
+                    met.guardaDatos(cad[2], 2);
+                    met.guardaDatos(encript2, 2);
+                    met.guardaDatos(cad[4], 2);
                     FormularioEvaluacion form = new FormularioEvaluacion();
                     form.setVisible(true);
                     form.setLocationRelativeTo(null);
-                    
-                }else{
+
+                } else {
                     JOptionPane.showMessageDialog(rootPane, "contraseña incorrecta");
-                        }
-            }else{
-            JOptionPane.showMessageDialog(rootPane, "Usuario incorrecto");
+                }
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Usuario incorrecto");
             }
         } catch (IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -140,7 +139,7 @@ public class CambioUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
- FormularioEvaluacion formu = new FormularioEvaluacion();
+        FormularioEvaluacion formu = new FormularioEvaluacion();
         formu.setVisible(true);
         formu.setLocationRelativeTo(null);          // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing

@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author lzambrs
@@ -26,8 +25,8 @@ public class AplicarFrenosParoEmergencia extends javax.swing.JFrame {
      */
     public AplicarFrenosParoEmergencia() throws IOException {
         initComponents();
-          this.setResizable(false);
-       
+        this.setResizable(false);
+
     }
 
     /**
@@ -102,11 +101,11 @@ public class AplicarFrenosParoEmergencia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoFrenos plano = null;
-                    plano = new PlanoFrenos();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoFrenos plano = null;
+        plano = new PlanoFrenos();
+        plano.setSize(1090, 474);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -116,37 +115,33 @@ public class AplicarFrenosParoEmergencia extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(AplicarFrenosParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(508,210);
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
+        condiciones.setSize(508, 210);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SistemadeFrenos plano = null;
-                    plano = new SistemadeFrenos();
-                    plano.setSize(810, 540);
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        plano = new SistemadeFrenos();
+        plano.setSize(810, 540);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        AplicarFrenosParoEmergencia p = new AplicarFrenosParoEmergencia();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		AplicarFrenosParoEmergencia p = new AplicarFrenosParoEmergencia();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

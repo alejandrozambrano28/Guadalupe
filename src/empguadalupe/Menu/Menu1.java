@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+luis alejandro zambrano
  */
 package empguadalupe.Menu;
 
@@ -23,17 +21,18 @@ import org.apache.commons.codec.digest.DigestUtils;
  * @author lzambrs
  */
 public class Menu1 extends javax.swing.JFrame {
+
     String Mu;
     String label;
-  
+
     /**
      * Creates new form Menu1
      */
     public Menu1() {
         initComponents();
-          this.setResizable(false);
-         this.setLocationRelativeTo(null);
-     
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -126,76 +125,76 @@ public class Menu1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     Arranque1 arranque = null;
+        Arranque1 arranque = null;
         try {
             arranque = new Arranque1();
         } catch (IOException ex) {
             Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
         }
-            arranque.setVisible(true);
-             ayudaaprendizaje ayuda = null;
+        arranque.setVisible(true);
+        ayudaaprendizaje ayuda = null;
         try {
             ayuda = new ayudaaprendizaje();
         } catch (IOException ex) {
             Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
         }
-           ayuda.setVisible(true);// TODO add your handling code here:
-           ayuda.setLocationRelativeTo(null);
+        ayuda.setVisible(true);// TODO add your handling code here:
+        ayuda.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-           JFrame ParoN = new ParoNormal();
-            ParoN.setVisible(true);
-                  ayudaaprendizaje ayuda = null;
+        JFrame ParoN = new ParoNormal();
+        ParoN.setVisible(true);
+        ayudaaprendizaje ayuda = null;
         try {
             ayuda = new ayudaaprendizaje();
         } catch (IOException ex) {
             Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
         }
-           ayuda.setVisible(true);
-            ayuda.setLocationRelativeTo(null);
+        ayuda.setVisible(true);
+        ayuda.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         JFrame ParoR = new ParoRapido();
-            ParoR.setVisible(true);
-                  ayudaaprendizaje ayuda = null;
+        JFrame ParoR = new ParoRapido();
+        ParoR.setVisible(true);
+        ayudaaprendizaje ayuda = null;
         try {
             ayuda = new ayudaaprendizaje();
         } catch (IOException ex) {
             Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
         }
-           ayuda.setVisible(true);
-            ayuda.setLocationRelativeTo(null);
+        ayuda.setVisible(true);
+        ayuda.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         JFrame ParoE = new ParoEmergencia();
-            ParoE.setVisible(true);
-                  ayudaaprendizaje ayuda = null;
+        ParoE.setVisible(true);
+        ayudaaprendizaje ayuda = null;
         try {
             ayuda = new ayudaaprendizaje();
         } catch (IOException ex) {
             Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
         }
-           ayuda.setVisible(true);
-           ayuda.setLocationRelativeTo(null);
+        ayuda.setVisible(true);
+        ayuda.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
-   
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         Login form = new Login();
-      form.setVisible(true);
-      form.setLocationRelativeTo(null);
-           
-      dispose();
-     String texto="arranque";
-        String encriptMD5=DigestUtils.md5Hex(texto);
-        System.out.println("md5:"+encriptMD5);
-      
+        form.setVisible(true);
+        form.setLocationRelativeTo(null);
+
+        dispose();
+        String texto = "arranque";
+        String encriptMD5 = DigestUtils.md5Hex(texto);
+        System.out.println("md5:" + encriptMD5);
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-         
+
     }//GEN-LAST:event_formWindowActivated
 
     /**

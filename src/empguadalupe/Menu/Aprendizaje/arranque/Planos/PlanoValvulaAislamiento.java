@@ -16,7 +16,7 @@ public class PlanoValvulaAislamiento extends javax.swing.JFrame {
      */
     public PlanoValvulaAislamiento() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

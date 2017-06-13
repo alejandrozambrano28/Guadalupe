@@ -25,7 +25,7 @@ public class AplicarFrenosParoRapido extends javax.swing.JFrame {
      */
     public AplicarFrenosParoRapido() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

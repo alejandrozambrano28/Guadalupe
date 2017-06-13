@@ -24,7 +24,7 @@ public class ValvulaAlivio extends javax.swing.JFrame {
      */
     public ValvulaAlivio() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**

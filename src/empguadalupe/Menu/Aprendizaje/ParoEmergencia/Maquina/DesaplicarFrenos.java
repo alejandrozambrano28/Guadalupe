@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author lzambrs
@@ -26,9 +25,9 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public DesaplicarFrenos() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -104,11 +103,11 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoFrenos plano = null;
-                    plano = new PlanoFrenos();
-            
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoFrenos plano = null;
+        plano = new PlanoFrenos();
+
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -118,37 +117,33 @@ public class DesaplicarFrenos extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(DesaplicarFrenos.class.getName()).log(Level.SEVERE, null, ex);
         }
-                
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
+
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-              SistemadeFrenos plano = null;
-                    plano = new SistemadeFrenos();
-                
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        SistemadeFrenos plano = null;
+        plano = new SistemadeFrenos();
+
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        DesaplicarFrenos p = new DesaplicarFrenos();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		DesaplicarFrenos p = new DesaplicarFrenos();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

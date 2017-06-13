@@ -20,8 +20,8 @@ public class ControlValvulaEsfericaA extends javax.swing.JFrame {
      */
     public ControlValvulaEsfericaA() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -93,14 +93,13 @@ public class ControlValvulaEsfericaA extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlValvulaEsfericaA().setVisible(true);
-                ControlValvulaEsfericaA control =new ControlValvulaEsfericaA();
+                ControlValvulaEsfericaA control = new ControlValvulaEsfericaA();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

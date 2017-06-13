@@ -120,6 +120,7 @@ public class Evaluacion extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Resultado res = new Resultado();
         res.setVisible(true);
+        dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -129,7 +130,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Arranque",1);
+            met.guardaDatos("Arranque", 1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -140,15 +141,16 @@ public class Evaluacion extends javax.swing.JFrame {
         }
         ayuda.setVisible(true);
         ayuda.setLocationRelativeTo(null);// TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       ParoNormalEVA pne = new ParoNormalEVA();
+        ParoNormalEVA pne = new ParoNormalEVA();
         pne.setVisible(true);
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Normal",1);
+            met.guardaDatos("Paro Normal", 1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -159,15 +161,16 @@ public class Evaluacion extends javax.swing.JFrame {
         }
         ayuda.setVisible(true);
         ayuda.setLocationRelativeTo(null);// TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       ParoRapidoEVA pne = new ParoRapidoEVA();
+        ParoRapidoEVA pne = new ParoRapidoEVA();
         pne.setVisible(true);
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Rapido",1);
+            met.guardaDatos("Paro Rapido", 1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -178,6 +181,7 @@ public class Evaluacion extends javax.swing.JFrame {
         }
         ayuda.setVisible(true);
         ayuda.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -186,7 +190,7 @@ public class Evaluacion extends javax.swing.JFrame {
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
-            met.guardaDatos("Paro Emergencia",1);
+            met.guardaDatos("Paro Emergencia", 1);
         } catch (IOException ex) {
             Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -197,6 +201,7 @@ public class Evaluacion extends javax.swing.JFrame {
         }
         ayuda.setVisible(true);
         ayuda.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

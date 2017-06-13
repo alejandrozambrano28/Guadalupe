@@ -26,7 +26,7 @@ public class BombaRefrigeracion extends javax.swing.JFrame {
      */
     public BombaRefrigeracion() throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
 
     }
 

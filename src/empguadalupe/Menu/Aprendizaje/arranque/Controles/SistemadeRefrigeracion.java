@@ -20,8 +20,8 @@ public class SistemadeRefrigeracion extends javax.swing.JFrame {
      */
     public SistemadeRefrigeracion() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -102,14 +102,13 @@ public class SistemadeRefrigeracion extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SistemadeRefrigeracion().setVisible(true);
-                SistemadeRefrigeracion control =new SistemadeRefrigeracion();
+                SistemadeRefrigeracion control = new SistemadeRefrigeracion();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

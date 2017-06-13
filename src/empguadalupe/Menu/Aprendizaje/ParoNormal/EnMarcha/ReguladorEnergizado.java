@@ -5,30 +5,27 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlRegulador;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoReguladorDes;
 import java.io.IOException;
-
 
 /**
  *
  * @author lzambrs
  */
 public class ReguladorEnergizado extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public ReguladorEnergizado(int contador) throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-         contgeneralv=contador;
-        
-       
+        initComponents();
+        this.setResizable(false);
+        contgeneralv = contador;
+
     }
-
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,31 +95,29 @@ int contgeneralv=0;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoReguladorDes plano = null;
-                    plano = new PlanoReguladorDes();
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoReguladorDes plano = null;
+        plano = new PlanoReguladorDes();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlRegulador control = null;
-                    control = new ControlRegulador();
-                    control.setVisible(true);
-                     control.setLocationRelativeTo(null);
+        control = new ControlRegulador();
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-                
+
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-	
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

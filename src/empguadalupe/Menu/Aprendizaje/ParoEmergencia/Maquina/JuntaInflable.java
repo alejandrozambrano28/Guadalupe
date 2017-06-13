@@ -5,7 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina;
 
-
 import empguadalupe.Menu.Aprendizaje.arranque.Controles.ControlJunta;
 import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoJunta;
 import empguadalupe.Menu.Aprendizaje.arranque.Condiciones.CondicionesJunta;
@@ -15,7 +14,6 @@ import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 /**
  *
@@ -27,9 +25,9 @@ public class JuntaInflable extends javax.swing.JFrame {
      * Creates new form BombaRefrigeracion
      */
     public JuntaInflable() throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-       
+        initComponents();
+        this.setResizable(false);
+
     }
 
     /**
@@ -107,53 +105,49 @@ public class JuntaInflable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoJunta plano = null;
-                    plano = new PlanoJunta();
-                    plano.setSize(1090,474);
-                    plano.setVisible(true);
-                    plano.setLocationRelativeTo(null);
-                    
+        PlanoJunta plano = null;
+        plano = new PlanoJunta();
+        plano.setSize(1090, 474);
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControlJunta control = null;
-                    control = new ControlJunta();
-                    control.setSize(224, 400);
-                    control.setVisible(true);
-                    control.setLocationRelativeTo(null);
+        control = new ControlJunta();
+        control.setSize(224, 400);
+        control.setVisible(true);
+        control.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-            CondicionesJunta condiciones = null;
+        CondicionesJunta condiciones = null;
         try {
             condiciones = new CondicionesJunta();
         } catch (IOException ex) {
             Logger.getLogger(JuntaInflable.class.getName()).log(Level.SEVERE, null, ex);
         }
-                    condiciones.setSize(450,170);
-                    condiciones.setVisible(true);
-                    condiciones.setBackground(Color.black);
-                    condiciones.setLocationRelativeTo(null);
+        condiciones.setSize(450, 170);
+        condiciones.setVisible(true);
+        condiciones.setBackground(Color.black);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
+        JuntaInflable p = new JuntaInflable();
+        p.show();
 
-	public static void main(String H[]) throws IOException
-	{
-		JuntaInflable p = new JuntaInflable();
-		p.show();
- 
-		//COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
-		p.addWindowListener(new WindowAdapter()
-		{
-			public void windowClosing(WindowEvent evt)
-			{
-				System.exit(0);
-			}
-		});
-	}
+        //COLOCAMOS EL CODIGO QUE PERMITE CERRAR LA VENTANA
+        p.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                System.exit(0);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

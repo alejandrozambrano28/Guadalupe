@@ -25,7 +25,7 @@ public class Reguladorbloqueado extends javax.swing.JFrame {
      */
     public Reguladorbloqueado(int contador) throws IOException {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         contgeneralv = contador;
         int a = 0;
 

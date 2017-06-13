@@ -20,8 +20,8 @@ public class ControlFiltro extends javax.swing.JFrame {
      */
     public ControlFiltro() {
         initComponents();
-          this.setResizable(false);
-     
+        this.setResizable(false);
+
     }
 
     /**
@@ -90,14 +90,13 @@ public class ControlFiltro extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ControlFiltro().setVisible(true);
-                ControlFiltro control =new ControlFiltro();
+                ControlFiltro control = new ControlFiltro();
                 control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                   
-                   //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+                //control.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
         });
     }
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

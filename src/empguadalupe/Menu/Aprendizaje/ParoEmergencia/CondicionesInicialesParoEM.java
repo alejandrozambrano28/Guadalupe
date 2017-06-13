@@ -16,7 +16,7 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
      */
     public CondicionesInicialesParoEM() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**
@@ -51,7 +51,6 @@ public class CondicionesInicialesParoEM extends javax.swing.JFrame {
         jTextArea1.setText("Aquí aparece un botón que al oprimirlo y teniendo el control de la máquina de forma remota, inmediatamente se da el paro de emergencia. Cuando el paro de emergencia no ha sido generado por el operador sino de forma automática por alguna falla grave en el sistema, se enciende el circulo “disp” y en el recuadro “No” se podrá ver el número de la secuencia en que va. \n\nPara este paro, no se necesitan condiciones previas, pues éste ocurre de forma abrupta\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 650, 160));

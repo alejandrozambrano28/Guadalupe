@@ -5,6 +5,7 @@
  */
 package empguadalupe.Menu.Evaluacion.Secuencias;
 
+import empguadalupe.Menu.Evaluacion.Menu.Evaluacion;
 import empguadalupe.Menu.Evaluacion.Menu.Metodos;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS2eva1;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS1evaB;
@@ -45,7 +46,7 @@ public class ArranqueEva extends javax.swing.JFrame {
     String Aced;
     String AnombS;
     int contadorPreguntas;
-    int totalpreguntas=67;
+    int totalpreguntas = 67;
 
     Thread hiloA;
     int contador = 0;
@@ -957,6 +958,11 @@ public class ArranqueEva extends javax.swing.JFrame {
                 boton4MouseReleased(evt);
             }
         });
+        boton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(boton4);
         boton4.setBounds(1130, 400, 300, 23);
 
@@ -1415,12 +1421,15 @@ public class ArranqueEva extends javax.swing.JFrame {
 
         Reloj.setBackground(new java.awt.Color(255, 255, 255));
         Reloj.setFont(new java.awt.Font("BankGothic Md BT", 0, 48)); // NOI18N
-        Reloj.setText("00:00");
+        Reloj.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Reloj.setText("00:00:00");
+        Reloj.setToolTipText("");
         Reloj.setOpaque(true);
         jPanel1.add(Reloj);
         Reloj.setBounds(480, 740, 280, 90);
 
         jButton1.setText("PUNTUACIÓN");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -1452,6 +1461,7 @@ public class ArranqueEva extends javax.swing.JFrame {
         Minuto = 0;
         Hora = 0;
         calendario = new GregorianCalendar();
+        jButton1.setEnabled(true);
         if (bandet == true) {
             timer.restart();
             bandet = false;
@@ -1487,7 +1497,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             timer.start();
         }
         bandet = true;
-
 
         contadorGError = 24;
         contador = 0;
@@ -1676,8 +1685,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
-        // hiloA.start();
+        if (bande1=true){
         mover(boton1);
+ }
 
     }//GEN-LAST:event_boton1MouseDragged
 
@@ -1735,11 +1745,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton1MouseReleased
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
+         if (bande2=true){
         mover(boton2);
+ }
     }//GEN-LAST:event_boton2MouseDragged
 
     private void boton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseEntered
@@ -1799,11 +1810,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton2MouseReleased
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
+        if (bande3=true){
         mover(boton3);
+ }
     }//GEN-LAST:event_boton3MouseDragged
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
@@ -1861,11 +1873,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton3MouseReleased
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
+         if (bande4=true){
         mover(boton4);
+ }
     }//GEN-LAST:event_boton4MouseDragged
 
     private void boton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseEntered
@@ -1926,7 +1939,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton4MouseReleased
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
+         if (bande5=true){
         mover(boton5);
+ }
     }//GEN-LAST:event_boton5MouseDragged
 
     private void boton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseEntered
@@ -1986,11 +2001,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton5MouseReleased
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
+        if (bande7=true){
         mover(boton7);
+ }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2047,11 +2063,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton7MouseReleased
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
+         if (bande6=true){
         mover(boton6);
+ }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2106,11 +2123,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton6MouseReleased
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
+        if (bande9=true){
         mover(boton9);
+ }
     }//GEN-LAST:event_boton9MouseDragged
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
@@ -2166,7 +2184,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
@@ -2174,7 +2191,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
+         if (bande8=true){
         mover(boton8);
+ }
     }//GEN-LAST:event_boton8MouseDragged
 
     private void boton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseEntered
@@ -2229,7 +2248,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
@@ -2237,7 +2255,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
+        if (bande10=true){
         mover(boton10);
+ }
     }//GEN-LAST:event_boton10MouseDragged
 
     private void boton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseEntered
@@ -2294,11 +2314,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton10MouseReleased
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
+       if (bande11=true){
         mover(boton11);
+ }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2359,11 +2380,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton11MouseReleased
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
+         if (bande12=true){
         mover(boton12);
+ }
     }//GEN-LAST:event_boton12MouseDragged
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
@@ -2420,11 +2442,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton12MouseReleased
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
+         if (bande13=true){
         mover(boton13);
+ }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -2480,11 +2503,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton13MouseReleased
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
+        if (bande14=true){
         mover(boton14);
+ }
     }//GEN-LAST:event_boton14MouseDragged
 
     private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
@@ -2543,7 +2567,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
@@ -2551,7 +2574,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
+        if (bande15=true){
         mover(boton15);
+ }
     }//GEN-LAST:event_boton15MouseDragged
 
     private void boton15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseEntered
@@ -2605,11 +2630,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton15MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
+        if (bande16=true){
         mover(boton16);
+ }
     }//GEN-LAST:event_boton16MouseDragged
 
     private void boton16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseEntered
@@ -2670,7 +2696,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton16MouseReleased
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
+        if (bande17=true){
         mover(boton17);
+ }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -2728,11 +2756,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
+        if (bande18=true){
         mover(boton18);
+ }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -2786,7 +2815,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton18MouseReleased
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
@@ -2794,7 +2822,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
+         if (bande19=true){
         mover(boton19);
+ }
     }//GEN-LAST:event_boton19MouseDragged
 
     private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
@@ -2849,7 +2879,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
@@ -2857,7 +2886,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton20MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseDragged
+        if (bande20=true){
         mover(boton20);
+ }
     }//GEN-LAST:event_boton20MouseDragged
 
     private void boton20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseEntered
@@ -2913,7 +2944,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton20MouseReleased
 
     private void boton21MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseDragged
+         if (bande21=true){
         mover(boton21);
+ }
     }//GEN-LAST:event_boton21MouseDragged
 
     private void boton21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseEntered
@@ -2972,11 +3005,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton21MouseReleased
 
     private void boton22MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton22MouseDragged
+         if (bande22=true){
         mover(boton22);
+ }
 
     }//GEN-LAST:event_boton22MouseDragged
 
@@ -3031,11 +3065,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton22MouseReleased
 
     private void boton23MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton23MouseDragged
+        if (bande23=true){
         mover(boton23);
+ }
 
     }//GEN-LAST:event_boton23MouseDragged
 
@@ -3091,11 +3126,12 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton23MouseReleased
 
     private void boton24MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseDragged
+         if (bande24=true){
         mover(boton24);
+ }
     }//GEN-LAST:event_boton24MouseDragged
 
     private void boton24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseEntered
@@ -3154,7 +3190,6 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         }
 
-
     }//GEN-LAST:event_boton24MouseReleased
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
@@ -3176,7 +3211,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                 String[] cadena = new String[6];
                 int j = 1;
                 timer.stop();
-                
+
                 Metodos met = new Metodos();
 
                 try {
@@ -3191,16 +3226,18 @@ public class ArranqueEva extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora),1);
-                    met.guardaDatos(String.valueOf(Minuto),1);
-                    met.guardaDatos(String.valueOf(Segundo),1);
-                    met.guardaDatos(String.valueOf(contadorGError),1);
-                    met.guardaDatos(String.valueOf(contadorPreguntas),1);
+                    met.guardaDatos(String.valueOf(Hora), 1);
+                    met.guardaDatos(String.valueOf(Minuto), 1);
+                    met.guardaDatos(String.valueOf(Segundo), 1);
+                    met.guardaDatos(String.valueOf(contadorGError), 1);
+                    met.guardaDatos(String.valueOf(contadorPreguntas), 1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                //  }
+                Evaluacion eva = new Evaluacion();
+                eva.setVisible(true);
+                eva.setLocationRelativeTo(null);
                 dispose();
             }
         }
@@ -3209,6 +3246,10 @@ public class ArranqueEva extends javax.swing.JFrame {
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_boton4ActionPerformed
     public int suma(int[] numeros) {
         int sum = 0;
         for (int i = 0; i < totalpreguntas; i++) {

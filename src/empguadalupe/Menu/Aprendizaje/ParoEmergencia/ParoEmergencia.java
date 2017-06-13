@@ -5,9 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.ParoEmergencia;
 
-
-
-
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.CerrarValvulaEsferica;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.AplicarFrenosParoEmergencia;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.BombaRefrigeracion;
@@ -42,14 +39,16 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JButton;
+
 /**
  *
  * @author lzambrs
  */
 public class ParoEmergencia extends javax.swing.JFrame {
-    Graphics g;          
+
+    Graphics g;
     int contador = 0;
-    private Point  location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
+    private Point location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
     private Point location13, location14, location15, location16, location17, location18, location19;
     Color color;
     private Point p;
@@ -80,8 +79,8 @@ public class ParoEmergencia extends javax.swing.JFrame {
     boolean bande17 = true;
     boolean bande18 = true;
     boolean bande19 = true;
-  
-      boolean bbande1 = false;
+
+    boolean bbande1 = false;
     boolean bbande2 = false;
     boolean bbande3 = false;
     boolean bbande4 = false;
@@ -100,17 +99,15 @@ public class ParoEmergencia extends javax.swing.JFrame {
     boolean bbande17 = false;
     boolean bbande18 = false;
     boolean bbande19 = false;
-    
-    Rectangle rec1,rec2,rec3,rec4,rec5,rec6,rec7,rec8,rec9,rec10,rec11,rec12,rec13,rec14,rec15,rec16,rec17,rec18,rec19;
-    
-    
+
+    Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19;
+
     /**
      * Creates new form Vista
      */
-    
     public ParoEmergencia() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         convertiranegro();
         correct3.setBackground(black);
@@ -130,27 +127,26 @@ public class ParoEmergencia extends javax.swing.JFrame {
         correct17.setBackground(black);
         correct18.setBackground(black);
         correct19.setBackground(black);
-        
-//define el tamaño de cada recuandro hembra 
 
-        rec3 =label3.getBounds();
-        rec4 =label4.getBounds();
-        rec5 =label5.getBounds();
-        rec6 =label6.getBounds();
-        rec7 =label7.getBounds();
-        rec8 =label8.getBounds();
-        rec9 =label9.getBounds();
-        rec10 =label10.getBounds();
-        rec11 =label11.getBounds();
-        rec12 =label12.getBounds();
-        rec13 =label13.getBounds();
-        rec14 =label14.getBounds();
-        rec15 =label15.getBounds();
-        rec16 =label16.getBounds();
-        rec17 =label17.getBounds();
-        rec18 =label18.getBounds();
-        rec19 =label19.getBounds();
-     
+//define el tamaño de cada recuandro hembra 
+        rec3 = label3.getBounds();
+        rec4 = label4.getBounds();
+        rec5 = label5.getBounds();
+        rec6 = label6.getBounds();
+        rec7 = label7.getBounds();
+        rec8 = label8.getBounds();
+        rec9 = label9.getBounds();
+        rec10 = label10.getBounds();
+        rec11 = label11.getBounds();
+        rec12 = label12.getBounds();
+        rec13 = label13.getBounds();
+        rec14 = label14.getBounds();
+        rec15 = label15.getBounds();
+        rec16 = label16.getBounds();
+        rec17 = label17.getBounds();
+        rec18 = label18.getBounds();
+        rec19 = label19.getBounds();
+
 //ubica da la posicion donde tiene que estar el boton macho, esto estan en pixeles de manera vertical        
         ubica[0] = 210;
         ubica[1] = 240;
@@ -170,8 +166,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         ubica[15] = 660;
         ubica[16] = 690;
         ubica[17] = 720;
-        
-        
+
 //desactiva todos los botones macho
         color = boton17.getBackground();
         boton17.setEnabled(false);
@@ -192,13 +187,14 @@ public class ParoEmergencia extends javax.swing.JFrame {
         boton3.setEnabled(false);
         boton7.setEnabled(false);
     }
-  public static void main(String args[]) {
+
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        
+
         //</editor-fold>
 
         /* Create and display the form */
@@ -208,7 +204,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
             }
         });
     }
-  
+
     //crea numeros aleatorios para poner los botones en diferentes posiciones
     public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
         int pos;
@@ -257,7 +253,8 @@ public class ParoEmergencia extends javax.swing.JFrame {
         tamaño[3] = posmayory;
         return tamaño;
     }
-    public void mover(JButton boton) {       
+
+    public void mover(JButton boton) {
 //calculo la posición del ratón y lo guardo en el p
         p = MouseInfo.getPointerInfo().getLocation();
         //este if solo se ejecuta al principio de que empiece a mover la etiqueta
@@ -1328,7 +1325,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de ParoEmergencia
     private void ParoEMERGENCIAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoEMERGENCIAActionPerformed
-            bbande1 = false;
+        bbande1 = false;
         bbande2 = false;
         bbande3 = false;
         bbande4 = false;
@@ -1350,7 +1347,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         //coloca los botones macho en orden aleatorio (el 1130 es la posicion de manera horizontal en pixeles)
         convertiranegro();
         Stack<Integer> numero = generaNumeroAleatorio(170, 700);
-        contador=0;
+        contador = 0;
         contgeneral = 0;
         CondicionesInicialesParoEM condi = new CondicionesInicialesParoEM();
         condi.setVisible(true);
@@ -1424,7 +1421,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         label17.setBounds(rec17);
         label18.setBounds(rec18);
         label19.setBounds(rec19);
-     //trae la locacion de lo botones machos  
+        //trae la locacion de lo botones machos  
         location3 = boton3.getLocation();
         location4 = boton4.getLocation();
         location5 = boton5.getLocation();
@@ -1442,7 +1439,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         location17 = boton17.getLocation();
         location18 = boton18.getLocation();
         location19 = boton19.getLocation();
- 
+
         bande3 = true;
         bande4 = true;
         bande5 = true;
@@ -1460,7 +1457,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
         bande17 = true;
         bande18 = true;
         bande19 = true;
-      
+
         boton17.setEnabled(true);
         boton16.setEnabled(true);
         boton18.setEnabled(true);
@@ -1485,7 +1482,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
-     if (superbande == true) {
+        if (superbande == true) {
             if (bande17 == true) {
                 mover(boton17);
                 int tam[];
@@ -1495,10 +1492,10 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamaño(label17);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 13)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     try {
                         generarsonidowell();
-                        bbande17=true;
+                        bbande17 = true;
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
                         boton17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1524,7 +1521,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
 
             }
         }
-       
+
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -1556,9 +1553,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamaño(label16);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 13)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     generarsonidowell();
-                    bbande16=true;
+                    bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1621,11 +1618,11 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamañoIz(label18);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 13)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     generarsonidowell();
-                    bbande18=true;
+                    bbande18 = true;
                     //(tam[0], tam[2] - 12)
-                        //(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton18.setLocation(tam[0], tam[2] - 12);
@@ -1691,7 +1688,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 6)) {
                     generarsonidowell();
-                    bbande10=true;
+                    bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1751,11 +1748,11 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamaño(label13);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 10)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 10)) {
                     generarsonidowell();
-                    bbande13=true;
-                         //(tam[0], tam[2] - 12)
-                        //(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    bbande13 = true;
+                    //(tam[0], tam[2] - 12)
+                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton13.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1765,7 +1762,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     bande13 = false;
                     //boton6.setBackground(Color.green);
                     correct13.setBackground(Color.green);
-                    
+
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
@@ -1818,7 +1815,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 6)) {
                     generarsonidowell();
-                    bbande9=true;
+                    bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1868,16 +1865,16 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-  if (bbande9==true){
-          LubricacionForzadaOn lubricar = null;
-                    try {
-                        lubricar = new LubricacionForzadaOn();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubricar.setVisible(true);
-                    lubricar.setLocationRelativeTo(null);
-  
+        if (bbande9 == true) {
+            LubricacionForzadaOn lubricar = null;
+            try {
+                lubricar = new LubricacionForzadaOn();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lubricar.setVisible(true);
+            lubricar.setLocationRelativeTo(null);
+
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton9ActionPerformed
 
@@ -1894,7 +1891,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 13)) {
                     generarsonidowell();
-                    bbande19=true;
+                    bbande19 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton19.setLocation(tam[0], tam[2] - 12);
@@ -1945,15 +1942,15 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
-  if (bbande19==true){
+        if (bbande19 == true) {
             DesaplicarFrenos frenosd = null;
-                    try {
-                        frenosd = new DesaplicarFrenos();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenosd.setVisible(true);
-                    frenosd.setLocationRelativeTo(null);   
+            try {
+                frenosd = new DesaplicarFrenos();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            frenosd.setVisible(true);
+            frenosd.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton19ActionPerformed
 
@@ -1969,7 +1966,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 0)) {
-                    bbande5=true;
+                    bbande5 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -1992,7 +1989,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                      Plabel3.setBackground(green);
+                    Plabel3.setBackground(green);
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
 
@@ -2032,11 +2029,11 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 0)) {
-                    bbande6=true;
+                    bbande6 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                       
+
                     boton6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
@@ -2056,7 +2053,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                      Plabel4.setBackground(green);
+                    Plabel4.setBackground(green);
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
 
@@ -2104,7 +2101,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    bbande8=true;
+                    bbande8 = true;
                     boton8.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
@@ -2161,9 +2158,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamaño(label4);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 0)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 0)) {
                     generarsonidowell();
-                    bbande4=true;
+                    bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2185,7 +2182,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                      Plabel1.setBackground(green);
+                    Plabel1.setBackground(green);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2223,9 +2220,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 tam = tamaño(label15);
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 12)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
-                    bbande15=true; 
+                    bbande15 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton15.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2279,15 +2276,15 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_boton15MouseReleased
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-   if (bbande15==true){
-               LubricacionForzadaOff lubrica = null;
-                    try {
-                        lubrica = new LubricacionForzadaOff(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubrica.setVisible(true);
-                    lubrica.setLocationRelativeTo(null);
+        if (bbande15 == true) {
+            LubricacionForzadaOff lubrica = null;
+            try {
+                lubrica = new LubricacionForzadaOff(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lubrica.setVisible(true);
+            lubrica.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton15ActionPerformed
 
@@ -2303,9 +2300,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
-                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])&& (contgeneral >= 6)) {
+                if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 6)) {
                     generarsonidowell();
-                    bbande11=true;
+                    bbande11 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton11.setLocation(tam[0], tam[2] - 12);
@@ -2368,7 +2365,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                  bbande12=true;
+                    bbande12 = true;
                     boton12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
@@ -2430,9 +2427,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 11)) {
                     generarsonidowell();
-                    bbande14=true;
-                      //(tam[0], tam[2] - 12)
-//(tam[1] - a.width - 20, tam[3] - a.height - 20)
+                    bbande14 = true;
+                    //(tam[0], tam[2] - 12)
+                    //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2497,7 +2494,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 0)) {
                     generarsonidowell();
-                    bbande3=true;
+                    bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2519,8 +2516,8 @@ public class ParoEmergencia extends javax.swing.JFrame {
                     } catch (IOException ex) {
                         Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                   // interruptor.setSize(734, 494);
-                     Plabel2.setBackground(green);
+                    // interruptor.setSize(734, 494);
+                    Plabel2.setBackground(green);
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
                 }
@@ -2564,7 +2561,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     generarsonidowell();
-                    bbande7=true;
+                    bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2614,41 +2611,41 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_boton7MouseReleased
 
     private void boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton10ActionPerformed
-        if (bbande10==true){
-                 CerrarValvulaEsferica valvulaE = null;
-                    try {
-                        valvulaE = new CerrarValvulaEsferica();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    valvulaE.setVisible(true);
-                    valvulaE.setLocationRelativeTo(null);
+        if (bbande10 == true) {
+            CerrarValvulaEsferica valvulaE = null;
+            try {
+                valvulaE = new CerrarValvulaEsferica();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            valvulaE.setVisible(true);
+            valvulaE.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton10ActionPerformed
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-           if (bbande11==true){
-               posiciondist0 interruptor = null;
-                    try {
-                        interruptor = new posiciondist0();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+        if (bbande11 == true) {
+            posiciondist0 interruptor = null;
+            try {
+                interruptor = new posiciondist0();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }// TODO add your handling code here:
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-           if (bbande7==true){
+        if (bbande7 == true) {
             LimitadorApertura0 limite = null;
-                    try {
-                        limite = new LimitadorApertura0(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    limite.setVisible(true);
-                    limite.setLocationRelativeTo(null);
+            try {
+                limite = new LimitadorApertura0(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            limite.setVisible(true);
+            limite.setLocationRelativeTo(null);
         }// TODO add your handling code here:
     }//GEN-LAST:event_boton7ActionPerformed
 
@@ -2665,156 +2662,155 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }//GEN-LAST:event_correct18ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-           if (bbande8==true){
-             VelocidadM90 velocidad = null;
-                    try {
-                        velocidad = new VelocidadM90(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    velocidad.setVisible(true);
-                    velocidad.setLocationRelativeTo(null);
+        if (bbande8 == true) {
+            VelocidadM90 velocidad = null;
+            try {
+                velocidad = new VelocidadM90(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            velocidad.setVisible(true);
+            velocidad.setLocationRelativeTo(null);
         }// TODO add your handling code here:
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
-   if (bbande13==true){
-             AplicarFrenosParoEmergencia frenos = null;
-                    try {
-                        frenos = new AplicarFrenosParoEmergencia();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenos.setVisible(true);
-                    frenos.setLocationRelativeTo(null);
+        if (bbande13 == true) {
+            AplicarFrenosParoEmergencia frenos = null;
+            try {
+                frenos = new AplicarFrenosParoEmergencia();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            frenos.setVisible(true);
+            frenos.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton13ActionPerformed
 
     private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
-   if (bbande16==true){
-          
-                    ValvulaAislamiento valvula = null;
-                    try {
-                        valvula = new ValvulaAislamiento();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    valvula.setVisible(true);
-                    valvula.setLocationRelativeTo(null);  
+        if (bbande16 == true) {
+
+            ValvulaAislamiento valvula = null;
+            try {
+                valvula = new ValvulaAislamiento();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            valvula.setVisible(true);
+            valvula.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
-   if (bbande17==true){
-           BombaRefrigeracion bomba = null;
-       try {
-           bomba = new BombaRefrigeracion();
-       } catch (IOException ex) {
-           Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-       }
-                        bomba.setVisible(true);
-                        bomba.setLocationRelativeTo(null); 
+        if (bbande17 == true) {
+            BombaRefrigeracion bomba = null;
+            try {
+                bomba = new BombaRefrigeracion();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            bomba.setVisible(true);
+            bomba.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton17ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-   if (bbande6==true){
-             ReguladorEnergizado reguladorene = null;
-                    try {
-                        reguladorene = new ReguladorEnergizado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                      Plabel4.setBackground(green);
-                    reguladorene.setVisible(true);
-                    reguladorene.setLocationRelativeTo(null);
+        if (bbande6 == true) {
+            ReguladorEnergizado reguladorene = null;
+            try {
+                reguladorene = new ReguladorEnergizado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            Plabel4.setBackground(green);
+            reguladorene.setVisible(true);
+            reguladorene.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-   if (bbande5==true){
+        if (bbande5 == true) {
             Reguladorbloqueado reguladordes = null;
-                    try {
-                        reguladordes = new Reguladorbloqueado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                      Plabel3.setBackground(green);
-                    reguladordes.setVisible(true);
-                    reguladordes.setLocationRelativeTo(null);
+            try {
+                reguladordes = new Reguladorbloqueado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            Plabel3.setBackground(green);
+            reguladordes.setVisible(true);
+            reguladordes.setLocationRelativeTo(null);
 
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-   if (bbande18==true){
-                    JuntaInflable junta = null;
+        if (bbande18 == true) {
+            JuntaInflable junta = null;
 
-                    try {
-                        junta = new JuntaInflable();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    junta.setVisible(true);
-                    junta.setLocationRelativeTo(null);
+            try {
+                junta = new JuntaInflable();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            junta.setVisible(true);
+            junta.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-   if (bbande4==true){
-             InterruptordeCampo interruptor = null;
-                    try {
-                        interruptor = new InterruptordeCampo(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                      Plabel1.setBackground(green);
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null); 
+        if (bbande4 == true) {
+            InterruptordeCampo interruptor = null;
+            try {
+                interruptor = new InterruptordeCampo(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            Plabel1.setBackground(green);
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
-   if (bbande12==true){
-               Velocidadm10 sincro = null;
-                    try {
-                        sincro = new Velocidadm10(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    sincro.setVisible(true);
-                    sincro.setLocationRelativeTo(null);
+        if (bbande12 == true) {
+            Velocidadm10 sincro = null;
+            try {
+                sincro = new Velocidadm10(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            sincro.setVisible(true);
+            sincro.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-   if (bbande14==true){
-                   Velocidadm1 unidad = null;
-                    try {
-                        unidad = new Velocidadm1(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    unidad.setVisible(true);
-                    unidad.setLocationRelativeTo(null);
+        if (bbande14 == true) {
+            Velocidadm1 unidad = null;
+            try {
+                unidad = new Velocidadm1(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            unidad.setVisible(true);
+            unidad.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-   if (bbande3==true){
-               InterruptoGeneradorCerrado interruptor = null;
-                    try {
-                        interruptor = new InterruptoGeneradorCerrado();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                   // interruptor.setSize(734, 494);
-                     Plabel2.setBackground(green);
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+        if (bbande3 == true) {
+            InterruptoGeneradorCerrado interruptor = null;
+            try {
+                interruptor = new InterruptoGeneradorCerrado();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoEmergencia.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            // interruptor.setSize(734, 494);
+            Plabel2.setBackground(green);
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }        // TODO add your handling code here:
     }//GEN-LAST:event_boton3ActionPerformed
- 
 
     public void generarsonido() {
         Clip sonido = null;
@@ -2869,36 +2865,37 @@ public class ParoEmergencia extends javax.swing.JFrame {
         }
         sonido.close();
     }
-     public void convertiranegro(){
-         Plabel1.setBackground(black);
-         Plabel2.setBackground(black);
-         Plabel3.setBackground(black);
-         Plabel4.setBackground(black);
-         Plabel5.setBackground(black);
-         Plabel6.setBackground(black);
-         Plabel7.setBackground(black);
-         Plabel9.setBackground(black);
-         Plabel1.setBackground(black);
-           
-            correct3.setBackground(black);
-            correct4.setBackground(black);
-            correct5.setBackground(black);
-            correct6.setBackground(black);
-            correct7.setBackground(black);
-            correct8.setBackground(black);
-            correct9.setBackground(black);
-            correct10.setBackground(black);
-            correct11.setBackground(black);
-            correct12.setBackground(black);
-            correct13.setBackground(black);
-            correct14.setBackground(black);
-            correct15.setBackground(black);
-            correct16.setBackground(black);
-            correct17.setBackground(black);
-            correct18.setBackground(black);
-            correct19.setBackground(black);
 
- }
+    public void convertiranegro() {
+        Plabel1.setBackground(black);
+        Plabel2.setBackground(black);
+        Plabel3.setBackground(black);
+        Plabel4.setBackground(black);
+        Plabel5.setBackground(black);
+        Plabel6.setBackground(black);
+        Plabel7.setBackground(black);
+        Plabel9.setBackground(black);
+        Plabel1.setBackground(black);
+
+        correct3.setBackground(black);
+        correct4.setBackground(black);
+        correct5.setBackground(black);
+        correct6.setBackground(black);
+        correct7.setBackground(black);
+        correct8.setBackground(black);
+        correct9.setBackground(black);
+        correct10.setBackground(black);
+        correct11.setBackground(black);
+        correct12.setBackground(black);
+        correct13.setBackground(black);
+        correct14.setBackground(black);
+        correct15.setBackground(black);
+        correct16.setBackground(black);
+        correct17.setBackground(black);
+        correct18.setBackground(black);
+        correct19.setBackground(black);
+
+    }
 
     public void validarcuantos(int p) {
         contador = contador + 1;
@@ -2923,11 +2920,11 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 break;
             case 17:
                 Plabel11.setBackground(green);
-                break;     
+                break;
         }
 
     }
-    
+
     private void tamaño() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -2943,7 +2940,6 @@ public class ParoEmergencia extends javax.swing.JFrame {
             contgeneral = contgeneral + 1;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ParoEMERGENCIA;
@@ -3041,5 +3037,5 @@ public class ParoEmergencia extends javax.swing.JFrame {
     private javax.swing.JLabel logo;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
-   
+
 }

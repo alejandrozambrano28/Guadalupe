@@ -1525,7 +1525,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     try {
                         generarsonidowell();
-                        bbande17=true;
+                        bbande17 = true;
                         contgeneral = contgeneral + 1;
                         validarcuantos(contgeneral);
                         boton17.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1588,7 +1588,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande16=true;
+                    bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1653,7 +1653,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                    bbande1=true;
+                    bbande1 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1718,7 +1718,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande18=true;
+                    bbande18 = true;
                     //(tam[0], tam[2] - 12)
                     //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
@@ -1785,7 +1785,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     generarsonidowell();
-                    bbande2=true;
+                    bbande2 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1852,7 +1852,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande10=true;
+                    bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -1914,7 +1914,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 12)) {
                     generarsonidowell();
-                    bbande13=true;
+                    bbande13 = true;
                     //(tam[0], tam[2] - 12)
                     //(tam[1] - a.width - 20, tam[3] - a.height - 20)
                     contgeneral = contgeneral + 1;
@@ -1979,7 +1979,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande9=true;
+                    bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2030,14 +2030,14 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
         if (bbande9 == true) {
-     LubricacionForzadaOn lubricar = null;
-                    try {
-                        lubricar = new LubricacionForzadaOn();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubricar.setVisible(true);
-                    lubricar.setLocationRelativeTo(null);
+            LubricacionForzadaOn lubricar = null;
+            try {
+                lubricar = new LubricacionForzadaOn();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lubricar.setVisible(true);
+            lubricar.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton9ActionPerformed
 
@@ -2054,7 +2054,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 15)) {
                     generarsonidowell();
-                    bbande19=true;
+                    bbande19 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton19.setLocation(tam[0], tam[2] - 12);
@@ -2106,14 +2106,14 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
         if (bbande19 == true) {
-                 DesaplicarFrenos frenosd = null;
-                    try {
-                        frenosd = new DesaplicarFrenos();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenosd.setVisible(true);
-                    frenosd.setLocationRelativeTo(null);
+            DesaplicarFrenos frenosd = null;
+            try {
+                frenosd = new DesaplicarFrenos();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            frenosd.setVisible(true);
+            frenosd.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton19ActionPerformed
 
@@ -2129,7 +2129,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande5=true;
+                    bbande5 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2191,7 +2191,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //valida si la pisicion del boton es igual a la del lugar donde deberia estar
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
-                    bbande6=true;
+                    bbande6 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2259,7 +2259,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     // &&(contgeneral>=9)
-                    bbande8=true;
+                    bbande8 = true;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2322,7 +2322,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 3)) {
                     generarsonidowell();
-                    bbande4=true;
+                    bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2383,7 +2383,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 14)) {
                     generarsonidowell();
-                    bbande15=true;
+                    bbande15 = true;
 
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
@@ -2439,14 +2439,14 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
         if (bbande15 == true) {
-    LubricacionForzadaOff lubrica = null;
-                    try {
-                        lubrica = new LubricacionForzadaOff(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    lubrica.setVisible(true);
-                    lubrica.setLocationRelativeTo(null);
+            LubricacionForzadaOff lubrica = null;
+            try {
+                lubrica = new LubricacionForzadaOff(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            lubrica.setVisible(true);
+            lubrica.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton15ActionPerformed
 
@@ -2462,7 +2462,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 8)) {
                     generarsonidowell();
-                    bbande11=true;
+                    bbande11 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2525,7 +2525,7 @@ public class ParoRapido extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    bbande12=true;
+                    bbande12 = true;
                     boton12.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
@@ -2591,7 +2591,7 @@ public class ParoRapido extends javax.swing.JFrame {
                     generarsonidowell();
                     //(tam[0], tam[2] - 12)
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)
-                    bbande14=true;
+                    bbande14 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton14.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2657,7 +2657,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 2)) {
                     generarsonidowell();
-                    bbande3=true;
+                    bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2723,7 +2723,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     generarsonidowell();
-                    bbande7=true;
+                    bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
@@ -2803,28 +2803,28 @@ public class ParoRapido extends javax.swing.JFrame {
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
         if (bbande11 == true) {
-posiciondist0 interruptor = null;
-                    try {
-                        interruptor = new posiciondist0();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+            posiciondist0 interruptor = null;
+            try {
+                interruptor = new posiciondist0();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
         if (bbande7 == true) {
             LimitadorApertura0 limite = null;
-                    try {
-                        limite = new LimitadorApertura0(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    //limite.setSize(734, 494);
-                    limite.setVisible(true);
-                    limite.setLocationRelativeTo(null);
+            try {
+                limite = new LimitadorApertura0(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //limite.setSize(734, 494);
+            limite.setVisible(true);
+            limite.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton7ActionPerformed
 
@@ -2848,28 +2848,28 @@ posiciondist0 interruptor = null;
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
         if (bbande8 == true) {
-VelocidadM90 velocidad = null;
-                    try {
-                        velocidad = new VelocidadM90(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    velocidad.setVisible(true);
-                    velocidad.setLocationRelativeTo(null);
+            VelocidadM90 velocidad = null;
+            try {
+                velocidad = new VelocidadM90(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            velocidad.setVisible(true);
+            velocidad.setLocationRelativeTo(null);
 
         }
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
         if (bbande13 == true) {
-AplicarFrenosParoRapido frenos = null;
-                    try {
-                        frenos = new AplicarFrenosParoRapido();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    frenos.setVisible(true);
-                    frenos.setLocationRelativeTo(null);
+            AplicarFrenosParoRapido frenos = null;
+            try {
+                frenos = new AplicarFrenosParoRapido();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            frenos.setVisible(true);
+            frenos.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton13ActionPerformed
 
@@ -2916,27 +2916,27 @@ AplicarFrenosParoRapido frenos = null;
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
         if (bbande6 == true) {
- ReguladorEnergizado reguladorene = null;
-                    try {
-                        reguladorene = new ReguladorEnergizado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reguladorene.setVisible(true);
-                    reguladorene.setLocationRelativeTo(null);
+            ReguladorEnergizado reguladorene = null;
+            try {
+                reguladorene = new ReguladorEnergizado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            reguladorene.setVisible(true);
+            reguladorene.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
         if (bbande5 == true) {
- Reguladorbloqueado reguladordes = null;
-                    try {
-                        reguladordes = new Reguladorbloqueado(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    reguladordes.setVisible(true);
-                    reguladordes.setLocationRelativeTo(null);
+            Reguladorbloqueado reguladordes = null;
+            try {
+                reguladordes = new Reguladorbloqueado(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            reguladordes.setVisible(true);
+            reguladordes.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton5ActionPerformed
 
@@ -2956,56 +2956,56 @@ AplicarFrenosParoRapido frenos = null;
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
         if (bbande4 == true) {
-InterruptordeCampo interruptor = null;
-                    try {
-                        interruptor = new InterruptordeCampo(contgeneral);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+            InterruptordeCampo interruptor = null;
+            try {
+                interruptor = new InterruptordeCampo(contgeneral);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
         if (bbande12 == true) {
-  Velocidadm10 sincro = null;
-                    try {
-                        sincro = new Velocidadm10(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    // sincro.setSize(734, 494);
-                    sincro.setVisible(true);
-                    sincro.setLocationRelativeTo(null);
+            Velocidadm10 sincro = null;
+            try {
+                sincro = new Velocidadm10(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            // sincro.setSize(734, 494);
+            sincro.setVisible(true);
+            sincro.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
         if (bbande14 == true) {
-  Velocidadm1 unidad = null;
-                    try {
-                        unidad = new Velocidadm1(contador);
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    //unidad.setSize(734, 494);
-                    unidad.setVisible(true);
-                    unidad.setLocationRelativeTo(null);
+            Velocidadm1 unidad = null;
+            try {
+                unidad = new Velocidadm1(contador);
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //unidad.setSize(734, 494);
+            unidad.setVisible(true);
+            unidad.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
         if (bbande3 == true) {
-  InterruptoGeneradorCerrado interruptor = null;
-                    try {
-                        interruptor = new InterruptoGeneradorCerrado();
-                    } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    // interruptor.setSize(734, 494);
-                    interruptor.setVisible(true);
-                    interruptor.setLocationRelativeTo(null);
+            InterruptoGeneradorCerrado interruptor = null;
+            try {
+                interruptor = new InterruptoGeneradorCerrado();
+            } catch (IOException ex) {
+                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            // interruptor.setSize(734, 494);
+            interruptor.setVisible(true);
+            interruptor.setLocationRelativeTo(null);
         }
     }//GEN-LAST:event_boton3ActionPerformed
 
@@ -3150,7 +3150,6 @@ InterruptordeCampo interruptor = null;
             contgeneral = contgeneral + 1;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ParoRapido;

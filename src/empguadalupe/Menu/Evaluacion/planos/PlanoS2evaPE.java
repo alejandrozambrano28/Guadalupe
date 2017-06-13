@@ -22,31 +22,41 @@ import javax.swing.JOptionPane;
  *
  * @author lzambrs
  */
-public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener{
- int contErrores;
+public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
+
+    int contErrores;
+
     /**
      * Creates new form PlanoBomba
      */
     public PlanoS2evaPE(int numeroboton) {
         initComponents();
-          this.setResizable(false);
-       
-         switch (numeroboton){
-    
-           case 1:bomba1.setEnabled(true);bomba2.setEnabled(true);bomba5.setEnabled(true);break;
-           case 2:bomba.setEnabled(true);bomba3.setEnabled(true);bomba4.setEnabled(true);break;
-    
-      
+        this.setResizable(false);
+
+        switch (numeroboton) {
+
+            case 1:
+                bomba1.setEnabled(true);
+                bomba2.setEnabled(true);
+                bomba5.setEnabled(true);
+                break;
+            case 2:
+                bomba.setEnabled(true);
+                bomba3.setEnabled(true);
+                bomba4.setEnabled(true);
+                break;
+
         }
-   
+
     }
 
     private PlanoS2evaPE() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-     public void ActionPerformed(ActionEvent e){
-                        JOptionPane.showMessageDialog(rootPane, "correcto");
-                        } 
+
+    public void ActionPerformed(ActionEvent e) {
+        JOptionPane.showMessageDialog(rootPane, "correcto");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -130,64 +140,64 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener{
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
         ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[10] = contErrores;
-        arra.preguntas[10]=1;
+        arra.preguntas[10] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();
+        dispose();
     }//GEN-LAST:event_bombaActionPerformed
 
     private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
-       ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
+        ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[9] = contErrores;
-        arra.preguntas[9]=1;
+        arra.preguntas[9] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();   // TODO add your handling code here:
+        dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_bomba1ActionPerformed
 
     private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
-       ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
+        ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[9] = contErrores;
-        arra.preguntas[9]=1;
+        arra.preguntas[9] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();   // TODO add your handling code here:
+        dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_bomba2ActionPerformed
 
     private void bomba3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba3ActionPerformed
-             ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
+        ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[10] = contErrores;
-        arra.preguntas[10]=1;
+        arra.preguntas[10] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();
+        dispose();
     }//GEN-LAST:event_bomba3ActionPerformed
 
     private void bomba4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba4ActionPerformed
-              ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
+        ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[10] = contErrores;
-        arra.preguntas[10]=1;
+        arra.preguntas[10] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose();   // TODO add your handling code here:
-  // TODO add your handling code here:
+        dispose();   // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_bomba4ActionPerformed
 
     private void bomba5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba5ActionPerformed
         ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
         arra.pu2[9] = contErrores;
-        arra.preguntas[9]=1;
+        arra.preguntas[9] = 1;
         JOptionPane.showMessageDialog(rootPane, "correcto");
-       dispose(); // TODO add your handling code here:
+        dispose(); // TODO add your handling code here:
     }//GEN-LAST:event_bomba5ActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
-         contErrores=contErrores+1;
-         Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png"); 
-     java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im,new Point(10, 10),"WILL"); 
-    setCursor(cur); 
-     try {
+        contErrores = contErrores + 1;
+        Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+        java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+        setCursor(cur);
+        try {
             Thread.sleep(300); // 1000 milisegundos (10 segundos)
-            
+
         } catch (InterruptedException ex) {
             Logger.getLogger(ParoEmergenciaEVA.class.getName()).log(Level.SEVERE, null, ex);
         }
-      this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
     }//GEN-LAST:event_formMousePressed
 
     /**
@@ -279,7 +289,7 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener{
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -304,5 +314,4 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-  
 }

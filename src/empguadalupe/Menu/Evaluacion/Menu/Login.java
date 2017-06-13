@@ -43,6 +43,9 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
@@ -118,13 +121,15 @@ public class Login extends javax.swing.JFrame {
             String passencript = DigestUtils.sha256Hex(pass);
 
             Metodos met = new Metodos();
-            met.ruta = "src\\info.txt";
+            //met.cargararchivo();
+            //met.ruta = "src\\libre\\info.txt";
             cad = met.muestraContenido(2);
             if (cad[3].equals(encript)) {
                 if (cad[4].equals(passencript)) {
                     FormularioEvaluacion form = new FormularioEvaluacion();
                     form.setVisible(true);
                     form.setLocationRelativeTo(null);
+                    dispose();
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "contraseña incorrecta");
                 }
@@ -149,7 +154,7 @@ public class Login extends javax.swing.JFrame {
                 met.guardaDatos(cad[2], 2);
                 met.guardaDatos(cad[1], 2);
                 met.guardaDatos(cad[2], 2);
-             
+
             } catch (IOException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -163,10 +168,24 @@ public class Login extends javax.swing.JFrame {
         formu.setLocationRelativeTo(null);         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosing
 
-/**
- * @param args the command line arguments
- */
-public static void main(String args[]) {
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+Metodos met = new Metodos();
+        try {
+            met.guardaDatos("08d38b7b0cea0cf6f4d30e942dd821244e19605d8522fbeefa7ed3d9f6be4711", 2);
+            met.guardaDatos("bad4cdcf622a1c2ad640925d73c0763e64cb2e62a9cdbf79c4f27045f1ac6ba5", 2);
+            met.guardaDatos("08d38b7b0cea0cf6f4d30e942dd821244e19605d8522fbeefa7ed3d9f6be4711", 2);
+            met.guardaDatos("bad4cdcf622a1c2ad640925d73c0763e64cb2e62a9cdbf79c4f27045f1ac6ba5", 2);
+            met.guardaDatos("null", 2);
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowActivated
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -177,28 +196,24 @@ public static void main(String args[]) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                
 
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Login.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (InstantiationException ex) {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Login.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Login.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

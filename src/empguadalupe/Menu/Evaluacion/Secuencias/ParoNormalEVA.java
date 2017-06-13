@@ -29,6 +29,7 @@ import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.LimitadorApertura0;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.PotenciaActivam5;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.posiciondist0;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.potenciaReactivam5;
+import empguadalupe.Menu.Evaluacion.Menu.Evaluacion;
 import static empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva.preguntas;
 import static empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva.pu2;
 
@@ -116,11 +117,11 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     boolean bbande17 = false;
     boolean bbande18 = false;
     boolean bbande19 = false;
-    boolean bandet=false;
+    boolean bandet = false;
     int contGError = 24;
     int dia, mes, año, hora, minutos, segundos;
     int Segundo, Minuto, Hora, cuantos;
-      Calendar calendario;
+    Calendar calendario;
     Timer timer;
 
     ImageIcon romboon, rombooff;
@@ -134,7 +135,6 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
         initComponents();
         convertiranegro();
-        
 
         romboon = new ImageIcon("imgfondo\\rombo.png");
         rombooff = new ImageIcon("imgfondo\\rombooff.png");
@@ -247,7 +247,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         Rectangle a = label.getBounds();
         int[] tamaño = new int[4];
 
-        posmenorx = a.x-20;
+        posmenorx = a.x - 20;
         posmayorx = a.x + 20;
         posmenory = a.y - 10;
         posmayory = a.y + 20;
@@ -267,7 +267,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         Rectangle a = label.getBounds();
         int[] tamaño = new int[4];
 
-        posmenorx = a.x-20;
+        posmenorx = a.x - 20;
         posmayorx = a.x + 20;
         posmenory = a.y - 20;
         posmayory = a.y + 20;
@@ -1313,7 +1313,8 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         jLabel18.setBounds(340, 70, 160, 17);
 
         reloj.setFont(new java.awt.Font("BankGothic Md BT", 0, 48)); // NOI18N
-        reloj.setText("00:00");
+        reloj.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        reloj.setText("00:00:00");
         jPanel1.add(reloj);
         reloj.setBounds(460, 700, 320, 120);
 
@@ -1323,13 +1324,14 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         label18.setBounds(900, 510, 20, 20);
 
         jButton1.setText("PUNTUACIÓN");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(550, 620, 120, 23);
+        jButton1.setBounds(550, 650, 120, 23);
 
         icono.setBackground(new java.awt.Color(153, 212, 94));
         icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -1347,10 +1349,11 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 //boton principal para arrancar la secuencia de ParoNormal
     private void ParoNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoNormalActionPerformed
         //coloca los botones macho en orden aleatorio (el 1130 es la posicion de manera horizontal en pixeles)
-         Segundo = 0;
-         Minuto = 0;
-         Hora = 0;
+        Segundo = 0;
+        Minuto = 0;
+        Hora = 0;
         calendario = new GregorianCalendar();
+        jButton1.enable();
         if (bandet == true) {
             timer.restart();
             bandet = false;
@@ -1560,7 +1563,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     public static int[] preguntas = new int[67];
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
+         if (bande17=true){
         mover(boton17);
+ }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -1588,10 +1593,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton17.setLocation(tam[0], tam[2] - 20);
+                    boton17.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
-                    label17.setLocation(tam[0], tam[2] - 20);
+                    label17.setLocation(tam[0] + 20, tam[2] + 10);
                     //boton1.setBackground(Color.black);
                     correct17.setBackground(Color.green);
                     bande17 = false;
@@ -1620,7 +1625,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
+       if (bande16=true){
         mover(boton16);
+ }
 
     }//GEN-LAST:event_boton16MouseDragged
 
@@ -1652,10 +1659,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande16 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton16.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
-                    label16.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label16.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande16 = false;
                     //boton2.setBackground(Color.green);
                     correct16.setBackground(Color.green);
@@ -1683,7 +1690,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton16MouseReleased
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
+       if (bande1=true){
         mover(boton1);
+ }
 
     }//GEN-LAST:event_boton1MouseDragged
 
@@ -1715,10 +1724,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande1 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton1.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label1.setSize(boton1.getWidth(), boton1.getHeight());
-                    label1.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label1.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande1 = false;
                     //boton3.setBackground(Color.green);
                     correct1.setBackground(Color.green);
@@ -1745,7 +1754,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton1MouseReleased
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
+         if (bande18=true){
         mover(boton18);
+ }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -1775,10 +1786,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande18 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton18.setLocation(tam[0], tam[2] - 20);
+                    boton18.setLocation(tam[0] + 20, tam[2] + 10);;
                     System.out.println("correcto");
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
-                    label18.setLocation(tam[0], tam[2] - 20);
+                    label18.setLocation(tam[0] + 20, tam[2] + 10);;
                     bande18 = false;
                     //boton4.setBackground(Color.green);
                     correct18.setBackground(Color.green);
@@ -1807,8 +1818,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
 
+        if (bande2=true){
         mover(boton2);
-
+ }
 
     }//GEN-LAST:event_boton2MouseDragged
 
@@ -1839,10 +1851,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande2 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton2.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label2.setSize(boton2.getWidth(), boton2.getHeight());
-                    label2.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label2.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande2 = false;
                     //boton5.setBackground(Color.green);
                     correct2.setBackground(Color.green);
@@ -1871,7 +1883,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton2MouseReleased
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
+        if (bande10=true){
         mover(boton10);
+ }
     }//GEN-LAST:event_boton10MouseDragged
 
     private void boton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseEntered
@@ -1896,10 +1910,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande10 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
-                    label10.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande10 = false;
                     //boton7.setBackground(Color.green);
                     correct10.setBackground(Color.green);
@@ -1927,7 +1941,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton10MouseReleased
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
+      if (bande13=true){
         mover(boton13);
+ }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -1952,10 +1968,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande13 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton13.setLocation(tam[0], tam[2] - 20);
+                    boton13.setLocation(tam[0] + 20, tam[2] + 10);;
                     System.out.println("correcto");
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
-                    label13.setLocation(tam[0], tam[2] - 20);
+                    label13.setLocation(tam[0] + 20, tam[2] + 10);;
                     bande13 = false;
                     //boton6.setBackground(Color.green);
                     correct13.setBackground(Color.green);
@@ -1985,10 +2001,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton13MouseReleased
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
-
+ if (bande9=true){
         mover(boton9);
-
-
+ }
     }//GEN-LAST:event_boton9MouseDragged
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
@@ -2013,10 +2028,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande9 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
-                    label9.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande9 = false;
                     //boton9.setBackground(Color.green);
                     correct9.setBackground(Color.green);
@@ -2044,12 +2059,14 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9MouseReleased
 
     private void boton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton9ActionPerformed
-           // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
 
+        if (bande19=true){
         mover(boton19);
+ }
     }//GEN-LAST:event_boton19MouseDragged
 
     private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
@@ -2074,10 +2091,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande19 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton19.setLocation(tam[0], tam[2] - 20);
+                    boton19.setLocation(tam[0] + 20, tam[2] + 10);;
                     System.out.println("correcto");
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
-                    label19.setLocation(tam[0], tam[2] - 20);
+                    label19.setLocation(tam[0] + 20, tam[2] + 10);;
                     bande19 = false;
 
                     //boton8.setBackground(Color.green);
@@ -2107,13 +2124,14 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton19MouseReleased
 
     private void boton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton19ActionPerformed
-  
+
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
 
+      if (bande5=true){
         mover(boton5);
-
+ }
 
     }//GEN-LAST:event_boton5MouseDragged
 
@@ -2139,10 +2157,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     preguntas[15] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton5.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton5.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
-                    label5.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label5.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande5 = false;
                     //boton10.setBackground(Color.green);
                     correct5.setBackground(Color.green);
@@ -2171,7 +2189,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton5MouseReleased
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
+        if (bande6=true){
         mover(boton6);
+ }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2201,10 +2221,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton6.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
-                    label6.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label6.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande6 = false;
                     //boton11.setBackground(Color.green);
                     correct6.setBackground(Color.green);
@@ -2234,8 +2254,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
 
+        if (bande8=true){
         mover(boton8);
-
+ }
 
     }//GEN-LAST:event_boton8MouseDragged
 
@@ -2262,10 +2283,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
 
-                    boton8.setLocation(tam[0], tam[2] - 20);
+                    boton8.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
-                    label8.setLocation(tam[0], tam[2] - 20);
+                    label8.setLocation(tam[0] + 20, tam[2] + 10);;
                     bande8 = false;
                     //boton12.setBackground(Color.green);
                     correct8.setBackground(Color.green);
@@ -2294,7 +2315,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
+        if (bande4=true){
         mover(boton4);
+ }
     }//GEN-LAST:event_boton4MouseDragged
 
     private void boton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseEntered
@@ -2317,10 +2340,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande4 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton4.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
-                    label4.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label4.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande4 = false;
                     //boton13.setBackground(Color.green);
                     correct4.setBackground(Color.green);
@@ -2349,7 +2372,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
 
+         if (bande15=true){
         mover(boton15);
+ }
 
     }//GEN-LAST:event_boton15MouseDragged
 
@@ -2379,10 +2404,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande15 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton15.setLocation(tam[0], tam[2] - 20);
+                    boton15.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
-                    label15.setLocation(tam[0], tam[2] - 20);
+                    label15.setLocation(tam[0] + 20, tam[2] + 10);
                     bande15 = false;
                     //boton14.setBackground(Color.green);
                     correct15.setBackground(Color.green);
@@ -2410,12 +2435,14 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton15MouseReleased
 
     private void boton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton15ActionPerformed
-          // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton15ActionPerformed
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
 
+        if (bande11=true){
         mover(boton11);
+ }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2440,10 +2467,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande11 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
-                    label11.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande11 = false;
                     //boton15.setBackground(Color.green);
                     correct11.setBackground(Color.green);
@@ -2469,8 +2496,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
 
+        if (bande12=true){
         mover(boton12);
-
+ }
     }//GEN-LAST:event_boton12MouseDragged
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
@@ -2499,10 +2527,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande12 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton12.setLocation(tam[0], tam[2] - 20);
+                    boton12.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
-                    label12.setLocation(tam[0], tam[2] - 20);
+                    label12.setLocation(tam[0] + 20, tam[2] + 10);
                     bande12 = false;
                     //boton16.setBackground(Color.green);
                     correct12.setBackground(Color.green);
@@ -2530,7 +2558,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton12MouseReleased
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
+        if (bande14=true){
         mover(boton14);
+ }
     }//GEN-LAST:event_boton14MouseDragged
 
     private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
@@ -2559,10 +2589,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande14 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton14.setLocation(tam[0], tam[2] - 20);
+                    boton14.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
-                    label14.setLocation(tam[0], tam[2] - 20);
+                    label14.setLocation(tam[0] + 20, tam[2] + 10);
                     bande14 = false;
                     //boton17.setBackground(Color.green);
                     correct14.setBackground(Color.green);
@@ -2590,9 +2620,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
-
+ if (bande3=true){
         mover(boton3);
-
+ }
     }//GEN-LAST:event_boton3MouseDragged
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
@@ -2621,10 +2651,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande3 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton3.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label3.setSize(boton3.getWidth(), boton3.getHeight());
-                    label3.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label3.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande3 = false;
                     //boton21.setBackground(Color.green);
                     correct3.setBackground(Color.green);
@@ -2652,9 +2682,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3MouseReleased
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
-
+ if (bande7=true){
         mover(boton7);
-
+ }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2674,15 +2704,15 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                 //si es afirmativo lo ancla a esta posicion de lo contrario cuando deja de dar click da la señal de error
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 4)) {
                     generarsonidowell();
-                     contGError--;
+                    contGError--;
                     preguntas[7] = 1;
                     bbande7 = true;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    boton7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    boton7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
-                    label7.setLocation(tam[1] - a.width - 20, tam[3] - a.height - 20);
+                    label7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande7 = false;
                     //boton23.setBackground(Color.green);
                     correct7.setBackground(Color.green);
@@ -2703,81 +2733,81 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     boton7.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[7]=1;
+                    pu2[7] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton7MouseReleased
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-  
+
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void boton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton10ActionPerformed
-   
+
     }//GEN-LAST:event_boton10ActionPerformed
 
     private void boton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton11ActionPerformed
-  
+
     }//GEN-LAST:event_boton11ActionPerformed
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
-   
+
     }//GEN-LAST:event_boton7ActionPerformed
 
     private void correct10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct10ActionPerformed
      }//GEN-LAST:event_correct10ActionPerformed
 
     private void boton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton13ActionPerformed
-            // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton13ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-    
+
     }//GEN-LAST:event_boton2ActionPerformed
 
     private void boton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton16ActionPerformed
-              // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton16ActionPerformed
 
     private void boton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton17ActionPerformed
-               // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton17ActionPerformed
 
     private void boton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton6ActionPerformed
-                // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton6ActionPerformed
 
     private void boton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton5ActionPerformed
-              // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton5ActionPerformed
 
     private void boton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton8ActionPerformed
-            // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton18ActionPerformed
-              // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-     
+
      }//GEN-LAST:event_boton4ActionPerformed
 
     private void boton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton12ActionPerformed
-              // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton12ActionPerformed
 
     private void boton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton14ActionPerformed
-             // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
-            // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   int pre = suma(preguntas);
+        int pre = suma(preguntas);
         int faltan = totalPreguntas - pre;
         if (pre != totalPreguntas) {
             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan" + faltan + "preguntas por responder, desea continuar con la evaluacion");
@@ -2790,7 +2820,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                 String[] cadena = new String[6];
                 int j = 1;
                 timer.stop();
-                
+
                 Metodos met = new Metodos();
 
                 try {
@@ -2805,19 +2835,21 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    met.guardaDatos(String.valueOf(Hora),1);
-                    met.guardaDatos(String.valueOf(Minuto),1);
-                    met.guardaDatos(String.valueOf(Segundo),1);
-                    met.guardaDatos(String.valueOf(contGError),1);
-                    met.guardaDatos(String.valueOf(contPreguntas),1);
+                    met.guardaDatos(String.valueOf(Hora), 1);
+                    met.guardaDatos(String.valueOf(Minuto), 1);
+                    met.guardaDatos(String.valueOf(Segundo), 1);
+                    met.guardaDatos(String.valueOf(contGError), 1);
+                    met.guardaDatos(String.valueOf(contPreguntas), 1);
 
                 } catch (IOException ex) {
                     Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                //  }
+                Evaluacion eva = new Evaluacion();
+                eva.setVisible(true);
+                eva.setLocationRelativeTo(null);
                 dispose();
             }
-        }         
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     public int suma(int[] numeros) {
         int sum = 0;
@@ -2826,6 +2858,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         }
         return sum;
     }
+
     public void generarsonido() {
         Clip sonido = null;
         try {
@@ -2966,7 +2999,6 @@ public class ParoNormalEVA extends javax.swing.JFrame {
             contgeneral = contgeneral + 1;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ParoNormal;

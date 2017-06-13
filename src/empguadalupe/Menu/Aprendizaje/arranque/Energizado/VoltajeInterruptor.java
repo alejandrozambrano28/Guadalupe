@@ -11,22 +11,22 @@ import empguadalupe.Menu.Aprendizaje.arranque.Planos.PlanoVoltajeM;
 
 import java.io.IOException;
 
-
-
 /**
  *
  * @author lzambrs
  */
 public class VoltajeInterruptor extends javax.swing.JFrame {
-int contgeneralv=0;
+
+    int contgeneralv = 0;
+
     /**
      * Creates new form BombaRefrigeracion
      */
     public VoltajeInterruptor(int contador) throws IOException {
-        initComponents(); 
-          this.setResizable(false);
-        contgeneralv=contador;
-       
+        initComponents();
+        this.setResizable(false);
+        contgeneralv = contador;
+
     }
 
     /**
@@ -98,35 +98,33 @@ int contgeneralv=0;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           PlanoVoltajeM plano = null;
-                    plano = new PlanoVoltajeM();
-                    plano.setVisible(true);
-                     plano.setLocationRelativeTo(null);
+        PlanoVoltajeM plano = null;
+        plano = new PlanoVoltajeM();
+        plano.setVisible(true);
+        plano.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ControlVoltajeSup condiciones = null;
         condiciones = new ControlVoltajeSup();
-                    condiciones.setVisible(true);
-                     condiciones.setLocationRelativeTo(null);
+        condiciones.setVisible(true);
+        condiciones.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-        if(contgeneralv==15){
-                        Energizado m = new Energizado();
-                           m.setVisible(true);
-                           m.setLocationRelativeTo(null);
-                      }
+        if (contgeneralv == 15) {
+            Energizado m = new Energizado();
+            m.setVisible(true);
+            m.setLocationRelativeTo(null);
+        }
     }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String H[]) throws IOException {
 
-	public static void main(String H[]) throws IOException
-	{
-		
-	}
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

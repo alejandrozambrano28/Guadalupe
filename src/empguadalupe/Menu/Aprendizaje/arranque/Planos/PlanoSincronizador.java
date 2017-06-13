@@ -5,8 +5,6 @@
  */
 package empguadalupe.Menu.Aprendizaje.arranque.Planos;
 
-
-
 /**
  *
  * @author lzambrs
@@ -18,7 +16,7 @@ public class PlanoSincronizador extends javax.swing.JFrame {
      */
     public PlanoSincronizador() {
         initComponents();
-          this.setResizable(false);
+        this.setResizable(false);
     }
 
     /**
