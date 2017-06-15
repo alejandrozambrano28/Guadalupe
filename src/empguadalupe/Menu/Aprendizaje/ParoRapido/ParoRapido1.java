@@ -24,6 +24,7 @@ import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.PotenciaActivam5;
 import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.Reguladorbloqueado;
 import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.posiciondist0;
 import empguadalupe.Menu.Aprendizaje.ParoRapido.Maquina.potenciaReactivam5;
+import empguadalupe.Menu.Menu2;
 
 import java.awt.Color;
 import static java.awt.Color.black;
@@ -40,13 +41,14 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
  *
  * @author lzambrs
  */
-public class ParoRapido extends javax.swing.JFrame {
+public class ParoRapido1 extends javax.swing.JFrame {
     //(tam[0], tam[2] - 12)
 //(tam[1] - a.width - 20, tam[3] - a.height - 20)
 
@@ -103,15 +105,18 @@ public class ParoRapido extends javax.swing.JFrame {
     boolean bbande17 = false;
     boolean bbande18 = false;
     boolean bbande19 = false;
+      ImageIcon romboon, rombooff;
 
     Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19;
 
     /**
      * Creates new form Vista
      */
-    public ParoRapido() {
+    public ParoRapido1() {
 
         initComponents();
+        romboon = new ImageIcon("imgfondo\\rombo.png");
+        rombooff = new ImageIcon("imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         correct1.setBackground(black);
         correct2.setBackground(black);
@@ -212,7 +217,7 @@ public class ParoRapido extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ParoRapido().setVisible(true);
+                new ParoRapido1().setVisible(true);
             }
         });
     }
@@ -1339,6 +1344,7 @@ public class ParoRapido extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de ParoRapido
     private void ParoRapidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoRapidoActionPerformed
+         validarcuantos(0);
         bbande1 = false;
         bbande2 = false;
         bbande3 = false;
@@ -1508,6 +1514,9 @@ public class ParoRapido extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_ParoRapidoActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Menu2 menu = new Menu2();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -1539,7 +1548,7 @@ public class ParoRapido extends javax.swing.JFrame {
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException ex) {
-                            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         //llamado a la ventana de la bomba de refrigeracion
                         BombaRefrigeracion bomba = null;
@@ -1548,7 +1557,7 @@ public class ParoRapido extends javax.swing.JFrame {
                         bomba.setLocationRelativeTo(null);
 
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
 
@@ -1601,14 +1610,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ValvulaAislamiento valvula = null;
                     try {
                         valvula = new ValvulaAislamiento();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     valvula.setVisible(true);
                     valvula.setLocationRelativeTo(null);
@@ -1666,14 +1675,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PotenciaActivam5 valvulaA = null;
 
                     try {
                         valvulaA = new PotenciaActivam5(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     valvulaA.setVisible(true);
                     valvulaA.setLocationRelativeTo(null);
@@ -1733,14 +1742,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     JuntaInflable junta = null;
 
                     try {
                         junta = new JuntaInflable();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     junta.setVisible(true);
                     junta.setLocationRelativeTo(null);
@@ -1798,14 +1807,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     potenciaReactivam5 filtro = null;
 
                     try {
                         filtro = new potenciaReactivam5();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     filtro.setVisible(true);
                     filtro.setLocationRelativeTo(null);
@@ -1865,14 +1874,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     CerrarValvulaEsferica valvulaE = null;
                     try {
                         valvulaE = new CerrarValvulaEsferica();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     valvulaE.setVisible(true);
                     valvulaE.setLocationRelativeTo(null);
@@ -1930,14 +1939,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     AplicarFrenosParoRapido frenos = null;
                     try {
                         frenos = new AplicarFrenosParoRapido();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     frenos.setVisible(true);
                     frenos.setLocationRelativeTo(null);
@@ -1992,14 +2001,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     LubricacionForzadaOn lubricar = null;
                     try {
                         lubricar = new LubricacionForzadaOn();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     lubricar.setVisible(true);
                     lubricar.setLocationRelativeTo(null);
@@ -2034,7 +2043,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 lubricar = new LubricacionForzadaOn();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             lubricar.setVisible(true);
             lubricar.setLocationRelativeTo(null);
@@ -2068,14 +2077,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     DesaplicarFrenos frenosd = null;
                     try {
                         frenosd = new DesaplicarFrenos();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     frenosd.setVisible(true);
                     frenosd.setLocationRelativeTo(null);
@@ -2110,7 +2119,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 frenosd = new DesaplicarFrenos();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             frenosd.setVisible(true);
             frenosd.setLocationRelativeTo(null);
@@ -2143,14 +2152,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     Reguladorbloqueado reguladordes = null;
                     try {
                         reguladordes = new Reguladorbloqueado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     reguladordes.setVisible(true);
                     reguladordes.setLocationRelativeTo(null);
@@ -2206,14 +2215,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     ReguladorEnergizado reguladorene = null;
                     try {
                         reguladorene = new ReguladorEnergizado(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     reguladorene.setVisible(true);
                     reguladorene.setLocationRelativeTo(null);
@@ -2274,14 +2283,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     VelocidadM90 velocidad = null;
                     try {
                         velocidad = new VelocidadM90(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     velocidad.setVisible(true);
                     velocidad.setLocationRelativeTo(null);
@@ -2335,14 +2344,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptordeCampo interruptor = null;
                     try {
                         interruptor = new InterruptordeCampo(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
@@ -2397,14 +2406,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LubricacionForzadaOff lubrica = null;
                     try {
                         lubrica = new LubricacionForzadaOff(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     lubrica.setVisible(true);
                     lubrica.setLocationRelativeTo(null);
@@ -2443,7 +2452,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 lubrica = new LubricacionForzadaOff(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             lubrica.setVisible(true);
             lubrica.setLocationRelativeTo(null);
@@ -2475,14 +2484,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     posiciondist0 interruptor = null;
                     try {
                         interruptor = new posiciondist0();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     interruptor.setVisible(true);
                     interruptor.setLocationRelativeTo(null);
@@ -2536,14 +2545,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     Velocidadm10 sincro = null;
                     try {
                         sincro = new Velocidadm10(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     // sincro.setSize(734, 494);
                     sincro.setVisible(true);
@@ -2604,14 +2613,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     Velocidadm1 unidad = null;
                     try {
                         unidad = new Velocidadm1(contador);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //unidad.setSize(734, 494);
                     unidad.setVisible(true);
@@ -2670,14 +2679,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     InterruptoGeneradorCerrado interruptor = null;
                     try {
                         interruptor = new InterruptoGeneradorCerrado();
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     // interruptor.setSize(734, 494);
                     interruptor.setVisible(true);
@@ -2736,14 +2745,14 @@ public class ParoRapido extends javax.swing.JFrame {
                     try {
                         Thread.sleep(500);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     LimitadorApertura0 limite = null;
                     try {
                         limite = new LimitadorApertura0(contgeneral);
                     } catch (IOException ex) {
-                        Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //limite.setSize(734, 494);
                     limite.setVisible(true);
@@ -2780,7 +2789,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 valvulaA = new PotenciaActivam5(contador);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             valvulaA.setVisible(true);
             valvulaA.setLocationRelativeTo(null);
@@ -2793,7 +2802,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 valvulaE = new CerrarValvulaEsferica();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             valvulaE.setVisible(true);
             valvulaE.setLocationRelativeTo(null);
@@ -2807,7 +2816,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 interruptor = new posiciondist0();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             interruptor.setVisible(true);
             interruptor.setLocationRelativeTo(null);
@@ -2820,7 +2829,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 limite = new LimitadorApertura0(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             //limite.setSize(734, 494);
             limite.setVisible(true);
@@ -2852,7 +2861,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 velocidad = new VelocidadM90(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             velocidad.setVisible(true);
             velocidad.setLocationRelativeTo(null);
@@ -2866,7 +2875,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 frenos = new AplicarFrenosParoRapido();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             frenos.setVisible(true);
             frenos.setLocationRelativeTo(null);
@@ -2880,7 +2889,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 filtro = new potenciaReactivam5();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             filtro.setVisible(true);
             filtro.setLocationRelativeTo(null);
@@ -2893,7 +2902,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 valvula = new ValvulaAislamiento();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             valvula.setVisible(true);
             valvula.setLocationRelativeTo(null);
@@ -2906,7 +2915,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 bomba = new BombaRefrigeracion();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             bomba.setVisible(true);
             bomba.setLocationRelativeTo(null);
@@ -2920,7 +2929,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 reguladorene = new ReguladorEnergizado(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             reguladorene.setVisible(true);
             reguladorene.setLocationRelativeTo(null);
@@ -2933,7 +2942,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 reguladordes = new Reguladorbloqueado(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             reguladordes.setVisible(true);
             reguladordes.setLocationRelativeTo(null);
@@ -2947,7 +2956,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 junta = new JuntaInflable();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             junta.setVisible(true);
             junta.setLocationRelativeTo(null);
@@ -2960,7 +2969,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 interruptor = new InterruptordeCampo(contgeneral);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             interruptor.setVisible(true);
             interruptor.setLocationRelativeTo(null);
@@ -2973,7 +2982,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 sincro = new Velocidadm10(contador);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             // sincro.setSize(734, 494);
             sincro.setVisible(true);
@@ -2987,7 +2996,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 unidad = new Velocidadm1(contador);
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             //unidad.setSize(734, 494);
             unidad.setVisible(true);
@@ -3001,7 +3010,7 @@ public class ParoRapido extends javax.swing.JFrame {
             try {
                 interruptor = new InterruptoGeneradorCerrado();
             } catch (IOException ex) {
-                Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
             }
             // interruptor.setSize(734, 494);
             interruptor.setVisible(true);
@@ -3014,24 +3023,24 @@ public class ParoRapido extends javax.swing.JFrame {
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("src\\sonidos\\Track_No01_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(1000); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
     }
@@ -3041,24 +3050,24 @@ public class ParoRapido extends javax.swing.JFrame {
         try {
             sonido = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         File a = new File("src\\sonidos\\Well_1.wav");
         try {
             sonido.open(AudioSystem.getAudioInputStream(a));
         } catch (UnsupportedAudioFileException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         } catch (LineUnavailableException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.start();
         System.out.println("Reproduciendo 10s. de sonido...");
         try {
             Thread.sleep(500); // 1000 milisegundos (10 segundos)
         } catch (InterruptedException ex) {
-            Logger.getLogger(ParoRapido.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParoRapido1.class.getName()).log(Level.SEVERE, null, ex);
         }
         sonido.close();
     }
@@ -3099,7 +3108,9 @@ public class ParoRapido extends javax.swing.JFrame {
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
-
+            case 0:
+                jLabel13.setIcon(romboon);
+                break;
             case 2:
                 Plabel1.setBackground(green);
                 break;
@@ -3129,6 +3140,7 @@ public class ParoRapido extends javax.swing.JFrame {
                 break;
             case 19:
                 Plabel11.setBackground(green);
+                jLabel15.setIcon(romboon);
                 break;
 
         }

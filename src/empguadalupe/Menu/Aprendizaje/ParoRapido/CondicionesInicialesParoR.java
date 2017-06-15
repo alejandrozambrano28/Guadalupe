@@ -43,6 +43,7 @@ public class CondicionesInicialesParoR extends javax.swing.JFrame {
         jLabel104 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N

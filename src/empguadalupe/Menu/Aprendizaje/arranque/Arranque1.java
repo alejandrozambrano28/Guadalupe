@@ -46,6 +46,7 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import empguadalupe.Menu.Aprendizaje.arranque.Sincronizado.VoltajeM63;
+import empguadalupe.Menu.Menu2;
 
 import javax.swing.ImageIcon;
 
@@ -1746,6 +1747,9 @@ public class Arranque1 extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_arranqueNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Menu2 menu = new Menu2();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

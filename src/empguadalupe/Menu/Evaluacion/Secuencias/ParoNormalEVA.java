@@ -10,28 +10,9 @@ import empguadalupe.Menu.Evaluacion.planos.PlanoS2evaPN;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS1evaPN;
 import empguadalupe.Menu.Evaluacion.planos.PlanoS3evaPN;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.*;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.CerrarValvulaEsferica;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.AplicarFrenosParoNormal;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.BombaRefrigeracion;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.DesaplicarFrenos;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.JuntaInflable;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.LubricacionForzadaOn;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Reguladorbloqueado;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.ReguladorEnergizado;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.ValvulaAislamiento;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.VelocidadM90;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Velocidadm1;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.EnMarcha.Velocidadm10;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Energizado.InterruptordeCampo;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Energizado.LubricacionForzadaOff;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.InterruptoGeneradorCerrado;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.LimitadorApertura0;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.PotenciaActivam5;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.posiciondist0;
-import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.potenciaReactivam5;
+
 import empguadalupe.Menu.Evaluacion.Menu.Evaluacion;
-import static empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva.preguntas;
-import static empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva.pu2;
+
 
 import java.awt.Color;
 import static java.awt.Color.black;
@@ -1340,7 +1321,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         icono.setToolTipText("");
         icono.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(icono);
-        icono.setBounds(0, 0, 1440, 870);
+        icono.setBounds(10, 0, 1430, 870);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1440, 840));
 
@@ -1353,7 +1334,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         Minuto = 0;
         Hora = 0;
         calendario = new GregorianCalendar();
-        jButton1.enable();
+        jButton1.setEnabled(true);
         if (bandet == true) {
             timer.restart();
             bandet = false;
@@ -1557,15 +1538,18 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_ParoNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Evaluacion eva = new Evaluacion();
+        eva.setVisible(true);
+        eva.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
     public static int[] pu2 = new int[67];
     public static int[] preguntas = new int[67];
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
-         if (bande17=true){
-        mover(boton17);
- }
+        if (bande17 = true) {
+            mover(boton17);
+        }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -1607,7 +1591,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(1);
+                    plano = new PlanoS1evaPN(1,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -1625,9 +1609,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
-       if (bande16=true){
-        mover(boton16);
- }
+        if (bande16 = true) {
+            mover(boton16);
+        }
 
     }//GEN-LAST:event_boton16MouseDragged
 
@@ -1673,7 +1657,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(3);
+                    plano = new PlanoS1evaPN(3,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1690,9 +1674,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton16MouseReleased
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
-       if (bande1=true){
-        mover(boton1);
- }
+        if (bande1 = true) {
+            mover(boton1);
+        }
 
     }//GEN-LAST:event_boton1MouseDragged
 
@@ -1737,7 +1721,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS3evaPN plano = null;
-                    plano = new PlanoS3evaPN();
+                    plano = new PlanoS3evaPN(4,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1754,9 +1738,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton1MouseReleased
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
-         if (bande18=true){
-        mover(boton18);
- }
+        if (bande18 = true) {
+            mover(boton18);
+        }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -1799,7 +1783,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(5);
+                    plano = new PlanoS1evaPN(5,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -1818,9 +1802,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
 
-        if (bande2=true){
-        mover(boton2);
- }
+        if (bande2 = true) {
+            mover(boton2);
+        }
 
     }//GEN-LAST:event_boton2MouseDragged
 
@@ -1865,7 +1849,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS3evaPN plano = null;
-                    plano = new PlanoS3evaPN();
+                    plano = new PlanoS3evaPN(4,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -1883,9 +1867,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton2MouseReleased
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
-        if (bande10=true){
-        mover(boton10);
- }
+        if (bande10 = true) {
+            mover(boton10);
+        }
     }//GEN-LAST:event_boton10MouseDragged
 
     private void boton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseEntered
@@ -1924,7 +1908,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(7);
+                    plano = new PlanoS1evaPN(7,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1941,9 +1925,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton10MouseReleased
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
-      if (bande13=true){
-        mover(boton13);
- }
+        if (bande13 = true) {
+            mover(boton13);
+        }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -1983,7 +1967,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(8);
+                    plano = new PlanoS1evaPN(8,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2001,9 +1985,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton13MouseReleased
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
- if (bande9=true){
-        mover(boton9);
- }
+        if (bande9 = true) {
+            mover(boton9);
+        }
     }//GEN-LAST:event_boton9MouseDragged
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
@@ -2041,7 +2025,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS2evaPN plano = null;
-                    plano = new PlanoS2evaPN(2);
+                    plano = new PlanoS2evaPN(2,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2064,9 +2048,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
 
-        if (bande19=true){
-        mover(boton19);
- }
+        if (bande19 = true) {
+            mover(boton19);
+        }
     }//GEN-LAST:event_boton19MouseDragged
 
     private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
@@ -2105,7 +2089,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(8);
+                    plano = new PlanoS1evaPN(8,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2129,9 +2113,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
 
-      if (bande5=true){
-        mover(boton5);
- }
+        if (bande5 = true) {
+            mover(boton5);
+        }
 
     }//GEN-LAST:event_boton5MouseDragged
 
@@ -2154,7 +2138,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     bbande5 = true;
                     generarsonidowell();
                     contGError--;
-                    preguntas[15] = 1;
+                    preguntas[5] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton5.setLocation(tam[1] - a.width, tam[3] - a.height);
@@ -2171,7 +2155,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2182,16 +2166,16 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     boton5.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[2] = 1;
+                    pu2[5] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton5MouseReleased
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
-        if (bande6=true){
-        mover(boton6);
- }
+        if (bande6 = true) {
+            mover(boton6);
+        }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2235,7 +2219,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2254,9 +2238,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
 
-        if (bande8=true){
-        mover(boton8);
- }
+        if (bande8 = true) {
+            mover(boton8);
+        }
 
     }//GEN-LAST:event_boton8MouseDragged
 
@@ -2282,7 +2266,8 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-
+                    contGError--;
+                    preguntas[8] = 1;
                     boton8.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
@@ -2297,7 +2282,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,3);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2315,9 +2300,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8MouseReleased
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
-        if (bande4=true){
-        mover(boton4);
- }
+        if (bande4 = true) {
+            mover(boton4);
+        }
     }//GEN-LAST:event_boton4MouseDragged
 
     private void boton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseEntered
@@ -2338,6 +2323,8 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3]) && (contgeneral >= 3)) {
                     generarsonidowell();
                     bbande4 = true;
+                    contGError--;
+                    preguntas[4] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton4.setLocation(tam[1] - a.width, tam[3] - a.height);
@@ -2354,7 +2341,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2evaPN plano = null;
-                    plano = new PlanoS2evaPN(1);
+                    plano = new PlanoS2evaPN(1,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2372,9 +2359,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
 
-         if (bande15=true){
-        mover(boton15);
- }
+        if (bande15 = true) {
+            mover(boton15);
+        }
 
     }//GEN-LAST:event_boton15MouseDragged
 
@@ -2418,7 +2405,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2evaPN plano = null;
-                    plano = new PlanoS2evaPN(2);
+                    plano = new PlanoS2evaPN(2,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2440,9 +2427,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
 
-        if (bande11=true){
-        mover(boton11);
- }
+        if (bande11 = true) {
+            mover(boton11);
+        }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2480,7 +2467,10 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     //llamado a la ventana de la bomba de refrigeracion
-
+                        PlanoS1evaPN plano = null;
+                    plano = new PlanoS1evaPN(6,4);
+                    plano.setVisible(true);
+                    plano.setLocationRelativeTo(null);    
                 } else {
                     System.out.println("incorrecto");
                     boton11.setLocation(location11);
@@ -2496,9 +2486,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
 
-        if (bande12=true){
-        mover(boton12);
- }
+        if (bande12 = true) {
+            mover(boton12);
+        }
     }//GEN-LAST:event_boton12MouseDragged
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
@@ -2541,7 +2531,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,5);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2558,9 +2548,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton12MouseReleased
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
-        if (bande14=true){
-        mover(boton14);
- }
+        if (bande14 = true) {
+            mover(boton14);
+        }
     }//GEN-LAST:event_boton14MouseDragged
 
     private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
@@ -2603,7 +2593,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2620,9 +2610,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14MouseReleased
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
- if (bande3=true){
-        mover(boton3);
- }
+        if (bande3 = true) {
+            mover(boton3);
+        }
     }//GEN-LAST:event_boton3MouseDragged
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
@@ -2665,7 +2655,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3evaPN plano = null;
-                    plano = new PlanoS3evaPN();
+                    plano = new PlanoS3evaPN(3,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2682,9 +2672,9 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3MouseReleased
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
- if (bande7=true){
-        mover(boton7);
- }
+        if (bande7 = true) {
+            mover(boton7);
+        }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2723,7 +2713,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPN plano = null;
-                    plano = new PlanoS1evaPN(6);
+                    plano = new PlanoS1evaPN(6,2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {

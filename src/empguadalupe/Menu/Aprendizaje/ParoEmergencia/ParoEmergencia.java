@@ -22,6 +22,8 @@ import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.LubricacionForzadaOf
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.InterruptoGeneradorCerrado;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.LimitadorApertura0;
 import empguadalupe.Menu.Aprendizaje.ParoEmergencia.Maquina.posiciondist0;
+import empguadalupe.Menu.Menu1;
+import empguadalupe.Menu.Menu2;
 import java.awt.Color;
 import static java.awt.Color.black;
 import static java.awt.Color.green;
@@ -38,6 +40,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
@@ -99,6 +102,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     boolean bbande17 = false;
     boolean bbande18 = false;
     boolean bbande19 = false;
+    ImageIcon romboon, rombooff;
 
     Rectangle rec1, rec2, rec3, rec4, rec5, rec6, rec7, rec8, rec9, rec10, rec11, rec12, rec13, rec14, rec15, rec16, rec17, rec18, rec19;
 
@@ -108,6 +112,8 @@ public class ParoEmergencia extends javax.swing.JFrame {
     public ParoEmergencia() {
         initComponents();
         this.setResizable(false);
+        romboon = new ImageIcon("src\\imgfondo\\rombo.png");
+        rombooff = new ImageIcon("src\\imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         convertiranegro();
         correct3.setBackground(black);
@@ -1325,6 +1331,7 @@ public class ParoEmergencia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 //boton principal para arrancar la secuencia de ParoEmergencia
     private void ParoEMERGENCIAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoEMERGENCIAActionPerformed
+        validarcuantos(0);
         bbande1 = false;
         bbande2 = false;
         bbande3 = false;
@@ -1478,6 +1485,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_ParoEMERGENCIAActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Menu2 menu = new Menu2();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -2900,6 +2910,9 @@ public class ParoEmergencia extends javax.swing.JFrame {
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
+             case 0:
+                jLabel13.setIcon(romboon);
+                break;
             case 6:
                 Plabel5.setBackground(green);
                 break;
@@ -2920,7 +2933,10 @@ public class ParoEmergencia extends javax.swing.JFrame {
                 break;
             case 17:
                 Plabel11.setBackground(green);
+                jLabel15.setIcon(romboon);
                 break;
+            
+                
         }
 
     }

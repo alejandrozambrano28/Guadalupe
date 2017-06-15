@@ -23,15 +23,44 @@ import javax.swing.JOptionPane;
 public class PlanoS3evaPN extends javax.swing.JFrame {
 
     int contErrores;
+    boolean bande1 = false;
+    boolean bande2 = false;
+    boolean bande3 = false;
+    boolean bande4 = false;
+  int nument=0;
 
     /**
      * Creates new form PlanoBomba
      */
-    public PlanoS3evaPN() {
+    public PlanoS3evaPN(int numeroboton,int numentrada) {
         initComponents();
         this.setResizable(false);
-        JButton filtro = new JButton();
 
+          nument=numentrada;
+
+
+        switch (numeroboton) {
+            case 1:
+                bande1 = true;
+                break;
+            case 2:
+                bande2 = true;
+
+                break;
+            case 3:
+                bande3 = true;
+
+                break;
+            case 4:
+                bande4 = true;
+                break;
+
+        }
+
+    }
+
+    public PlanoS3evaPN() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -45,8 +74,13 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         bomba = new javax.swing.JButton();
+        bomba1 = new javax.swing.JButton();
+        bomba2 = new javax.swing.JButton();
+        bomba3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 formMousePressed(evt);
@@ -55,7 +89,7 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1Operador.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
@@ -63,17 +97,51 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
                 bombaActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 90, 50));
+        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 30, 30));
+
+        bomba1.setText("jButton1");
+        bomba1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, 70));
+
+        bomba2.setText("jButton2");
+        bomba2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 30, 30));
+
+        bomba3.setText("jButton3");
+        bomba3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bomba3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bomba3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 270, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
-        ParoNormalEVA arra = new ParoNormalEVA();
-        arra.pu2[11] = contErrores;
-        arra.preguntas[11] = 1;
-        JOptionPane.showMessageDialog(rootPane, "correcto");
-        dispose();
+        if (bande1 == true) {
+        
+        } else {
+
+            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+            setCursor(cur);
+            try {
+                Thread.sleep(300); // 1000 milisegundos (10 segundos)
+
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        }
     }//GEN-LAST:event_bombaActionPerformed
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
@@ -89,6 +157,68 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
         }
         this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
     }//GEN-LAST:event_formMousePressed
+
+    private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
+          if (bande2 == true) {
+       
+        } else {
+
+            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+            setCursor(cur);
+            try {
+                Thread.sleep(300); // 1000 milisegundos (10 segundos)
+
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        }
+    }//GEN-LAST:event_bomba1ActionPerformed
+
+    private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
+   if (bande3 == true) {
+            ParoNormalEVA arra = new ParoNormalEVA();
+            arra.pu2[36+nument] = contErrores;
+            arra.preguntas[36+nument] = 1;
+            JOptionPane.showMessageDialog(rootPane, "correcto");
+            dispose();
+        } else {
+
+            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+            setCursor(cur);
+            try {
+                Thread.sleep(300); // 1000 milisegundos (10 segundos)
+
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba2ActionPerformed
+
+    private void bomba3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba3ActionPerformed
+   if (bande4 == true) {
+            ParoNormalEVA arra = new ParoNormalEVA();
+            arra.pu2[37+nument] = contErrores;
+            arra.preguntas[37+nument] = 1;
+            JOptionPane.showMessageDialog(rootPane, "correcto");
+            dispose();
+        } else {
+
+            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+            setCursor(cur);
+            try {
+                Thread.sleep(300); // 1000 milisegundos (10 segundos)
+
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ParoNormalEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_bomba3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,133 +247,7 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
+     
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -254,6 +258,9 @@ public class PlanoS3evaPN extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bomba;
+    private javax.swing.JButton bomba1;
+    private javax.swing.JButton bomba2;
+    private javax.swing.JButton bomba3;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

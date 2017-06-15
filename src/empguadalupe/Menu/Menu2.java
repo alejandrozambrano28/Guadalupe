@@ -3,8 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package empguadalupe.Menu.Evaluacion.Menu;
+package empguadalupe.Menu;
 
+import empguadalupe.Menu.Aprendizaje.ParoEmergencia.ParoEmergencia;
+import empguadalupe.Menu.Aprendizaje.ParoNormal.ParoNormal;
+import empguadalupe.Menu.Aprendizaje.ParoRapido.ParoRapido1;
+import empguadalupe.Menu.Aprendizaje.arranque.Arranque1;
+import empguadalupe.Menu.Evaluacion.Menu.*;
 import empguadalupe.Menu.Evaluacion.Secuencias.ArranqueEva;
 import empguadalupe.Menu.Evaluacion.Secuencias.ParoEmergenciaEVA;
 import empguadalupe.Menu.Evaluacion.Secuencias.ParoNormalEVA;
@@ -19,12 +24,12 @@ import java.util.logging.Logger;
  *
  * @author lzambrs
  */
-public class Evaluacion extends javax.swing.JFrame {
+public class Menu2 extends javax.swing.JFrame {
 
     /**
      * Creates new form Evaluacion
      */
-    public Evaluacion() {
+    public Menu2() {
         initComponents();
     }
 
@@ -37,7 +42,6 @@ public class Evaluacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -46,21 +50,12 @@ public class Evaluacion extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setText("CALIFICACION TOTAL");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 145, -1));
 
         jButton2.setText("ARRANQUE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -98,47 +93,45 @@ public class Evaluacion extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 290));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 250));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Resultado res = new Resultado();
-        res.setVisible(true);
-        dispose();
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ArranqueEva arr = new ArranqueEva();
-        arr.setVisible(true);
-        ayudaaprendizaje ayuda = null;
-        Metodos met = new Metodos();
-        try {
-            met.guardaDatos("Arranque", 1);
+        try {                                         
+            Arranque1 arr = new Arranque1();
+            arr.setVisible(true);
+            ayudaaprendizaje ayuda = null;
+            Metodos met = new Metodos();
+            try {
+                met.guardaDatos("Arranque", 1);
+            } catch (IOException ex) {
+                Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                ayuda = new ayudaaprendizaje();
+            } catch (IOException ex) {
+                Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            ayuda.setVisible(true);
+            ayuda.setLocationRelativeTo(null);// TODO add your handling code here:
+            dispose();
         } catch (IOException ex) {
-            Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
         }
-        try {
-            ayuda = new ayudaaprendizaje();
-        } catch (IOException ex) {
-            Logger.getLogger(Menu1.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        ayuda.setVisible(true);
-        ayuda.setLocationRelativeTo(null);// TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ParoNormalEVA pne = new ParoNormalEVA();
+        ParoNormal pne = new ParoNormal();
         pne.setVisible(true);
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
             met.guardaDatos("Paro Normal", 1);
         } catch (IOException ex) {
-            Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             ayuda = new ayudaaprendizaje();
@@ -151,14 +144,14 @@ public class Evaluacion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ParoRapidoEVA pne = new ParoRapidoEVA();
+        ParoRapido1 pne = new ParoRapido1();
         pne.setVisible(true);
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
             met.guardaDatos("Paro Rapido", 1);
         } catch (IOException ex) {
-            Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             ayuda = new ayudaaprendizaje();
@@ -171,14 +164,14 @@ public class Evaluacion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        ParoEmergenciaEVA pne = new ParoEmergenciaEVA();
+        ParoEmergencia pne = new ParoEmergencia();
         pne.setVisible(true);
         ayudaaprendizaje ayuda = null;
         Metodos met = new Metodos();
         try {
             met.guardaDatos("Paro Emergencia", 1);
         } catch (IOException ex) {
-            Logger.getLogger(Evaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Menu2.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             ayuda = new ayudaaprendizaje();
@@ -213,26 +206,26 @@ public class Evaluacion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Evaluacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Evaluacion().setVisible(true);
+                new Menu2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

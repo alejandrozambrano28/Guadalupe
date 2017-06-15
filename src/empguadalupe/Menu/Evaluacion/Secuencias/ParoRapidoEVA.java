@@ -1363,7 +1363,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
         Minuto = 0;
         Hora = 0;
         calendario = new GregorianCalendar();
-        jButton1.enable();
+        jButton1.setEnabled(true);
         if (bandet == true) {
             timer.restart();
             bandet = false;
@@ -1569,13 +1569,16 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_ParoRapidoActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Evaluacion eva = new Evaluacion();
+        eva.setVisible(true);
+        eva.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
- if (bande17=true){
-        mover(boton17);
- }
+        if (bande17 = true) {
+            mover(boton17);
+        }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -1615,7 +1618,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(1);
+                    plano = new PlanoS1evaPR(1,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1632,9 +1635,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
- if (bande16=true){
-        mover(boton16);
- }
+        if (bande16 = true) {
+            mover(boton16);
+        }
     }//GEN-LAST:event_boton16MouseDragged
 
     private void boton16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseEntered
@@ -1677,7 +1680,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(3);
+                    plano = new PlanoS1evaPR(3,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1695,9 +1698,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
 
-         if (bande1=true){
-        mover(boton1);
- }
+        if (bande1 = true) {
+            mover(boton1);
+        }
 
     }//GEN-LAST:event_boton1MouseDragged
 
@@ -1739,6 +1742,10 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     } catch (InterruptedException ex) {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
+                     PlanoS3evaPR plano = null;
+                    plano = new PlanoS3evaPR(4,0);
+                    plano.setVisible(true);
+                    plano.setLocationRelativeTo(null);
 
                 } else {
                     System.out.println("incorrecto");
@@ -1755,9 +1762,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
 
-        if (bande18=true){
-        mover(boton18);
- }
+        if (bande18 = true) {
+            mover(boton18);
+        }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -1801,7 +1808,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(5);
+                    plano = new PlanoS1evaPR(5,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -1820,9 +1827,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
 
-        if (bande2=true){
-        mover(boton2);
- }
+        if (bande2 = true) {
+            mover(boton2);
+        }
 
     }//GEN-LAST:event_boton2MouseDragged
 
@@ -1864,7 +1871,10 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     } catch (InterruptedException ex) {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
-
+                      PlanoS3evaPR plano = null;
+                    plano = new PlanoS3evaPR(4,1);
+                    plano.setVisible(true);
+                    plano.setLocationRelativeTo(null);
                 } else {
                     System.out.println("incorrecto");
                     boton2.setLocation(location2);
@@ -1880,9 +1890,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
 
-         if (bande10=true){
-        mover(boton10);
- }
+        if (bande10 = true) {
+            mover(boton10);
+        }
 
     }//GEN-LAST:event_boton10MouseDragged
 
@@ -1921,7 +1931,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                         Logger.getLogger(ParoRapidoEVA.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(7);
+                    plano = new PlanoS1evaPR(7,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -1939,9 +1949,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
 
-    if (bande13=true){
-        mover(boton13);
- }
+        if (bande13 = true) {
+            mover(boton13);
+        }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -1983,7 +1993,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(8);
+                    plano = new PlanoS1evaPR(8,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2002,9 +2012,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
 
-        if (bande9=true){
-        mover(boton9);
- }
+        if (bande9 = true) {
+            mover(boton9);
+        }
 
     }//GEN-LAST:event_boton9MouseDragged
 
@@ -2044,7 +2054,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS2evaPR plano = null;
-                    plano = new PlanoS2evaPR(2);
+                    plano = new PlanoS2evaPR(2,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2068,9 +2078,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
 
-        if (bande19=true){
-        mover(boton19);
- }
+        if (bande19 = true) {
+            mover(boton19);
+        }
 
     }//GEN-LAST:event_boton19MouseDragged
 
@@ -2112,7 +2122,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(8);
+                    plano = new PlanoS1evaPR(8,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2135,9 +2145,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
 
-       if (bande5=true){
-        mover(boton5);
- }
+        if (bande5 = true) {
+            mover(boton5);
+        }
     }//GEN-LAST:event_boton5MouseDragged
 
     private void boton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseEntered
@@ -2176,7 +2186,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2195,9 +2205,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
 
-         if (bande6=true){
-        mover(boton6);
- }
+        if (bande6 = true) {
+            mover(boton6);
+        }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2241,7 +2251,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2260,9 +2270,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
 
-        if (bande8=true){
-        mover(boton8);
- }
+        if (bande8 = true) {
+            mover(boton8);
+        }
 
     }//GEN-LAST:event_boton8MouseDragged
 
@@ -2305,7 +2315,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,3);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
 
@@ -2324,9 +2334,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
 
-        if (bande4=true){
-        mover(boton4);
- }
+        if (bande4 = true) {
+            mover(boton4);
+        }
 
     }//GEN-LAST:event_boton4MouseDragged
 
@@ -2366,7 +2376,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2evaPR plano = null;
-                    plano = new PlanoS2evaPR(1);
+                    plano = new PlanoS2evaPR(1,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2384,9 +2394,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
 
-     if (bande15=true){
-        mover(boton15);
- }
+        if (bande15 = true) {
+            mover(boton15);
+        }
 
     }//GEN-LAST:event_boton15MouseDragged
 
@@ -2431,7 +2441,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2evaPR plano = null;
-                    plano = new PlanoS2evaPR(2);
+                    plano = new PlanoS2evaPR(2,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2454,9 +2464,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
 
-        if (bande11=true){
-        mover(boton11);
- }
+        if (bande11 = true) {
+            mover(boton11);
+        }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2495,7 +2505,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,4);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2513,9 +2523,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
 
-        if (bande12=true){
-        mover(boton12);
- }
+        if (bande12 = true) {
+            mover(boton12);
+        }
 
     }//GEN-LAST:event_boton12MouseDragged
 
@@ -2559,7 +2569,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,5);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2577,9 +2587,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
 
-         if (bande14=true){
-        mover(boton14);
- }
+        if (bande14 = true) {
+            mover(boton14);
+        }
 
     }//GEN-LAST:event_boton14MouseDragged
 
@@ -2625,7 +2635,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,6);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2643,9 +2653,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
 
-        if (bande3=true){
-        mover(boton3);
- }
+        if (bande3 = true) {
+            mover(boton3);
+        }
 
     }//GEN-LAST:event_boton3MouseDragged
 
@@ -2689,7 +2699,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3evaPR plano = null;
-                    plano = new PlanoS3evaPR();
+                    plano = new PlanoS3evaPR(3,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2707,9 +2717,9 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
 
-       if (bande7=true){
-        mover(boton7);
- }
+        if (bande7 = true) {
+            mover(boton7);
+        }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2748,7 +2758,7 @@ public class ParoRapidoEVA extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaPR plano = null;
-                    plano = new PlanoS1evaPR(6);
+                    plano = new PlanoS1evaPR(6,2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {

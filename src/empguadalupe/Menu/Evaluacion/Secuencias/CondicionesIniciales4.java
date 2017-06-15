@@ -72,6 +72,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
         jLabel104 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -283,7 +284,7 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         if (contadorGeneral == 1) {
             ArranqueEva arr = new ArranqueEva();
-            arr.preguntas[15] = contadorGeneral;
+            arr.preguntas[28] = contadorGeneral;
             dispose();
         } else {
             int dialogButton = JOptionPane.showConfirmDialog(rootPane, "faltan preguntas por responder, desea continuar con la evaluacion de las condiciones");
@@ -291,8 +292,8 @@ public class CondicionesIniciales4 extends javax.swing.JFrame {
 
             } else {
                 ArranqueEva arr = new ArranqueEva();
-                arr.pu2[15] = contErrores;
-                arr.preguntas[15] = 0;
+                arr.pu2[28] = contErrores;
+                arr.preguntas[28] = 0;
                 dispose();
             }
         } // TODO add your handling code here:

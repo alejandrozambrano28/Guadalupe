@@ -167,6 +167,7 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
         jLabel104 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -944,8 +945,8 @@ public class CondicionesInicialesEva extends javax.swing.JFrame {
             CondicionesIniciales2 condi2 = new CondicionesIniciales2();
             condi2.setVisible(true);
             ArranqueEva arra = new ArranqueEva();
-            arra.pu2[12] = contErrores;
-            arra.preguntas[12] = 6;
+            arra.pu2[25] = contErrores;
+            arra.preguntas[25] = 6;
             dispose();
         } else {
             close();

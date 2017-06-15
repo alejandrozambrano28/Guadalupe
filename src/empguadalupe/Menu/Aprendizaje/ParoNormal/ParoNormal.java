@@ -24,6 +24,7 @@ import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.LimitadorApertura0;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.PotenciaActivam5;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.posiciondist0;
 import empguadalupe.Menu.Aprendizaje.ParoNormal.Sincronizado.potenciaReactivam5;
+import empguadalupe.Menu.Menu2;
 
 import java.awt.Color;
 import static java.awt.Color.black;
@@ -1310,8 +1311,9 @@ public class ParoNormal extends javax.swing.JFrame {
     private void ParoNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ParoNormalActionPerformed
         //coloca los botones macho en orden aleatorio (el 1130 es la posicion de manera horizontal en pixeles)
         convertiranegro();
+        validarcuantos(0);
         Stack<Integer> numero = generaNumeroAleatorio(170, 700);
-        contador = 0;
+        contador = 0; 
         contgeneral = 0;
         CondicionesInicialesParoN condi = new CondicionesInicialesParoN();
         condi.setVisible(true);
@@ -1477,6 +1479,9 @@ public class ParoNormal extends javax.swing.JFrame {
         superbande = true;
     }//GEN-LAST:event_ParoNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+         Menu2 menu = new Menu2();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -3039,7 +3044,9 @@ public class ParoNormal extends javax.swing.JFrame {
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
-
+            case 0: 
+                jLabel17.setIcon(romboon);
+                break;
             case 2:
                 Plabel1.setBackground(green);
                 break;

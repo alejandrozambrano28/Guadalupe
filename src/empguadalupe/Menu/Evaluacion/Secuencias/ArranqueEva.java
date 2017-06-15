@@ -104,8 +104,8 @@ public class ArranqueEva extends javax.swing.JFrame {
         initComponents();
 
         convertiranegro();
-        romboon = new ImageIcon("src\\imgdiseño\\rombo.png");
-        rombooff = new ImageIcon("src\\imgdiseño\\rombooff.png");
+        romboon = new ImageIcon("src\\imgfondo\\rombo.png");
+        rombooff = new ImageIcon("src\\imgfondo\\rombooff.png");
         rec1 = label1.getBounds();
         rec2 = label2.getBounds();
         rec3 = label3.getBounds();
@@ -1160,7 +1160,7 @@ public class ArranqueEva extends javax.swing.JFrame {
             }
         });
         jPanel1.add(boton13);
-        boton13.setBounds(1130, 430, 240, 23);
+        boton13.setBounds(1130, 430, 260, 23);
 
         boton14.setBackground(new java.awt.Color(0, 0, 0));
         boton14.setForeground(new java.awt.Color(255, 255, 255));
@@ -1455,7 +1455,7 @@ public class ArranqueEva extends javax.swing.JFrame {
     int dia, mes, año, hora, minutos, segundos;
     int Segundo, Minuto, Hora, cuantos;
     private void arranqueNormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arranqueNormalActionPerformed
-
+        validarcuantos(0);
         convertiranegro();
         Segundo = 0;
         Minuto = 0;
@@ -1681,13 +1681,16 @@ public class ArranqueEva extends javax.swing.JFrame {
 
     }//GEN-LAST:event_arranqueNormalActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Evaluacion eva = new Evaluacion();
+        eva.setVisible(true);
+        eva.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void boton1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseDragged
-        if (bande1=true){
-        mover(boton1);
- }
+        if (bande1 = true) {
+            mover(boton1);
+        }
 
     }//GEN-LAST:event_boton1MouseDragged
 
@@ -1712,7 +1715,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    preguntas[16] = 1;
+                    preguntas[1] = 1;
                     boton1.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label1.setSize(boton1.getWidth(), boton1.getHeight());
@@ -1727,7 +1730,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(1);
+                    plano = new PlanoS1evaB(1,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -1738,7 +1741,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton1.setBackground(Color.red);
                     //codigo para la generacion del sonido
                     generarsonido();
-                    pu2[16] = 1;
+                    pu2[1] = 1;
 
                 }
 
@@ -1748,9 +1751,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton1MouseReleased
 
     private void boton2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseDragged
-         if (bande2=true){
-        mover(boton2);
- }
+        if (bande2 = true) {
+            mover(boton2);
+        }
     }//GEN-LAST:event_boton2MouseDragged
 
     private void boton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseEntered
@@ -1778,7 +1781,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    preguntas[17] = 1;
+                    preguntas[2] = 1;
                     boton2.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
                     label2.setSize(boton2.getWidth(), boton2.getHeight());
@@ -1793,7 +1796,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(3);
+                    plano = new PlanoS1evaB(3,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -1804,7 +1807,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton2.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[17] = 1;
+                    pu2[2] = 1;
                 }
 
             }
@@ -1813,9 +1816,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton2MouseReleased
 
     private void boton3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseDragged
-        if (bande3=true){
-        mover(boton3);
- }
+        if (bande3 = true) {
+            mover(boton3);
+        }
     }//GEN-LAST:event_boton3MouseDragged
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
@@ -1841,7 +1844,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                 if ((tam[0] <= p.x && p.x <= tam[1]) && (tam[2] <= p.y && p.y <= tam[3])) {
                     contadorGError--;
                     generarsonidowell();
-                    preguntas[18] = 1;
+                    preguntas[3] = 1;
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
                     boton3.setLocation(tam[1] - a.width, tam[3] - a.height);
@@ -1856,7 +1859,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(4);
+                    plano = new PlanoS1evaB(4,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -1868,7 +1871,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton3.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[18] = 1;
+                    pu2[3] = 1;
                 }
             }
         }
@@ -1876,9 +1879,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3MouseReleased
 
     private void boton4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseDragged
-         if (bande4=true){
-        mover(boton4);
- }
+        if (bande4 = true) {
+            mover(boton4);
+        }
     }//GEN-LAST:event_boton4MouseDragged
 
     private void boton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseEntered
@@ -1908,7 +1911,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton4.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[19] = 1;
+                    preguntas[4] = 1;
                     label4.setSize(boton4.getWidth(), boton4.getHeight());
                     label4.setLocation(tam[0] + 20, tam[2] + 10);
                     bande4 = false;
@@ -1920,7 +1923,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(5);
+                    plano = new PlanoS1evaB(5,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -1931,7 +1934,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton4.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[19] = 1;
+                    pu2[4] = 1;
 
                 }
             }
@@ -1939,9 +1942,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton4MouseReleased
 
     private void boton5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseDragged
-         if (bande5=true){
-        mover(boton5);
- }
+        if (bande5 = true) {
+            mover(boton5);
+        }
     }//GEN-LAST:event_boton5MouseDragged
 
     private void boton5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MouseEntered
@@ -1971,7 +1974,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton5.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[20] = 1;
+                    preguntas[5] = 1;
                     label5.setSize(boton5.getWidth(), boton5.getHeight());
                     label5.setLocation(tam[0] + 20, tam[2] + 10);
                     bande5 = false;
@@ -1983,7 +1986,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(2);
+                    plano = new PlanoS1evaB(2,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -1995,7 +1998,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton5.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[20] = 1;
+                    pu2[5] = 1;
                 }
 
             }
@@ -2004,9 +2007,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton5MouseReleased
 
     private void boton7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseDragged
-        if (bande7=true){
-        mover(boton7);
- }
+        if (bande7 = true) {
+            mover(boton7);
+        }
     }//GEN-LAST:event_boton7MouseDragged
 
     private void boton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseEntered
@@ -2033,7 +2036,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[21] = 1;
+                    preguntas[7] = 1;
                     label7.setSize(boton7.getWidth(), boton7.getHeight());
                     label7.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande7 = false;
@@ -2046,7 +2049,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(7);
+                    plano = new PlanoS1evaB(7,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2057,7 +2060,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton7.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[21] = 1;
+                    pu2[7] = 1;
                 }
 
             }
@@ -2066,9 +2069,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton7MouseReleased
 
     private void boton6MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseDragged
-         if (bande6=true){
-        mover(boton6);
- }
+        if (bande6 = true) {
+            mover(boton6);
+        }
     }//GEN-LAST:event_boton6MouseDragged
 
     private void boton6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MouseEntered
@@ -2094,7 +2097,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton6.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[22] = 1;
+                    preguntas[6] = 1;
                     label6.setSize(boton6.getWidth(), boton6.getHeight());
                     label6.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande6 = false;
@@ -2107,7 +2110,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(8);
+                    plano = new PlanoS1evaB(8,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2118,7 +2121,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton6.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[22] = 1;
+                    pu2[6] = 1;
                 }
             }
         }
@@ -2126,9 +2129,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton6MouseReleased
 
     private void boton9MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseDragged
-        if (bande9=true){
-        mover(boton9);
- }
+        if (bande9 = true) {
+            mover(boton9);
+        }
     }//GEN-LAST:event_boton9MouseDragged
 
     private void boton9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MouseEntered
@@ -2154,7 +2157,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[23] = 1;
+                    preguntas[9] = 1;
                     label9.setSize(boton9.getWidth(), boton9.getHeight());
                     label9.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande9 = false;
@@ -2167,7 +2170,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS2eva1 plano = null;
-                    plano = new PlanoS2eva1(2);
+                    plano = new PlanoS2eva1(2,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2179,7 +2182,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton9.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[23] = 1;
+                    pu2[9] = 1;
                 }
             }
         }
@@ -2191,9 +2194,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton9ActionPerformed
 
     private void boton8MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseDragged
-         if (bande8=true){
-        mover(boton8);
- }
+        if (bande8 = true) {
+            mover(boton8);
+        }
     }//GEN-LAST:event_boton8MouseDragged
 
     private void boton8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MouseEntered
@@ -2219,7 +2222,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton8.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[24] = 1;
+                    preguntas[8] = 1;
                     label8.setSize(boton8.getWidth(), boton8.getHeight());
                     label8.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande8 = false;
@@ -2232,7 +2235,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(8);
+                    plano = new PlanoS1evaB(8,1);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2243,7 +2246,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton8.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[24] = 1;
+                    pu2[8] = 1;
                 }
             }
         }
@@ -2255,9 +2258,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton8ActionPerformed
 
     private void boton10MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseDragged
-        if (bande10=true){
-        mover(boton10);
- }
+        if (bande10 = true) {
+            mover(boton10);
+        }
     }//GEN-LAST:event_boton10MouseDragged
 
     private void boton10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton10MouseEntered
@@ -2284,7 +2287,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[25] = 1;
+                    preguntas[10] = 1;
                     label10.setSize(boton10.getWidth(), boton10.getHeight());
                     label10.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande10 = false;
@@ -2297,7 +2300,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(6);
+                    plano = new PlanoS1evaB(6,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2309,7 +2312,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton10.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[25] = 1;
+                    pu2[10] = 1;
                 }
             }
         }
@@ -2317,9 +2320,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton10MouseReleased
 
     private void boton11MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseDragged
-       if (bande11=true){
-        mover(boton11);
- }
+        if (bande11 = true) {
+            mover(boton11);
+        }
     }//GEN-LAST:event_boton11MouseDragged
 
     private void boton11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton11MouseEntered
@@ -2350,7 +2353,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[26] = 1;
+                    preguntas[11] = 1;
                     label11.setSize(boton11.getWidth(), boton11.getHeight());
                     label11.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande11 = false;
@@ -2363,7 +2366,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(6);
+                    plano = new PlanoS1evaB(6,1);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2375,7 +2378,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton11.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[26] = 1;
+                    pu2[11] = 1;
                 }
             }
         }
@@ -2383,9 +2386,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton11MouseReleased
 
     private void boton12MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseDragged
-         if (bande12=true){
-        mover(boton12);
- }
+        if (bande12 = true) {
+            mover(boton12);
+        }
     }//GEN-LAST:event_boton12MouseDragged
 
     private void boton12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton12MouseEntered
@@ -2412,7 +2415,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton12.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[27] = 1;
+                    preguntas[12] = 1;
                     label12.setSize(boton12.getWidth(), boton12.getHeight());
                     label12.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande12 = false;
@@ -2425,7 +2428,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
 
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(6);
+                    plano = new PlanoS1evaB(6,2);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2437,7 +2440,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton12.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[27] = 1;
+                    pu2[12] = 1;
                 }
             }
         }
@@ -2445,9 +2448,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton12MouseReleased
 
     private void boton13MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseDragged
-         if (bande13=true){
-        mover(boton13);
- }
+        if (bande13 = true) {
+            mover(boton13);
+        }
     }//GEN-LAST:event_boton13MouseDragged
 
     private void boton13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton13MouseEntered
@@ -2473,7 +2476,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton13.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[28] = 1;
+                    preguntas[13] = 1;
                     label13.setSize(boton13.getWidth(), boton13.getHeight());
                     label13.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande13 = false;
@@ -2486,7 +2489,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2eva1 plano = null;
-                    plano = new PlanoS2eva1(1);
+                    plano = new PlanoS2eva1(1,3);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2497,7 +2500,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton13.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[28] = 1;
+                    pu2[13] = 1;
                 }
 
             }
@@ -2506,9 +2509,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton13MouseReleased
 
     private void boton14MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseDragged
-        if (bande14=true){
-        mover(boton14);
- }
+        if (bande14 = true) {
+            mover(boton14);
+        }
     }//GEN-LAST:event_boton14MouseDragged
 
     private void boton14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton14MouseEntered
@@ -2538,7 +2541,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton14.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[29] = 1;
+                    preguntas[14] = 1;
                     label14.setSize(boton14.getWidth(), boton14.getHeight());
                     label14.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande14 = false;
@@ -2551,7 +2554,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2eva1 plano = null;
-                    plano = new PlanoS2eva1(2);
+                    plano = new PlanoS2eva1(2,1);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2562,7 +2565,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton14.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[29] = 1;
+                    pu2[14] = 1;
                 }
             }
         }
@@ -2574,9 +2577,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton14ActionPerformed
 
     private void boton15MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseDragged
-        if (bande15=true){
-        mover(boton15);
- }
+        if (bande15 = true) {
+            mover(boton15);
+        }
     }//GEN-LAST:event_boton15MouseDragged
 
     private void boton15MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton15MouseEntered
@@ -2602,7 +2605,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton15.setLocation(tam[1] - a.width, tam[3] - a.height);
                     System.out.println("correcto");
-                    preguntas[30] = 1;
+                    preguntas[15] = 1;
                     label15.setSize(boton15.getWidth(), boton15.getHeight());
                     label15.setLocation(tam[1] - a.width, tam[3] - a.height);
                     bande15 = false;
@@ -2614,7 +2617,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(3,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2624,7 +2627,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton15.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[30] = 1;
+                    pu2[15] = 1;
                 }
 
             }
@@ -2633,9 +2636,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton15MouseReleased
 
     private void boton16MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseDragged
-        if (bande16=true){
-        mover(boton16);
- }
+        if (bande16 = true) {
+            mover(boton16);
+        }
     }//GEN-LAST:event_boton16MouseDragged
 
     private void boton16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton16MouseEntered
@@ -2665,7 +2668,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton16.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[31] = 1;
+                    preguntas[16] = 1;
                     label16.setSize(boton16.getWidth(), boton16.getHeight());
                     label16.setLocation(tam[0] + 20, tam[2] + 10);
                     bande16 = false;
@@ -2678,7 +2681,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(1,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2688,7 +2691,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton16.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[31] = 1;
+                    pu2[16] = 1;
                 }
 
             }
@@ -2696,9 +2699,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton16MouseReleased
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
-        if (bande17=true){
-        mover(boton17);
- }
+        if (bande17 = true) {
+            mover(boton17);
+        }
     }//GEN-LAST:event_boton17MouseDragged
 
     private void boton17MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseEntered
@@ -2726,7 +2729,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    preguntas[32] = 1;
+                    preguntas[17] = 1;
                     boton17.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label17.setSize(boton17.getWidth(), boton17.getHeight());
@@ -2740,7 +2743,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(2,0);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2750,7 +2753,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton17.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[32] = 1;
+                    pu2[17] = 1;
                 }
 
             }
@@ -2759,9 +2762,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton17MouseReleased
 
     private void boton18MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseDragged
-        if (bande18=true){
-        mover(boton18);
- }
+        if (bande18 = true) {
+            mover(boton18);
+        }
     }//GEN-LAST:event_boton18MouseDragged
 
     private void boton18MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton18MouseEntered
@@ -2787,7 +2790,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton18.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[33] = 1;
+                    preguntas[18] = 1;
                     label18.setSize(boton18.getWidth(), boton18.getHeight());
                     label18.setLocation(tam[0] + 20, tam[2] + 10);
                     bande18 = false;
@@ -2800,7 +2803,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(1,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2810,7 +2813,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton18.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[33] = 1;
+                    pu2[18] = 1;
                 }
             }
         }
@@ -2822,9 +2825,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton18ActionPerformed
 
     private void boton19MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseDragged
-         if (bande19=true){
-        mover(boton19);
- }
+        if (bande19 = true) {
+            mover(boton19);
+        }
     }//GEN-LAST:event_boton19MouseDragged
 
     private void boton19MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton19MouseEntered
@@ -2850,7 +2853,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton19.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[34] = 1;
+                    preguntas[19] = 1;
                     label19.setSize(boton19.getWidth(), boton19.getHeight());
                     label19.setLocation(tam[0] + 20, tam[2] + 10);
                     bande19 = false;
@@ -2863,7 +2866,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(1,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2873,7 +2876,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton19.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[34] = 1;
+                    pu2[19] = 1;
                 }
 
             }
@@ -2886,9 +2889,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton19ActionPerformed
 
     private void boton20MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseDragged
-        if (bande20=true){
-        mover(boton20);
- }
+        if (bande20 = true) {
+            mover(boton20);
+        }
     }//GEN-LAST:event_boton20MouseDragged
 
     private void boton20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton20MouseEntered
@@ -2914,7 +2917,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     validarcuantos(contgeneral);
                     boton20.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
-                    preguntas[35] = 1;
+                    preguntas[20] = 1;
                     label20.setSize(boton20.getWidth(), boton20.getHeight());
                     label20.setLocation(tam[0] + 20, tam[2] + 10);
                     bande20 = false;
@@ -2927,7 +2930,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(1,2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2937,16 +2940,16 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton20.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[35] = 1;
+                    pu2[20] = 1;
                 }
             }
         }
     }//GEN-LAST:event_boton20MouseReleased
 
     private void boton21MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseDragged
-         if (bande21=true){
-        mover(boton21);
- }
+        if (bande21 = true) {
+            mover(boton21);
+        }
     }//GEN-LAST:event_boton21MouseDragged
 
     private void boton21MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton21MouseEntered
@@ -2973,7 +2976,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
-                    preguntas[36] = 1;
+                    preguntas[21] = 1;
                     validarcuantos(contgeneral);
                     boton21.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
@@ -2989,7 +2992,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(3,1);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2999,7 +3002,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton21.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[36] = 1;
+                    pu2[21] = 1;
                 }
 
             }
@@ -3008,9 +3011,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton21MouseReleased
 
     private void boton22MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton22MouseDragged
-         if (bande22=true){
-        mover(boton22);
- }
+        if (bande22 = true) {
+            mover(boton22);
+        }
 
     }//GEN-LAST:event_boton22MouseDragged
 
@@ -3033,7 +3036,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
-                    preguntas[37] = 1;
+                    preguntas[22] = 1;
                     validarcuantos(contgeneral);
                     boton22.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
@@ -3049,7 +3052,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(3,2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -3059,7 +3062,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton22.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[37] = 1;
+                    pu2[22] = 1;
                 }
 
             }
@@ -3068,9 +3071,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton22MouseReleased
 
     private void boton23MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton23MouseDragged
-        if (bande23=true){
-        mover(boton23);
- }
+        if (bande23 = true) {
+            mover(boton23);
+        }
 
     }//GEN-LAST:event_boton23MouseDragged
 
@@ -3093,7 +3096,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     contadorGError--;
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
-                    preguntas[38] = 1;
+                    preguntas[23] = 1;
                     validarcuantos(contgeneral);
                     boton23.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
@@ -3109,7 +3112,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS1evaB plano = null;
-                    plano = new PlanoS1evaB(6);
+                    plano = new PlanoS1evaB(6,3);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -3120,7 +3123,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton23.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[38] = 1;
+                    pu2[23] = 1;
                 }
 
             }
@@ -3129,9 +3132,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton23MouseReleased
 
     private void boton24MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseDragged
-         if (bande24=true){
-        mover(boton24);
- }
+        if (bande24 = true) {
+            mover(boton24);
+        }
     }//GEN-LAST:event_boton24MouseDragged
 
     private void boton24MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton24MouseEntered
@@ -3160,7 +3163,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     generarsonidowell();
                     contgeneral = contgeneral + 1;
                     validarcuantos(contgeneral);
-                    preguntas[39] = 1;
+                    preguntas[24] = 1;
                     boton24.setLocation(tam[0] + 20, tam[2] + 10);
                     System.out.println("correcto");
                     label24.setSize(boton24.getWidth(), boton24.getHeight());
@@ -3174,7 +3177,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1();
+                    plano = new PlanoS3eva1(1,3);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -3184,7 +3187,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     boton24.setBackground(Color.red);
                     //codigo para la generacion de el sonido
                     generarsonido();
-                    pu2[39] = 1;
+                    pu2[24] = 1;
                 }
 
             }
@@ -3248,7 +3251,7 @@ public class ArranqueEva extends javax.swing.JFrame {
     }//GEN-LAST:event_boton3ActionPerformed
 
     private void boton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton4ActionPerformed
-         // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_boton4ActionPerformed
     public int suma(int[] numeros) {
         int sum = 0;
@@ -3315,7 +3318,9 @@ public class ArranqueEva extends javax.swing.JFrame {
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
-
+            case 0:
+                jLabel17.setIcon(romboon);
+                break;
             case 5:
                 Plabel1.setBackground(green);
                 break;

@@ -1,5 +1,3 @@
-asda
-asda
-123
-123
-Paro Normal
+Arranque
+Paro Emergencia
+Paro Emergencia
