@@ -46,7 +46,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     Thread hiloA;
     int contador = 0;
     int contPreguntas;
-    int totalPreguntas = 67;
+    int totalPreguntas = 38;
     private Point location1, location2, location3, location4, location5, location6, location7, location8, location9, location10, location11, location12;
     private Point location13, location14, location15, location16, location17, location18, location19;
     Color color;
@@ -99,7 +99,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     boolean bbande18 = false;
     boolean bbande19 = false;
     boolean bandet = false;
-    int contGError = 24;
+    int contGError = 20;
     int dia, mes, año, hora, minutos, segundos;
     int Segundo, Minuto, Hora, cuantos;
     Calendar calendario;
@@ -206,7 +206,7 @@ public class ParoNormalEVA extends javax.swing.JFrame {
     }
 
     //crea numeros aleatorios para poner los botones en diferentes posiciones
-    public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
+    /*public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
         int pos;
         int nCartas = 19;
         Stack< Integer> pCartas = new Stack< Integer>();
@@ -216,6 +216,16 @@ public class ParoNormalEVA extends javax.swing.JFrame {
                 pos = (int) Math.floor(Math.random() * nCartas);
             }
             pCartas.push(pos);
+        }
+        return pCartas;
+    }*/
+    
+    public static Stack<Integer> generaNumeroAleatorio(int minimo, int maximo) {
+        int pos;
+        int nCartas = 19;
+        Stack< Integer> pCartas = new Stack< Integer>();
+        for (int i = 0; i < nCartas; i++) {
+            pCartas.push(i);
         }
         return pCartas;
     }
@@ -1543,8 +1553,8 @@ public class ParoNormalEVA extends javax.swing.JFrame {
         eva.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-    public static int[] pu2 = new int[67];
-    public static int[] preguntas = new int[67];
+    public static int[] pu2 = new int[38];
+    public static int[] preguntas = new int[38];
 
     private void boton17MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton17MouseDragged
         if (bande17 = true) {

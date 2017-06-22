@@ -115,8 +115,8 @@ public class ParoRapido1 extends javax.swing.JFrame {
     public ParoRapido1() {
 
         initComponents();
-        romboon = new ImageIcon("imgfondo\\rombo.png");
-        rombooff = new ImageIcon("imgfondo\\rombooff.png");
+        romboon = new ImageIcon("src\\imgfondo\\rombo.png");
+        rombooff = new ImageIcon("src\\imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
         correct1.setBackground(black);
         correct2.setBackground(black);

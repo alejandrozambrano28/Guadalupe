@@ -165,8 +165,8 @@ public class PlanoS3eva1 extends javax.swing.JFrame {
     private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
           if (bande2 == true) {
             ArranqueEva arra = new ArranqueEva();
-            arra.pu2[48+nument] = contErrores;
-            arra.preguntas[48+nument] = 1;
+            arra.pu2[49] = contErrores;
+            arra.preguntas[49] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {

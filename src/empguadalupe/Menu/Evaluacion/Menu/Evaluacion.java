@@ -60,7 +60,7 @@ public class Evaluacion extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 145, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 160, -1));
 
         jButton2.setText("ARRANQUE");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +68,7 @@ public class Evaluacion extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 147, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
 
         jButton3.setText("PARO NORMAL");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +76,7 @@ public class Evaluacion extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 147, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 160, -1));
 
         jButton4.setText("PARO RAPIDO");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,7 @@ public class Evaluacion extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 145, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 160, -1));
 
         jButton5.setText("PARO DE EMERGENCIA");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,7 @@ public class Evaluacion extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 160, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/thumbGRUPO20EPM20CON20CIERRE202013.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, 60));
@@ -106,6 +106,7 @@ public class Evaluacion extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Resultado res = new Resultado();
         res.setVisible(true);
+        res.setLocationRelativeTo(null);
         dispose();
 
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -131,8 +131,8 @@ public class Arranque1 extends javax.swing.JFrame {
 
         initComponents();
         convertiranegro();
-        romboon = new ImageIcon("imgfondo\\rombo.png");
-        rombooff = new ImageIcon("imgfondo\\rombooff.png");
+        romboon = new ImageIcon("src\\imgfondo\\rombo.png");
+        rombooff = new ImageIcon("src\\imgfondo\\rombooff.png");
         rec1 = label1.getBounds();
         rec2 = label2.getBounds();
         rec3 = label3.getBounds();
@@ -1542,6 +1542,7 @@ public class Arranque1 extends javax.swing.JFrame {
         convertiranegro();
         contador = 0;
         contgeneral = 0;
+        validarcuantos(0);
         CondicionesIniciales condi = new CondicionesIniciales();
         condi.setVisible(true);
         condi.setLocationRelativeTo(null);
@@ -3724,7 +3725,9 @@ public class Arranque1 extends javax.swing.JFrame {
     public void validarcuantos(int p) {
         contador = contador + 1;
         switch (p) {
-
+             case 0:
+                jLabel17.setIcon(romboon);
+                break;
             case 5:
                 Plabel1.setBackground(green);
                 break;

@@ -115,8 +115,8 @@ public class ParoNormal extends javax.swing.JFrame {
 
         initComponents();
         convertiranegro();
-        romboon = new ImageIcon("imgfondo\\rombo.png");
-        rombooff = new ImageIcon("imgfondo\\rombooff.png");
+        romboon = new ImageIcon("src\\imgfondo\\rombo.png");
+        rombooff = new ImageIcon("src\\imgfondo\\rombooff.png");
         //envia a todos los botones correct que iluminan cuando es correcta el color negro 
 
 //define el tamaño de cada recuandro hembra 
@@ -1317,6 +1317,7 @@ public class ParoNormal extends javax.swing.JFrame {
         contgeneral = 0;
         CondicionesInicialesParoN condi = new CondicionesInicialesParoN();
         condi.setVisible(true);
+        condi.setLocationRelativeTo(null);
         int num0 = numero.get(0);
         boton1.setLocation(1130, ubica[num0]);
         boton1.setBackground(color);

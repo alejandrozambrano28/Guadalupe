@@ -93,10 +93,10 @@ public class ParoEmergenciaEVA extends javax.swing.JFrame {
     boolean bbande18 = false;
     boolean bbande19 = false;
     int contPreguntas;
-    int totalPreguntas = 67;
-    int contGError = 24;
-    public static int[] pu2 = new int[67];
-    public static int[] preguntas = new int[67];
+    int totalPreguntas = 34;
+    int contGError = 17;
+    public static int[] pu2 = new int[34];
+    public static int[] preguntas = new int[34];
     int dia, mes, año, hora, minutos, segundos;
     int Segundo, Minuto, Hora, cuantos;
     Calendar calendario;

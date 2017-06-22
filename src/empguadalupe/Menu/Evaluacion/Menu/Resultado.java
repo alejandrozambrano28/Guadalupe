@@ -80,6 +80,7 @@ public class Resultado extends javax.swing.JFrame {
         TiempoA3 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         Registro = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -91,23 +92,34 @@ public class Resultado extends javax.swing.JFrame {
                 formWindowClosed(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre del Funcionario");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 23, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cedula del Funcionario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 62, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre del Gestor");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 140, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Calificacion Arranque");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 182, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Tiempo");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 104, -1, -1));
 
-        NombreOP.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        NombreOP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         NombreOP.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         NombreOP.setEnabled(false);
         NombreOP.addActionListener(new java.awt.event.ActionListener() {
@@ -115,22 +127,27 @@ public class Resultado extends javax.swing.JFrame {
                 NombreOPActionPerformed(evt);
             }
         });
+        getContentPane().add(NombreOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 20, 120, -1));
 
-        CedulaOP.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CedulaOP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         CedulaOP.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         CedulaOP.setEnabled(false);
+        getContentPane().add(CedulaOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 59, 120, -1));
 
-        NombreS.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        NombreS.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         NombreS.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         NombreS.setEnabled(false);
+        getContentPane().add(NombreS, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 140, 120, -1));
 
-        CalificacionA.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         CalificacionA.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         CalificacionA.setEnabled(false);
+        getContentPane().add(CalificacionA, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 179, 120, -1));
 
-        TiempoA.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TiempoA.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         TiempoA.setEnabled(false);
+        getContentPane().add(TiempoA, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 179, 76, -1));
 
         jButton1.setText("PDF");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -138,144 +155,66 @@ public class Resultado extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 339, 106, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Calificacion Paro Normal");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 221, -1, -1));
 
-        CalificacionA1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         CalificacionA1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         CalificacionA1.setEnabled(false);
+        getContentPane().add(CalificacionA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 218, 118, -1));
 
-        TiempoA1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TiempoA1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         TiempoA1.setEnabled(false);
+        getContentPane().add(TiempoA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 218, 76, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Calificacion Paro Rapido");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 253, -1, -1));
 
-        CalificacionA2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         CalificacionA2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         CalificacionA2.setEnabled(false);
+        getContentPane().add(CalificacionA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 250, 118, -1));
 
-        TiempoA2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TiempoA2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         TiempoA2.setEnabled(false);
+        getContentPane().add(TiempoA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 250, 76, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Calificacion Paro de Emergencia");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 292, -1, -1));
 
-        CalificacionA3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        CalificacionA3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         CalificacionA3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         CalificacionA3.setEnabled(false);
+        getContentPane().add(CalificacionA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 289, 118, -1));
 
-        TiempoA3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        TiempoA3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TiempoA3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         TiempoA3.setEnabled(false);
+        getContentPane().add(TiempoA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 289, 76, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Registro EPM");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 104, -1, -1));
 
-        Registro.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Registro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Registro.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         Registro.setEnabled(false);
+        getContentPane().add(Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 101, 120, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(NombreS, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CedulaOP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(NombreOP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CalificacionA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(CalificacionA3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                .addComponent(CalificacionA2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(CalificacionA1)))))
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TiempoA1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TiempoA, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TiempoA2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TiempoA3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(NombreOP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(CedulaOP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel9)
-                    .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(NombreS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(CalificacionA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TiempoA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(CalificacionA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TiempoA1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(CalificacionA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TiempoA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(CalificacionA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TiempoA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(jButton1)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -387,7 +326,6 @@ public class Resultado extends javax.swing.JFrame {
         if (dialogButton == JOptionPane.YES_OPTION) {
             FormularioEvaluacion formu = new FormularioEvaluacion();
             formu.setVisible(true);
-
             met.eliminar(1);
         }
         if (dialogButton == JOptionPane.NO_OPTION) {
@@ -594,6 +532,7 @@ public class Resultado extends javax.swing.JFrame {
     private javax.swing.JTextField TiempoA3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

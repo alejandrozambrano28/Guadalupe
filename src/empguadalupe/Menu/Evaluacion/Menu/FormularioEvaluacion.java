@@ -77,12 +77,12 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 90, 40));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre del Funcionario");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        Nom.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Nom.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Nom.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 NomFocusLost(evt);
@@ -100,12 +100,12 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
         });
         getContentPane().add(Nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 235, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cedula del Funcionario");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        ced.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ced.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         ced.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 cedKeyTyped(evt);
@@ -113,12 +113,12 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
         });
         getContentPane().add(ced, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 235, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nombre del Gestor");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
-        nomS.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        nomS.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         nomS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomSActionPerformed(evt);
@@ -131,7 +131,7 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
         });
         getContentPane().add(nomS, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 235, -1));
 
-        reg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        reg.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regActionPerformed(evt);
@@ -144,7 +144,7 @@ public class FormularioEvaluacion extends javax.swing.JFrame {
         });
         getContentPane().add(reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 235, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Registro EPM");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));

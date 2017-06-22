@@ -2489,7 +2489,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS2eva1 plano = null;
-                    plano = new PlanoS2eva1(1,3);
+                    plano = new PlanoS2eva1(1,0);
 
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
@@ -2866,7 +2866,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1(1,1);
+                    plano = new PlanoS3eva1(1,2);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -2930,7 +2930,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                     }
                     //llamado a la ventana de la bomba de refrigeracion
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1(1,2);
+                    plano = new PlanoS3eva1(1,3);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -3177,7 +3177,7 @@ public class ArranqueEva extends javax.swing.JFrame {
                         Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     PlanoS3eva1 plano = null;
-                    plano = new PlanoS3eva1(1,3);
+                    plano = new PlanoS3eva1(1,4);
                     plano.setVisible(true);
                     plano.setLocationRelativeTo(null);
                 } else {
@@ -3243,6 +3243,40 @@ public class ArranqueEva extends javax.swing.JFrame {
                 eva.setLocationRelativeTo(null);
                 dispose();
             }
+        }else{
+        System.out.println(pu2 + "errores");
+                contadorGError = contadorGError + suma(pu2);
+                String[] cadena = new String[6];
+                int j = 1;
+                timer.stop();
+
+                Metodos met = new Metodos();
+
+                try {
+                    cadena = met.muestraContenido(1);
+                    int i = Integer.parseInt(cadena[0]);
+                    while (j != i) {
+                        System.out.println(cadena[j]);
+                        j++;
+                    }
+
+                } catch (IOException ex) {
+                    Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                try {
+                    met.guardaDatos(String.valueOf(Hora), 1);
+                    met.guardaDatos(String.valueOf(Minuto), 1);
+                    met.guardaDatos(String.valueOf(Segundo), 1);
+                    met.guardaDatos(String.valueOf(contadorGError), 1);
+                    met.guardaDatos(String.valueOf(contadorPreguntas), 1);
+
+                } catch (IOException ex) {
+                    Logger.getLogger(ArranqueEva.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                Evaluacion eva = new Evaluacion();
+                eva.setVisible(true);
+                eva.setLocationRelativeTo(null);
+                dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
