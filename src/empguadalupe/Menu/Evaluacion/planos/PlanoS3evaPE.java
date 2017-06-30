@@ -72,11 +72,12 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         bomba = new javax.swing.JButton();
         bomba1 = new javax.swing.JButton();
         bomba2 = new javax.swing.JButton();
         bomba3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -88,16 +89,13 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1Operador.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
-
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bombaActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 30, 30));
+        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 20, 30));
 
         bomba1.setText("jButton1");
         bomba1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +103,7 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
                 bomba1ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, 70));
+        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 30, 70));
 
         bomba2.setText("jButton2");
         bomba2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +111,7 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
                 bomba2ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 30, 30));
+        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 50, 30));
 
         bomba3.setText("jButton3");
         bomba3.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +120,17 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bomba3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 270, 70));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 120, 110));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoSalaoperacionvacio.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -178,11 +187,7 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
 
     private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
    if (bande3 == true) {
-            ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
-            arra.pu2[34+nument] = contErrores;
-            arra.preguntas[34+nument] = 1;
-            JOptionPane.showMessageDialog(rootPane, "correcto");
-            dispose();
+
         } else {
 
             Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
@@ -215,6 +220,28 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
             this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
         }        // TODO add your handling code here:
     }//GEN-LAST:event_bomba3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       if (bande3 == true) {
+            ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
+            arra.pu2[34] = contErrores;
+            arra.preguntas[34] = 1;
+            JOptionPane.showMessageDialog(rootPane, "correcto");
+            dispose();
+        } else {
+
+            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
+            setCursor(cur);
+            try {
+                Thread.sleep(300); // 1000 milisegundos (10 segundos)
+
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ParoEmergenciaEVA.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.setCursor(new java.awt.Cursor(Cursor.CURSOR_CUSTOM));
+        }  
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,6 +284,7 @@ public class PlanoS3evaPE extends javax.swing.JFrame {
     private javax.swing.JButton bomba1;
     private javax.swing.JButton bomba2;
     private javax.swing.JButton bomba3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

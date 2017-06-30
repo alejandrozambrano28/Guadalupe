@@ -301,8 +301,8 @@ public class PlanoS1evaPE extends javax.swing.JFrame implements ActionListener {
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         if (bande1 == true) {
             ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
-            arra.pu2[18+nument] = contErrores;
-            arra.preguntas[18+nument] = 1;
+            arra.pu2[18] = contErrores;
+            arra.preguntas[18] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {

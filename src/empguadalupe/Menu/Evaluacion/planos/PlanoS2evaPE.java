@@ -81,13 +81,13 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         bomba = new javax.swing.JButton();
         bomba1 = new javax.swing.JButton();
         bomba2 = new javax.swing.JButton();
         bomba3 = new javax.swing.JButton();
         bomba4 = new javax.swing.JButton();
         bomba5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -99,16 +99,13 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
-
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bombaActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 50, 50));
+        getContentPane().add(bomba, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 50, 50));
 
         bomba1.setText("jButton1");
         bomba1.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +113,7 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
                 bomba1ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 50, 50));
+        getContentPane().add(bomba1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 50, 50));
 
         bomba2.setText("jButton1");
         bomba2.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +121,7 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
                 bomba2ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 50, 50));
+        getContentPane().add(bomba2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 50, 50));
 
         bomba3.setText("jButton1");
         bomba3.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +129,7 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
                 bomba3ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 50, 50));
+        getContentPane().add(bomba3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 50, 50));
 
         bomba4.setText("jButton1");
         bomba4.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +137,7 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
                 bomba4ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 50, 50));
+        getContentPane().add(bomba4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 50, 50));
 
         bomba5.setText("jButton1");
         bomba5.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +145,10 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
                 bomba5ActionPerformed(evt);
             }
         });
-        getContentPane().add(bomba5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 50, 50));
+        getContentPane().add(bomba5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 50, 50));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,8 +156,8 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
     private void bombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bombaActionPerformed
         if (bande == true) {
             ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
-            arra.pu2[31+nument] = contErrores;
-            arra.preguntas[31+nument] = 1;
+            arra.pu2[31] = contErrores;
+            arra.preguntas[31] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {
@@ -222,8 +222,8 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
     private void bomba3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba3ActionPerformed
         if (bande3 == true) {
             ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
-            arra.pu2[31+nument] = contErrores;
-            arra.preguntas[31+nument] = 1;
+            arra.pu2[31] = contErrores;
+            arra.preguntas[31] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {
@@ -244,8 +244,8 @@ public class PlanoS2evaPE extends javax.swing.JFrame implements ActionListener {
     private void bomba4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba4ActionPerformed
         if (bande4 == true) {
             ParoEmergenciaEVA arra = new ParoEmergenciaEVA();
-            arra.pu2[31+nument] = contErrores;
-            arra.preguntas[31+nument] = 1;
+            arra.pu2[31] = contErrores;
+            arra.preguntas[31] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {

@@ -45,6 +45,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
     boolean bande17 = false;
     boolean bande18 = false;
     int nument=0;
+    String aa = "archivos\\error.png";
 
     /**
      * Creates new form PlanoBomba
@@ -303,7 +304,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -319,7 +320,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         contErrores = contErrores + 1;
-        Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+        Image im = Toolkit.getDefaultToolkit().createImage(aa);
         java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
         setCursor(cur);
         try {
@@ -340,7 +341,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -362,7 +363,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -384,7 +385,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -406,7 +407,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -428,7 +429,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -451,7 +452,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -473,7 +474,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -495,7 +496,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -517,7 +518,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -539,7 +540,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -562,7 +563,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -584,7 +585,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -606,7 +607,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -628,7 +629,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -650,7 +651,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -672,7 +673,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {
@@ -694,7 +695,7 @@ public class PlanoS1evaB extends javax.swing.JFrame implements ActionListener {
             dispose();
         } else {
 
-            Image im = Toolkit.getDefaultToolkit().createImage("src\\imgfondo\\error.png");
+            Image im = Toolkit.getDefaultToolkit().createImage(aa);
             java.awt.Cursor cur = Toolkit.getDefaultToolkit().createCustomCursor(im, new Point(10, 10), "WILL");
             setCursor(cur);
             try {

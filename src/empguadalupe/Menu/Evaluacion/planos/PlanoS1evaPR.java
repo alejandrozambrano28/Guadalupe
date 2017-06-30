@@ -116,7 +116,6 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         btn1 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
         btn3 = new javax.swing.JButton();
@@ -135,6 +134,7 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
         btn16 = new javax.swing.JButton();
         btn17 = new javax.swing.JButton();
         btn18 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -145,10 +145,6 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/plano S1_1.png"))); // NOI18N
-        jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 460));
 
         btn1.setText("jButton1");
         btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -294,6 +290,10 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
             }
         });
         getContentPane().add(btn18, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 373, -1, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/plano S1_1.png"))); // NOI18N
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -615,7 +615,7 @@ public class PlanoS1evaPR extends javax.swing.JFrame implements ActionListener {
         if (bande17 == true) {
             ParoRapidoEVA arra = new ParoRapidoEVA();
             arra.pu2[23+nument] = contErrores;
-            arra.preguntas[34+nument] = 1;
+            arra.preguntas[23+nument] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
         } else {

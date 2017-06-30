@@ -77,13 +77,13 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         bomba = new javax.swing.JButton();
         bomba1 = new javax.swing.JButton();
         bomba2 = new javax.swing.JButton();
         bomba3 = new javax.swing.JButton();
         bomba4 = new javax.swing.JButton();
         bomba5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -94,9 +94,6 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
             }
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
 
         bomba.setText("jButton1");
         bomba.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +143,9 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
         });
         getContentPane().add(bomba5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 50, 50));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgmaquina/planoP1m.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -174,7 +174,7 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
     private void bomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba1ActionPerformed
         if (bande1 == true) {
             ArranqueEva arra = new ArranqueEva();
-            arra.pu2[43+nument] = contErrores;
+            arra.pu2[43] = contErrores;
             arra.preguntas[43+nument] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
@@ -196,7 +196,7 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
     private void bomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba2ActionPerformed
         if (bande2 == true) {
             ArranqueEva arra = new ArranqueEva();
-            arra.pu2[43+nument] = contErrores;
+            arra.pu2[43] = contErrores;
             arra.preguntas[43+nument] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
@@ -263,7 +263,7 @@ public class PlanoS2eva1 extends javax.swing.JFrame implements ActionListener {
     private void bomba5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bomba5ActionPerformed
         if (bande5 == true) {
             ArranqueEva arra = new ArranqueEva();
-            arra.pu2[43+nument] = contErrores;
+            arra.pu2[43] = contErrores;
             arra.preguntas[43+nument] = 1;
             JOptionPane.showMessageDialog(rootPane, "correcto");
             dispose();
