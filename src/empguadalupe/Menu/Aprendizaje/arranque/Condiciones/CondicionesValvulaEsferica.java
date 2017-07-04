@@ -45,7 +45,6 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jCheckBox9 = new javax.swing.JCheckBox();
         jCheckBox10 = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -62,19 +61,19 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setSelected(true);
         jCheckBox1.setText("Reset reles paro y bloqueo no activos");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jCheckBox2.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox2.setSelected(true);
         jCheckBox2.setText("Valvula esferica cerrada");
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
+        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
         jCheckBox3.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox3.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox3.setSelected(true);
         jCheckBox3.setText("Sellos MTTO aguas arriba desaplicados");
-        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, -1, -1));
+        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         jCheckBox4.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox4.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,25 +84,25 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
                 jCheckBox4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
+        getContentPane().add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         jCheckBox5.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox5.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox5.setSelected(true);
         jCheckBox5.setText("Llave de bloqueo val 3 vias desaplicada");
-        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
+        getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, -1));
 
         jCheckBox7.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox7.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox7.setSelected(true);
         jCheckBox7.setText("Control modo automatico");
-        getContentPane().add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, -1, -1));
+        getContentPane().add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, -1, -1));
 
         jCheckBox8.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox8.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox8.setSelected(true);
         jCheckBox8.setText("Bypass cerrado");
-        getContentPane().add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
+        getContentPane().add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
         jCheckBox9.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBox9.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,11 +120,6 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Enclavamientos");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Permisivos");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgfondo/color.png"))); // NOI18N
@@ -166,7 +160,6 @@ public class CondicionesValvulaEsferica extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
